@@ -46,12 +46,16 @@ class FSMPerson(models.Model):
         offset=0,
         limit=None,
         order=None,
+        **kwargs,
     ):
+        # **kwargs catches forward-compatible additions like saas-19.3's
+        # `bypass_access`; signature-widening is the recommended OCA pattern.
         res = super()._search(
             args,
             offset=offset,
             limit=limit,
             order=order,
+            **kwargs,
         )
         # Check for args first having location_ids as default filter
         for arg in args:
