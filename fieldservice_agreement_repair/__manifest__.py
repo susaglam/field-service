@@ -6,7 +6,7 @@
     "name": "Fieldservice Agreement Repair",
     "summary": "Fieldservice Agreement Repair",
     "category": "Field Service",
-    "version": "18.0.1.0.0",
+    "version": "saas~19.3.1.0.0",
     "author": "Camptocamp SA, Italo Lopes, Odoo Community Association (OCA)",
     "license": "AGPL-3",
     "website": "https://github.com/OCA/field-service",
