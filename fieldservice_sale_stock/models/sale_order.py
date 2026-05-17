@@ -26,8 +26,8 @@ class SaleOrder(models.Model):
                     ("sale_line_id", "=", False),
                 ]
             )
-            if rec.procurement_group_id:
-                rec.procurement_group_id.fsm_order_id = fsm_order.id or False
+            # procurement.group removed in saas-19.3; fsm_order tagging on the
+            # group is no longer applicable. Only pickings/moves get tagged.
             for picking in rec.picking_ids:
                 picking.write(rec.prepare_fsm_values_for_stock_picking(fsm_order))
                 for move in picking.move_ids:
