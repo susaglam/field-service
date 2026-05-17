@@ -76,6 +76,7 @@ class FSMAccountCase(TransactionCase):
                         0,
                         {
                             "name": "Test",
+                            "display_type": "product",
                             "quantity": 1.00,
                             "price_unit": 100.00,
                         },
@@ -112,6 +113,7 @@ class FSMAccountCase(TransactionCase):
                         0,
                         {
                             "name": "Test1",
+                            "display_type": "product",
                             "quantity": 1.00,
                             "price_unit": 100.00,
                         },
