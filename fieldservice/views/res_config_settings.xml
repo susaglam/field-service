@@ -202,32 +202,13 @@
                         >
                             <field name="module_fieldservice_route" />
                         </setting>
-                        <setting
-                            string="Check collected payments"
-                            help="Check the amount collected by the worker during the route"
-                            invisible="not module_fieldservice_route"
-                        >
-                        </setting>
-                        <setting
-                            string="Check inventory"
-                            help="Check the inventory of the vehicle at the end of the route"
-                            invisible="not module_fieldservice_route"
-                        >
-                        </setting>
                     </block>
-
-                    <block title="Mapping Tools" name="mapping_setting_container">
-                        <setting
-                            string="Use GeoEngine with OpenStreetMap"
-                            help="Display locations and orders on a map with OpenStreetMap"
-                        >
-                        </setting>
-                        <setting
-                            string="Allow Field Service Google Maps"
-                            help="Display locations and orders on a map with Google Maps"
-                        >
-                        </setting>
-                    </block>
+                    <!--
+                        Mapping Tools block removed: fieldservice_geoengine
+                        (base_geoengine dep) and fieldservice_google_map
+                        (web_view_google_map dep) NOT_INSTALLABLE on saas-19.3.
+                        Restore when upstream deps land.
+                    -->
                 </app>
             </xpath>
         </field>
