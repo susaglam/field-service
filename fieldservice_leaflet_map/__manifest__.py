@@ -14,6 +14,7 @@
     ],
     "data": [
         "views/fsm_location_views.xml",
+        "views/res_config_settings_views.xml",
     ],
     "installable": True,
     "assets": {
