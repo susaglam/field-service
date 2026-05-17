@@ -401,7 +401,7 @@
                     name="order_upcoming_month"
                 />
                 <separator />
-                <group expand="0" string="Group By">
+                <group>
                     <filter
                         name="territory_id"
                         string="Territory"
@@ -447,7 +447,7 @@
             <calendar
                 string="FSM Orders"
                 date_start="scheduled_date_start"
-                date_delay="scheduled_duration"
+                date_stop="scheduled_date_end"
                 color="stage_id"
             >
                 <field name="name" />

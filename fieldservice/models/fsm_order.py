@@ -248,7 +248,7 @@ class FSMOrder(models.Model):
     state_name = fields.Char(related="location_id.state_id.name", string="State")
     country_name = fields.Char(related="location_id.country_id.name", string="Country")
     phone = fields.Char(related="location_id.phone", string="Location Phone")
-    mobile = fields.Char(related="location_id.mobile")
+    # mobile related field removed: res.partner.mobile dropped in saas-19.3
 
     stage_name = fields.Char(related="stage_id.name", string="Stage Name")
     # Field for Stage Color

@@ -42,7 +42,7 @@
             <search string="Search Location Worker">
                 <field name="location_id" />
                 <field name="person_id" />
-                <group expand="0" string="Group By">
+                <group>
                     <filter
                         name="location_id"
                         string="Location"

@@ -12,7 +12,7 @@
                 <field name="district_id" />
                 <field name="region_id" />
                 <field name="person_id" />
-                <group expand="0" string="Group By">
+                <group>
                     <filter
                         name="person_id"
                         string="Worker"
