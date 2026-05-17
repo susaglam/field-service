@@ -84,17 +84,15 @@ class FSMRecurringOrder(models.Model):
 
     @api.depends("fsm_order_ids")
     def _compute_order_count(self):
-        data = self.env["fsm.order"].read_group(
+        data = self.env["fsm.order"]._read_group(
             [
                 ("fsm_recurring_id", "in", self.ids),
                 ("stage_id", "!=", self.env.ref("fieldservice.fsm_stage_cancelled").id),
             ],
-            ["fsm_recurring_id"],
-            ["fsm_recurring_id"],
+            groupby=["fsm_recurring_id"],
+            aggregates=["__count"],
         )
-        count_data = {
-            item["fsm_recurring_id"][0]: item["fsm_recurring_id_count"] for item in data
-        }
+        count_data = {recurring.id: count for recurring, count in data}
         for recurring in self:
             recurring.fsm_order_count = count_data.get(recurring.id, 0)
 
