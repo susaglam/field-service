@@ -5,7 +5,7 @@
     "name": "Field Service Web Timeline",
     "summary": "This module is a display timeline view of the Field Service"
     " order in Odoo.",
-    "version": "17.0.1.0.0",
+    "version": "saas~19.3.1.0.0",
     "category": "Field Service",
     "license": "AGPL-3",
     "author": "Open Source Integrators, Odoo Community Association (OCA)",
@@ -14,5 +14,6 @@
     "data": ["views/fsm_order.xml", "views/fsm_team.xml"],
     "development_status": "Beta",
     "maintainers": ["wolfhall", "max3903"],
-    "uninstall_hook": "uninstall_hook",
+    "uninstall_hook": "uninstall_hook",,
+    "installable": False
 }
