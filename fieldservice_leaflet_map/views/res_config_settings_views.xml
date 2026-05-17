@@ -39,6 +39,12 @@
                         <field name="fsm_map_auto_geocode" />
                     </setting>
                     <setting
+                        string="Default Map Layer"
+                        help="Which tile layer the Field Service map opens on by default. Users can still switch via the layer-switcher control on the top-right corner of the map."
+                    >
+                        <field name="fsm_map_default_layer" />
+                    </setting>
+                    <setting
                         string="Geocode All Locations Now"
                         help="Run OpenStreetMap geocoding on every existing Field Service location that does not yet have latitude/longitude set. Useful after enabling the map for the first time."
                     >

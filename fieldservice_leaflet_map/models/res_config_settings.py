@@ -21,6 +21,9 @@ class ResConfigSettings(models.TransientModel):
     fsm_map_auto_geocode = fields.Boolean(
         related="company_id.fsm_map_auto_geocode", readonly=False,
     )
+    fsm_map_default_layer = fields.Selection(
+        related="company_id.fsm_map_default_layer", readonly=False,
+    )
 
     def action_fsm_geocode_all_locations(self):
         partners = self.env["res.partner"].search(

@@ -35,3 +35,17 @@ class ResCompany(models.Model):
         "Field Service location after create/write so the partner_latitude / "
         "partner_longitude fields get filled and the marker appears on the map.",
     )
+    fsm_map_default_layer = fields.Selection(
+        [
+            ("OpenStreetMap", "OpenStreetMap (default)"),
+            ("OpenTopoMap", "OpenTopoMap (terrain)"),
+            ("Google Streets", "Google Streets"),
+            ("Google Satellite", "Google Satellite"),
+            ("Google Hybrid", "Google Hybrid (satellite + labels)"),
+        ],
+        string="Default Map Layer",
+        default="OpenStreetMap",
+        help="Which tile layer the Field Service map opens on by default. "
+        "Users can still switch to other layers from the layer-switcher "
+        "control on the top-right corner of the map.",
+    )

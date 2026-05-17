@@ -1,12 +1,7 @@
 /* saas-19.3 fix: leaflet view fits the action manager column exactly,
-   no right-side scrollbar. Previous h-100 cascades broke at the
-   .o_view_controller layer because the control panel (breadcrumb +
-   view switcher buttons) consumes vertical space that the map's
-   "height: 100%" was double-counting against the viewport.
-
-   Approach: make the leaflet root absolutely positioned inside its
-   view controller. inset: 0 fills exactly the available column,
-   independent of any height cascade above. */
+   no right-side scrollbar. Sidebar is now a floating overlay on top of
+   the map (position: absolute inside o_leaflet_main_container), so the
+   only thing that needs to stretch is the map container itself. */
 
 .o_action_manager {
     .o_view_controller {
@@ -19,12 +14,6 @@
     .o_leaflet_main_container {
         position: absolute;
         inset: 0;
-        display: flex;
-        overflow: hidden;
-    }
-
-    .o_leaflet_sidebar {
-        height: 100%;
         overflow: hidden;
     }
 

@@ -8,6 +8,12 @@
                 field_latitude="partner_latitude"
                 field_longitude="partner_longitude"
                 field_title="display_name"
+                field_address="street"
+                field_description="description"
+                field_extra_info="street2,city,zip,phone,owner_id,territory_id,team_id"
+                default_zoom="7"
+                focus_zoom="15"
+                show_sidebar="1"
             />
         </field>
     </record>
