@@ -23,14 +23,14 @@ class FSMLocation(models.Model):
         required=True,
         ondelete="restrict",
         delegate=True,
-        auto_join=True,
+        bypass_search_access=True,
     )
     owner_id = fields.Many2one(
         "res.partner",
         string="Related Owner",
         required=True,
         ondelete="restrict",
-        auto_join=True,
+        bypass_search_access=True,
     )
     contact_id = fields.Many2one(
         "res.partner",

@@ -20,7 +20,7 @@ class ChangeLog(models.Model):
         string="Changed By",
         default=lambda self: self.env.user,
         tracking=True,
-        required="1",
+        required=True,
     )
     tag_ids = fields.Many2many("change.log.tag", string="Tags")
     type_id = fields.Many2one("change.log.type", string="Type", required=True)

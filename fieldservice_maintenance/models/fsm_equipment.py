@@ -15,7 +15,7 @@ class FSMEquipment(models.Model):
         required=True,
         ondelete="restrict",
         delegate=True,
-        auto_join=True,
+        bypass_search_access=True,
         index=True,
     )
 

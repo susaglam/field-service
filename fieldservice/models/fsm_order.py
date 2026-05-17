@@ -240,7 +240,6 @@ class FSMOrder(models.Model):
     )
 
     # Fields for Geoengine Identify
-    display_name = fields.Char(related="name", string="Order")
     street = fields.Char(related="location_id.street")
     street2 = fields.Char(related="location_id.street2")
     zip = fields.Char(related="location_id.zip")

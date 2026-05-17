@@ -17,7 +17,7 @@ class FSMPerson(models.Model):
         required=True,
         ondelete="restrict",
         delegate=True,
-        auto_join=True,
+        bypass_search_access=True,
     )
     category_ids = fields.Many2many("fsm.category", string="Categories")
     calendar_id = fields.Many2one("resource.calendar", string="Working Schedule")
