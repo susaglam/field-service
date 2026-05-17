@@ -16,13 +16,10 @@ class FSMVehicle(models.Model):
         ondelete="restrict",
     )
 
-    _sql_constraints = [
-        (
-            "fsm_vehicle_fleet_uniq",
-            "unique(id,fleet_vehicle_id)",
-            "FSM vehicle can only be linked to one fleet vehicle",
-        )
-    ]
+    _fsm_vehicle_fleet_uniq = models.Constraint(
+        'unique(id,fleet_vehicle_id)',
+        'FSM vehicle can only be linked to one fleet vehicle',
+    )
 
     @api.model_create_multi
     def create(self, vals_list):

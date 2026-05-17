@@ -13,6 +13,7 @@ class ChangeLogTags(models.Model):
     description = fields.Text()
     color = fields.Integer(string="Color Index")
 
-    _sql_constraints = [
-        ("name_uniq", "unique (name)", "Tag name already exists!"),
-    ]
+    _name_uniq = models.Constraint(
+        'unique (name)',
+        'Tag name already exists!',
+    )

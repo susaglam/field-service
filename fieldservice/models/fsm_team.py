@@ -85,4 +85,7 @@ class FSMTeam(models.Model):
         help="Company related to this team",
     )
 
-    _sql_constraints = [("name_uniq", "unique (name)", "Team name already exists!")]
+    _name_uniq = models.Constraint(
+        'unique (name)',
+        'Team name already exists!',
+    )
