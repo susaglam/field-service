@@ -1,0 +1,11 @@
+/* saas-19.3 fix: web_view_leaflet_map renderer fits the available viewport
+   height. Without this the action-manager parent has no explicit height
+   and the .leaflet-container collapses to 0 (or relies on a tile load that
+   never completes when tile_url defaults to "False"). */
+.o_action_manager .o_leaflet_map_view,
+.o_action_manager .o_leaflet_map_view > div,
+.o_action_manager .leaflet-container {
+    height: 100% !important;
+    min-height: calc(100vh - 200px);
+    width: 100%;
+}
