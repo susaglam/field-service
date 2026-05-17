@@ -1,25 +1,41 @@
-/* saas-19.3 fix: leaflet view fits the action manager container exactly
-   with no overflow. The previous calc(100vh - 200px) approximation pushed
-   the container past the visible area on some pages, producing a right-side
-   scrollbar. Pure 100%-of-parent + min-height: 0 lets flexbox shrink the
-   map correctly inside .o_action_manager's viewport-pinned column. */
+/* saas-19.3 fix: leaflet view fits the action manager column exactly,
+   no right-side scrollbar. Previous h-100 cascades broke at the
+   .o_view_controller layer because the control panel (breadcrumb +
+   view switcher buttons) consumes vertical space that the map's
+   "height: 100%" was double-counting against the viewport.
 
-.o_action_manager .o_content,
-.o_action_manager .o_action {
-    overflow: hidden;
-}
+   Approach: make the leaflet root absolutely positioned inside its
+   view controller. inset: 0 fills exactly the available column,
+   independent of any height cascade above. */
 
-.o_action_manager .o_leaflet_main_container,
-.o_action_manager .o_leaflet_map_container,
-.o_action_manager .o_leaflet_map_view {
-    height: 100% !important;
-    min-height: 0 !important;
-    max-height: 100%;
-    width: 100%;
-    overflow: hidden;
-}
+.o_action_manager {
+    .o_view_controller {
+        &:has(.o_leaflet_main_container) {
+            position: relative;
+            overflow: hidden;
+        }
+    }
 
-.o_action_manager .leaflet-container {
-    height: 100% !important;
-    width: 100% !important;
+    .o_leaflet_main_container {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        overflow: hidden;
+    }
+
+    .o_leaflet_sidebar {
+        height: 100%;
+        overflow: hidden;
+    }
+
+    .o_leaflet_map_container {
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .leaflet-container {
+        height: 100% !important;
+        width: 100% !important;
+    }
 }
