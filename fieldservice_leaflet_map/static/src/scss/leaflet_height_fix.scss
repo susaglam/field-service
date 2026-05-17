@@ -1,11 +1,25 @@
-/* saas-19.3 fix: web_view_leaflet_map renderer fits the available viewport
-   height. Without this the action-manager parent has no explicit height
-   and the .leaflet-container collapses to 0 (or relies on a tile load that
-   never completes when tile_url defaults to "False"). */
-.o_action_manager .o_leaflet_map_view,
-.o_action_manager .o_leaflet_map_view > div,
+/* saas-19.3 fix: leaflet view fits the action manager container exactly
+   with no overflow. The previous calc(100vh - 200px) approximation pushed
+   the container past the visible area on some pages, producing a right-side
+   scrollbar. Pure 100%-of-parent + min-height: 0 lets flexbox shrink the
+   map correctly inside .o_action_manager's viewport-pinned column. */
+
+.o_action_manager .o_content,
+.o_action_manager .o_action {
+    overflow: hidden;
+}
+
+.o_action_manager .o_leaflet_main_container,
+.o_action_manager .o_leaflet_map_container,
+.o_action_manager .o_leaflet_map_view {
+    height: 100% !important;
+    min-height: 0 !important;
+    max-height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
 .o_action_manager .leaflet-container {
     height: 100% !important;
-    min-height: calc(100vh - 200px);
-    width: 100%;
+    width: 100% !important;
 }
