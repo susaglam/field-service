@@ -59,7 +59,7 @@
     </record>
 
     <record id="fieldservice.action_fsm_dash_order" model="ir.actions.act_window">
-        <field name="view_mode">kanban,tree,form,calendar,google_map</field>
+        <field name="view_mode">kanban,list,form,calendar,google_map</field>
     </record>
     <record
         id="action_fsm_dash_order_view_google_map"

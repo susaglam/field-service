@@ -15,5 +15,5 @@
     "development_status": "Beta",
     "maintainers": ["wolfhall", "max3903"],
     "uninstall_hook": "uninstall_hook",,
-    "installable": False
+    "installable": True
 }

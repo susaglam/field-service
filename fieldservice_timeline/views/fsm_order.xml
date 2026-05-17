@@ -16,9 +16,9 @@
         </field>
     </record>
     <record id="fieldservice.action_fsm_dash_order" model="ir.actions.act_window">
-        <field name="view_mode">kanban,tree,form,calendar,timeline</field>
+        <field name="view_mode">kanban,list,form,calendar,timeline</field>
     </record>
     <record id="fieldservice.action_fsm_operation_order" model="ir.actions.act_window">
-        <field name="view_mode">tree,form,calendar,timeline</field>
+        <field name="view_mode">list,form,calendar,timeline</field>
     </record>
 </odoo>

@@ -39,7 +39,7 @@
     <record id="change_log_impact_action" model="ir.actions.act_window">
         <field name="name">Change Log Impact Action</field>
         <field name="res_model">change.log.impact</field>
-        <field name="view_mode">tree,form</field>
+        <field name="view_mode">list,form</field>
     </record>
 
     <menuitem
