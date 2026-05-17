@@ -14,7 +14,6 @@ class FSMRouteDayRoute(models.Model):
         string='Invoice Count',
         compute='_compute_invoice_count', readonly=True)
 
-    @api.multi
     def write(self, values):
         result = super(FSMRouteDayRoute, self).write(values)
         for rec in self:
@@ -36,7 +35,7 @@ class FSMRouteDayRoute(models.Model):
                             'name': rec.name,
                             'account_id':
                                 route_payment.journal_id.
-                                default_credit_account_id.id,
+                                default_account_id.id,
                             'credit': amount,
                         })]
                         route_payment.move_id = \
@@ -45,7 +44,7 @@ class FSMRouteDayRoute(models.Model):
                                 'ref': rec.name,
                                 'line_ids': lines,
                             })
-                        route_payment.move_id.post()
+                        route_payment.move_id._post()
         return result
 
     @api.depends('order_ids.invoice_count')
@@ -54,10 +53,9 @@ class FSMRouteDayRoute(models.Model):
             for order in dayroute.order_ids:
                 dayroute.invoice_count += order.invoice_count
 
-    @api.multi
     def action_view_invoices(self):
         action = self.env.ref(
-            'account.action_invoice_tree1').read()[0]
+            'account.action_move_out_invoice_type').read()[0]
         invoice_ids = []
         for order in self.order_ids:
             for invoice in order.invoice_ids:
@@ -66,6 +64,6 @@ class FSMRouteDayRoute(models.Model):
             action['domain'] = [('id', 'in', invoice_ids)]
         elif self.invoice_count == 1:
             action['views'] = \
-                [(self.env.ref('account.invoice_form').id, 'form')]
+                [(self.env.ref('account.view_move_form').id, 'form')]
             action['res_id'] = invoice_ids[0]
         return action

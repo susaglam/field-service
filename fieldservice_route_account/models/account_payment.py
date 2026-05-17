@@ -8,7 +8,7 @@ class AccountPayment(models.Model):
     _inherit = "account.payment"
 
     def post(self):
-        res = super().post()
+        res = super()._post()
         dayroute_payment_obj = self.env['fsm.route.dayroute.payment']
         for rec in self:
             for fsm_order_rec in rec.fsm_order_ids:
