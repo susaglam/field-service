@@ -49,7 +49,7 @@ class TestFieldServiceSaleAgreementEquipmentStock(TestSaleCommon):
         self.order.action_confirm()
         self.assertTrue(self.order.picking_ids, "The Picking should've been created")
         stock_move = self.order.picking_ids.move_ids
-        stock_move._set_quantity_done(1.0)
+        stock_move.quantity = 1.0
         stock_move.picked = True
         stock_move_line = stock_move.move_line_ids
         stock_move_line.lot_name = "TEST"
