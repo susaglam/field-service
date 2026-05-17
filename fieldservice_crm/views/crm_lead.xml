@@ -31,12 +31,8 @@
             >
                 <field name="fsm_location_id" groups="fieldservice.group_fsm_user" />
             </xpath>
-            <xpath
-                expr="//group[@name='opportunity_partner']/field[@name='partner_id']"
-                position="after"
-            >
-                <field name="fsm_location_id" groups="fieldservice.group_fsm_user" />
-            </xpath>
+            <!-- opportunity_partner group merged into lead_partner in saas-19.3 -->
+
         </field>
     </record>
     <record id="fieldservice_crm_list_view" model="ir.ui.view">
