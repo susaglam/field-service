@@ -15,7 +15,7 @@
     "data": [
         "views/fsm_location_views.xml",
     ],
-    "installable": True,,
+    "installable": True,
     "assets": {
         "web.assets_web": [
             "fieldservice_leaflet_map/static/src/scss/leaflet_height_fix.scss",
