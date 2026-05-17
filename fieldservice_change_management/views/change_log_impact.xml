@@ -10,11 +10,11 @@
         <field name="name">Change Log Impact List View</field>
         <field name="model">change.log.impact</field>
         <field name="arch" type="xml">
-            <tree editable="top">
+            <list editable="top">
                 <field name="log_impact_sequence" widget="handle" />
                 <field name="name" />
                 <field name="description" />
-            </tree>
+            </list>
         </field>
     </record>
 

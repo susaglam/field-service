@@ -10,11 +10,11 @@
         <field name="name">Change Log Type List View</field>
         <field name="model">change.log.type</field>
         <field name="arch" type="xml">
-            <tree editable="top">
+            <list editable="top">
                 <field name="log_type_sequence" widget="handle" />
                 <field name="name" />
                 <field name="description" />
-            </tree>
+            </list>
         </field>
     </record>
 

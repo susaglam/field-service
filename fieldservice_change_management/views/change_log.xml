@@ -3,7 +3,7 @@
         <field name="name">Change Logs</field>
         <field name="model">change.log</field>
         <field name="arch" type="xml">
-            <tree>
+            <list>
                 <field name="name" />
                 <field name="location_id" />
                 <field name="type_id" />
@@ -13,7 +13,7 @@
                 <field name="stage_id" />
                 <field name="user_id" />
                 <field name="implemented_on" />
-            </tree>
+            </list>
         </field>
     </record>
 
@@ -33,7 +33,7 @@
                 <sheet>
                     <div class="oe_button_box" name="button_box">
                         <button
-                            name="toggle_active"
+                            name="action_archive"
                             type="object"
                             class="oe_stat_button"
                             icon="fa-archive"
@@ -103,7 +103,7 @@
                     domain="[('active','=',False)]"
                     name="archive"
                 />
-                <group expand="0" string="Group By">
+                <group>
                     <filter
                         string="Changed By"
                         name="user_id"
