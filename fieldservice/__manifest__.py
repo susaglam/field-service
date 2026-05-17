@@ -3,12 +3,13 @@
 {
     "name": "Field Service",
     "summary": "Manage Field Service Locations, Workers and Orders",
-    "version": "18.0.5.6.0",
+    "version": "saas~19.3.5.6.0",
     "license": "AGPL-3",
     "category": "Field Service",
     "author": "Open Source Integrators, Odoo Community Association (OCA)",
     "website": "https://github.com/OCA/field-service",
     "depends": ["base_territory", "base_geolocalize", "resource", "contacts"],
+    "installable": True,
     "data": [
         "data/ir_sequence.xml",
         "data/mail_message_subtype.xml",
@@ -47,7 +48,7 @@
     "development_status": "Production/Stable",
     "maintainers": ["max3903", "brian10048"],
     "assets": {
-        "web.assets_backend": [
+        "web.assets_web": [
             "fieldservice/static/src/scss/team_dashboard.scss",
         ]
     },

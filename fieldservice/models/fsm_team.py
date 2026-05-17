@@ -13,40 +13,40 @@ class FSMTeam(models.Model):
         return self.env["fsm.stage"].search([("is_default", "=", True)])
 
     def _compute_order_count(self):
-        order_data = self.env["fsm.order"].read_group(
+        order_data = self.env["fsm.order"]._read_group(
             [("team_id", "in", self.ids), ("stage_id.is_closed", "=", False)],
-            ["team_id"],
-            ["team_id"],
+            groupby=["team_id"],
+            aggregates=["__count"],
         )
-        result = {data["team_id"][0]: int(data["team_id_count"]) for data in order_data}
+        result = {team.id: count for team, count in order_data}
         for team in self:
             team.order_count = result.get(team.id, 0)
 
     def _compute_order_need_assign_count(self):
-        order_data = self.env["fsm.order"].read_group(
+        order_data = self.env["fsm.order"]._read_group(
             [
                 ("team_id", "in", self.ids),
                 ("person_id", "=", False),
                 ("stage_id.is_closed", "=", False),
             ],
-            ["team_id"],
-            ["team_id"],
+            groupby=["team_id"],
+            aggregates=["__count"],
         )
-        result = {data["team_id"][0]: int(data["team_id_count"]) for data in order_data}
+        result = {team.id: count for team, count in order_data}
         for team in self:
             team.order_need_assign_count = result.get(team.id, 0)
 
     def _compute_order_need_schedule_count(self):
-        order_data = self.env["fsm.order"].read_group(
+        order_data = self.env["fsm.order"]._read_group(
             [
                 ("team_id", "in", self.ids),
                 ("scheduled_date_start", "=", False),
                 ("stage_id.is_closed", "=", False),
             ],
-            ["team_id"],
-            ["team_id"],
+            groupby=["team_id"],
+            aggregates=["__count"],
         )
-        result = {data["team_id"][0]: int(data["team_id_count"]) for data in order_data}
+        result = {team.id: count for team, count in order_data}
         for team in self:
             team.order_need_schedule_count = result.get(team.id, 0)
 

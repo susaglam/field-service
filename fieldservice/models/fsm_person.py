@@ -28,11 +28,16 @@ class FSMPerson(models.Model):
         related="partner_id.active", readonly=True, string="Partner is Active"
     )
 
-    def toggle_active(self):
-        for person in self:
-            if not person.active and not person.partner_id.active:
-                person.partner_id.toggle_active()
-        return super().toggle_active()
+    def action_unarchive(self):
+        # Mirror the pre-saas-19.x toggle_active cascade: reactivating a
+        # worker brings its partner back too if the partner is also
+        # archived. Archives do NOT cascade — only unarchives.
+        partners_to_unarchive = self.mapped("partner_id").filtered(
+            lambda p: not p.active
+        )
+        res = super().action_unarchive()
+        partners_to_unarchive.action_unarchive()
+        return res
 
     @api.model
     def _search(

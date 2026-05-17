@@ -15,14 +15,14 @@ class FSMPerson(TransactionCase):
         # Create a person
         test_worker_one = self.Worker.create({"name": "Worker One"})
         self.assertTrue(test_worker_one.fsm_person)
-        # Test toggle_active
-        test_worker_one.toggle_active()
+        # Test archive/unarchive (saas-19.x: toggle_active was removed)
+        test_worker_one.action_archive()
         self.assertTrue(
             test_worker_one.partner_id.active,
             "Partner related to FSM Person should remain active",
         )
-        test_worker_one.partner_id.toggle_active()
-        test_worker_one.toggle_active()
+        test_worker_one.partner_id.action_archive()
+        test_worker_one.action_unarchive()
         self.assertTrue(
             test_worker_one.partner_id.active,
             "Activating FSM Person must make related partner active",
