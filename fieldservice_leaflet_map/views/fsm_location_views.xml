@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="view_fsm_location_leaflet_map" model="ir.ui.view">
+        <field name="name">fsm.location.leaflet_map</field>
+        <field name="model">fsm.location</field>
+        <field name="arch" type="xml">
+            <leaflet_map
+                field_latitude="partner_latitude"
+                field_longitude="partner_longitude"
+                field_title="display_name"
+            />
+        </field>
+    </record>
+
+    <record id="fieldservice.action_fsm_location" model="ir.actions.act_window">
+        <field name="view_mode">kanban,list,form,leaflet_map</field>
+    </record>
+
+    <record id="action_fsm_location_view_leaflet_map" model="ir.actions.act_window.view">
+        <field name="sequence" eval="3" />
+        <field name="view_mode">leaflet_map</field>
+        <field name="view_id" ref="view_fsm_location_leaflet_map" />
+        <field name="act_window_id" ref="fieldservice.action_fsm_location" />
+    </record>
+</odoo>
