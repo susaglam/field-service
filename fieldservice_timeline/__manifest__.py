@@ -14,6 +14,6 @@
     "data": ["views/fsm_order.xml", "views/fsm_team.xml"],
     "development_status": "Beta",
     "maintainers": ["wolfhall", "max3903"],
-    "uninstall_hook": "uninstall_hook",,
-    "installable": True
+    "uninstall_hook": "uninstall_hook",
+    "installable": True,
 }

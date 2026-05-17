@@ -22,6 +22,6 @@
     "maintainers": [
         "wolfhall",
         "max3903",
-    ],,
+    ],
     "installable": False,
 }

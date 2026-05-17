@@ -23,6 +23,6 @@
         ]
     },
     "development_status": "Beta",
-    "maintainers": ["wolfhall", "max3903"],,
+    "maintainers": ["wolfhall", "max3903"],
     "installable": False
 }

@@ -21,6 +21,6 @@
     'development_status': 'Beta',
     'maintainers': [
         'max3903',
-    ],,
+    ],
     'installable': False,
 }
