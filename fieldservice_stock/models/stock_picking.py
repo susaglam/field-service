@@ -6,6 +6,8 @@ from odoo import fields, models
 class StockPicking(models.Model):
     _inherit = "stock.picking"
 
+    # Was: related="group_id.fsm_order_id" — procurement.group removed in saas-19.3.
+    # Now standalone; populated directly by callers (e.g. fieldservice_sale_stock).
     fsm_order_id = fields.Many2one(
-        related="group_id.fsm_order_id", string="Field Service Order", store=True
+        "fsm.order", string="Field Service Order", index=True, copy=False
     )

@@ -23,9 +23,7 @@ class FSMOrder(models.Model):
     delivery_count = fields.Integer(
         string="Delivery Orders", compute="_compute_picking_ids"
     )
-    procurement_group_id = fields.Many2one(
-        "procurement.group", "Procurement Group", copy=False
-    )
+    # procurement_group_id removed: procurement.group model gone in saas-19.3
     inventory_location_id = fields.Many2one(
         related="location_id.inventory_location_id",
     )
