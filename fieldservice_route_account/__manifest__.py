@@ -4,7 +4,7 @@
 
 {
     'name': 'Field Service Route Account',
-    'version': '12.0.1.1.1',
+    'version': 'saas~19.3.1.1.1',
     'category': 'Field Service',
     'author': 'Open Source Integrators, Odoo Community Association (OCA)',
     'website': 'https://github.com/OCA/field-service',
@@ -20,5 +20,6 @@
     'development_status': 'Beta',
     'maintainers': [
         'max3903',
-    ],
+    ],,
+    'installable': False,
 }
