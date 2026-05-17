@@ -17,15 +17,12 @@
         </field>
     </record>
 
-    <record id="fsm_equipment_tree_view_model" model="ir.ui.view">
-        <field name="name">fsm.equipment.model</field>
-        <field name="model">fsm.equipment</field>
-        <field name="inherit_id" ref="fieldservice.fsm_equipment_tree_view" />
-        <field name="arch" type="xml">
-            <field name="name" position="after">
-                <field name="category_id" />
-            </field>
-        </field>
-    </record>
+    <!--
+        Tree view inheritance dropped in saas-19.3: list-view validation runs
+        before _inherits delegate-field resolution, so 'category_id' (delegate
+        from maintenance.equipment) is rejected as "Field does not exist".
+        Form view inheritance below works because form validation tolerates it.
+        Restore this block when a proper saas-19.3 pattern emerges.
+    -->
 
 </odoo>

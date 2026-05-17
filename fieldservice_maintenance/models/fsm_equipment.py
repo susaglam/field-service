@@ -6,6 +6,8 @@ from odoo import api, fields, models
 
 class FSMEquipment(models.Model):
     _inherit = "fsm.equipment"
+    # saas-19.3 requires explicit _inherits when using delegate=True
+    _inherits = {"maintenance.equipment": "maintenance_equipment_id"}
 
     maintenance_equipment_id = fields.Many2one(
         "maintenance.equipment",
