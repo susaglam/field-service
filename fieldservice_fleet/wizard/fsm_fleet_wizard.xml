@@ -7,7 +7,7 @@
         <field name="target">new</field>
         <field name="binding_model_id" ref="fleet.model_fleet_vehicle" />
         <field
-            name="groups_id"
+            name="group_ids"
             eval="[(4, ref('fieldservice.group_fsm_dispatcher'))]"
         />
     </record>
