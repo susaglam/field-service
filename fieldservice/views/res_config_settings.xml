@@ -207,14 +207,12 @@
                             help="Check the amount collected by the worker during the route"
                             invisible="not module_fieldservice_route"
                         >
-                            <field name="module_fieldservice_route_account" />
                         </setting>
                         <setting
                             string="Check inventory"
                             help="Check the inventory of the vehicle at the end of the route"
                             invisible="not module_fieldservice_route"
                         >
-                            <field name="module_fieldservice_route_stock" />
                         </setting>
                     </block>
 
@@ -223,13 +221,11 @@
                             string="Use GeoEngine with OpenStreetMap"
                             help="Display locations and orders on a map with OpenStreetMap"
                         >
-                            <field name="module_fieldservice_geoengine" />
                         </setting>
                         <setting
                             string="Allow Field Service Google Maps"
                             help="Display locations and orders on a map with Google Maps"
                         >
-                            <field name="module_fieldservice_google_map" />
                         </setting>
                     </block>
                 </app>

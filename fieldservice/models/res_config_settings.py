@@ -37,10 +37,6 @@ class ResConfigSettings(models.TransientModel):
     module_fieldservice_fleet = fields.Boolean(
         string="Link FSM vehicles to Fleet vehicles"
     )
-    module_fieldservice_geoengine = fields.Boolean(string="Use GeoEngine")
-    module_fieldservice_google_map = fields.Boolean(
-        string="Allow Field Service Google Map"
-    )
     module_fieldservice_location_builder = fields.Boolean(
         string="Use FSM Location Builder"
     )
@@ -56,12 +52,6 @@ class ResConfigSettings(models.TransientModel):
         string="Link FSM orders to MRP Repair orders"
     )
     module_fieldservice_route = fields.Boolean(string="Manage routes")
-    module_fieldservice_route_account = fields.Boolean(
-        string="Check the amount collected during the route"
-    )
-    module_fieldservice_route_stock = fields.Boolean(
-        string="Check the inventory of the vehicle at the end of the route"
-    )
     module_fieldservice_sale = fields.Boolean(string="Sell FSM orders")
     module_fieldservice_size = fields.Boolean(
         string="Manage sizes for orders and locations"
