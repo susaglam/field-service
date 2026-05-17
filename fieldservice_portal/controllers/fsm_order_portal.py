@@ -4,7 +4,7 @@ from operator import itemgetter
 from odoo import _, http
 from odoo.exceptions import AccessError
 from odoo.http import request
-from odoo.osv.expression import OR
+from odoo.fields import Domain
 from odoo.tools import groupby as groupbyelem
 
 from odoo.addons.portal.controllers.portal import CustomerPortal
@@ -117,7 +117,7 @@ class CustomerPortal(CustomerPortal):
                 for (k, v) in searchbar_inputs.items()
                 if search_in in (v["input"], "all") and k != "all"
             ]:
-                search_domain = OR(
+                search_domain = Domain.OR(
                     [search_domain, [(search_property, "ilike", search)]]
                 )
             domain += search_domain
