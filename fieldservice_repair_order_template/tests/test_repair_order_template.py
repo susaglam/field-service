@@ -14,7 +14,7 @@ class TestRepairOrderTemplate(TransactionCase):
     def setUpClass(cls):
         super().setUpClass()
         cls.env = cls.env(context=dict(cls.env.context, **DISABLED_MAIL_CONTEXT))
-        cls.env.user.groups_id += cls.env.ref("fieldservice.group_fsm_template")
+        cls.env.user.group_ids += cls.env.ref("fieldservice.group_fsm_template")
         cls.repair_template = cls.env.ref(
             "repair_order_template.repair_order_template_demo"
         )
