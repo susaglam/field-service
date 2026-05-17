@@ -24,11 +24,6 @@
                     <field name="country_name" class="o_address_country" />
                 </div>
 
-                <div invisible="not mobile">
-                    <i class="fa fa-mobile text-info me-2 fa-lg" title="Mobile" />
-                    <field name="mobile" />
-                </div>
-
                 <div invisible="not phone">
                     <i class="fa fa-phone text-info me-1" title="Phone" />
                     <field name="phone" />
