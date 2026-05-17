@@ -191,7 +191,7 @@
                             <field name="module_fieldservice_size" />
                         </setting>
                         <setting string="Allow Field Service Web Timeline View">
-                            <field name="module_fieldservice_web_timeline_view" />
+                            <field name="module_fieldservice_timeline" />
                         </setting>
                     </block>
 
