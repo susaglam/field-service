@@ -48,7 +48,7 @@ class TestStockMove(TransactionCase):
                 "location_dest_id": self.stock_location.id,
                 "name": "MOVE INCOMING -> STOCK ",
                 "product_id": productA.id,
-                "product_uom": productA.uom_id.id,
+                "uom_id": productA.uom_id.id,
                 "product_uom_qty": 2,
             }
         )
