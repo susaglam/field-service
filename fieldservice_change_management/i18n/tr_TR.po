@@ -136,6 +136,30 @@ msgid "Change Logs for"
 msgstr "Değişiklik Kayıtları"
 
 #. module: fieldservice_change_management
+#: model:ir.actions.act_window,name:fieldservice_change_management.change_log_action
+#: model:ir.ui.menu,name:fieldservice_change_management.change_log_menu
+msgid "Location Change History"
+msgstr "Konum Değişiklik Geçmişi"
+
+#. module: fieldservice_change_management
+#: model_terms:ir.actions.act_window,help:fieldservice_change_management.change_log_action
+msgid "Log a change made at a Field Service location"
+msgstr "Bir Saha Servis konumunda yapılan değişikliği kaydedin"
+
+#. module: fieldservice_change_management
+#: model_terms:ir.actions.act_window,help:fieldservice_change_management.change_log_action
+msgid ""
+"Use this journal to track structural, electrical, plumbing, HVAC, or "
+"configuration changes at your service locations. Each entry has a stage "
+"(Draft → In Progress → Implemented), an impact level, a type, and a "
+"free-text description."
+msgstr ""
+"Servis konumlarınızdaki yapısal, elektrik, tesisat, HVAC veya "
+"konfigürasyon değişikliklerini takip etmek için bu kayıt defterini "
+"kullanın. Her giriş bir aşama (Taslak → Devam Ediyor → Uygulandı), bir "
+"etki seviyesi, bir tür ve serbest metin açıklama içerir."
+
+#. module: fieldservice_change_management
 #: model:ir.model.fields,field_description:fieldservice_change_management.field_change_log__user_id
 #: model_terms:ir.ui.view,arch_db:fieldservice_change_management.change_log_view_search
 #: model_terms:ir.ui.view,arch_db:fieldservice_change_management.report_change_log_document

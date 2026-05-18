@@ -135,9 +135,29 @@
     </record>
 
     <record id="change_log_action" model="ir.actions.act_window">
-        <field name="name">Change Logs</field>
+        <field name="name">Location Change History</field>
         <field name="res_model">change.log</field>
         <field name="view_mode">list,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Log a change made at a Field Service location
+            </p>
+            <p>
+                Use this journal to track structural, electrical, plumbing,
+                HVAC, or configuration changes at your service locations.
+                Each entry has a stage (Draft → In Progress → Implemented),
+                an impact level, a type, and a free-text description.
+            </p>
+            <p>
+                Examples:
+                <br /><b>Installation:</b> "Replaced 3 radiators with
+                low-temperature units" — Impact: Major
+                <br /><b>Configuration:</b> "Re-zoned heating circuit
+                upstairs/downstairs" — Impact: Moderate
+                <br /><b>Repair:</b> "Replaced shower mixer cartridge" —
+                Impact: Minor
+            </p>
+        </field>
     </record>
 
     <menuitem
@@ -149,7 +169,7 @@
     />
 
     <menuitem
-        name="Change Logs"
+        name="Location Change History"
         id="change_log_menu"
         parent="change_log_root_menu"
         sequence="10"
