@@ -1,10 +1,18 @@
 # Copyright 2026 saas-19.3 port
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
-from odoo import api, models
+from odoo import api, fields, models
 
 
 class FSMLocation(models.Model):
     _inherit = "fsm.location"
+
+    description = fields.Text(
+        string="Description",
+        help="Free-text description of this Field Service location. Shown "
+        "as an italic block in the Leaflet map popup so dispatchers see "
+        "site-specific notes (access codes, parking, contact tips) at a "
+        "glance without opening the form.",
+    )
 
     def _auto_geocode_if_enabled(self):
         for rec in self:

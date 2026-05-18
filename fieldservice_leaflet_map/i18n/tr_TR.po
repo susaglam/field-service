@@ -1,0 +1,252 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* fieldservice_leaflet_map
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server saas~19.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-18 08:42+0000\n"
+"PO-Revision-Date: 2026-05-18 08:42+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: tr_TR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=(n>1);\n"
+
+#. module: fieldservice_leaflet_map
+#: model:ir.model.fields,field_description:fieldservice_leaflet_map.field_res_company__fsm_map_auto_geocode
+#: model:ir.model.fields,field_description:fieldservice_leaflet_map.field_res_config_settings__fsm_map_auto_geocode
+#: model_terms:ir.ui.view,arch_db:fieldservice_leaflet_map.res_config_settings_view_form_fsm_map
+msgid "Auto-Geocode New Locations"
+msgstr "Yeni Konumları Otomatik Geokodla"
+
+#. module: fieldservice_leaflet_map
+#: model:ir.model.fields,field_description:fieldservice_leaflet_map.field_res_company__fsm_map_fit_bounds
+#: model:ir.model.fields,field_description:fieldservice_leaflet_map.field_res_config_settings__fsm_map_fit_bounds
+#: model_terms:ir.ui.view,arch_db:fieldservice_leaflet_map.res_config_settings_view_form_fsm_map
+msgid "Auto-fit Map to Locations"
+msgstr "Haritayı Konumlara Otomatik Sığdır"
+
+#. module: fieldservice_leaflet_map
+#: model_terms:ir.ui.view,arch_db:fieldservice_leaflet_map.res_config_settings_view_form_fsm_map
+msgid ""
+"Automatically run OpenStreetMap geocoding (Nominatim) on every Field Service"
+" location after create or address change. Without this you must run 'Geocode"
+" All Locations' manually to populate latitude/longitude."
+msgstr ""
+"Saha Servis konumu oluşturulduğunda veya adresi değiştirildiğinde "
+"OpenStreetMap geokodlamasını (Nominatim) otomatik çalıştırır. Bu seçenek "
+"kapalı olduğunda enlem/boylam değerlerini doldurmak için 'Tüm Konumları "
+"Geokodla' işlemini elle çalıştırmanız gerekir."
+
+#. module: fieldservice_leaflet_map
+#: model:ir.model.fields,help:fieldservice_leaflet_map.field_res_company__fsm_map_auto_geocode
+#: model:ir.model.fields,help:fieldservice_leaflet_map.field_res_config_settings__fsm_map_auto_geocode
+msgid ""
+"Automatically run OpenStreetMap geocoding (Nominatim) on every Field Service"
+" location after create/write so the partner_latitude / partner_longitude "
+"fields get filled and the marker appears on the map."
+msgstr ""
+"Her Saha Servis konumu için create/write işleminden sonra OpenStreetMap "
+"geokodlamasını (Nominatim) otomatik çalıştırarak partner_latitude / "
+"partner_longitude alanlarını doldurur ve işaretçinin haritada görünmesini "
+"sağlar."
+
+#. module: fieldservice_leaflet_map
+#: model:ir.model,name:fieldservice_leaflet_map.model_res_company
+msgid "Company"
+msgstr "Şirket"
+
+#. module: fieldservice_leaflet_map
+#: model:ir.model,name:fieldservice_leaflet_map.model_res_config_settings
+msgid "Config Settings"
+msgstr "Yapılandırma Ayarları"
+
+#. module: fieldservice_leaflet_map
+#: model:ir.model.fields,field_description:fieldservice_leaflet_map.field_res_company__fsm_map_default_latitude
+#: model:ir.model.fields,field_description:fieldservice_leaflet_map.field_res_config_settings__fsm_map_default_latitude
+#: model_terms:ir.ui.view,arch_db:fieldservice_leaflet_map.res_config_settings_view_form_fsm_map
+msgid "Default Map Latitude"
+msgstr "Varsayılan Harita Enlemi"
+
+#. module: fieldservice_leaflet_map
+#: model:ir.model.fields,field_description:fieldservice_leaflet_map.field_res_company__fsm_map_default_layer
+#: model:ir.model.fields,field_description:fieldservice_leaflet_map.field_res_config_settings__fsm_map_default_layer
+#: model_terms:ir.ui.view,arch_db:fieldservice_leaflet_map.res_config_settings_view_form_fsm_map
+msgid "Default Map Layer"
+msgstr "Varsayılan Harita Katmanı"
+
+#. module: fieldservice_leaflet_map
+#: model:ir.model.fields,field_description:fieldservice_leaflet_map.field_res_company__fsm_map_default_longitude
+#: model:ir.model.fields,field_description:fieldservice_leaflet_map.field_res_config_settings__fsm_map_default_longitude
+#: model_terms:ir.ui.view,arch_db:fieldservice_leaflet_map.res_config_settings_view_form_fsm_map
+msgid "Default Map Longitude"
+msgstr "Varsayılan Harita Boylamı"
+
+#. module: fieldservice_leaflet_map
+#: model:ir.model.fields,field_description:fieldservice_leaflet_map.field_res_company__fsm_map_default_zoom
+#: model:ir.model.fields,field_description:fieldservice_leaflet_map.field_res_config_settings__fsm_map_default_zoom
+#: model_terms:ir.ui.view,arch_db:fieldservice_leaflet_map.res_config_settings_view_form_fsm_map
+msgid "Default Map Zoom"
+msgstr "Varsayılan Harita Yakınlaştırması"
+
+#. module: fieldservice_leaflet_map
+#: model:ir.model.fields,field_description:fieldservice_leaflet_map.field_fsm_location__display_name
+#: model:ir.model.fields,field_description:fieldservice_leaflet_map.field_res_company__display_name
+#: model:ir.model.fields,field_description:fieldservice_leaflet_map.field_res_config_settings__display_name
+#: model:ir.model.fields,field_description:fieldservice_leaflet_map.field_res_users__display_name
+msgid "Display Name"
+msgstr "Görünen Ad"
+
+#. module: fieldservice_leaflet_map
+#: model:ir.model,name:fieldservice_leaflet_map.model_fsm_location
+msgid "Field Service Location"
+msgstr "Saha Servis Konumu"
+
+#. module: fieldservice_leaflet_map
+#: model_terms:ir.ui.view,arch_db:fieldservice_leaflet_map.res_config_settings_view_form_fsm_map
+msgid "Geocode All Locations Now"
+msgstr "Tüm Konumları Şimdi Geokodla"
+
+#. module: fieldservice_leaflet_map
+#: model:ir.model.fields.selection,name:fieldservice_leaflet_map.selection__res_company__fsm_map_default_layer__google_hybrid
+msgid "Google Hybrid (satellite + labels)"
+msgstr "Google Karma (uydu + etiketler)"
+
+#. module: fieldservice_leaflet_map
+#: model:ir.model.fields.selection,name:fieldservice_leaflet_map.selection__res_company__fsm_map_default_layer__google_satellite
+msgid "Google Satellite"
+msgstr "Google Uydu"
+
+#. module: fieldservice_leaflet_map
+#: model:ir.model.fields.selection,name:fieldservice_leaflet_map.selection__res_company__fsm_map_default_layer__google_streets
+msgid "Google Streets"
+msgstr "Google Sokak"
+
+#. module: fieldservice_leaflet_map
+#: model:ir.model.fields,field_description:fieldservice_leaflet_map.field_fsm_location__id
+#: model:ir.model.fields,field_description:fieldservice_leaflet_map.field_res_company__id
+#: model:ir.model.fields,field_description:fieldservice_leaflet_map.field_res_config_settings__id
+#: model:ir.model.fields,field_description:fieldservice_leaflet_map.field_res_users__id
+msgid "ID"
+msgstr "Kimlik"
+
+#. module: fieldservice_leaflet_map
+#: model_terms:ir.ui.view,arch_db:fieldservice_leaflet_map.res_config_settings_view_form_fsm_map
+msgid ""
+"Initial zoom level (1=world, 18=street level). 7 is a good country-scale "
+"default."
+msgstr ""
+"Başlangıç yakınlaştırma seviyesi (1=dünya, 18=sokak seviyesi). "
+"Ülke ölçeği için 7 iyi bir varsayılandır."
+
+#. module: fieldservice_leaflet_map
+#: model:ir.model.fields,help:fieldservice_leaflet_map.field_res_company__fsm_map_default_zoom
+#: model:ir.model.fields,help:fieldservice_leaflet_map.field_res_config_settings__fsm_map_default_zoom
+msgid ""
+"Initial zoom level when the Field Service map opens (1=world, 18=street)."
+msgstr ""
+"Saha Servis haritası açıldığındaki başlangıç yakınlaştırma seviyesi "
+"(1=dünya, 18=sokak)."
+
+#. module: fieldservice_leaflet_map
+#: model_terms:ir.ui.view,arch_db:fieldservice_leaflet_map.res_config_settings_view_form_fsm_map
+msgid "Map Settings"
+msgstr "Harita Ayarları"
+
+#. module: fieldservice_leaflet_map
+#: model:ir.model.fields,help:fieldservice_leaflet_map.field_res_company__fsm_map_default_latitude
+#: model:ir.model.fields,help:fieldservice_leaflet_map.field_res_config_settings__fsm_map_default_latitude
+msgid "Map center latitude when no location is in view (NL default ~52.1)."
+msgstr ""
+"Görüntüde konum yokken haritanın merkez enlemi (Hollanda varsayılanı ~52.1)."
+
+#. module: fieldservice_leaflet_map
+#: model_terms:ir.ui.view,arch_db:fieldservice_leaflet_map.res_config_settings_view_form_fsm_map
+msgid "Map center latitude when the map opens empty (NL default ~52.1)."
+msgstr ""
+"Harita boş açıldığında merkez enlemi (Hollanda varsayılanı ~52.1)."
+
+#. module: fieldservice_leaflet_map
+#: model:ir.model.fields,help:fieldservice_leaflet_map.field_res_company__fsm_map_default_longitude
+#: model:ir.model.fields,help:fieldservice_leaflet_map.field_res_config_settings__fsm_map_default_longitude
+msgid "Map center longitude when no location is in view (NL default ~5.3)."
+msgstr ""
+"Görüntüde konum yokken haritanın merkez boylamı (Hollanda varsayılanı ~5.3)."
+
+#. module: fieldservice_leaflet_map
+#: model_terms:ir.ui.view,arch_db:fieldservice_leaflet_map.res_config_settings_view_form_fsm_map
+msgid "Map center longitude when the map opens empty (NL default ~5.3)."
+msgstr ""
+"Harita boş açıldığında merkez boylamı (Hollanda varsayılanı ~5.3)."
+
+#. module: fieldservice_leaflet_map
+#: model:ir.model.fields.selection,name:fieldservice_leaflet_map.selection__res_company__fsm_map_default_layer__openstreetmap
+msgid "OpenStreetMap (default)"
+msgstr "OpenStreetMap (varsayılan)"
+
+#. module: fieldservice_leaflet_map
+#: model:ir.model.fields.selection,name:fieldservice_leaflet_map.selection__res_company__fsm_map_default_layer__opentopomap
+msgid "OpenTopoMap (terrain)"
+msgstr "OpenTopoMap (arazi)"
+
+#. module: fieldservice_leaflet_map
+#: model_terms:ir.ui.view,arch_db:fieldservice_leaflet_map.res_config_settings_view_form_fsm_map
+msgid "Run Geocoding"
+msgstr "Geokodlamayı Çalıştır"
+
+#. module: fieldservice_leaflet_map
+#: model_terms:ir.ui.view,arch_db:fieldservice_leaflet_map.res_config_settings_view_form_fsm_map
+msgid ""
+"Run OpenStreetMap geocoding on every existing Field Service location that "
+"does not yet have latitude/longitude set. Useful after enabling the map for "
+"the first time."
+msgstr ""
+"Henüz enlem/boylam değeri girilmemiş tüm Saha Servis konumlarında "
+"OpenStreetMap geokodlamasını çalıştırır. Haritayı ilk kez "
+"etkinleştirdikten sonra kullanışlıdır."
+
+#. module: fieldservice_leaflet_map
+#: model:ir.model,name:fieldservice_leaflet_map.model_res_users
+msgid "User"
+msgstr "Kullanıcı"
+
+#. module: fieldservice_leaflet_map
+#: model_terms:ir.ui.view,arch_db:fieldservice_leaflet_map.res_config_settings_view_form_fsm_map
+msgid ""
+"When checked, the map auto-zooms to encompass all visible locations on load."
+msgstr ""
+"İşaretliyse, harita yüklenirken tüm görünür konumları kapsayacak şekilde "
+"otomatik yakınlaştırılır."
+
+#. module: fieldservice_leaflet_map
+#: model:ir.model.fields,help:fieldservice_leaflet_map.field_res_company__fsm_map_fit_bounds
+#: model:ir.model.fields,help:fieldservice_leaflet_map.field_res_config_settings__fsm_map_fit_bounds
+msgid "When on, the map auto-zooms to encompass all visible locations."
+msgstr ""
+"Açıkken, harita tüm görünür konumları kapsayacak şekilde otomatik "
+"yakınlaştırılır."
+
+#. module: fieldservice_leaflet_map
+#: model:ir.model.fields,help:fieldservice_leaflet_map.field_res_company__fsm_map_default_layer
+#: model:ir.model.fields,help:fieldservice_leaflet_map.field_res_config_settings__fsm_map_default_layer
+msgid ""
+"Which tile layer the Field Service map opens on by default. Users can still "
+"switch to other layers from the layer-switcher control on the top-right "
+"corner of the map."
+msgstr ""
+"Saha Servis haritasının varsayılan olarak hangi katmanla açılacağı. "
+"Kullanıcılar haritanın sağ üst köşesindeki katman seçici aracılığıyla "
+"diğer katmanlara geçebilir."
+
+#. module: fieldservice_leaflet_map
+#: model_terms:ir.ui.view,arch_db:fieldservice_leaflet_map.res_config_settings_view_form_fsm_map
+msgid ""
+"Which tile layer the Field Service map opens on by default. Users can still "
+"switch via the layer-switcher control on the top-right corner of the map."
+msgstr ""
+"Saha Servis haritasının varsayılan olarak hangi katmanla açılacağı. "
+"Kullanıcılar haritanın sağ üst köşesindeki katman seçici ile geçiş yapabilir."

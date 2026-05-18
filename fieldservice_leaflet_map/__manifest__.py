@@ -3,7 +3,7 @@
 {
     "name": "Field Service - Leaflet Map (OpenStreetMap)",
     "summary": "Display FSM locations on a Leaflet/OSM map without PostGIS.",
-    "version": "saas~19.3.1.0.2",
+    "version": "saas~19.3.1.0.3",
     "license": "AGPL-3",
     "category": "Field Service",
     "author": "saas-19.3 port, Odoo Community Association (OCA)",

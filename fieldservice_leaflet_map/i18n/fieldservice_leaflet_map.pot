@@ -1,0 +1,223 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* fieldservice_leaflet_map
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server saas~19.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-18 08:42+0000\n"
+"PO-Revision-Date: 2026-05-18 08:42+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: fieldservice_leaflet_map
+#: model:ir.model.fields,field_description:fieldservice_leaflet_map.field_res_company__fsm_map_auto_geocode
+#: model:ir.model.fields,field_description:fieldservice_leaflet_map.field_res_config_settings__fsm_map_auto_geocode
+#: model_terms:ir.ui.view,arch_db:fieldservice_leaflet_map.res_config_settings_view_form_fsm_map
+msgid "Auto-Geocode New Locations"
+msgstr ""
+
+#. module: fieldservice_leaflet_map
+#: model:ir.model.fields,field_description:fieldservice_leaflet_map.field_res_company__fsm_map_fit_bounds
+#: model:ir.model.fields,field_description:fieldservice_leaflet_map.field_res_config_settings__fsm_map_fit_bounds
+#: model_terms:ir.ui.view,arch_db:fieldservice_leaflet_map.res_config_settings_view_form_fsm_map
+msgid "Auto-fit Map to Locations"
+msgstr ""
+
+#. module: fieldservice_leaflet_map
+#: model_terms:ir.ui.view,arch_db:fieldservice_leaflet_map.res_config_settings_view_form_fsm_map
+msgid ""
+"Automatically run OpenStreetMap geocoding (Nominatim) on every Field Service"
+" location after create or address change. Without this you must run 'Geocode"
+" All Locations' manually to populate latitude/longitude."
+msgstr ""
+
+#. module: fieldservice_leaflet_map
+#: model:ir.model.fields,help:fieldservice_leaflet_map.field_res_company__fsm_map_auto_geocode
+#: model:ir.model.fields,help:fieldservice_leaflet_map.field_res_config_settings__fsm_map_auto_geocode
+msgid ""
+"Automatically run OpenStreetMap geocoding (Nominatim) on every Field Service"
+" location after create/write so the partner_latitude / partner_longitude "
+"fields get filled and the marker appears on the map."
+msgstr ""
+
+#. module: fieldservice_leaflet_map
+#: model:ir.model,name:fieldservice_leaflet_map.model_res_company
+msgid "Company"
+msgstr ""
+
+#. module: fieldservice_leaflet_map
+#: model:ir.model,name:fieldservice_leaflet_map.model_res_config_settings
+msgid "Config Settings"
+msgstr ""
+
+#. module: fieldservice_leaflet_map
+#: model:ir.model.fields,field_description:fieldservice_leaflet_map.field_res_company__fsm_map_default_latitude
+#: model:ir.model.fields,field_description:fieldservice_leaflet_map.field_res_config_settings__fsm_map_default_latitude
+#: model_terms:ir.ui.view,arch_db:fieldservice_leaflet_map.res_config_settings_view_form_fsm_map
+msgid "Default Map Latitude"
+msgstr ""
+
+#. module: fieldservice_leaflet_map
+#: model:ir.model.fields,field_description:fieldservice_leaflet_map.field_res_company__fsm_map_default_layer
+#: model:ir.model.fields,field_description:fieldservice_leaflet_map.field_res_config_settings__fsm_map_default_layer
+#: model_terms:ir.ui.view,arch_db:fieldservice_leaflet_map.res_config_settings_view_form_fsm_map
+msgid "Default Map Layer"
+msgstr ""
+
+#. module: fieldservice_leaflet_map
+#: model:ir.model.fields,field_description:fieldservice_leaflet_map.field_res_company__fsm_map_default_longitude
+#: model:ir.model.fields,field_description:fieldservice_leaflet_map.field_res_config_settings__fsm_map_default_longitude
+#: model_terms:ir.ui.view,arch_db:fieldservice_leaflet_map.res_config_settings_view_form_fsm_map
+msgid "Default Map Longitude"
+msgstr ""
+
+#. module: fieldservice_leaflet_map
+#: model:ir.model.fields,field_description:fieldservice_leaflet_map.field_res_company__fsm_map_default_zoom
+#: model:ir.model.fields,field_description:fieldservice_leaflet_map.field_res_config_settings__fsm_map_default_zoom
+#: model_terms:ir.ui.view,arch_db:fieldservice_leaflet_map.res_config_settings_view_form_fsm_map
+msgid "Default Map Zoom"
+msgstr ""
+
+#. module: fieldservice_leaflet_map
+#: model:ir.model.fields,field_description:fieldservice_leaflet_map.field_fsm_location__display_name
+#: model:ir.model.fields,field_description:fieldservice_leaflet_map.field_res_company__display_name
+#: model:ir.model.fields,field_description:fieldservice_leaflet_map.field_res_config_settings__display_name
+#: model:ir.model.fields,field_description:fieldservice_leaflet_map.field_res_users__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: fieldservice_leaflet_map
+#: model:ir.model,name:fieldservice_leaflet_map.model_fsm_location
+msgid "Field Service Location"
+msgstr ""
+
+#. module: fieldservice_leaflet_map
+#: model_terms:ir.ui.view,arch_db:fieldservice_leaflet_map.res_config_settings_view_form_fsm_map
+msgid "Geocode All Locations Now"
+msgstr ""
+
+#. module: fieldservice_leaflet_map
+#: model:ir.model.fields.selection,name:fieldservice_leaflet_map.selection__res_company__fsm_map_default_layer__google_hybrid
+msgid "Google Hybrid (satellite + labels)"
+msgstr ""
+
+#. module: fieldservice_leaflet_map
+#: model:ir.model.fields.selection,name:fieldservice_leaflet_map.selection__res_company__fsm_map_default_layer__google_satellite
+msgid "Google Satellite"
+msgstr ""
+
+#. module: fieldservice_leaflet_map
+#: model:ir.model.fields.selection,name:fieldservice_leaflet_map.selection__res_company__fsm_map_default_layer__google_streets
+msgid "Google Streets"
+msgstr ""
+
+#. module: fieldservice_leaflet_map
+#: model:ir.model.fields,field_description:fieldservice_leaflet_map.field_fsm_location__id
+#: model:ir.model.fields,field_description:fieldservice_leaflet_map.field_res_company__id
+#: model:ir.model.fields,field_description:fieldservice_leaflet_map.field_res_config_settings__id
+#: model:ir.model.fields,field_description:fieldservice_leaflet_map.field_res_users__id
+msgid "ID"
+msgstr ""
+
+#. module: fieldservice_leaflet_map
+#: model_terms:ir.ui.view,arch_db:fieldservice_leaflet_map.res_config_settings_view_form_fsm_map
+msgid ""
+"Initial zoom level (1=world, 18=street level). 7 is a good country-scale "
+"default."
+msgstr ""
+
+#. module: fieldservice_leaflet_map
+#: model:ir.model.fields,help:fieldservice_leaflet_map.field_res_company__fsm_map_default_zoom
+#: model:ir.model.fields,help:fieldservice_leaflet_map.field_res_config_settings__fsm_map_default_zoom
+msgid ""
+"Initial zoom level when the Field Service map opens (1=world, 18=street)."
+msgstr ""
+
+#. module: fieldservice_leaflet_map
+#: model_terms:ir.ui.view,arch_db:fieldservice_leaflet_map.res_config_settings_view_form_fsm_map
+msgid "Map Settings"
+msgstr ""
+
+#. module: fieldservice_leaflet_map
+#: model:ir.model.fields,help:fieldservice_leaflet_map.field_res_company__fsm_map_default_latitude
+#: model:ir.model.fields,help:fieldservice_leaflet_map.field_res_config_settings__fsm_map_default_latitude
+msgid "Map center latitude when no location is in view (NL default ~52.1)."
+msgstr ""
+
+#. module: fieldservice_leaflet_map
+#: model_terms:ir.ui.view,arch_db:fieldservice_leaflet_map.res_config_settings_view_form_fsm_map
+msgid "Map center latitude when the map opens empty (NL default ~52.1)."
+msgstr ""
+
+#. module: fieldservice_leaflet_map
+#: model:ir.model.fields,help:fieldservice_leaflet_map.field_res_company__fsm_map_default_longitude
+#: model:ir.model.fields,help:fieldservice_leaflet_map.field_res_config_settings__fsm_map_default_longitude
+msgid "Map center longitude when no location is in view (NL default ~5.3)."
+msgstr ""
+
+#. module: fieldservice_leaflet_map
+#: model_terms:ir.ui.view,arch_db:fieldservice_leaflet_map.res_config_settings_view_form_fsm_map
+msgid "Map center longitude when the map opens empty (NL default ~5.3)."
+msgstr ""
+
+#. module: fieldservice_leaflet_map
+#: model:ir.model.fields.selection,name:fieldservice_leaflet_map.selection__res_company__fsm_map_default_layer__openstreetmap
+msgid "OpenStreetMap (default)"
+msgstr ""
+
+#. module: fieldservice_leaflet_map
+#: model:ir.model.fields.selection,name:fieldservice_leaflet_map.selection__res_company__fsm_map_default_layer__opentopomap
+msgid "OpenTopoMap (terrain)"
+msgstr ""
+
+#. module: fieldservice_leaflet_map
+#: model_terms:ir.ui.view,arch_db:fieldservice_leaflet_map.res_config_settings_view_form_fsm_map
+msgid "Run Geocoding"
+msgstr ""
+
+#. module: fieldservice_leaflet_map
+#: model_terms:ir.ui.view,arch_db:fieldservice_leaflet_map.res_config_settings_view_form_fsm_map
+msgid ""
+"Run OpenStreetMap geocoding on every existing Field Service location that "
+"does not yet have latitude/longitude set. Useful after enabling the map for "
+"the first time."
+msgstr ""
+
+#. module: fieldservice_leaflet_map
+#: model:ir.model,name:fieldservice_leaflet_map.model_res_users
+msgid "User"
+msgstr ""
+
+#. module: fieldservice_leaflet_map
+#: model_terms:ir.ui.view,arch_db:fieldservice_leaflet_map.res_config_settings_view_form_fsm_map
+msgid ""
+"When checked, the map auto-zooms to encompass all visible locations on load."
+msgstr ""
+
+#. module: fieldservice_leaflet_map
+#: model:ir.model.fields,help:fieldservice_leaflet_map.field_res_company__fsm_map_fit_bounds
+#: model:ir.model.fields,help:fieldservice_leaflet_map.field_res_config_settings__fsm_map_fit_bounds
+msgid "When on, the map auto-zooms to encompass all visible locations."
+msgstr ""
+
+#. module: fieldservice_leaflet_map
+#: model:ir.model.fields,help:fieldservice_leaflet_map.field_res_company__fsm_map_default_layer
+#: model:ir.model.fields,help:fieldservice_leaflet_map.field_res_config_settings__fsm_map_default_layer
+msgid ""
+"Which tile layer the Field Service map opens on by default. Users can still "
+"switch to other layers from the layer-switcher control on the top-right "
+"corner of the map."
+msgstr ""
+
+#. module: fieldservice_leaflet_map
+#: model_terms:ir.ui.view,arch_db:fieldservice_leaflet_map.res_config_settings_view_form_fsm_map
+msgid ""
+"Which tile layer the Field Service map opens on by default. Users can still "
+"switch via the layer-switcher control on the top-right corner of the map."
+msgstr ""

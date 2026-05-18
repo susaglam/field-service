@@ -21,5 +21,5 @@
     'maintainers': [
         'max3903',
     ],
-    'installable': False,
+    'installable': True,
 }

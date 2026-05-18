@@ -7,20 +7,25 @@ from odoo import models
 class AccountPayment(models.Model):
     _inherit = "account.payment"
 
-    def post(self):
-        res = super()._post()
-        dayroute_payment_obj = self.env['fsm.route.dayroute.payment']
+    def action_post(self):
+        res = super().action_post()
+        dayroute_payment_obj = self.env["fsm.route.dayroute.payment"]
         for rec in self:
             for fsm_order_rec in rec.fsm_order_ids:
-                if fsm_order_rec.dayroute_id:
-                    dayroute_payment = dayroute_payment_obj.search([
-                        ('journal_id', '=', rec.journal_id.id),
-                        ('dayroute_id', '=',
-                         fsm_order_rec.dayroute_id.id)
-                    ])
-                    if not dayroute_payment:
-                        dayroute_payment_obj.create({
-                            'journal_id': self.journal_id.id,
-                            'dayroute_id': fsm_order_rec.dayroute_id.id
-                        })
+                if not fsm_order_rec.dayroute_id:
+                    continue
+                existing = dayroute_payment_obj.search(
+                    [
+                        ("journal_id", "=", rec.journal_id.id),
+                        ("dayroute_id", "=", fsm_order_rec.dayroute_id.id),
+                    ],
+                    limit=1,
+                )
+                if not existing:
+                    dayroute_payment_obj.create(
+                        {
+                            "journal_id": rec.journal_id.id,
+                            "dayroute_id": fsm_order_rec.dayroute_id.id,
+                        }
+                    )
         return res
