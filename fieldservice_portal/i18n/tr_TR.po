@@ -1,0 +1,242 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* fieldservice_portal
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server saas~19.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-18 09:27+0000\n"
+"PO-Revision-Date: 2026-05-18 09:27+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: tr_TR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=(n>1);\n"
+
+#. module: fieldservice_portal
+#: model_terms:ir.ui.view,arch_db:fieldservice_portal.portal_fieldservice_order_page
+msgid ""
+"<br/>\n"
+"                                <strong>Arrival On Site:</strong>"
+msgstr ""
+"<br/>\n"
+"                                <strong>Sahaya Varış:</strong>"
+
+#. module: fieldservice_portal
+#: model_terms:ir.ui.view,arch_db:fieldservice_portal.portal_fieldservice_order_page
+msgid ""
+"<br/>\n"
+"                                <strong>City:</strong>"
+msgstr ""
+"<br/>\n"
+"                                <strong>Şehir:</strong>"
+
+#. module: fieldservice_portal
+#: model_terms:ir.ui.view,arch_db:fieldservice_portal.portal_fieldservice_order_page
+msgid ""
+"<br/>\n"
+"                                <strong>Country:</strong>"
+msgstr ""
+"<br/>\n"
+"                                <strong>Ülke:</strong>"
+
+#. module: fieldservice_portal
+#: model_terms:ir.ui.view,arch_db:fieldservice_portal.portal_fieldservice_order_page
+msgid ""
+"<br/>\n"
+"                                <strong>Work Type:</strong>"
+msgstr ""
+"<br/>\n"
+"                                <strong>İş Türü:</strong>"
+
+#. module: fieldservice_portal
+#: model_terms:ir.ui.view,arch_db:fieldservice_portal.portal_fieldservice_order_page
+msgid "<span>N/A</span>"
+msgstr "<span>Yok</span>"
+
+#. module: fieldservice_portal
+#: model_terms:ir.ui.view,arch_db:fieldservice_portal.portal_fieldservice_order_page
+msgid "<strong>Location:</strong>"
+msgstr "<strong>Konum:</strong>"
+
+#. module: fieldservice_portal
+#: model_terms:ir.ui.view,arch_db:fieldservice_portal.portal_fieldservice_order_page
+msgid "<strong>Stage:</strong>"
+msgstr "<strong>Aşama:</strong>"
+
+#. module: fieldservice_portal
+#. odoo-python
+#: code:addons/fieldservice_portal/controllers/fsm_order_portal.py:0
+msgid "All"
+msgstr "Tümü"
+
+#. module: fieldservice_portal
+#: model_terms:ir.ui.view,arch_db:fieldservice_portal.portal_fieldservice_order_page
+#: model_terms:ir.ui.view,arch_db:fieldservice_portal.portal_my_fsm_orders
+msgid "Description"
+msgstr "Açıklama"
+
+#. module: fieldservice_portal
+#: model:ir.model.fields,field_description:fieldservice_portal.field_fsm_stage__display_name
+msgid "Display Name"
+msgstr "Görünen Ad"
+
+#. module: fieldservice_portal
+#: model:ir.model.fields,help:fieldservice_portal.field_fsm_stage__portal_visible
+msgid ""
+"Enable to display field service orders based on it's stage in the portal"
+msgstr "Saha servis siparişlerini aşamasına göre portalda göstermek için açın"
+
+#. module: fieldservice_portal
+#: model_terms:ir.ui.view,arch_db:fieldservice_portal.portal_my_home_fsm_order
+msgid "FSM Orders"
+msgstr "FSM Siparişleri"
+
+#. module: fieldservice_portal
+#: model:ir.model,name:fieldservice_portal.model_fsm_stage
+msgid "Field Service Stage"
+msgstr "Saha Servis Aşaması"
+
+#. module: fieldservice_portal
+#: model_terms:ir.ui.view,arch_db:fieldservice_portal.portal_fieldservice_order_page
+msgid "History"
+msgstr "Geçmiş"
+
+#. module: fieldservice_portal
+#: model:ir.model.fields,field_description:fieldservice_portal.field_fsm_stage__id
+msgid "ID"
+msgstr "Kimlik"
+
+#. module: fieldservice_portal
+#. odoo-python
+#: code:addons/fieldservice_portal/controllers/fsm_order_portal.py:0
+#: model_terms:ir.ui.view,arch_db:fieldservice_portal.portal_my_fsm_orders
+msgid "Location"
+msgstr "Konum"
+
+#. module: fieldservice_portal
+#. odoo-python
+#: code:addons/fieldservice_portal/controllers/fsm_order_portal.py:0
+#: model_terms:ir.ui.view,arch_db:fieldservice_portal.portal_my_fsm_orders
+msgid "Name"
+msgstr "Ad"
+
+#. module: fieldservice_portal
+#. odoo-python
+#: code:addons/fieldservice_portal/controllers/fsm_order_portal.py:0
+msgid "Newest"
+msgstr "En Yeni"
+
+#. module: fieldservice_portal
+#. odoo-python
+#: code:addons/fieldservice_portal/controllers/fsm_order_portal.py:0
+msgid "None"
+msgstr "Yok"
+
+#. module: fieldservice_portal
+#: model_terms:ir.ui.view,arch_db:fieldservice_portal.portal_fieldservice_order_page
+msgid "Not started yet"
+msgstr "Henüz başlamadı"
+
+#. module: fieldservice_portal
+#. odoo-python
+#: code:addons/fieldservice_portal/controllers/fsm_order_portal.py:0
+msgid "Open"
+msgstr "Açık"
+
+#. module: fieldservice_portal
+#. odoo-python
+#: code:addons/fieldservice_portal/controllers/fsm_order_portal.py:0
+msgid "Search in All"
+msgstr "Tümünde Ara"
+
+#. module: fieldservice_portal
+#. odoo-python
+#: code:addons/fieldservice_portal/controllers/fsm_order_portal.py:0
+msgid "Search in Description"
+msgstr "Açıklamada Ara"
+
+#. module: fieldservice_portal
+#. odoo-python
+#: code:addons/fieldservice_portal/controllers/fsm_order_portal.py:0
+msgid "Search in Location Numbers"
+msgstr "Konum Numaralarında Ara"
+
+#. module: fieldservice_portal
+#. odoo-python
+#: code:addons/fieldservice_portal/controllers/fsm_order_portal.py:0
+msgid "Search in WO Number"
+msgstr "İş Emri Numarasında Ara"
+
+#. module: fieldservice_portal
+#. odoo-python
+#: code:addons/fieldservice_portal/controllers/fsm_order_portal.py:0
+#: model_terms:ir.ui.view,arch_db:fieldservice_portal.portal_my_fsm_orders
+msgid "Stage"
+msgstr "Aşama"
+
+#. module: fieldservice_portal
+#: model_terms:ir.ui.view,arch_db:fieldservice_portal.portal_my_fsm_orders
+msgid "There are no Work Orders in your account."
+msgstr "Hesabınızda iş emri yok."
+
+#. module: fieldservice_portal
+#. odoo-python
+#: code:addons/fieldservice_portal/controllers/fsm_order_portal.py:0
+msgid "Ticket"
+msgstr "Bilet"
+
+#. module: fieldservice_portal
+#. odoo-python
+#: code:addons/fieldservice_portal/controllers/fsm_order_portal.py:0
+#: model_terms:ir.ui.view,arch_db:fieldservice_portal.portal_my_fsm_orders
+msgid "Type"
+msgstr "Tür"
+
+#. module: fieldservice_portal
+#: model_terms:ir.ui.view,arch_db:fieldservice_portal.portal_my_home_fsm_order
+msgid "View your fieldservice orders"
+msgstr "Saha servis siparişlerinizi görüntüleyin"
+
+#. module: fieldservice_portal
+#: model:ir.model.fields,field_description:fieldservice_portal.field_fsm_stage__portal_visible
+msgid "Visible in Portal"
+msgstr "Portalda Görünür"
+
+#. module: fieldservice_portal
+#: model_terms:ir.ui.view,arch_db:fieldservice_portal.portal_breadcrumbs
+#: model_terms:ir.ui.view,arch_db:fieldservice_portal.portal_my_fsm_orders
+msgid "Work Orders"
+msgstr "İş Emirleri"
+
+#. module: fieldservice_portal
+#: model_terms:ir.ui.view,arch_db:fieldservice_portal.portal_my_fsm_orders
+msgid "Work Orders for"
+msgstr "İş Emirleri"
+
+#. module: fieldservice_portal
+#. odoo-python
+#: code:addons/fieldservice_portal/controllers/fsm_order_portal.py:0
+msgid "description"
+msgstr "açıklama"
+
+#. module: fieldservice_portal
+#. odoo-python
+#: code:addons/fieldservice_portal/controllers/fsm_order_portal.py:0
+msgid "is_closed"
+msgstr "is_closed"
+
+#. module: fieldservice_portal
+#. odoo-python
+#: code:addons/fieldservice_portal/controllers/fsm_order_portal.py:0
+msgid "location_id.name"
+msgstr "location_id.name"
+
+#. module: fieldservice_portal
+#. odoo-python
+#: code:addons/fieldservice_portal/controllers/fsm_order_portal.py:0
+msgid "name"
+msgstr "ad"

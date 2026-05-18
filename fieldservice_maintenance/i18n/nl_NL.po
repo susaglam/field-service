@@ -1,0 +1,258 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* fieldservice_maintenance
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server saas~19.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-18 09:27+0000\n"
+"PO-Revision-Date: 2026-05-18 09:27+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: nl_NL\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. module: fieldservice_maintenance
+#: model:ir.model.fields,field_description:fieldservice_maintenance.field_fsm_equipment__active
+msgid "Active"
+msgstr "Actief"
+
+#. module: fieldservice_maintenance
+#: model:ir.model.fields,field_description:fieldservice_maintenance.field_fsm_equipment__assign_date
+msgid "Assigned Date"
+msgstr "Toegewezen datum"
+
+#. module: fieldservice_maintenance
+#: model:ir.model.fields,help:fieldservice_maintenance.field_fsm_equipment__estimated_next_failure
+msgid "Computed as Latest Failure Date + MTBF"
+msgstr "Berekend als Laatste Storingsdatum + MTBF"
+
+#. module: fieldservice_maintenance
+#: model:ir.model.fields,field_description:fieldservice_maintenance.field_fsm_equipment__cost
+msgid "Cost"
+msgstr "Kostprijs"
+
+#. module: fieldservice_maintenance
+#: model:ir.model.fields,field_description:fieldservice_maintenance.field_fsm_equipment__maintenance_open_count
+msgid "Current Maintenance"
+msgstr "Huidig onderhoud"
+
+#. module: fieldservice_maintenance
+#: model:ir.model.fields,field_description:fieldservice_maintenance.field_fsm_equipment__display_name
+#: model:ir.model.fields,field_description:fieldservice_maintenance.field_fsm_order__display_name
+#: model:ir.model.fields,field_description:fieldservice_maintenance.field_fsm_order_type__display_name
+#: model:ir.model.fields,field_description:fieldservice_maintenance.field_maintenance_equipment__display_name
+#: model:ir.model.fields,field_description:fieldservice_maintenance.field_maintenance_request__display_name
+msgid "Display Name"
+msgstr "Weergavenaam"
+
+#. module: fieldservice_maintenance
+#: model:ir.model.fields,field_description:fieldservice_maintenance.field_fsm_equipment__effective_date
+msgid "Effective Date"
+msgstr "Ingangsdatum"
+
+#. module: fieldservice_maintenance
+#: model:ir.model.fields,field_description:fieldservice_maintenance.field_fsm_equipment__category_id
+msgid "Equipment Category"
+msgstr "Apparaatcategorie"
+
+#. module: fieldservice_maintenance
+#: model:ir.model.fields,field_description:fieldservice_maintenance.field_fsm_equipment__estimated_next_failure
+msgid "Estimated time before next failure (in days)"
+msgstr "Geschatte tijd tot volgende storing (in dagen)"
+
+#. module: fieldservice_maintenance
+#: model:ir.model.fields,field_description:fieldservice_maintenance.field_fsm_equipment__expected_mtbf
+msgid "Expected MTBF"
+msgstr "Verwachte MTBF"
+
+#. module: fieldservice_maintenance
+#: model:ir.model.fields,help:fieldservice_maintenance.field_fsm_equipment__expected_mtbf
+msgid "Expected Mean Time Between Failure"
+msgstr "Verwachte gemiddelde tijd tussen storingen"
+
+#. module: fieldservice_maintenance
+#: model:ir.model,name:fieldservice_maintenance.model_fsm_equipment
+msgid "Field Service Equipment"
+msgstr "Field Service-apparaat"
+
+#. module: fieldservice_maintenance
+#: model:ir.model,name:fieldservice_maintenance.model_fsm_order
+#: model:ir.model.fields,field_description:fieldservice_maintenance.field_maintenance_request__fsm_order_id
+msgid "Field Service Order"
+msgstr "Field Service-order"
+
+#. module: fieldservice_maintenance
+#: model:ir.model,name:fieldservice_maintenance.model_fsm_order_type
+msgid "Field Service Order Type"
+msgstr "Field Service-ordertype"
+
+#. module: fieldservice_maintenance
+#: model:ir.model.fields,field_description:fieldservice_maintenance.field_fsm_equipment__id
+#: model:ir.model.fields,field_description:fieldservice_maintenance.field_fsm_order__id
+#: model:ir.model.fields,field_description:fieldservice_maintenance.field_fsm_order_type__id
+#: model:ir.model.fields,field_description:fieldservice_maintenance.field_maintenance_equipment__id
+#: model:ir.model.fields,field_description:fieldservice_maintenance.field_maintenance_request__id
+msgid "ID"
+msgstr "ID"
+
+#. module: fieldservice_maintenance
+#: model:ir.model.fields,field_description:fieldservice_maintenance.field_fsm_order_type__internal_type
+msgid "Internal Type"
+msgstr "Intern type"
+
+#. module: fieldservice_maintenance
+#: model:ir.model.fields,field_description:fieldservice_maintenance.field_fsm_equipment__is_assigned
+msgid "Is Assigned"
+msgstr "Is toegewezen"
+
+#. module: fieldservice_maintenance
+#: model:ir.model.fields,field_description:fieldservice_maintenance.field_fsm_equipment__is_fsm_equipment
+#: model:ir.model.fields,field_description:fieldservice_maintenance.field_maintenance_equipment__is_fsm_equipment
+msgid "Is a FSM Equipment"
+msgstr "Is een FSM-apparaat"
+
+#. module: fieldservice_maintenance
+#: model:ir.model.fields,field_description:fieldservice_maintenance.field_fsm_equipment__latest_failure_date
+msgid "Latest Failure Date"
+msgstr "Laatste storingsdatum"
+
+#. module: fieldservice_maintenance
+#: model:ir.model.fields,field_description:fieldservice_maintenance.field_fsm_equipment__mtbf
+msgid "MTBF"
+msgstr "MTBF"
+
+#. module: fieldservice_maintenance
+#: model:ir.model.fields,field_description:fieldservice_maintenance.field_fsm_equipment__mttr
+msgid "MTTR"
+msgstr "MTTR"
+
+#. module: fieldservice_maintenance
+#: model:ir.model.fields,field_description:fieldservice_maintenance.field_fsm_equipment__maintenance_ids
+#: model:ir.model.fields.selection,name:fieldservice_maintenance.selection__fsm_order_type__internal_type__maintenance
+#: model_terms:ir.ui.view,arch_db:fieldservice_maintenance.fsm_equipment_form_view_maintenance
+msgid "Maintenance"
+msgstr "Onderhoud"
+
+#. module: fieldservice_maintenance
+#: model:ir.model.fields,field_description:fieldservice_maintenance.field_fsm_equipment__maintenance_count
+msgid "Maintenance Count"
+msgstr "Aantal onderhoudsbeurten"
+
+#. module: fieldservice_maintenance
+#: model:ir.model,name:fieldservice_maintenance.model_maintenance_equipment
+msgid "Maintenance Equipment"
+msgstr "Onderhoudsapparaat"
+
+#. module: fieldservice_maintenance
+#: model:ir.model,name:fieldservice_maintenance.model_maintenance_request
+#: model:ir.model.fields,field_description:fieldservice_maintenance.field_fsm_order__request_id
+msgid "Maintenance Request"
+msgstr "Onderhoudsverzoek"
+
+#. module: fieldservice_maintenance
+#: model:ir.model.fields,field_description:fieldservice_maintenance.field_fsm_equipment__maintenance_team_id
+msgid "Maintenance Team"
+msgstr "Onderhoudsteam"
+
+#. module: fieldservice_maintenance
+#: model:ir.model.fields,help:fieldservice_maintenance.field_fsm_equipment__mtbf
+msgid ""
+"Mean Time Between Failure, computed based on done corrective maintenances."
+msgstr ""
+"Gemiddelde tijd tussen storingen, berekend op basis van uitgevoerde "
+"correctieve onderhoudsbeurten."
+
+#. module: fieldservice_maintenance
+#: model:ir.model.fields,help:fieldservice_maintenance.field_fsm_equipment__mttr
+msgid "Mean Time To Repair"
+msgstr "Gemiddelde reparatietijd"
+
+#. module: fieldservice_maintenance
+#: model:ir.model.fields,field_description:fieldservice_maintenance.field_fsm_equipment__model
+msgid "Model"
+msgstr "Model"
+
+#. module: fieldservice_maintenance
+#: model:ir.model.fields,field_description:fieldservice_maintenance.field_fsm_equipment__note
+msgid "Note"
+msgstr "Notitie"
+
+#. module: fieldservice_maintenance
+#. odoo-python
+#: code:addons/fieldservice_maintenance/models/maintenance_request.py:0
+msgid "Order was not created because the equipment's location is not set"
+msgstr ""
+"Order is niet aangemaakt omdat de locatie van het apparaat niet is "
+"ingesteld"
+
+#. module: fieldservice_maintenance
+#: model_terms:ir.ui.view,arch_db:fieldservice_maintenance.hr_equipment_view_form
+msgid "Others"
+msgstr "Overig"
+
+#. module: fieldservice_maintenance
+#: model:ir.model.fields,field_description:fieldservice_maintenance.field_fsm_equipment__owner_user_id
+msgid "Owner"
+msgstr "Eigenaar"
+
+#. module: fieldservice_maintenance
+#: model:ir.model.fields,field_description:fieldservice_maintenance.field_fsm_equipment__equipment_properties
+msgid "Properties"
+msgstr "Eigenschappen"
+
+#. module: fieldservice_maintenance
+#: model:ir.model.fields,field_description:fieldservice_maintenance.field_fsm_equipment__maintenance_equipment_id
+msgid "Related Maintenance Equipment"
+msgstr "Gerelateerd onderhoudsapparaat"
+
+#. module: fieldservice_maintenance
+#: model:ir.model.fields,field_description:fieldservice_maintenance.field_fsm_equipment__scrap_date
+msgid "Scrap Date"
+msgstr "Sloopdatum"
+
+#. module: fieldservice_maintenance
+#: model:ir.model.fields,field_description:fieldservice_maintenance.field_fsm_equipment__serial_no
+msgid "Serial Number"
+msgstr "Serienummer"
+
+#. module: fieldservice_maintenance
+#: model:ir.model.fields,field_description:fieldservice_maintenance.field_fsm_equipment__technician_user_id
+msgid "Technician"
+msgstr "Technicus"
+
+#. module: fieldservice_maintenance
+#: model:ir.model.fields,help:fieldservice_maintenance.field_fsm_equipment__effective_date
+msgid "This date will be used to compute the Mean Time Between Failure."
+msgstr ""
+"Deze datum wordt gebruikt om de gemiddelde tijd tussen storingen te "
+"berekenen."
+
+#. module: fieldservice_maintenance
+#: model:ir.model.fields,field_description:fieldservice_maintenance.field_fsm_equipment__equipment_assign_to
+msgid "Used By"
+msgstr "Gebruikt door"
+
+#. module: fieldservice_maintenance
+#: model:ir.model.fields,field_description:fieldservice_maintenance.field_fsm_equipment__vehicle_id
+msgid "Vehicle"
+msgstr "Voertuig"
+
+#. module: fieldservice_maintenance
+#: model:ir.model.fields,field_description:fieldservice_maintenance.field_fsm_equipment__partner_id
+msgid "Vendor"
+msgstr "Leverancier"
+
+#. module: fieldservice_maintenance
+#: model:ir.model.fields,field_description:fieldservice_maintenance.field_fsm_equipment__partner_ref
+msgid "Vendor Reference"
+msgstr "Leveranciersreferentie"
+
+#. module: fieldservice_maintenance
+#: model:ir.model.fields,field_description:fieldservice_maintenance.field_fsm_equipment__warranty_date
+msgid "Warranty Expiration Date"
+msgstr "Vervaldatum garantie"

@@ -1,0 +1,244 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* fieldservice_portal
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server saas~19.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-18 09:27+0000\n"
+"PO-Revision-Date: 2026-05-18 09:27+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: nl_NL\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. module: fieldservice_portal
+#: model_terms:ir.ui.view,arch_db:fieldservice_portal.portal_fieldservice_order_page
+msgid ""
+"<br/>\n"
+"                                <strong>Arrival On Site:</strong>"
+msgstr ""
+"<br/>\n"
+"                                <strong>Aankomst op locatie:</strong>"
+
+#. module: fieldservice_portal
+#: model_terms:ir.ui.view,arch_db:fieldservice_portal.portal_fieldservice_order_page
+msgid ""
+"<br/>\n"
+"                                <strong>City:</strong>"
+msgstr ""
+"<br/>\n"
+"                                <strong>Plaats:</strong>"
+
+#. module: fieldservice_portal
+#: model_terms:ir.ui.view,arch_db:fieldservice_portal.portal_fieldservice_order_page
+msgid ""
+"<br/>\n"
+"                                <strong>Country:</strong>"
+msgstr ""
+"<br/>\n"
+"                                <strong>Land:</strong>"
+
+#. module: fieldservice_portal
+#: model_terms:ir.ui.view,arch_db:fieldservice_portal.portal_fieldservice_order_page
+msgid ""
+"<br/>\n"
+"                                <strong>Work Type:</strong>"
+msgstr ""
+"<br/>\n"
+"                                <strong>Werktype:</strong>"
+
+#. module: fieldservice_portal
+#: model_terms:ir.ui.view,arch_db:fieldservice_portal.portal_fieldservice_order_page
+msgid "<span>N/A</span>"
+msgstr "<span>N.v.t.</span>"
+
+#. module: fieldservice_portal
+#: model_terms:ir.ui.view,arch_db:fieldservice_portal.portal_fieldservice_order_page
+msgid "<strong>Location:</strong>"
+msgstr "<strong>Locatie:</strong>"
+
+#. module: fieldservice_portal
+#: model_terms:ir.ui.view,arch_db:fieldservice_portal.portal_fieldservice_order_page
+msgid "<strong>Stage:</strong>"
+msgstr "<strong>Fase:</strong>"
+
+#. module: fieldservice_portal
+#. odoo-python
+#: code:addons/fieldservice_portal/controllers/fsm_order_portal.py:0
+msgid "All"
+msgstr "Alles"
+
+#. module: fieldservice_portal
+#: model_terms:ir.ui.view,arch_db:fieldservice_portal.portal_fieldservice_order_page
+#: model_terms:ir.ui.view,arch_db:fieldservice_portal.portal_my_fsm_orders
+msgid "Description"
+msgstr "Omschrijving"
+
+#. module: fieldservice_portal
+#: model:ir.model.fields,field_description:fieldservice_portal.field_fsm_stage__display_name
+msgid "Display Name"
+msgstr "Weergavenaam"
+
+#. module: fieldservice_portal
+#: model:ir.model.fields,help:fieldservice_portal.field_fsm_stage__portal_visible
+msgid ""
+"Enable to display field service orders based on it's stage in the portal"
+msgstr ""
+"Schakel in om Field Service-orders op basis van hun fase in het portaal te "
+"tonen"
+
+#. module: fieldservice_portal
+#: model_terms:ir.ui.view,arch_db:fieldservice_portal.portal_my_home_fsm_order
+msgid "FSM Orders"
+msgstr "FSM-orders"
+
+#. module: fieldservice_portal
+#: model:ir.model,name:fieldservice_portal.model_fsm_stage
+msgid "Field Service Stage"
+msgstr "Field Service-fase"
+
+#. module: fieldservice_portal
+#: model_terms:ir.ui.view,arch_db:fieldservice_portal.portal_fieldservice_order_page
+msgid "History"
+msgstr "Geschiedenis"
+
+#. module: fieldservice_portal
+#: model:ir.model.fields,field_description:fieldservice_portal.field_fsm_stage__id
+msgid "ID"
+msgstr "ID"
+
+#. module: fieldservice_portal
+#. odoo-python
+#: code:addons/fieldservice_portal/controllers/fsm_order_portal.py:0
+#: model_terms:ir.ui.view,arch_db:fieldservice_portal.portal_my_fsm_orders
+msgid "Location"
+msgstr "Locatie"
+
+#. module: fieldservice_portal
+#. odoo-python
+#: code:addons/fieldservice_portal/controllers/fsm_order_portal.py:0
+#: model_terms:ir.ui.view,arch_db:fieldservice_portal.portal_my_fsm_orders
+msgid "Name"
+msgstr "Naam"
+
+#. module: fieldservice_portal
+#. odoo-python
+#: code:addons/fieldservice_portal/controllers/fsm_order_portal.py:0
+msgid "Newest"
+msgstr "Nieuwste"
+
+#. module: fieldservice_portal
+#. odoo-python
+#: code:addons/fieldservice_portal/controllers/fsm_order_portal.py:0
+msgid "None"
+msgstr "Geen"
+
+#. module: fieldservice_portal
+#: model_terms:ir.ui.view,arch_db:fieldservice_portal.portal_fieldservice_order_page
+msgid "Not started yet"
+msgstr "Nog niet gestart"
+
+#. module: fieldservice_portal
+#. odoo-python
+#: code:addons/fieldservice_portal/controllers/fsm_order_portal.py:0
+msgid "Open"
+msgstr "Open"
+
+#. module: fieldservice_portal
+#. odoo-python
+#: code:addons/fieldservice_portal/controllers/fsm_order_portal.py:0
+msgid "Search in All"
+msgstr "Zoeken in alles"
+
+#. module: fieldservice_portal
+#. odoo-python
+#: code:addons/fieldservice_portal/controllers/fsm_order_portal.py:0
+msgid "Search in Description"
+msgstr "Zoeken in omschrijving"
+
+#. module: fieldservice_portal
+#. odoo-python
+#: code:addons/fieldservice_portal/controllers/fsm_order_portal.py:0
+msgid "Search in Location Numbers"
+msgstr "Zoeken in locatienummers"
+
+#. module: fieldservice_portal
+#. odoo-python
+#: code:addons/fieldservice_portal/controllers/fsm_order_portal.py:0
+msgid "Search in WO Number"
+msgstr "Zoeken in werkordernummer"
+
+#. module: fieldservice_portal
+#. odoo-python
+#: code:addons/fieldservice_portal/controllers/fsm_order_portal.py:0
+#: model_terms:ir.ui.view,arch_db:fieldservice_portal.portal_my_fsm_orders
+msgid "Stage"
+msgstr "Fase"
+
+#. module: fieldservice_portal
+#: model_terms:ir.ui.view,arch_db:fieldservice_portal.portal_my_fsm_orders
+msgid "There are no Work Orders in your account."
+msgstr "Er zijn geen werkorders in uw account."
+
+#. module: fieldservice_portal
+#. odoo-python
+#: code:addons/fieldservice_portal/controllers/fsm_order_portal.py:0
+msgid "Ticket"
+msgstr "Ticket"
+
+#. module: fieldservice_portal
+#. odoo-python
+#: code:addons/fieldservice_portal/controllers/fsm_order_portal.py:0
+#: model_terms:ir.ui.view,arch_db:fieldservice_portal.portal_my_fsm_orders
+msgid "Type"
+msgstr "Type"
+
+#. module: fieldservice_portal
+#: model_terms:ir.ui.view,arch_db:fieldservice_portal.portal_my_home_fsm_order
+msgid "View your fieldservice orders"
+msgstr "Bekijk uw Field Service-orders"
+
+#. module: fieldservice_portal
+#: model:ir.model.fields,field_description:fieldservice_portal.field_fsm_stage__portal_visible
+msgid "Visible in Portal"
+msgstr "Zichtbaar in portaal"
+
+#. module: fieldservice_portal
+#: model_terms:ir.ui.view,arch_db:fieldservice_portal.portal_breadcrumbs
+#: model_terms:ir.ui.view,arch_db:fieldservice_portal.portal_my_fsm_orders
+msgid "Work Orders"
+msgstr "Werkorders"
+
+#. module: fieldservice_portal
+#: model_terms:ir.ui.view,arch_db:fieldservice_portal.portal_my_fsm_orders
+msgid "Work Orders for"
+msgstr "Werkorders voor"
+
+#. module: fieldservice_portal
+#. odoo-python
+#: code:addons/fieldservice_portal/controllers/fsm_order_portal.py:0
+msgid "description"
+msgstr "omschrijving"
+
+#. module: fieldservice_portal
+#. odoo-python
+#: code:addons/fieldservice_portal/controllers/fsm_order_portal.py:0
+msgid "is_closed"
+msgstr "is_closed"
+
+#. module: fieldservice_portal
+#. odoo-python
+#: code:addons/fieldservice_portal/controllers/fsm_order_portal.py:0
+msgid "location_id.name"
+msgstr "location_id.name"
+
+#. module: fieldservice_portal
+#. odoo-python
+#: code:addons/fieldservice_portal/controllers/fsm_order_portal.py:0
+msgid "name"
+msgstr "naam"

@@ -1,0 +1,253 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* fieldservice_maintenance
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server saas~19.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-18 09:27+0000\n"
+"PO-Revision-Date: 2026-05-18 09:27+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: tr_TR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=(n>1);\n"
+
+#. module: fieldservice_maintenance
+#: model:ir.model.fields,field_description:fieldservice_maintenance.field_fsm_equipment__active
+msgid "Active"
+msgstr "Aktif"
+
+#. module: fieldservice_maintenance
+#: model:ir.model.fields,field_description:fieldservice_maintenance.field_fsm_equipment__assign_date
+msgid "Assigned Date"
+msgstr "Atama Tarihi"
+
+#. module: fieldservice_maintenance
+#: model:ir.model.fields,help:fieldservice_maintenance.field_fsm_equipment__estimated_next_failure
+msgid "Computed as Latest Failure Date + MTBF"
+msgstr "Son Arıza Tarihi + MTBF olarak hesaplanır"
+
+#. module: fieldservice_maintenance
+#: model:ir.model.fields,field_description:fieldservice_maintenance.field_fsm_equipment__cost
+msgid "Cost"
+msgstr "Maliyet"
+
+#. module: fieldservice_maintenance
+#: model:ir.model.fields,field_description:fieldservice_maintenance.field_fsm_equipment__maintenance_open_count
+msgid "Current Maintenance"
+msgstr "Aktif Bakım"
+
+#. module: fieldservice_maintenance
+#: model:ir.model.fields,field_description:fieldservice_maintenance.field_fsm_equipment__display_name
+#: model:ir.model.fields,field_description:fieldservice_maintenance.field_fsm_order__display_name
+#: model:ir.model.fields,field_description:fieldservice_maintenance.field_fsm_order_type__display_name
+#: model:ir.model.fields,field_description:fieldservice_maintenance.field_maintenance_equipment__display_name
+#: model:ir.model.fields,field_description:fieldservice_maintenance.field_maintenance_request__display_name
+msgid "Display Name"
+msgstr "Görünen Ad"
+
+#. module: fieldservice_maintenance
+#: model:ir.model.fields,field_description:fieldservice_maintenance.field_fsm_equipment__effective_date
+msgid "Effective Date"
+msgstr "Geçerlilik Tarihi"
+
+#. module: fieldservice_maintenance
+#: model:ir.model.fields,field_description:fieldservice_maintenance.field_fsm_equipment__category_id
+msgid "Equipment Category"
+msgstr "Ekipman Kategorisi"
+
+#. module: fieldservice_maintenance
+#: model:ir.model.fields,field_description:fieldservice_maintenance.field_fsm_equipment__estimated_next_failure
+msgid "Estimated time before next failure (in days)"
+msgstr "Sonraki arızaya kadar tahmini süre (gün)"
+
+#. module: fieldservice_maintenance
+#: model:ir.model.fields,field_description:fieldservice_maintenance.field_fsm_equipment__expected_mtbf
+msgid "Expected MTBF"
+msgstr "Beklenen MTBF"
+
+#. module: fieldservice_maintenance
+#: model:ir.model.fields,help:fieldservice_maintenance.field_fsm_equipment__expected_mtbf
+msgid "Expected Mean Time Between Failure"
+msgstr "Beklenen Arızalar Arası Ortalama Süre"
+
+#. module: fieldservice_maintenance
+#: model:ir.model,name:fieldservice_maintenance.model_fsm_equipment
+msgid "Field Service Equipment"
+msgstr "Saha Servis Ekipmanı"
+
+#. module: fieldservice_maintenance
+#: model:ir.model,name:fieldservice_maintenance.model_fsm_order
+#: model:ir.model.fields,field_description:fieldservice_maintenance.field_maintenance_request__fsm_order_id
+msgid "Field Service Order"
+msgstr "Saha Servis Siparişi"
+
+#. module: fieldservice_maintenance
+#: model:ir.model,name:fieldservice_maintenance.model_fsm_order_type
+msgid "Field Service Order Type"
+msgstr "Saha Servis Sipariş Türü"
+
+#. module: fieldservice_maintenance
+#: model:ir.model.fields,field_description:fieldservice_maintenance.field_fsm_equipment__id
+#: model:ir.model.fields,field_description:fieldservice_maintenance.field_fsm_order__id
+#: model:ir.model.fields,field_description:fieldservice_maintenance.field_fsm_order_type__id
+#: model:ir.model.fields,field_description:fieldservice_maintenance.field_maintenance_equipment__id
+#: model:ir.model.fields,field_description:fieldservice_maintenance.field_maintenance_request__id
+msgid "ID"
+msgstr "Kimlik"
+
+#. module: fieldservice_maintenance
+#: model:ir.model.fields,field_description:fieldservice_maintenance.field_fsm_order_type__internal_type
+msgid "Internal Type"
+msgstr "Dahili Tür"
+
+#. module: fieldservice_maintenance
+#: model:ir.model.fields,field_description:fieldservice_maintenance.field_fsm_equipment__is_assigned
+msgid "Is Assigned"
+msgstr "Atandı mı"
+
+#. module: fieldservice_maintenance
+#: model:ir.model.fields,field_description:fieldservice_maintenance.field_fsm_equipment__is_fsm_equipment
+#: model:ir.model.fields,field_description:fieldservice_maintenance.field_maintenance_equipment__is_fsm_equipment
+msgid "Is a FSM Equipment"
+msgstr "FSM Ekipmanı mı"
+
+#. module: fieldservice_maintenance
+#: model:ir.model.fields,field_description:fieldservice_maintenance.field_fsm_equipment__latest_failure_date
+msgid "Latest Failure Date"
+msgstr "Son Arıza Tarihi"
+
+#. module: fieldservice_maintenance
+#: model:ir.model.fields,field_description:fieldservice_maintenance.field_fsm_equipment__mtbf
+msgid "MTBF"
+msgstr "MTBF"
+
+#. module: fieldservice_maintenance
+#: model:ir.model.fields,field_description:fieldservice_maintenance.field_fsm_equipment__mttr
+msgid "MTTR"
+msgstr "MTTR"
+
+#. module: fieldservice_maintenance
+#: model:ir.model.fields,field_description:fieldservice_maintenance.field_fsm_equipment__maintenance_ids
+#: model:ir.model.fields.selection,name:fieldservice_maintenance.selection__fsm_order_type__internal_type__maintenance
+#: model_terms:ir.ui.view,arch_db:fieldservice_maintenance.fsm_equipment_form_view_maintenance
+msgid "Maintenance"
+msgstr "Bakım"
+
+#. module: fieldservice_maintenance
+#: model:ir.model.fields,field_description:fieldservice_maintenance.field_fsm_equipment__maintenance_count
+msgid "Maintenance Count"
+msgstr "Bakım Sayısı"
+
+#. module: fieldservice_maintenance
+#: model:ir.model,name:fieldservice_maintenance.model_maintenance_equipment
+msgid "Maintenance Equipment"
+msgstr "Bakım Ekipmanı"
+
+#. module: fieldservice_maintenance
+#: model:ir.model,name:fieldservice_maintenance.model_maintenance_request
+#: model:ir.model.fields,field_description:fieldservice_maintenance.field_fsm_order__request_id
+msgid "Maintenance Request"
+msgstr "Bakım Talebi"
+
+#. module: fieldservice_maintenance
+#: model:ir.model.fields,field_description:fieldservice_maintenance.field_fsm_equipment__maintenance_team_id
+msgid "Maintenance Team"
+msgstr "Bakım Takımı"
+
+#. module: fieldservice_maintenance
+#: model:ir.model.fields,help:fieldservice_maintenance.field_fsm_equipment__mtbf
+msgid ""
+"Mean Time Between Failure, computed based on done corrective maintenances."
+msgstr ""
+"Tamamlanan düzeltici bakımlara göre hesaplanan Arızalar Arası Ortalama Süre."
+
+#. module: fieldservice_maintenance
+#: model:ir.model.fields,help:fieldservice_maintenance.field_fsm_equipment__mttr
+msgid "Mean Time To Repair"
+msgstr "Ortalama Onarım Süresi"
+
+#. module: fieldservice_maintenance
+#: model:ir.model.fields,field_description:fieldservice_maintenance.field_fsm_equipment__model
+msgid "Model"
+msgstr "Model"
+
+#. module: fieldservice_maintenance
+#: model:ir.model.fields,field_description:fieldservice_maintenance.field_fsm_equipment__note
+msgid "Note"
+msgstr "Not"
+
+#. module: fieldservice_maintenance
+#. odoo-python
+#: code:addons/fieldservice_maintenance/models/maintenance_request.py:0
+msgid "Order was not created because the equipment's location is not set"
+msgstr "Ekipmanın konumu ayarlanmadığı için sipariş oluşturulmadı"
+
+#. module: fieldservice_maintenance
+#: model_terms:ir.ui.view,arch_db:fieldservice_maintenance.hr_equipment_view_form
+msgid "Others"
+msgstr "Diğerleri"
+
+#. module: fieldservice_maintenance
+#: model:ir.model.fields,field_description:fieldservice_maintenance.field_fsm_equipment__owner_user_id
+msgid "Owner"
+msgstr "Sahip"
+
+#. module: fieldservice_maintenance
+#: model:ir.model.fields,field_description:fieldservice_maintenance.field_fsm_equipment__equipment_properties
+msgid "Properties"
+msgstr "Özellikler"
+
+#. module: fieldservice_maintenance
+#: model:ir.model.fields,field_description:fieldservice_maintenance.field_fsm_equipment__maintenance_equipment_id
+msgid "Related Maintenance Equipment"
+msgstr "İlgili Bakım Ekipmanı"
+
+#. module: fieldservice_maintenance
+#: model:ir.model.fields,field_description:fieldservice_maintenance.field_fsm_equipment__scrap_date
+msgid "Scrap Date"
+msgstr "Hurdaya Çıkış Tarihi"
+
+#. module: fieldservice_maintenance
+#: model:ir.model.fields,field_description:fieldservice_maintenance.field_fsm_equipment__serial_no
+msgid "Serial Number"
+msgstr "Seri Numarası"
+
+#. module: fieldservice_maintenance
+#: model:ir.model.fields,field_description:fieldservice_maintenance.field_fsm_equipment__technician_user_id
+msgid "Technician"
+msgstr "Teknisyen"
+
+#. module: fieldservice_maintenance
+#: model:ir.model.fields,help:fieldservice_maintenance.field_fsm_equipment__effective_date
+msgid "This date will be used to compute the Mean Time Between Failure."
+msgstr "Bu tarih Arızalar Arası Ortalama Süre hesaplanmasında kullanılacak."
+
+#. module: fieldservice_maintenance
+#: model:ir.model.fields,field_description:fieldservice_maintenance.field_fsm_equipment__equipment_assign_to
+msgid "Used By"
+msgstr "Kullanan"
+
+#. module: fieldservice_maintenance
+#: model:ir.model.fields,field_description:fieldservice_maintenance.field_fsm_equipment__vehicle_id
+msgid "Vehicle"
+msgstr "Araç"
+
+#. module: fieldservice_maintenance
+#: model:ir.model.fields,field_description:fieldservice_maintenance.field_fsm_equipment__partner_id
+msgid "Vendor"
+msgstr "Tedarikçi"
+
+#. module: fieldservice_maintenance
+#: model:ir.model.fields,field_description:fieldservice_maintenance.field_fsm_equipment__partner_ref
+msgid "Vendor Reference"
+msgstr "Tedarikçi Referansı"
+
+#. module: fieldservice_maintenance
+#: model:ir.model.fields,field_description:fieldservice_maintenance.field_fsm_equipment__warranty_date
+msgid "Warranty Expiration Date"
+msgstr "Garanti Bitiş Tarihi"
