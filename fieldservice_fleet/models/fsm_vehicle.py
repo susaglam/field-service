@@ -14,6 +14,7 @@ class FSMVehicle(models.Model):
         string="Vehicle Details",
         required=True,
         ondelete="restrict",
+        help="Fleet Vehicle Id. Linked record reference.",
     )
 
     _fsm_vehicle_fleet_uniq = models.Constraint(

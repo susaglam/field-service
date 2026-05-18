@@ -31,7 +31,7 @@ class FSMPerson(models.Model):
     mobile = fields.Char(
         help="Worker's mobile number for dispatch.",
     )
-    territory_ids = fields.Many2many("res.territory", string="Territories")
+    territory_ids = fields.Many2many("res.territory", string="Territories", help="Territory Ids. Many-to-many / one-to-many relation collection.")
     active = fields.Boolean(default=True)
     active_partner = fields.Boolean(
         related="partner_id.active", readonly=True, string="Partner is Active"

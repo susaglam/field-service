@@ -11,7 +11,8 @@ class FSMOrder(models.Model):
     _inherit = "fsm.order"
 
     dayroute_id = fields.Many2one(
-        comodel_name="fsm.route.dayroute", string="Day Route", index=True
+        comodel_name="fsm.route.dayroute", string="Day Route", index=True,
+        help="Dayroute Id. Linked record reference.",
     )
     fsm_route_id = fields.Many2one(related="location_id.fsm_route_id", string="Route")
 

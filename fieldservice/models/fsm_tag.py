@@ -13,7 +13,7 @@ class FSMTag(models.Model):
         help="Tag label.",
 
     )
-    parent_id = fields.Many2one("fsm.tag", string="Parent")
+    parent_id = fields.Many2one("fsm.tag", string="Parent", help="Parent Id. Linked record reference.")
     color = fields.Integer("Color Index", default=10,
         help="Kanban color index (1–11) for visual grouping.",
     )

@@ -11,6 +11,7 @@ class FSMOrder(models.Model):
         "calendar.event",
         string="Meeting",
         readonly=True,
+        help="Calendar Event Id. Linked record reference.",
     )
 
     @api.model_create_multi

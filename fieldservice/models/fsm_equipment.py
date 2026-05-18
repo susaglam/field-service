@@ -55,8 +55,8 @@ class FSMEquipment(models.Model):
     current_location_id = fields.Many2one("fsm.location", string="Current Location",
         help="Tracked current location (may differ from location_id if equipment was moved).",
     )
-    managed_by_id = fields.Many2one("res.partner", string="Managed By")
-    owned_by_id = fields.Many2one("res.partner", string="Owned By")
+    managed_by_id = fields.Many2one("res.partner", string="Managed By", help="Managed By Id. Linked record reference.")
+    owned_by_id = fields.Many2one("res.partner", string="Owned By", help="Owned By Id. Linked record reference.")
     parent_id = fields.Many2one("fsm.equipment", string="Parent",
         help="Parent equipment (e.g. boiler → pump component).",
     )

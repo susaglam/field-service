@@ -17,6 +17,7 @@ class FSMEquipment(models.Model):
         delegate=True,
         bypass_search_access=True,
         index=True,
+        help="Maintenance Equipment Id. Linked record reference.",
     )
 
     @api.model_create_multi

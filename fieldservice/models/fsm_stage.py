@@ -41,7 +41,7 @@ class FSMStage(models.Model):
     custom_color = fields.Char(
         "Color Code", default="#FFFFFF", help="Use Hex Code only Ex:-#FFFFFF"
     )
-    description = fields.Text(translate=True)
+    description = fields.Text(translate=True, help="Description.")
     stage_type = fields.Selection(
         [
             ("order", "Order"),
@@ -61,6 +61,7 @@ class FSMStage(models.Model):
         "res.company",
         string="Company",
         default=lambda self: self.env.user.company_id.id,
+        help="Company Id. Linked record reference.",
     )
     team_ids = fields.Many2many(
         "fsm.team",
@@ -69,6 +70,7 @@ class FSMStage(models.Model):
         "team_id",
         string="Teams",
         default=lambda self: self._default_team_ids(),
+        help="Team Ids. Many-to-many / one-to-many relation collection.",
     )
 
     def get_color_information(self):

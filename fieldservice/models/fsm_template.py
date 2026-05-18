@@ -9,8 +9,8 @@ class FSMTemplate(models.Model):
     _description = "Field Service Order Template"
 
     name = fields.Char(required=True)
-    instructions = fields.Html()
-    category_ids = fields.Many2many("fsm.category", string="Categories")
+    instructions = fields.Html(help="Instructions.")
+    category_ids = fields.Many2many("fsm.category", string="Categories", help="Category Ids. Many-to-many / one-to-many relation collection.")
     duration = fields.Float(help="Default duration in hours")
     company_id = fields.Many2one(
         "res.company",
@@ -18,7 +18,7 @@ class FSMTemplate(models.Model):
         index=True,
         help="Company related to this template",
     )
-    type_id = fields.Many2one("fsm.order.type", string="Type")
+    type_id = fields.Many2one("fsm.order.type", string="Type", help="Type Id. Linked record reference.")
     team_id = fields.Many2one(
         "fsm.team",
         string="Team",

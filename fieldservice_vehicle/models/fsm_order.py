@@ -11,7 +11,8 @@ class FSMOrder(models.Model):
         return self.person_id.vehicle_id.id or False
 
     vehicle_id = fields.Many2one(
-        "fsm.vehicle", string="Vehicle", default=_get_default_vehicle
+        "fsm.vehicle", string="Vehicle", default=_get_default_vehicle,
+        help="Vehicle Id. Linked record reference.",
     )
 
     @api.model_create_multi

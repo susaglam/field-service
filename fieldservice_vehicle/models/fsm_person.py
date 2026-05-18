@@ -6,4 +6,4 @@ from odoo import fields, models
 class FSMPerson(models.Model):
     _inherit = "fsm.person"
 
-    vehicle_id = fields.Many2one("fsm.vehicle", string="Default Vehicle")
+    vehicle_id = fields.Many2one("fsm.vehicle", string="Default Vehicle", help="Vehicle Id. Linked record reference.")

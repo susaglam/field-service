@@ -17,6 +17,7 @@ class Agreement(models.Model):
         column1="agreement_id",
         column2="fsm_location_id",
         string="FSM Locations",
+        help="Fsm Location Ids. Many-to-many / one-to-many relation collection.",
     )
 
     def _compute_service_order_count(self):

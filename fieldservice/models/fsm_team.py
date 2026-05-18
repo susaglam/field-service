@@ -55,7 +55,7 @@ class FSMTeam(models.Model):
         help="Name of the team (e.g. 'Plumbing Crew A').",
 
     )
-    description = fields.Text(translate=True)
+    description = fields.Text(translate=True, help="Description.")
     active = fields.Boolean(default=True)
     color = fields.Integer("Color Index")
     stage_ids = fields.Many2many(
@@ -65,12 +65,14 @@ class FSMTeam(models.Model):
         "stage_id",
         string="Stages",
         default=_default_stages,
+        help="Stage Ids. Many-to-many / one-to-many relation collection.",
     )
     order_ids = fields.One2many(
         "fsm.order",
         "team_id",
         string="Orders",
         domain=[("stage_id.is_closed", "=", False)],
+        help="Order Ids. Many-to-many / one-to-many relation collection.",
     )
     order_count = fields.Integer(compute="_compute_order_count", string="Orders Count")
     order_need_assign_count = fields.Integer(

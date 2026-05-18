@@ -10,6 +10,7 @@ class SaleOrderLine(models.Model):
     qty_delivered_method = fields.Selection(
         selection_add=[("field_service", "Field Service Order")],
         ondelete={"field_service": "cascade"},
+        help="Qty Delivered Method. Quantity value.",
     )
     fsm_order_id = fields.Many2one(
         "fsm.order",

@@ -10,7 +10,8 @@ class FSMOrder(models.Model):
     _inherit = "fsm.order"
 
     fsm_recurring_id = fields.Many2one(
-        "fsm.recurring", "Recurring Order", readonly=True
+        "fsm.recurring", "Recurring Order", readonly=True,
+        help="Fsm Recurring Id. Linked record reference.",
     )
 
     @api.model_create_multi

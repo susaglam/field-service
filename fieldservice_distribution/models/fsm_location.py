@@ -7,8 +7,8 @@ from odoo import fields, models
 class FSMLocation(models.Model):
     _inherit = "fsm.location"
 
-    is_a_distribution = fields.Boolean(string="Is a Distribution")
-    dist_parent_id = fields.Many2one("fsm.location", string="Distribution Parent")
+    is_a_distribution = fields.Boolean(string="Is a Distribution", help="Is A Distribution. Boolean flag — true when the condition holds.")
+    dist_parent_id = fields.Many2one("fsm.location", string="Distribution Parent", help="Dist Parent Id. Linked record reference.")
 
     distrib_count = fields.Integer(
         compute="_compute_distrib_sublocation_ids",

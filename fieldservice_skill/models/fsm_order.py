@@ -11,7 +11,7 @@ _logger = logging.getLogger(__name__)
 class FSMOrder(models.Model):
     _inherit = "fsm.order"
 
-    skill_ids = fields.Many2many("hr.skill", string="Required Skills")
+    skill_ids = fields.Many2many("hr.skill", string="Required Skills", help="Skill Ids. Many-to-many / one-to-many relation collection.")
     skill_worker_ids = fields.Many2many(
         "fsm.person",
         "fsm_order_skill_workers_rel",

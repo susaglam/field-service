@@ -9,7 +9,8 @@ class ProductTemplate(models.Model):
     _inherit = "product.template"
 
     field_service_tracking = fields.Selection(
-        selection_add=[("recurring", "Create a recurring order")]
+        selection_add=[("recurring", "Create a recurring order")],
+        help="Field Service Tracking.",
     )
     fsm_recurring_template_id = fields.Many2one(
         "fsm.recurring.template",

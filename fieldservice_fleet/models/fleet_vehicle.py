@@ -8,7 +8,7 @@ from odoo import fields, models
 class FleetVehicle(models.Model):
     _inherit = "fleet.vehicle"
 
-    is_fsm_vehicle = fields.Boolean(string="Is used for Field Service?")
+    is_fsm_vehicle = fields.Boolean(string="Is used for Field Service?", help="Is Fsm Vehicle. Boolean flag — true when the condition holds.")
 
     def set_fsm_driver(self):
         for record in self.filtered("is_fsm_vehicle").filtered("driver_id"):

@@ -8,7 +8,8 @@ class ProjectTask(models.Model):
     _inherit = "project.task"
 
     fsm_order_ids = fields.One2many(
-        "fsm.order", "project_task_id", string="Service Orders"
+        "fsm.order", "project_task_id", string="Service Orders",
+        help="Fsm Order Ids. Many-to-many / one-to-many relation collection.",
     )
 
     def action_create_order(self):

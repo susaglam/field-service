@@ -9,59 +9,72 @@ class ResConfigSettings(models.TransientModel):
 
     # Groups
     group_fsm_team = fields.Boolean(
-        string="Manage Teams", implied_group="fieldservice.group_fsm_team"
+        string="Manage Teams", implied_group="fieldservice.group_fsm_team",
+        help="Group Fsm Team.",
     )
     group_fsm_category = fields.Boolean(
-        string="Manage Categories", implied_group="fieldservice.group_fsm_category"
+        string="Manage Categories", implied_group="fieldservice.group_fsm_category",
+        help="Group Fsm Category.",
     )
     group_fsm_tag = fields.Boolean(
-        string="Manage Tags", implied_group="fieldservice.group_fsm_tag"
+        string="Manage Tags", implied_group="fieldservice.group_fsm_tag",
+        help="Group Fsm Tag.",
     )
     group_fsm_equipment = fields.Boolean(
-        string="Manage Equipment", implied_group="fieldservice.group_fsm_equipment"
+        string="Manage Equipment", implied_group="fieldservice.group_fsm_equipment",
+        help="Group Fsm Equipment.",
     )
     group_fsm_template = fields.Boolean(
-        string="Manage Template", implied_group="fieldservice.group_fsm_template"
+        string="Manage Template", implied_group="fieldservice.group_fsm_template",
+        help="Group Fsm Template.",
     )
     group_fsm_territory = fields.Boolean(
-        string="Manage Territory", implied_group="fieldservice.group_fsm_territory"
+        string="Manage Territory", implied_group="fieldservice.group_fsm_territory",
+        help="Group Fsm Territory.",
     )
 
     # Modules
-    module_fieldservice_account = fields.Boolean(string="Invoice your FSM orders")
-    module_fieldservice_activity = fields.Boolean(string="Manage FSM Activities")
-    module_fieldservice_agreement = fields.Boolean(string="Manage Agreements")
-    module_fieldservice_change_management = fields.Boolean(string="Change Management")
-    module_fieldservice_crm = fields.Boolean(string="CRM")
-    module_fieldservice_distribution = fields.Boolean(string="Manage Distribution")
+    module_fieldservice_account = fields.Boolean(string="Invoice your FSM orders", help="Module Fieldservice Account.")
+    module_fieldservice_activity = fields.Boolean(string="Manage FSM Activities", help="Module Fieldservice Activity.")
+    module_fieldservice_agreement = fields.Boolean(string="Manage Agreements", help="Module Fieldservice Agreement.")
+    module_fieldservice_change_management = fields.Boolean(string="Change Management", help="Module Fieldservice Change Management.")
+    module_fieldservice_crm = fields.Boolean(string="CRM", help="Module Fieldservice Crm.")
+    module_fieldservice_distribution = fields.Boolean(string="Manage Distribution", help="Module Fieldservice Distribution.")
     module_fieldservice_fleet = fields.Boolean(
-        string="Link FSM vehicles to Fleet vehicles"
+        string="Link FSM vehicles to Fleet vehicles",
+        help="Module Fieldservice Fleet.",
     )
     module_fieldservice_location_builder = fields.Boolean(
-        string="Use FSM Location Builder"
+        string="Use FSM Location Builder",
+        help="Module Fieldservice Location Builder.",
     )
     module_fieldservice_maintenance = fields.Boolean(
-        string="Link FSM orders to maintenance requests"
+        string="Link FSM orders to maintenance requests",
+        help="Module Fieldservice Maintenance.",
     )
-    module_fieldservice_project = fields.Boolean(string="Projects and Tasks")
+    module_fieldservice_project = fields.Boolean(string="Projects and Tasks", help="Module Fieldservice Project.")
     module_fieldservice_purchase = fields.Boolean(
-        string="Manage subcontractors and their pricelists"
+        string="Manage subcontractors and their pricelists",
+        help="Module Fieldservice Purchase.",
     )
-    module_fieldservice_recurring = fields.Boolean(string="Manage Recurring Orders")
+    module_fieldservice_recurring = fields.Boolean(string="Manage Recurring Orders", help="Module Fieldservice Recurring.")
     module_fieldservice_repair = fields.Boolean(
-        string="Link FSM orders to MRP Repair orders"
+        string="Link FSM orders to MRP Repair orders",
+        help="Module Fieldservice Repair.",
     )
-    module_fieldservice_route = fields.Boolean(string="Manage routes")
-    module_fieldservice_sale = fields.Boolean(string="Sell FSM orders")
+    module_fieldservice_route = fields.Boolean(string="Manage routes", help="Module Fieldservice Route.")
+    module_fieldservice_sale = fields.Boolean(string="Sell FSM orders", help="Module Fieldservice Sale.")
     module_fieldservice_size = fields.Boolean(
-        string="Manage sizes for orders and locations"
+        string="Manage sizes for orders and locations",
+        help="Module Fieldservice Size.",
     )
-    module_fieldservice_skill = fields.Boolean(string="Manage Skills")
-    module_fieldservice_stock = fields.Boolean(string="Use Odoo Logistics")
-    module_fieldservice_vehicle = fields.Boolean(string="Manage Vehicles")
-    module_fieldservice_substatus = fields.Boolean(string="Manage Sub-Statuses")
+    module_fieldservice_skill = fields.Boolean(string="Manage Skills", help="Module Fieldservice Skill.")
+    module_fieldservice_stock = fields.Boolean(string="Use Odoo Logistics", help="Module Fieldservice Stock.")
+    module_fieldservice_vehicle = fields.Boolean(string="Manage Vehicles", help="Module Fieldservice Vehicle.")
+    module_fieldservice_substatus = fields.Boolean(string="Manage Sub-Statuses", help="Module Fieldservice Substatus.")
     module_fieldservice_timeline = fields.Boolean(
-        string="Allow Field Service Web Timeline View"
+        string="Allow Field Service Web Timeline View",
+        help="Module Fieldservice Timeline.",
     )
 
     # Companies

@@ -7,9 +7,10 @@ from odoo import api, fields, models
 class FSMOrder(models.Model):
     _inherit = "fsm.order"
 
-    project_id = fields.Many2one("project.project", string="Project", tracking=True)
+    project_id = fields.Many2one("project.project", string="Project", tracking=True, help="Project Id. Linked record reference.")
     project_task_id = fields.Many2one(
-        "project.task", string="Project Task", tracking=True
+        "project.task", string="Project Task", tracking=True,
+        help="Project Task Id. Linked record reference.",
     )
 
     def action_view_order(self):

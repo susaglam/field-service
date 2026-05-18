@@ -17,7 +17,7 @@ class FSMLocation(models.Model):
         recursive=True,
         default=lambda self: self.env.ref("stock.stock_location_customers"),
     )
-    shipping_address_id = fields.Many2one("res.partner", string="Shipping Location")
+    shipping_address_id = fields.Many2one("res.partner", string="Shipping Location", help="Shipping Address Id. Linked record reference.")
 
     @api.depends("parent_id", "parent_id.inventory_location_id")
     def _compute_inventory_location_id(self):

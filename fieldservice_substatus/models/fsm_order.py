@@ -13,6 +13,7 @@ class FSMOrder(models.Model):
         required=True,
         tracking=True,
         default=lambda self: self._default_stage_id().sub_stage_id,
+        help="Sub Stage Id. Linked record reference.",
     )
 
     def write(self, vals):

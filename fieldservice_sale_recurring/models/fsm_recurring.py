@@ -8,7 +8,7 @@ from odoo import _, fields, models
 class FSMRecurring(models.Model):
     _inherit = "fsm.recurring"
 
-    sale_line_id = fields.Many2one("sale.order.line")
+    sale_line_id = fields.Many2one("sale.order.line", help="Sale Line Id. Linked record reference.")
 
     def action_view_sales(self):
         self.ensure_one()

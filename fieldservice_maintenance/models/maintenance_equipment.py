@@ -7,4 +7,4 @@ from odoo import fields, models
 class MaintenanceEquipment(models.Model):
     _inherit = "maintenance.equipment"
 
-    is_fsm_equipment = fields.Boolean(string="Is a FSM Equipment")
+    is_fsm_equipment = fields.Boolean(string="Is a FSM Equipment", help="Is Fsm Equipment. Boolean flag — true when the condition holds.")

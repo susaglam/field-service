@@ -5,4 +5,5 @@
 from . import (
     fsm_vehicle,
     fleet_vehicle,
+    fsm_fleet_mcp,
 )

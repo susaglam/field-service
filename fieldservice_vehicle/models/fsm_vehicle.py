@@ -8,7 +8,7 @@ class FSMVehicle(models.Model):
     _description = "Field Service Vehicle"
 
     name = fields.Char(required=True)
-    person_id = fields.Many2one("fsm.person", string="Assigned Driver")
+    person_id = fields.Many2one("fsm.person", string="Assigned Driver", help="Person Id. Linked record reference.")
 
     _name_uniq = models.Constraint(
         'unique (name)',

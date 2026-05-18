@@ -16,7 +16,7 @@ class FSMLocation(models.Model):
     _stage_type = "location"
     _rec_names_search = ["complete_name"]
 
-    direction = fields.Char()
+    direction = fields.Char(help="Direction.")
     partner_id = fields.Many2one(
         "res.partner",
         string="Related Partner",
@@ -39,8 +39,9 @@ class FSMLocation(models.Model):
         string="Primary Contact",
         domain="[('is_company', '=', False)," " ('fsm_location', '=', False)]",
         index=True,
+        help="Contact Id. Linked record reference.",
     )
-    description = fields.Char()
+    description = fields.Char(help="Description.")
     territory_id = fields.Many2one("res.territory", string="Territory",
         help="Which sales/service territory this location belongs to.",
     )
@@ -71,8 +72,8 @@ class FSMLocation(models.Model):
         help="Working hours calendar for this location.",
 
     )
-    parent_id = fields.Many2one("fsm.location", string="Parent", index=True)
-    parent_path = fields.Char(index=True)
+    parent_id = fields.Many2one("fsm.location", string="Parent", index=True, help="Parent Id. Linked record reference.")
+    parent_path = fields.Char(index=True, help="Parent Path.")
     child_ids = fields.One2many(
         string="Children Locations",
         comodel_name="fsm.location",
@@ -311,5 +312,6 @@ class FSMPerson(models.Model):
     _inherit = "fsm.person"
 
     location_ids = fields.One2many(
-        "fsm.location.person", "person_id", string="Linked Locations"
+        "fsm.location.person", "person_id", string="Linked Locations",
+        help="Location Ids. Many-to-many / one-to-many relation collection.",
     )

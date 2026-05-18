@@ -11,6 +11,7 @@ class Meeting(models.Model):
         string="Order id",
         comodel_name="fsm.order",
         inverse_name="calendar_event_id",
+        help="Fsm Order Id. Linked record reference.",
     )
 
     def _update_fsm_order_date(self):

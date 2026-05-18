@@ -10,7 +10,7 @@ class FSMLocation(models.Model):
     change_log_count = fields.Integer(
         compute="_compute_change_log_count", string="# Change Logs"
     )
-    change_log_ids = fields.One2many("change.log", "location_id", string="Change Logs")
+    change_log_ids = fields.One2many("change.log", "location_id", string="Change Logs", help="Change Log Ids. Many-to-many / one-to-many relation collection.")
 
     def _compute_change_log_count(self):
         for location in self:

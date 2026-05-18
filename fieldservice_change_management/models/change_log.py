@@ -12,19 +12,20 @@ class ChangeLog(models.Model):
 
     active = fields.Boolean(default=True)
     name = fields.Char(string="Title", required=True)
-    location_id = fields.Many2one("fsm.location", string="FSM Location")
-    implemented_on = fields.Datetime(required=True, default=fields.Datetime.now)
-    description = fields.Text(required=True)
+    location_id = fields.Many2one("fsm.location", string="FSM Location", help="Location Id. Linked record reference.")
+    implemented_on = fields.Datetime(required=True, default=fields.Datetime.now, help="Implemented On.")
+    description = fields.Text(required=True, help="Description.")
     user_id = fields.Many2one(
         "res.users",
         string="Changed By",
         default=lambda self: self.env.user,
         tracking=True,
         required=True,
+        help="User Id. Linked record reference.",
     )
-    tag_ids = fields.Many2many("change.log.tag", string="Tags")
-    type_id = fields.Many2one("change.log.type", string="Type", required=True)
-    impact_id = fields.Many2one("change.log.impact", string="Impact", required=True)
+    tag_ids = fields.Many2many("change.log.tag", string="Tags", help="Tag Ids. Many-to-many / one-to-many relation collection.")
+    type_id = fields.Many2one("change.log.type", string="Type", required=True, help="Type Id. Linked record reference.")
+    impact_id = fields.Many2one("change.log.impact", string="Impact", required=True, help="Impact Id. Linked record reference.")
     stage_id = fields.Many2one(
         "change.log.stage",
         string="Stage",

@@ -16,6 +16,7 @@ class FSMStage(models.Model):
         string="Default Sub-Status",
         store=True,
         default=_default_sub_stage,
+        help="Sub Stage Id. Linked record reference.",
     )
     sub_stage_ids = fields.Many2many(
         "fsm.stage.status",
@@ -23,6 +24,7 @@ class FSMStage(models.Model):
         "fsm_stage_id",
         "sub_stage_id",
         string="Potential Sub-Statuses",
+        help="Sub Stage Ids. Many-to-many / one-to-many relation collection.",
     )
 
     @api.onchange("sub_stage_id")

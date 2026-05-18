@@ -16,8 +16,9 @@ class FsmModelMixin(models.AbstractModel):
         copy=False,
         group_expand="_read_group_stage_ids",
         default=lambda self: self._default_stage_id(),
+        help="Stage Id. Linked record reference.",
     )
-    hide = fields.Boolean()
+    hide = fields.Boolean(help="Hide.")
 
     @api.model
     def _read_group_stage_ids(self, stages, domain):

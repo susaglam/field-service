@@ -12,11 +12,12 @@ class FSMPersonSkill(models.Model):
     _description = "Field Service Worker Skill"
 
     person_id = fields.Many2one(
-        "fsm.person", string="Field Service Worker", required=True
+        "fsm.person", string="Field Service Worker", required=True,
+        help="Person Id. Linked record reference.",
     )
-    skill_id = fields.Many2one("hr.skill", string="Skill", required=True)
-    skill_level_id = fields.Many2one("hr.skill.level", required=True)
-    skill_type_id = fields.Many2one("hr.skill.type", required=True)
+    skill_id = fields.Many2one("hr.skill", string="Skill", required=True, help="Skill Id. Linked record reference.")
+    skill_level_id = fields.Many2one("hr.skill.level", required=True, help="Skill Level Id. Linked record reference.")
+    skill_type_id = fields.Many2one("hr.skill.type", required=True, help="Skill Type Id. Linked record reference.")
     level_progress = fields.Integer(related="skill_level_id.level_progress", store=True)
 
     _person_skill_uniq = models.Constraint(

@@ -13,4 +13,5 @@ class FSMRoute(models.Model):
         "fsm_route_id",
         "fsm_blackout_group_id",
         string="Blackout Group Days",
+        help="Fsm Blackout Group Ids. Many-to-many / one-to-many relation collection.",
     )

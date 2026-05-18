@@ -7,4 +7,4 @@ from odoo import fields, models
 class FSMTemplate(models.Model):
     _inherit = "fsm.template"
 
-    skill_ids = fields.Many2many("hr.skill", string="Required Skills")
+    skill_ids = fields.Many2many("hr.skill", string="Required Skills", help="Skill Ids. Many-to-many / one-to-many relation collection.")

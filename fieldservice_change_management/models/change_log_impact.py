@@ -10,9 +10,10 @@ class ChangeLogImpact(models.Model):
     _description = "Change Log Impact"
 
     name = fields.Char(string="Impact", required=True)
-    description = fields.Text()
+    description = fields.Text(help="Description.")
     log_impact_sequence = fields.Integer(
         required=True,
         default=lambda self: self.env["ir.sequence"].next_by_code("res.log.impact")
         or 0,
+        help="Log Impact Sequence.",
     )

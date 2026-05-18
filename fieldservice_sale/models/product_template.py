@@ -11,6 +11,7 @@ class ProductTemplate(models.Model):
     service_type = fields.Selection(
         selection_add=[("field", "Field Service Orders")],
         ondelete={"field": "cascade"},
+        help="Service Type.",
     )
     field_service_tracking = fields.Selection(
         [

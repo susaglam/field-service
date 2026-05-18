@@ -7,4 +7,5 @@ from . import (
     sale_order,
     sale_order_line,
     fsm_recurring,
+    fsm_sale_recurring_mcp,
 )

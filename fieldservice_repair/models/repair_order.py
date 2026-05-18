@@ -7,4 +7,4 @@ from odoo import fields, models
 class RepairOrder(models.Model):
     _inherit = "repair.order"
 
-    fsm_order_id = fields.Many2one("fsm.order", string="Field Service Order")
+    fsm_order_id = fields.Many2one("fsm.order", string="Field Service Order", help="Fsm Order Id. Linked record reference.")

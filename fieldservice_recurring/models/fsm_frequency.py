@@ -50,48 +50,49 @@ class FSMFrequency(models.Model):
         FREQUENCY_SELECT,
         required=True,
         tracking=True,
+        help="Interval Type.",
     )
     is_exclusive = fields.Boolean(
         string="Exclusive Rule?",
         help="""Checking this box will make this an exclusive rule. Exclusive
             rules prevent the configured days from being a schedule option""",
     )
-    company_id = fields.Many2one("res.company", "Company")
+    company_id = fields.Many2one("res.company", "Company", help="Company Id. Linked record reference.")
     use_bymonthday = fields.Boolean(
         string="Use Day of Month",
         help="""When selected you will be able to specify which calendar day
             of the month the event occurs on""",
     )
-    month_day = fields.Integer(string="Day of Month", tracking=True)
+    month_day = fields.Integer(string="Day of Month", tracking=True, help="Month Day.")
 
     use_byweekday = fields.Boolean(
         string="Use Days of Week",
         help="""When selected you will be able to choose which days of the
             week the scheduler will include (or exclude if Exclusive rule)""",
     )
-    mo = fields.Boolean("Monday")
-    tu = fields.Boolean("Tuesday")
-    we = fields.Boolean("Wednesday")
-    th = fields.Boolean("Thursday")
-    fr = fields.Boolean("Friday")
-    sa = fields.Boolean("Saturday")
-    su = fields.Boolean("Sunday")
+    mo = fields.Boolean("Monday", help="Mo.")
+    tu = fields.Boolean("Tuesday", help="Tu.")
+    we = fields.Boolean("Wednesday", help="We.")
+    th = fields.Boolean("Thursday", help="Th.")
+    fr = fields.Boolean("Friday", help="Fr.")
+    sa = fields.Boolean("Saturday", help="Sa.")
+    su = fields.Boolean("Sunday", help="Su.")
 
-    use_bymonth = fields.Boolean(string="Use Months")
-    jan = fields.Boolean("January")
-    feb = fields.Boolean("February")
-    mar = fields.Boolean("March")
-    apr = fields.Boolean("April")
-    may = fields.Boolean()
-    jun = fields.Boolean("June")
-    jul = fields.Boolean("July")
-    aug = fields.Boolean("August")
-    sep = fields.Boolean("September")
-    oct = fields.Boolean("October")
-    nov = fields.Boolean("November")
-    dec = fields.Boolean("December")
+    use_bymonth = fields.Boolean(string="Use Months", help="Use Bymonth. Toggle that enables the related behaviour.")
+    jan = fields.Boolean("January", help="Jan.")
+    feb = fields.Boolean("February", help="Feb.")
+    mar = fields.Boolean("March", help="Mar.")
+    apr = fields.Boolean("April", help="Apr.")
+    may = fields.Boolean(help="May.")
+    jun = fields.Boolean("June", help="Jun.")
+    jul = fields.Boolean("July", help="Jul.")
+    aug = fields.Boolean("August", help="Aug.")
+    sep = fields.Boolean("September", help="Sep.")
+    oct = fields.Boolean("October", help="Oct.")
+    nov = fields.Boolean("November", help="Nov.")
+    dec = fields.Boolean("December", help="Dec.")
 
-    use_setpos = fields.Boolean(string="Use Position")
+    use_setpos = fields.Boolean(string="Use Position", help="Use Setpos. Toggle that enables the related behaviour.")
     set_pos = fields.Integer(
         string="By Position",
         help="""Specify an occurrence number, positive or negative,

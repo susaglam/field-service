@@ -4,4 +4,5 @@ from . import (
     fsm_equipment,
     product_template,
     stock_lot,
+    fsm_equipment_stock_mcp,
 )

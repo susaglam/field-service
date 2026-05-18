@@ -9,5 +9,6 @@ class StockPicking(models.Model):
     # Was: related="group_id.fsm_order_id" — procurement.group removed in saas-19.3.
     # Now standalone; populated directly by callers (e.g. fieldservice_sale_stock).
     fsm_order_id = fields.Many2one(
-        "fsm.order", string="Field Service Order", index=True, copy=False
+        "fsm.order", string="Field Service Order", index=True, copy=False,
+        help="Fsm Order Id. Linked record reference.",
     )

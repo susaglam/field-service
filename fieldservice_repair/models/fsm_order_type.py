@@ -9,4 +9,5 @@ class FsmOrderType(models.Model):
 
     internal_type = fields.Selection(
         selection_add=[("repair", "Repair")],
+        help="Internal Type.",
     )

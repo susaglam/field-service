@@ -164,9 +164,9 @@ class FSMOrder(models.Model):
     )
 
     # Signature
-    signed_by = fields.Char(copy=False, readonly=True)
-    signed_on = fields.Datetime(copy=False, readonly=True)
-    signature = fields.Image(copy=False, max_width=1024, max_height=1024, readonly=True)
+    signed_by = fields.Char(copy=False, readonly=True, help="Signed By.")
+    signed_on = fields.Datetime(copy=False, readonly=True, help="Signed On.")
+    signature = fields.Image(copy=False, max_width=1024, max_height=1024, readonly=True, help="Signature.")
     require_signature = fields.Boolean(related="stage_id.require_signature")
 
     def _calc_request_late(self, vals):
@@ -206,7 +206,7 @@ class FSMOrder(models.Model):
         help="Customer-facing description of the work requested.",
     )
 
-    person_ids = fields.Many2many("fsm.person", string="Field Service Workers")
+    person_ids = fields.Many2many("fsm.person", string="Field Service Workers", help="Person Ids. Many-to-many / one-to-many relation collection.")
 
     # Planning
     person_id = fields.Many2one("fsm.person", string="Assigned To", index=True,
@@ -246,7 +246,7 @@ class FSMOrder(models.Model):
         compute=_compute_duration,
         help="Actual duration in hours",
     )
-    current_date = fields.Datetime(default=fields.Datetime.now, store=True)
+    current_date = fields.Datetime(default=fields.Datetime.now, store=True, help="Current Date. Date value.")
 
     # Location
     territory_id = fields.Many2one(

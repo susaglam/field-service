@@ -1,6 +1,6 @@
 {
     "name": "Field Service - Portal",
-    "version": "saas~19.3.1.0.0",
+    "version": "saas~19.3.1.0.1",
     "summary": """
     Bridge module between fieldservice and portal.
     """,

@@ -11,10 +11,12 @@ class FSMLocationPerson(models.Model):
     _order = "sequence"
 
     location_id = fields.Many2one(
-        "fsm.location", string="Location", required=True, index=True
+        "fsm.location", string="Location", required=True, index=True,
+        help="Location Id. Linked record reference.",
     )
     person_id = fields.Many2one(
-        "fsm.person", string="Worker", required=True, index=True
+        "fsm.person", string="Worker", required=True, index=True,
+        help="Person Id. Linked record reference.",
     )
     sequence = fields.Integer(required=True, default="10")
     phone = fields.Char(related="person_id.phone")

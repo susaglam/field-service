@@ -3,7 +3,7 @@
 
 {
     "name": "Field Service - Sale Stock",
-    "version": "saas~19.3.1.0.0",
+    "version": "saas~19.3.1.0.1",
     "summary": "Sell stockable items linked to field service orders.",
     "category": "Field Service",
     "author": "Brian McMaster, Odoo Community Association (OCA)",

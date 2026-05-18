@@ -4,3 +4,4 @@ from . import agreement
 from . import fsm_equipment
 from . import fsm_order
 from . import fsm_person
+from . import fsm_agreement_mcp

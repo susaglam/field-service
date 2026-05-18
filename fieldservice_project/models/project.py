@@ -7,8 +7,8 @@ from odoo import fields, models
 class Project(models.Model):
     _inherit = "project.project"
 
-    fsm_order_ids = fields.One2many("fsm.order", "project_id", string="Service Orders")
-    fsm_location_id = fields.Many2one("fsm.location", string="FSM Location")
+    fsm_order_ids = fields.One2many("fsm.order", "project_id", string="Service Orders", help="Fsm Order Ids. Many-to-many / one-to-many relation collection.")
+    fsm_location_id = fields.Many2one("fsm.location", string="FSM Location", help="Fsm Location Id. Linked record reference.")
 
     def action_create_order(self):
         """

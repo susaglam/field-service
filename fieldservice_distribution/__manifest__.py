@@ -4,7 +4,7 @@
 {
     "name": "Field Service - Distribution",
     "summary": "Manage your distribution structure",
-    "version": "saas~19.3.1.0.0",
+    "version": "saas~19.3.1.0.1",
     "category": "Field Service",
     "author": "Open Source Integrators, Odoo Community Association (OCA)",
     "website": "https://github.com/OCA/field-service",

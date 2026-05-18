@@ -10,4 +10,5 @@ class FsmOrderType(models.Model):
     internal_type = fields.Selection(
         selection_add=[("maintenance", "Maintenance")],
         ondelete={"maintenance": "cascade"},
+        help="Internal Type.",
     )

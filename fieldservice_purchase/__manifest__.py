@@ -8,7 +8,7 @@
     "website": "https://github.com/OCA/field-service",
     "category": "Field Service",
     "license": "AGPL-3",
-    "version": "saas~19.3.1.0.1",
+    "version": "saas~19.3.1.0.2",
     "depends": [
         "fieldservice",
         "purchase",

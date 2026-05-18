@@ -11,7 +11,8 @@ class FSMEquipment(models.Model):
     _inherit = "fsm.equipment"
 
     warranty_start_date = fields.Date(
-        copy=False, tracking=True, default=fields.Date.today
+        copy=False, tracking=True, default=fields.Date.today,
+        help="Warranty Start Date. Date value.",
     )
     warranty_end_date = fields.Date(
         tracking=True, compute="_compute_warranty_end_date", store=True, readonly=False

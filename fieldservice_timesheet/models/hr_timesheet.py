@@ -11,4 +11,5 @@ class AccountAnalyticLine(models.Model):
         comodel_name="fsm.order",
         string="Field Service Order",
         domain=[("project_id", "!=", False)],
+        help="Fsm Order Id. Linked record reference.",
     )

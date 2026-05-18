@@ -37,22 +37,26 @@ class FSMRecurringOrder(models.Model):
         readonly=True,
         default="draft",
         tracking=True,
+        help="State. Current state of the record.",
     )
     fsm_recurring_template_id = fields.Many2one(
         "fsm.recurring.template",
         "Recurring Template",
+        help="Fsm Recurring Template Id. Linked record reference.",
     )
     location_id = fields.Many2one(
-        "fsm.location", string="Location", index=True, required=True
+        "fsm.location", string="Location", index=True, required=True,
+        help="Location Id. Linked record reference.",
     )
-    description = fields.Text()
+    description = fields.Text(help="Description.")
     fsm_frequency_set_id = fields.Many2one(
         "fsm.frequency.set",
         "Frequency Set",
+        help="Fsm Frequency Set Id. Linked record reference.",
     )
     scheduled_duration = fields.Float(help="Scheduled duration of the work in hours")
 
-    start_date = fields.Datetime()
+    start_date = fields.Datetime(help="Start Date. Date value.")
     end_date = fields.Datetime(help="Recurring orders will not be made after this date")
     max_orders = fields.Integer(
         string="Maximum Orders", help="Maximum number of orders that will be created"
@@ -63,10 +67,12 @@ class FSMRecurringOrder(models.Model):
         help="This is the order template that will be recurring",
     )
     company_id = fields.Many2one(
-        "res.company", "Company", default=lambda self: self.env.company, required=True
+        "res.company", "Company", default=lambda self: self.env.company, required=True,
+        help="Company Id. Linked record reference.",
     )
     fsm_order_ids = fields.One2many(
-        "fsm.order", "fsm_recurring_id", string="Orders", copy=False
+        "fsm.order", "fsm_recurring_id", string="Orders", copy=False,
+        help="Fsm Order Ids. Many-to-many / one-to-many relation collection.",
     )
     fsm_order_count = fields.Integer("Orders Count", compute="_compute_order_count")
     team_id = fields.Many2one(
@@ -76,11 +82,13 @@ class FSMRecurringOrder(models.Model):
         index=True,
         required=True,
         tracking=True,
+        help="Team Id. Linked record reference.",
     )
     person_id = fields.Many2one(
-        "fsm.person", string="Assigned To", index=True, tracking=True
+        "fsm.person", string="Assigned To", index=True, tracking=True,
+        help="Person Id. Linked record reference.",
     )
-    equipment_ids = fields.Many2many("fsm.equipment")
+    equipment_ids = fields.Many2many("fsm.equipment", help="Equipment Ids. Many-to-many / one-to-many relation collection.")
 
     @api.depends("fsm_order_ids")
     def _compute_order_count(self):

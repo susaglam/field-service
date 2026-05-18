@@ -19,7 +19,7 @@ class FSMOrder(models.Model):
     def _get_move_domain(self):
         return [("picking_id.picking_type_id.code", "in", ("outgoing", "incoming"))]
 
-    picking_ids = fields.One2many("stock.picking", "fsm_order_id", string="Transfers")
+    picking_ids = fields.One2many("stock.picking", "fsm_order_id", string="Transfers", help="Picking Ids. Many-to-many / one-to-many relation collection.")
     delivery_count = fields.Integer(
         string="Delivery Orders", compute="_compute_picking_ids"
     )
@@ -38,7 +38,8 @@ class FSMOrder(models.Model):
         string="Return Orders", compute="_compute_picking_ids"
     )
     move_ids = fields.One2many(
-        "stock.move", "fsm_order_id", string="Operations", domain=_get_move_domain
+        "stock.move", "fsm_order_id", string="Operations", domain=_get_move_domain,
+        help="Move Ids. Many-to-many / one-to-many relation collection.",
     )
 
     @api.depends("picking_ids")

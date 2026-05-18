@@ -5,7 +5,7 @@
 {
     "name": "Field Service Fleet",
     "summary": "Link Field Service vehicles with Odoo Fleet",
-    "version": "saas~19.3.1.0.0",
+    "version": "saas~19.3.1.0.1",
     "category": "Field Service",
     "author": "Brian McMaster, "
     "Open Source Integrators, "

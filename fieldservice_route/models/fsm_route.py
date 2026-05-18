@@ -9,8 +9,8 @@ class FSMRoute(models.Model):
     _description = "Field Service Route"
 
     name = fields.Char(required=True)
-    fsm_person_id = fields.Many2one(comodel_name="fsm.person", string="Person")
-    day_ids = fields.Many2many(comodel_name="fsm.route.day", string="Days")
+    fsm_person_id = fields.Many2one(comodel_name="fsm.person", string="Person", help="Fsm Person Id. Linked record reference.")
+    day_ids = fields.Many2many(comodel_name="fsm.route.day", string="Days", help="Day Ids. Many-to-many / one-to-many relation collection.")
     max_order = fields.Integer(
         string="Maximum Orders",
         default=0,

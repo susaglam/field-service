@@ -7,23 +7,26 @@ from odoo import api, fields, models
 class ResPartner(models.Model):
     _inherit = "res.partner"
 
-    type = fields.Selection(selection_add=[("fsm_location", "Location")])
-    fsm_location = fields.Boolean("Is a FS Location")
-    fsm_person = fields.Boolean("Is a FS Worker")
+    type = fields.Selection(selection_add=[("fsm_location", "Location")], help="Type.")
+    fsm_location = fields.Boolean("Is a FS Location", help="Fsm Location.")
+    fsm_person = fields.Boolean("Is a FS Worker", help="Fsm Person.")
     fsm_location_ids = fields.One2many(
         comodel_name="fsm.location",
         string="Related FS Location",
         inverse_name="partner_id",
         readonly=True,
+        help="Fsm Location Ids. Many-to-many / one-to-many relation collection.",
     )
     service_location_id = fields.Many2one(
-        "fsm.location", string="Primary Service Location"
+        "fsm.location", string="Primary Service Location",
+        help="Service Location Id. Linked record reference.",
     )
     owned_location_ids = fields.One2many(
         "fsm.location",
         "owner_id",
         string="Owned Locations",
         domain=[("parent_id", "=", False)],
+        help="Owned Location Ids. Many-to-many / one-to-many relation collection.",
     )
     owned_location_count = fields.Integer(
         compute="_compute_owned_location_count", string="# of Owned Locations"

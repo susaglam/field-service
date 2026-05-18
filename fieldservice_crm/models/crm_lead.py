@@ -8,9 +8,10 @@ class Lead(models.Model):
     _inherit = "crm.lead"
 
     fsm_order_ids = fields.One2many(
-        "fsm.order", "opportunity_id", string="Service Orders"
+        "fsm.order", "opportunity_id", string="Service Orders",
+        help="Fsm Order Ids. Many-to-many / one-to-many relation collection.",
     )
-    fsm_location_id = fields.Many2one("fsm.location", string="FSM Location")
+    fsm_location_id = fields.Many2one("fsm.location", string="FSM Location", help="Fsm Location Id. Linked record reference.")
     fsm_order_count = fields.Integer(
         compute="_compute_fsm_order_count", string="# FSM Orders"
     )

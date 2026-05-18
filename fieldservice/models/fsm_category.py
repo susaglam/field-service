@@ -9,10 +9,10 @@ class FSMCategory(models.Model):
     _description = "Field Service Worker Category"
 
     name = fields.Char(required=True)
-    parent_id = fields.Many2one("fsm.category", string="Parent")
+    parent_id = fields.Many2one("fsm.category", string="Parent", help="Parent Id. Linked record reference.")
     color = fields.Integer("Color Index", default=10)
     full_name = fields.Char(compute="_compute_full_name")
-    description = fields.Char()
+    description = fields.Char(help="Description.")
     company_id = fields.Many2one(
         "res.company",
         string="Company",
