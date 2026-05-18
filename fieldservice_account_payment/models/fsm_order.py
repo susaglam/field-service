@@ -13,6 +13,7 @@ class FSMOrder(models.Model):
         "fsm_order_id",
         "payment_id",
         string="Payments",
+        help="Payment Ids. Many-to-many / one-to-many relation collection.",
     )
     payment_count = fields.Integer(compute="_compute_account_payment_count")
 

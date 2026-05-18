@@ -7,7 +7,7 @@ from odoo import fields, models
 class FSMStage(models.Model):
     _inherit = "fsm.stage"
 
-    is_invoiceable = fields.Boolean(copy=False)
+    is_invoiceable = fields.Boolean(copy=False, help="Is Invoiceable. Boolean flag — true when the condition holds.")
 
     def _get_invoiceable_stage(self):
         """

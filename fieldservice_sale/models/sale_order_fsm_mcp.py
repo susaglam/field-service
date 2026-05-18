@@ -3,7 +3,15 @@
 """MCP / @ai_tool surface for sale.order ↔ FSM-order link."""
 
 from odoo import models
-from odoo.addons.cs_mcp_bridge.tools import ai_tool
+try:
+    from odoo.addons.cs_mcp_bridge.tools import ai_tool
+except ImportError:
+    # No-op fallback when cs_mcp_bridge is not installed.
+    # AI/MCP surface unavailable; methods stay normal callable Python.
+    def ai_tool(**_kwargs):
+        def _decorator(fn):
+            return fn
+        return _decorator
 
 
 class SaleOrderFsmMcp(models.Model):

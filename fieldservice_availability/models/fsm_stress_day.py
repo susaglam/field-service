@@ -9,7 +9,7 @@ class FieldServiceStressDay(models.Model):
     _description = "High-Demand Days"
 
     name = fields.Char(string="Description", required=True)
-    date = fields.Date(string="Stress Day", required=True)
+    date = fields.Date(string="Stress Day", required=True, help="Date.")
 
     _unique_stress_day = models.Constraint(
         'unique(date)',

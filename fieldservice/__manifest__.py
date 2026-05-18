@@ -3,7 +3,7 @@
 {
     "name": "Field Service",
     "summary": "Manage Field Service Locations, Workers and Orders",
-    "version": "saas~19.3.5.6.1",
+    "version": "saas~19.3.5.6.2",
     "license": "AGPL-3",
     "category": "Field Service",
     "author": "Open Source Integrators, Odoo Community Association (OCA)",
@@ -13,8 +13,11 @@
         "base_geolocalize",
         "resource",
         "contacts",
-        "cs_mcp_bridge",
     ],
+    # Optional integration: when cs_mcp_bridge is installed, the
+    # @ai_tool decorators in models/*_mcp.py register tools with the
+    # bridge registry. When the bridge is absent, the soft-import
+    # fallback turns @ai_tool into a no-op so module load is unaffected.
     "installable": True,
     "data": [
         "data/ir_sequence.xml",

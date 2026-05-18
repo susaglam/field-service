@@ -7,7 +7,7 @@ from odoo import fields, models
 class FSMRecurring(models.Model):
     _inherit = "fsm.recurring"
 
-    agreement_id = fields.Many2one("agreement", string="Agreement", copy=False)
+    agreement_id = fields.Many2one("agreement", string="Agreement", copy=False, help="Agreement Id. Linked record reference.")
 
     def _prepare_order_values(self, date=None):
         res = super()._prepare_order_values(date)

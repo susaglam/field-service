@@ -11,8 +11,8 @@ class FSMDeliveryTimeRange(models.Model):
     _order = "sequence, start_time asc"
 
     name = fields.Char(compute="_compute_name", store=True)
-    start_time = fields.Float(required=True)
-    end_time = fields.Float(required=True)
+    start_time = fields.Float(required=True, help="Start Time.")
+    end_time = fields.Float(required=True, help="End Time.")
     route_id = fields.Many2one(
         "fsm.route",
         string="Route",

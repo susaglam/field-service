@@ -12,6 +12,7 @@ class FSMOrder(models.Model):
         "fsm_order_id",
         "account_move_line_id",
         copy=False,
+        help="Invoice Lines.",
     )
 
     invoice_ids = fields.Many2many(

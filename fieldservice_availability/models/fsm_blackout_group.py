@@ -15,4 +15,5 @@ class FieldServiceBlackoutGroup(models.Model):
         "fsm_blackout_group_id",
         "fsm_blackout_day_id",
         string="Days",
+        help="Fsm Blackout Day Ids. Many-to-many / one-to-many relation collection.",
     )

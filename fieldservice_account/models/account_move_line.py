@@ -15,4 +15,5 @@ class AccountMoveLine(models.Model):
         string="FSM Orders",
         readonly=True,
         copy=False,
+        help="Fsm Order Ids. Many-to-many / one-to-many relation collection.",
     )

@@ -9,7 +9,7 @@ class FieldServiceBlackoutDay(models.Model):
     _description = "Blackout Days (No Service)"
 
     name = fields.Char(string="Description", required=True)
-    date = fields.Date(string="Blackout Day", required=True)
+    date = fields.Date(string="Blackout Day", required=True, help="Date.")
 
     _unique_blackout_day = models.Constraint(
         'unique(date)',
