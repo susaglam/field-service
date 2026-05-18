@@ -16,6 +16,7 @@ from . import (
     res_partner,
     fsm_equipment,
     fsm_order,
+    fsm_order_mcp,
     fsm_order_type,
     fsm_person_calendar_filter,
 )
