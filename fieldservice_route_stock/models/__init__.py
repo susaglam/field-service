@@ -5,4 +5,5 @@ from . import (
     fsm_vehicle,
     fsm_route,
     fsm_route_dayroute,
+    route_capacity_mcp,
 )

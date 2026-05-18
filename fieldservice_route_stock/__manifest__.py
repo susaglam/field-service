@@ -6,7 +6,7 @@
     "name": "Field Service Route Stock",
     "summary": "Capacity planning for FSM routes: track vehicle product "
     "capacity and aggregate per-day usage from order moves.",
-    "version": "saas~19.3.1.2.3",
+    "version": "saas~19.3.1.2.4",
     "category": "Field Service",
     "author": "Open Source Integrators, "
     "Odoo Community Association (OCA), saas-19.3 port",

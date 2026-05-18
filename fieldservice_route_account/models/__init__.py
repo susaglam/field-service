@@ -4,4 +4,5 @@ from . import (
     fsm_dayroute_payment,
     fsm_route_dayroute,
     account_payment,
+    dayroute_payment_mcp,
 )
