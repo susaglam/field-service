@@ -3,6 +3,7 @@
 
 from . import (
     change_log,
+    change_log_mcp,
     change_log_impact,
     change_log_stage,
     change_log_tags,

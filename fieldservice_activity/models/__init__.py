@@ -2,5 +2,6 @@
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl.html).
 
 from . import fsm_activity
+from . import fsm_activity_mcp
 from . import fsm_order
 from . import fsm_template

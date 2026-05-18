@@ -4,7 +4,7 @@
 {
     "name": "Field Service - Skills",
     "summary": "Manage your Field Service workers skills",
-    "version": "saas~19.3.1.0.0",
+    "version": "saas~19.3.1.0.2",
     "category": "Field Service",
     "license": "AGPL-3",
     "author": "Open Source Integrators, Odoo Community Association (OCA)",

@@ -7,7 +7,7 @@
     "author": "Pavlov Media, Odoo Community Association (OCA)",
     "website": "https://github.com/OCA/field-service",
     "category": "Extra Tools",
-    "version": "saas~19.3.1.0.1",
+    "version": "saas~19.3.1.0.3",
     "license": "AGPL-3",
     "depends": [
         "fieldservice",
