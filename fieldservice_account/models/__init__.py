@@ -5,4 +5,5 @@ from . import (
     account_move_line,
     fsm_order,
     fsm_stage,
+    fsm_order_invoice_mcp,
 )

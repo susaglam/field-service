@@ -8,3 +8,4 @@ from . import (
     fsm_equipment,
 )
 from . import fsm_order_type
+from . import maintenance_request_fsm_mcp

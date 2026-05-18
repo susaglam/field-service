@@ -5,3 +5,4 @@ from . import fsm_order
 from . import project
 from . import project_task
 from . import fsm_team
+from . import project_task_fsm_mcp

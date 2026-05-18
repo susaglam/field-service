@@ -4,4 +4,5 @@
 from . import (
     account_payment,
     fsm_order,
+    fsm_order_payment_mcp,
 )

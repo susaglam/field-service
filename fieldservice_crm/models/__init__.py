@@ -4,3 +4,4 @@
 from . import crm_lead
 from . import fsm_location
 from . import fsm_order
+from . import crm_lead_fsm_mcp
