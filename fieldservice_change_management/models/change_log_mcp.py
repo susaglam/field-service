@@ -7,7 +7,7 @@ from odoo.addons.cs_mcp_bridge.tools import ai_tool
 
 
 class ChangeLogMcp(models.Model):
-    _inherit = "change_log"
+    _inherit = "change.log"
 
     @ai_tool(
         name="change_log.search",

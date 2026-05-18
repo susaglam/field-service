@@ -6,7 +6,7 @@ from odoo import models
 from odoo.addons.cs_mcp_bridge.tools import ai_tool
 
 
-class FsmLocationLevelMcp(models.Model):
+class FsmLocationLevelMcp(models.TransientModel):
     _inherit = "fsm.location.level"
 
     @ai_tool(
