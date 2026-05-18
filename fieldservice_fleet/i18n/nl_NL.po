@@ -1,0 +1,777 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* fieldservice_fleet
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server saas~19.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-18 09:27+0000\n"
+"PO-Revision-Date: 2026-05-18 09:27+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: nl_NL\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. module: fieldservice_fleet
+#. odoo-python
+#: code:addons/fieldservice_fleet/wizard/fsm_fleet_wizard.py:0
+msgid "A Field Service Vehicle related to that Fleet Vehicle already exists."
+msgstr ""
+"Er bestaat al een Field Service-voertuig dat gekoppeld is aan dat "
+"wagenparkvoertuig."
+
+#. module: fieldservice_fleet
+#: model:ir.model.fields,help:fieldservice_fleet.field_fsm_vehicle__trailer_hook
+msgid ""
+"A trailer hitch is a device attached to a vehicle's chassis for towing "
+"purposes,             such as pulling trailers, boats, or other vehicles."
+msgstr ""
+"Een trekhaak is een apparaat dat aan het chassis van een voertuig is "
+"bevestigd voor sleepdoeleinden, zoals het trekken van aanhangers, boten of "
+"andere voertuigen."
+
+#. module: fieldservice_fleet
+#: model:ir.model.fields,field_description:fieldservice_fleet.field_fsm_vehicle__message_needaction
+msgid "Action Needed"
+msgstr "Actie vereist"
+
+#. module: fieldservice_fleet
+#: model:ir.model.fields,field_description:fieldservice_fleet.field_fsm_vehicle__active
+msgid "Active"
+msgstr "Actief"
+
+#. module: fieldservice_fleet
+#: model:ir.model.fields,field_description:fieldservice_fleet.field_fsm_vehicle__activity_ids
+msgid "Activities"
+msgstr "Activiteiten"
+
+#. module: fieldservice_fleet
+#: model:ir.model.fields,field_description:fieldservice_fleet.field_fsm_vehicle__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "Activiteit-uitzonderingsdecoratie"
+
+#. module: fieldservice_fleet
+#: model:ir.model.fields,field_description:fieldservice_fleet.field_fsm_vehicle__activity_plans_ids
+msgid "Activity Plans"
+msgstr "Activiteitenplannen"
+
+#. module: fieldservice_fleet
+#: model:ir.model.fields,field_description:fieldservice_fleet.field_fsm_vehicle__activity_state
+msgid "Activity State"
+msgstr "Activiteitstatus"
+
+#. module: fieldservice_fleet
+#: model:ir.model.fields,field_description:fieldservice_fleet.field_fsm_vehicle__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "Activiteit-type-icoon"
+
+#. module: fieldservice_fleet
+#: model:ir.model.fields,field_description:fieldservice_fleet.field_fsm_vehicle__next_assignation_date
+msgid "Assignment Date"
+msgstr "Toewijzingsdatum"
+
+#. module: fieldservice_fleet
+#: model:ir.model.fields,field_description:fieldservice_fleet.field_fsm_vehicle__log_drivers
+msgid "Assignment Logs"
+msgstr "Toewijzingslogs"
+
+#. module: fieldservice_fleet
+#: model:ir.model.fields,field_description:fieldservice_fleet.field_fsm_vehicle__message_attachment_count
+msgid "Attachment Count"
+msgstr "Aantal bijlagen"
+
+#. module: fieldservice_fleet
+#: model:ir.model.fields,field_description:fieldservice_fleet.field_fsm_vehicle__avatar_1920
+msgid "Avatar"
+msgstr "Avatar"
+
+#. module: fieldservice_fleet
+#: model:ir.model.fields,field_description:fieldservice_fleet.field_fsm_vehicle__avatar_1024
+msgid "Avatar 1024"
+msgstr "Avatar 1024"
+
+#. module: fieldservice_fleet
+#: model:ir.model.fields,field_description:fieldservice_fleet.field_fsm_vehicle__avatar_128
+msgid "Avatar 128"
+msgstr "Avatar 128"
+
+#. module: fieldservice_fleet
+#: model:ir.model.fields,field_description:fieldservice_fleet.field_fsm_vehicle__avatar_256
+msgid "Avatar 256"
+msgstr "Avatar 256"
+
+#. module: fieldservice_fleet
+#: model:ir.model.fields,field_description:fieldservice_fleet.field_fsm_vehicle__avatar_512
+msgid "Avatar 512"
+msgstr "Avatar 512"
+
+#. module: fieldservice_fleet
+#: model:ir.model.fields,field_description:fieldservice_fleet.field_fsm_vehicle__frame_type
+msgid "Bike Frame Type"
+msgstr "Fietsframe-type"
+
+#. module: fieldservice_fleet
+#: model:ir.model.fields,field_description:fieldservice_fleet.field_fsm_vehicle__brand_id
+msgid "Brand"
+msgstr "Merk"
+
+#. module: fieldservice_fleet
+#: model:ir.model.fields,help:fieldservice_fleet.field_fsm_vehicle__co2
+msgid "CO2 emissions of the vehicle"
+msgstr "CO2-uitstoot van het voertuig"
+
+#. module: fieldservice_fleet
+#: model:ir.model.fields,field_description:fieldservice_fleet.field_fsm_vehicle__co2
+msgid "CO₂ Emissions"
+msgstr "CO₂-uitstoot"
+
+#. module: fieldservice_fleet
+#: model_terms:ir.ui.view,arch_db:fieldservice_fleet.vehicle_wizard_view
+msgid "Cancel"
+msgstr "Annuleren"
+
+#. module: fieldservice_fleet
+#: model:ir.model.fields,field_description:fieldservice_fleet.field_fsm_vehicle__write_off_date
+msgid "Cancellation Date"
+msgstr "Annuleringsdatum"
+
+#. module: fieldservice_fleet
+#: model:ir.model.fields,field_description:fieldservice_fleet.field_fsm_vehicle__car_value
+msgid "Catalog Value (Tax Incl.)"
+msgstr "Catalogusprijs (incl. btw)"
+
+#. module: fieldservice_fleet
+#: model:ir.model.fields,field_description:fieldservice_fleet.field_fsm_vehicle__category_id
+msgid "Category"
+msgstr "Categorie"
+
+#. module: fieldservice_fleet
+#: model:ir.model.fields,field_description:fieldservice_fleet.field_fsm_vehicle__vin_sn
+msgid "Chassis Number"
+msgstr "Chassisnummer"
+
+#. module: fieldservice_fleet
+#: model:ir.model.fields,field_description:fieldservice_fleet.field_fsm_vehicle__co2_emission_unit
+msgid "Co2 Emission Unit"
+msgstr "CO2-uitstoot-eenheid"
+
+#. module: fieldservice_fleet
+#: model:ir.model.fields,field_description:fieldservice_fleet.field_fsm_vehicle__color
+msgid "Color"
+msgstr "Kleur"
+
+#. module: fieldservice_fleet
+#: model:ir.model.fields,help:fieldservice_fleet.field_fsm_vehicle__color
+msgid "Color of the vehicle"
+msgstr "Kleur van het voertuig"
+
+#. module: fieldservice_fleet
+#: model:ir.model.fields,field_description:fieldservice_fleet.field_fsm_vehicle__company_id
+msgid "Company"
+msgstr "Bedrijf"
+
+#. module: fieldservice_fleet
+#: model:ir.model.fields,field_description:fieldservice_fleet.field_fsm_vehicle__contract_count
+msgid "Contract Count"
+msgstr "Aantal contracten"
+
+#. module: fieldservice_fleet
+#: model:ir.model.fields,field_description:fieldservice_fleet.field_fsm_vehicle__log_contracts
+msgid "Contracts"
+msgstr "Contracten"
+
+#. module: fieldservice_fleet
+#: model_terms:ir.ui.view,arch_db:fieldservice_fleet.vehicle_wizard_view
+msgid "Convert"
+msgstr "Converteren"
+
+#. module: fieldservice_fleet
+#: model_terms:ir.ui.view,arch_db:fieldservice_fleet.vehicle_wizard_view
+msgid "Convert this vehicle record into a Field Service Vehicle."
+msgstr "Converteer dit voertuig-record naar een Field Service-voertuig."
+
+#. module: fieldservice_fleet
+#: model:ir.actions.act_window,name:fieldservice_fleet.vehicle_fsm_action
+msgid "Convert to FSM Vehicle"
+msgstr "Converteren naar FSM-voertuig"
+
+#. module: fieldservice_fleet
+#: model_terms:ir.ui.view,arch_db:fieldservice_fleet.vehicle_wizard_view
+msgid "Convert to a Field Service Vehicle"
+msgstr "Converteren naar een Field Service-voertuig"
+
+#. module: fieldservice_fleet
+#: model:ir.model.fields,field_description:fieldservice_fleet.field_fsm_vehicle__country_id
+msgid "Country"
+msgstr "Land"
+
+#. module: fieldservice_fleet
+#: model:ir.model.fields,field_description:fieldservice_fleet.field_fsm_vehicle__country_code
+msgid "Country Code"
+msgstr "Landcode"
+
+#. module: fieldservice_fleet
+#: model:ir.model.fields,field_description:fieldservice_fleet.field_fsm_fleet_wizard__create_uid
+msgid "Created by"
+msgstr "Aangemaakt door"
+
+#. module: fieldservice_fleet
+#: model:ir.model.fields,field_description:fieldservice_fleet.field_fsm_fleet_wizard__create_date
+msgid "Created on"
+msgstr "Aangemaakt op"
+
+#. module: fieldservice_fleet
+#: model:ir.model.fields,field_description:fieldservice_fleet.field_fsm_vehicle__currency_id
+msgid "Currency"
+msgstr "Valuta"
+
+#. module: fieldservice_fleet
+#: model:ir.model.fields,help:fieldservice_fleet.field_fsm_vehicle__state_id
+msgid "Current state of the vehicle"
+msgstr "Huidige status van het voertuig"
+
+#. module: fieldservice_fleet
+#: model:ir.model.fields,help:fieldservice_fleet.field_fsm_vehicle__acquisition_date
+msgid "Date of vehicle registration"
+msgstr "Datum van voertuigregistratie"
+
+#. module: fieldservice_fleet
+#: model:ir.model.fields,help:fieldservice_fleet.field_fsm_vehicle__write_off_date
+msgid "Date when the vehicle's license plate has been cancelled/removed."
+msgstr "Datum waarop het kenteken van het voertuig is geannuleerd/verwijderd."
+
+#. module: fieldservice_fleet
+#: model:ir.model.fields,field_description:fieldservice_fleet.field_fleet_vehicle__display_name
+#: model:ir.model.fields,field_description:fieldservice_fleet.field_fsm_fleet_wizard__display_name
+#: model:ir.model.fields,field_description:fieldservice_fleet.field_fsm_vehicle__display_name
+msgid "Display Name"
+msgstr "Weergavenaam"
+
+#. module: fieldservice_fleet
+#: model:ir.model.fields,field_description:fieldservice_fleet.field_fsm_vehicle__driver_id
+msgid "Driver"
+msgstr "Chauffeur"
+
+#. module: fieldservice_fleet
+#: model:ir.model.fields,help:fieldservice_fleet.field_fsm_vehicle__driver_id
+msgid "Driver address of the vehicle"
+msgstr "Chauffeursadres van het voertuig"
+
+#. module: fieldservice_fleet
+#: model:ir.model.fields,field_description:fieldservice_fleet.field_fsm_vehicle__history_count
+msgid "Drivers History Count"
+msgstr "Aantal chauffeursgeschiedenis"
+
+#. module: fieldservice_fleet
+#: model:ir.model.fields,field_description:fieldservice_fleet.field_fsm_vehicle__electric_assistance
+msgid "Electric Assistance"
+msgstr "Elektrische ondersteuning"
+
+#. module: fieldservice_fleet
+#: model:ir.model.fields,field_description:fieldservice_fleet.field_fsm_vehicle__co2_standard
+msgid "Emission Standard"
+msgstr "Uitstoot-standaard"
+
+#. module: fieldservice_fleet
+#: model:ir.model.fields,help:fieldservice_fleet.field_fsm_vehicle__co2_standard
+msgid ""
+"Emission Standard specifies the regulatory test procedure             or "
+"guideline under which a vehicle's emissions are measured."
+msgstr ""
+"Uitstoot-standaard specificeert de regelgevende testprocedure of richtlijn "
+"waarmee de uitstoot van een voertuig wordt gemeten."
+
+#. module: fieldservice_fleet
+#: model:ir.model.fields,field_description:fieldservice_fleet.field_fsm_vehicle__equipment_ids
+msgid "Equipment"
+msgstr "Apparatuur"
+
+#. module: fieldservice_fleet
+#: model:ir.model.fields,field_description:fieldservice_fleet.field_fsm_vehicle__equipment_count
+msgid "Equipment Count"
+msgstr "Aantal apparatuur"
+
+#. module: fieldservice_fleet
+#: model:ir.model,name:fieldservice_fleet.model_fsm_fleet_wizard
+msgid "FSM Fleet Vehicle Conversion"
+msgstr "FSM-wagenparkvoertuig-conversie"
+
+#. module: fieldservice_fleet
+#: model:ir.model.constraint,message:fieldservice_fleet.constraint_fsm_vehicle_fsm_vehicle_fleet_uniq
+msgid "FSM vehicle can only be linked to one fleet vehicle"
+msgstr ""
+"FSM-voertuig kan slechts gekoppeld zijn aan één wagenparkvoertuig"
+
+#. module: fieldservice_fleet
+#: model:ir.model,name:fieldservice_fleet.model_fsm_vehicle
+msgid "Field Service Vehicle"
+msgstr "Field Service-voertuig"
+
+#. module: fieldservice_fleet
+#: model:ir.model.fields,field_description:fieldservice_fleet.field_fsm_vehicle__contract_date_start
+msgid "First Contract Date"
+msgstr "Eerste contractdatum"
+
+#. module: fieldservice_fleet
+#: model:ir.model.fields,field_description:fieldservice_fleet.field_fsm_vehicle__manager_id
+msgid "Fleet Manager"
+msgstr "Wagenparkmanager"
+
+#. module: fieldservice_fleet
+#: model:ir.model.fields,field_description:fieldservice_fleet.field_fsm_vehicle__message_follower_ids
+msgid "Followers"
+msgstr "Volgers"
+
+#. module: fieldservice_fleet
+#: model:ir.model.fields,field_description:fieldservice_fleet.field_fsm_vehicle__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Volgers (Relaties)"
+
+#. module: fieldservice_fleet
+#: model:ir.model.fields,help:fieldservice_fleet.field_fsm_vehicle__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr "Font Awesome-icoon, bv. fa-tasks"
+
+#. module: fieldservice_fleet
+#: model:ir.model.fields,field_description:fieldservice_fleet.field_fsm_vehicle__frame_size
+msgid "Frame Size"
+msgstr "Framemaat"
+
+#. module: fieldservice_fleet
+#: model:ir.model.fields,field_description:fieldservice_fleet.field_fsm_vehicle__fuel_type
+msgid "Fuel Type"
+msgstr "Brandstoftype"
+
+#. module: fieldservice_fleet
+#: model:ir.model.fields,field_description:fieldservice_fleet.field_fsm_vehicle__future_driver_id
+msgid "Future Driver"
+msgstr "Toekomstige chauffeur"
+
+#. module: fieldservice_fleet
+#: model:ir.model.fields,field_description:fieldservice_fleet.field_fsm_vehicle__contract_renewal_overdue
+msgid "Has Contracts Overdue"
+msgstr "Heeft achterstallige contracten"
+
+#. module: fieldservice_fleet
+#: model:ir.model.fields,field_description:fieldservice_fleet.field_fsm_vehicle__contract_renewal_due_soon
+msgid "Has Contracts to renew"
+msgstr "Heeft contracten te vernieuwen"
+
+#. module: fieldservice_fleet
+#: model:ir.model.fields,field_description:fieldservice_fleet.field_fsm_vehicle__has_message
+msgid "Has Message"
+msgstr "Heeft bericht"
+
+#. module: fieldservice_fleet
+#: model:ir.model.fields,field_description:fieldservice_fleet.field_fsm_vehicle__horsepower
+msgid "Horsepower"
+msgstr "Pk"
+
+#. module: fieldservice_fleet
+#: model:ir.model.fields,field_description:fieldservice_fleet.field_fsm_vehicle__horsepower_tax
+msgid "Horsepower Taxation"
+msgstr "Pk-belasting"
+
+#. module: fieldservice_fleet
+#: model:ir.model.fields,field_description:fieldservice_fleet.field_fleet_vehicle__id
+#: model:ir.model.fields,field_description:fieldservice_fleet.field_fsm_fleet_wizard__id
+#: model:ir.model.fields,field_description:fieldservice_fleet.field_fsm_vehicle__id
+msgid "ID"
+msgstr "ID"
+
+#. module: fieldservice_fleet
+#: model:ir.model.fields,field_description:fieldservice_fleet.field_fsm_vehicle__activity_exception_icon
+msgid "Icon"
+msgstr "Icoon"
+
+#. module: fieldservice_fleet
+#: model:ir.model.fields,help:fieldservice_fleet.field_fsm_vehicle__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "Icoon om een uitzonderingsactiviteit aan te duiden."
+
+#. module: fieldservice_fleet
+#: model:ir.model.fields,help:fieldservice_fleet.field_fsm_vehicle__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "Indien aangevinkt, vereisen nieuwe berichten uw aandacht."
+
+#. module: fieldservice_fleet
+#: model:ir.model.fields,help:fieldservice_fleet.field_fsm_vehicle__message_has_error
+#: model:ir.model.fields,help:fieldservice_fleet.field_fsm_vehicle__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "Indien aangevinkt, hebben sommige berichten een bezorgfout."
+
+#. module: fieldservice_fleet
+#: model:ir.model.fields,field_description:fieldservice_fleet.field_fsm_vehicle__image_1920
+msgid "Image"
+msgstr "Afbeelding"
+
+#. module: fieldservice_fleet
+#: model:ir.model.fields,field_description:fieldservice_fleet.field_fsm_vehicle__image_1024
+msgid "Image 1024"
+msgstr "Afbeelding 1024"
+
+#. module: fieldservice_fleet
+#: model:ir.model.fields,field_description:fieldservice_fleet.field_fsm_vehicle__image_128
+msgid "Image 128"
+msgstr "Afbeelding 128"
+
+#. module: fieldservice_fleet
+#: model:ir.model.fields,field_description:fieldservice_fleet.field_fsm_vehicle__image_256
+msgid "Image 256"
+msgstr "Afbeelding 256"
+
+#. module: fieldservice_fleet
+#: model:ir.model.fields,field_description:fieldservice_fleet.field_fsm_vehicle__image_512
+msgid "Image 512"
+msgstr "Afbeelding 512"
+
+#. module: fieldservice_fleet
+#: model:ir.model.fields,field_description:fieldservice_fleet.field_fsm_vehicle__message_is_follower
+msgid "Is Follower"
+msgstr "Is volger"
+
+#. module: fieldservice_fleet
+#: model:ir.model.fields,field_description:fieldservice_fleet.field_fleet_vehicle__is_fsm_vehicle
+#: model:ir.model.fields,field_description:fieldservice_fleet.field_fsm_vehicle__is_fsm_vehicle
+msgid "Is used for Field Service?"
+msgstr "Wordt gebruikt voor Field Service?"
+
+#. module: fieldservice_fleet
+#: model:ir.model.fields,field_description:fieldservice_fleet.field_fsm_vehicle__contract_state
+msgid "Last Contract State"
+msgstr "Laatste contractstatus"
+
+#. module: fieldservice_fleet
+#: model:ir.model.fields,field_description:fieldservice_fleet.field_fsm_vehicle__odometer
+msgid "Last Odometer"
+msgstr "Laatste kilometerstand"
+
+#. module: fieldservice_fleet
+#: model:ir.model.fields,field_description:fieldservice_fleet.field_fsm_fleet_wizard__write_uid
+msgid "Last Updated by"
+msgstr "Laatst bijgewerkt door"
+
+#. module: fieldservice_fleet
+#: model:ir.model.fields,field_description:fieldservice_fleet.field_fsm_fleet_wizard__write_date
+msgid "Last Updated on"
+msgstr "Laatst bijgewerkt op"
+
+#. module: fieldservice_fleet
+#: model:ir.model.fields,field_description:fieldservice_fleet.field_fsm_vehicle__license_plate
+msgid "License Plate"
+msgstr "Kenteken"
+
+#. module: fieldservice_fleet
+#: model:ir.model.fields,help:fieldservice_fleet.field_fsm_vehicle__license_plate
+msgid "License plate number of the vehicle (i = plate number for a car)"
+msgstr "Kentekennummer van het voertuig (i = kentekennummer voor een auto)"
+
+#. module: fieldservice_fleet
+#: model:ir.model.fields,field_description:fieldservice_fleet.field_fsm_vehicle__location
+msgid "Location"
+msgstr "Locatie"
+
+#. module: fieldservice_fleet
+#: model:ir.model.fields,help:fieldservice_fleet.field_fsm_vehicle__location
+msgid "Location of the vehicle (garage, ...)"
+msgstr "Locatie van het voertuig (garage, ...)"
+
+#. module: fieldservice_fleet
+#: model:ir.model.fields,field_description:fieldservice_fleet.field_fsm_vehicle__message_has_error
+msgid "Message Delivery error"
+msgstr "Bezorgfout bericht"
+
+#. module: fieldservice_fleet
+#: model:ir.model.fields,field_description:fieldservice_fleet.field_fsm_vehicle__message_ids
+msgid "Messages"
+msgstr "Berichten"
+
+#. module: fieldservice_fleet
+#: model:ir.model.fields,field_description:fieldservice_fleet.field_fsm_vehicle__model_id
+msgid "Model"
+msgstr "Model"
+
+#. module: fieldservice_fleet
+#: model:ir.model.fields,field_description:fieldservice_fleet.field_fsm_vehicle__model_year
+msgid "Model Year"
+msgstr "Modeljaar"
+
+#. module: fieldservice_fleet
+#: model:ir.model.fields,field_description:fieldservice_fleet.field_fsm_vehicle__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr "Deadline van mijn activiteit"
+
+#. module: fieldservice_fleet
+#: model:ir.model.fields,field_description:fieldservice_fleet.field_fsm_vehicle__activity_calendar_event_id
+msgid "Next Activity Calendar Event"
+msgstr "Volgende activiteit-agenda-evenement"
+
+#. module: fieldservice_fleet
+#: model:ir.model.fields,field_description:fieldservice_fleet.field_fsm_vehicle__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "Deadline volgende activiteit"
+
+#. module: fieldservice_fleet
+#: model:ir.model.fields,field_description:fieldservice_fleet.field_fsm_vehicle__activity_summary
+msgid "Next Activity Summary"
+msgstr "Samenvatting volgende activiteit"
+
+#. module: fieldservice_fleet
+#: model:ir.model.fields,field_description:fieldservice_fleet.field_fsm_vehicle__activity_type_id
+msgid "Next Activity Type"
+msgstr "Volgend activiteittype"
+
+#. module: fieldservice_fleet
+#: model:ir.model.fields,help:fieldservice_fleet.field_fsm_vehicle__future_driver_id
+msgid "Next Driver Address of the vehicle"
+msgstr "Volgend chauffeursadres van het voertuig"
+
+#. module: fieldservice_fleet
+#: model:ir.model.fields,field_description:fieldservice_fleet.field_fsm_vehicle__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Aantal acties"
+
+#. module: fieldservice_fleet
+#: model:ir.model.fields,field_description:fieldservice_fleet.field_fsm_vehicle__doors
+msgid "Number of Doors"
+msgstr "Aantal deuren"
+
+#. module: fieldservice_fleet
+#: model:ir.model.fields,help:fieldservice_fleet.field_fsm_vehicle__doors
+msgid "Number of doors of the vehicle"
+msgstr "Aantal deuren van het voertuig"
+
+#. module: fieldservice_fleet
+#: model:ir.model.fields,field_description:fieldservice_fleet.field_fsm_vehicle__message_has_error_counter
+msgid "Number of errors"
+msgstr "Aantal fouten"
+
+#. module: fieldservice_fleet
+#: model:ir.model.fields,help:fieldservice_fleet.field_fsm_vehicle__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr "Aantal berichten dat actie vereist"
+
+#. module: fieldservice_fleet
+#: model:ir.model.fields,help:fieldservice_fleet.field_fsm_vehicle__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "Aantal berichten met bezorgfout"
+
+#. module: fieldservice_fleet
+#: model:ir.model.fields,help:fieldservice_fleet.field_fsm_vehicle__seats
+msgid "Number of seats of the vehicle"
+msgstr "Aantal zitplaatsen van het voertuig"
+
+#. module: fieldservice_fleet
+#: model:ir.model.fields,field_description:fieldservice_fleet.field_fsm_vehicle__odometer_count
+msgid "Odometer"
+msgstr "Kilometerstand"
+
+#. module: fieldservice_fleet
+#: model:ir.model.fields,field_description:fieldservice_fleet.field_fsm_vehicle__odometer_unit
+msgid "Odometer Unit"
+msgstr "Kilometerstand-eenheid"
+
+#. module: fieldservice_fleet
+#: model:ir.model.fields,help:fieldservice_fleet.field_fsm_vehicle__odometer
+msgid "Odometer measure of the vehicle at the moment of this log"
+msgstr "Kilometerstand van het voertuig op het moment van deze log"
+
+#. module: fieldservice_fleet
+#: model:ir.model.fields,field_description:fieldservice_fleet.field_fsm_vehicle__order_date
+msgid "Order Date"
+msgstr "Orderdatum"
+
+#. module: fieldservice_fleet
+#: model:ir.model.fields,field_description:fieldservice_fleet.field_fsm_vehicle__plan_to_change_vehicle
+msgid "Plan To Change Vehicle"
+msgstr "Plan om voertuig te wijzigen"
+
+#. module: fieldservice_fleet
+#: model:ir.model.fields,field_description:fieldservice_fleet.field_fsm_vehicle__power
+msgid "Power"
+msgstr "Vermogen"
+
+#. module: fieldservice_fleet
+#: model:ir.model.fields,field_description:fieldservice_fleet.field_fsm_vehicle__power_unit
+msgid "Power Unit"
+msgstr "Vermogenseenheid"
+
+#. module: fieldservice_fleet
+#: model:ir.model.fields,help:fieldservice_fleet.field_fsm_vehicle__power
+msgid "Power in kW of the vehicle"
+msgstr "Vermogen in kW van het voertuig"
+
+#. module: fieldservice_fleet
+#: model:ir.model.fields,field_description:fieldservice_fleet.field_fsm_vehicle__vehicle_properties
+msgid "Properties"
+msgstr "Eigenschappen"
+
+#. module: fieldservice_fleet
+#: model:ir.model.fields,field_description:fieldservice_fleet.field_fsm_vehicle__net_car_value
+msgid "Purchase Value"
+msgstr "Aankoopwaarde"
+
+#. module: fieldservice_fleet
+#: model:ir.model.fields,field_description:fieldservice_fleet.field_fsm_vehicle__vehicle_range
+msgid "Range"
+msgstr "Bereik"
+
+#. module: fieldservice_fleet
+#: model:ir.model.fields,field_description:fieldservice_fleet.field_fsm_vehicle__range_unit
+msgid "Range Unit"
+msgstr "Bereik-eenheid"
+
+#. module: fieldservice_fleet
+#: model:ir.model.fields,help:fieldservice_fleet.field_fsm_vehicle__vehicle_range
+msgid ""
+"Range represents the maximum distance a vehicle can travel on a full charge "
+"(for EVs) or             a full tank (for fuel-powered vehicles)"
+msgstr ""
+"Bereik staat voor de maximale afstand die een voertuig kan afleggen op een "
+"volledig opgeladen accu (voor EV's) of een volle tank (voor "
+"brandstofvoertuigen)"
+
+#. module: fieldservice_fleet
+#: model:ir.model.fields,field_description:fieldservice_fleet.field_fsm_vehicle__rating_ids
+msgid "Ratings"
+msgstr "Beoordelingen"
+
+#. module: fieldservice_fleet
+#: model:ir.model.fields,field_description:fieldservice_fleet.field_fsm_vehicle__acquisition_date
+msgid "Registration Date"
+msgstr "Registratiedatum"
+
+#. module: fieldservice_fleet
+#: model:ir.model.fields,field_description:fieldservice_fleet.field_fsm_vehicle__residual_value
+msgid "Residual Value"
+msgstr "Restwaarde"
+
+#. module: fieldservice_fleet
+#: model:ir.model.fields,field_description:fieldservice_fleet.field_fsm_vehicle__activity_user_id
+msgid "Responsible User"
+msgstr "Verantwoordelijke gebruiker"
+
+#. module: fieldservice_fleet
+#: model:ir.model.fields,field_description:fieldservice_fleet.field_fsm_vehicle__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "SMS-bezorgfout"
+
+#. module: fieldservice_fleet
+#: model:ir.model.fields,field_description:fieldservice_fleet.field_fsm_vehicle__seats
+msgid "Seating Capacity"
+msgstr "Zitplaatsen"
+
+#. module: fieldservice_fleet
+#: model:ir.model.fields,field_description:fieldservice_fleet.field_fsm_vehicle__service_activity
+msgid "Service Activity"
+msgstr "Service-activiteit"
+
+#. module: fieldservice_fleet
+#: model:ir.model.fields,field_description:fieldservice_fleet.field_fsm_vehicle__service_count
+msgid "Services"
+msgstr "Services"
+
+#. module: fieldservice_fleet
+#: model:ir.model.fields,field_description:fieldservice_fleet.field_fsm_vehicle__log_services
+msgid "Services Logs"
+msgstr "Service-logs"
+
+#. module: fieldservice_fleet
+#: model:ir.model.fields,field_description:fieldservice_fleet.field_fsm_vehicle__state_id
+msgid "State"
+msgstr "Status"
+
+#. module: fieldservice_fleet
+#: model:ir.model.fields,help:fieldservice_fleet.field_fsm_vehicle__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"Status op basis van activiteiten\n"
+"Te laat: Vervaldatum is al gepasseerd\n"
+"Vandaag: Activiteitsdatum is vandaag\n"
+"Gepland: Toekomstige activiteiten."
+
+#. module: fieldservice_fleet
+#: model:ir.model.fields,field_description:fieldservice_fleet.field_fsm_vehicle__tag_ids
+msgid "Tags"
+msgstr "Tags"
+
+#. module: fieldservice_fleet
+#: model:ir.model.fields,help:fieldservice_fleet.field_fsm_vehicle__country_code
+msgid ""
+"The ISO country code in two chars. \n"
+"You can use this field for quick search."
+msgstr ""
+"De ISO-landcode in twee tekens.\n"
+"U kunt dit veld gebruiken voor snelzoeken."
+
+#. module: fieldservice_fleet
+#: model:ir.model.fields,help:fieldservice_fleet.field_fsm_vehicle__next_assignation_date
+msgid ""
+"This is the date at which the car will be available, if not set it means "
+"available instantly"
+msgstr ""
+"Dit is de datum waarop de auto beschikbaar zal zijn; indien niet ingesteld, "
+"betekent dit direct beschikbaar"
+
+#. module: fieldservice_fleet
+#: model:ir.model.fields,field_description:fieldservice_fleet.field_fsm_vehicle__trailer_hook
+msgid "Trailer Hitch"
+msgstr "Trekhaak"
+
+#. module: fieldservice_fleet
+#: model:ir.model.fields,field_description:fieldservice_fleet.field_fsm_vehicle__transmission
+msgid "Transmission"
+msgstr "Transmissie"
+
+#. module: fieldservice_fleet
+#: model:ir.model.fields,help:fieldservice_fleet.field_fsm_vehicle__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "Type van de uitzonderingsactiviteit op record."
+
+#. module: fieldservice_fleet
+#: model:ir.model.fields,help:fieldservice_fleet.field_fsm_vehicle__vin_sn
+msgid "Unique number written on the vehicle motor (VIN/SN number)"
+msgstr "Uniek nummer op de motor van het voertuig (VIN/SN-nummer)"
+
+#. module: fieldservice_fleet
+#: model:ir.model,name:fieldservice_fleet.model_fleet_vehicle
+msgid "Vehicle"
+msgstr "Voertuig"
+
+#. module: fieldservice_fleet
+#: model:ir.model.fields,field_description:fieldservice_fleet.field_fsm_vehicle__description
+msgid "Vehicle Description"
+msgstr "Voertuigomschrijving"
+
+#. module: fieldservice_fleet
+#: model:ir.model.fields,field_description:fieldservice_fleet.field_fsm_vehicle__fleet_vehicle_id
+msgid "Vehicle Details"
+msgstr "Voertuigdetails"
+
+#. module: fieldservice_fleet
+#: model:ir.model.fields,field_description:fieldservice_fleet.field_fsm_vehicle__vehicle_type
+msgid "Vehicle Type"
+msgstr "Voertuigtype"
+
+#. module: fieldservice_fleet
+#: model:ir.model.fields,field_description:fieldservice_fleet.field_fsm_vehicle__website_message_ids
+msgid "Website Messages"
+msgstr "Website-berichten"
+
+#. module: fieldservice_fleet
+#: model:ir.model.fields,help:fieldservice_fleet.field_fsm_vehicle__website_message_ids
+msgid "Website communication history"
+msgstr "Website-communicatiegeschiedenis"
+
+#. module: fieldservice_fleet
+#: model:ir.model.fields,help:fieldservice_fleet.field_fsm_vehicle__model_year
+msgid "Year of the model"
+msgstr "Jaar van het model"
