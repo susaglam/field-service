@@ -10,15 +10,16 @@ msgstr ""
 "PO-Revision-Date: 2026-05-18 09:10+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
+"Language: nl_NL\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Plural-Forms: \n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. module: fieldservice_route_account
 #: model_terms:ir.ui.view,arch_db:fieldservice_route_account.fsm_route_dayroute_inherit_dayroute
 msgid "Accounting"
-msgstr ""
+msgstr "Boekhouding"
 
 #. module: fieldservice_route_account
 #: model:ir.model.fields,help:fieldservice_route_account.field_fsm_route_dayroute_payment__journal_id
@@ -27,6 +28,9 @@ msgid ""
 "Bank, etc.). One row per journal — each row aggregates the collected vs. "
 "counted amounts for that journal."
 msgstr ""
+"Boekhouddagboek waarop de betalingen voor deze dagroute geboekt zijn "
+"(Kas, Bank, etc.). Eén rij per dagboek — elke rij telt de geïnde versus "
+"de getelde bedragen voor dat dagboek op."
 
 #. module: fieldservice_route_account
 #: model:ir.model.fields,help:fieldservice_route_account.field_fsm_route_dayroute_payment__move_id
@@ -34,6 +38,9 @@ msgid ""
 "Auto-generated account move that reconciles a positive difference into the "
 "worker's receivable account when the day-route stage closes."
 msgstr ""
+"Automatisch gegenereerde boekingsregel die een positief verschil "
+"verrekent met de vorderingsrekening van de medewerker wanneer de "
+"dagroute-fase sluit."
 
 #. module: fieldservice_route_account
 #: model:ir.model.fields,help:fieldservice_route_account.field_fsm_route_dayroute_payment__amount_counted
@@ -42,11 +49,14 @@ msgid ""
 "The difference between this and the Collected Amount becomes the day-route's"
 " reconciliation discrepancy."
 msgstr ""
+"Contant geld / bedrag dat fysiek door de medewerker geteld wordt aan het "
+"einde van de dagroute. Het verschil tussen dit en het Geïnde Bedrag is de "
+"reconciliatie-discrepantie van de dagroute."
 
 #. module: fieldservice_route_account
 #: model:ir.model.fields,field_description:fieldservice_route_account.field_fsm_route_dayroute_payment__amount_collected
 msgid "Collected Amount"
-msgstr ""
+msgstr "Geïnd bedrag"
 
 #. module: fieldservice_route_account
 #: model:ir.model.fields,help:fieldservice_route_account.field_fsm_route_dayroute_payment__difference
@@ -55,95 +65,98 @@ msgid ""
 "cash (worker owes the company); negative values indicate over-counting "
 "(company owes the worker)."
 msgstr ""
+"Geïnd bedrag minus geteld bedrag. Positieve waarden duiden op niet-geteld "
+"contant geld (medewerker schuldig aan bedrijf); negatieve waarden duiden "
+"op over-tellen (bedrijf schuldig aan medewerker)."
 
 #. module: fieldservice_route_account
 #: model:ir.model.fields,field_description:fieldservice_route_account.field_fsm_route_dayroute_payment__amount_counted
 msgid "Counted Amount"
-msgstr ""
+msgstr "Geteld bedrag"
 
 #. module: fieldservice_route_account
 #: model:ir.model.fields,field_description:fieldservice_route_account.field_fsm_route_dayroute_payment__create_uid
 msgid "Created by"
-msgstr ""
+msgstr "Aangemaakt door"
 
 #. module: fieldservice_route_account
 #: model:ir.model.fields,field_description:fieldservice_route_account.field_fsm_route_dayroute_payment__create_date
 msgid "Created on"
-msgstr ""
+msgstr "Aangemaakt op"
 
 #. module: fieldservice_route_account
 #: model:ir.model.fields,field_description:fieldservice_route_account.field_fsm_route_dayroute_payment__dayroute_id
 msgid "Day Route"
-msgstr ""
+msgstr "Dagroute"
 
 #. module: fieldservice_route_account
 #: model:ir.model.fields,field_description:fieldservice_route_account.field_fsm_route_dayroute_payment__difference
 msgid "Difference"
-msgstr ""
+msgstr "Verschil"
 
 #. module: fieldservice_route_account
 #: model:ir.model.fields,field_description:fieldservice_route_account.field_account_payment__display_name
 #: model:ir.model.fields,field_description:fieldservice_route_account.field_fsm_route_dayroute__display_name
 #: model:ir.model.fields,field_description:fieldservice_route_account.field_fsm_route_dayroute_payment__display_name
 msgid "Display Name"
-msgstr ""
+msgstr "Weergavenaam"
 
 #. module: fieldservice_route_account
 #: model:ir.model,name:fieldservice_route_account.model_fsm_route_dayroute_payment
 msgid "Field Service Dayroute Payment"
-msgstr ""
+msgstr "Field Service Dagroute-betaling"
 
 #. module: fieldservice_route_account
 #: model:ir.model,name:fieldservice_route_account.model_fsm_route_dayroute
 msgid "Field Service Route Dayroute"
-msgstr ""
+msgstr "Field Service Route Dagroute"
 
 #. module: fieldservice_route_account
 #: model:ir.model.fields,field_description:fieldservice_route_account.field_account_payment__id
 #: model:ir.model.fields,field_description:fieldservice_route_account.field_fsm_route_dayroute__id
 #: model:ir.model.fields,field_description:fieldservice_route_account.field_fsm_route_dayroute_payment__id
 msgid "ID"
-msgstr ""
+msgstr "ID"
 
 #. module: fieldservice_route_account
 #: model:ir.model.fields,field_description:fieldservice_route_account.field_fsm_route_dayroute__invoice_count
 msgid "Invoice Count"
-msgstr ""
+msgstr "Aantal facturen"
 
 #. module: fieldservice_route_account
 #: model_terms:ir.ui.view,arch_db:fieldservice_route_account.fsm_route_dayroute_inherit_dayroute
 msgid "Invoices/Bills"
-msgstr ""
+msgstr "Facturen/Rekeningen"
 
 #. module: fieldservice_route_account
 #: model:ir.model.fields,field_description:fieldservice_route_account.field_fsm_route_dayroute_payment__journal_id
 msgid "Journal"
-msgstr ""
+msgstr "Dagboek"
 
 #. module: fieldservice_route_account
 #: model:ir.model.fields,field_description:fieldservice_route_account.field_fsm_route_dayroute_payment__move_id
 msgid "Journal Entry"
-msgstr ""
+msgstr "Boekingsregel"
 
 #. module: fieldservice_route_account
 #: model:ir.model.fields,field_description:fieldservice_route_account.field_fsm_route_dayroute_payment__write_uid
 msgid "Last Updated by"
-msgstr ""
+msgstr "Laatst bijgewerkt door"
 
 #. module: fieldservice_route_account
 #: model:ir.model.fields,field_description:fieldservice_route_account.field_fsm_route_dayroute_payment__write_date
 msgid "Last Updated on"
-msgstr ""
+msgstr "Laatst bijgewerkt op"
 
 #. module: fieldservice_route_account
 #: model:ir.model,name:fieldservice_route_account.model_account_payment
 msgid "Payment"
-msgstr ""
+msgstr "Betaling"
 
 #. module: fieldservice_route_account
 #: model:ir.model.fields,field_description:fieldservice_route_account.field_fsm_route_dayroute__dayroute_payment_ids
 msgid "Payment Summary"
-msgstr ""
+msgstr "Betalingsoverzicht"
 
 #. module: fieldservice_route_account
 #: model:ir.model.fields,help:fieldservice_route_account.field_fsm_route_dayroute__dayroute_payment_ids
@@ -151,6 +164,8 @@ msgid ""
 "Per-journal cash count for this day-route. Each row aggregates the payments "
 "collected from this day-route's FSM orders."
 msgstr ""
+"Kastelling per dagboek voor deze dagroute. Elke rij telt de betalingen op "
+"die geïnd zijn uit de FSM-orders van deze dagroute."
 
 #. module: fieldservice_route_account
 #: model:ir.model.fields,help:fieldservice_route_account.field_fsm_route_dayroute_payment__amount_collected
@@ -158,11 +173,14 @@ msgid ""
 "Sum of payments that were posted against this day-route's FSM orders on the "
 "selected journal. Auto-computed from account.payment records."
 msgstr ""
+"Som van de betalingen die zijn geboekt op de FSM-orders van deze dagroute "
+"op het geselecteerde dagboek. Automatisch berekend uit account.payment-"
+"records."
 
 #. module: fieldservice_route_account
 #: model:ir.model.fields,help:fieldservice_route_account.field_fsm_route_dayroute_payment__dayroute_id
 msgid "The day-route whose order payments this row aggregates."
-msgstr ""
+msgstr "De dagroute waarvan deze rij de orderbetalingen optelt."
 
 #. module: fieldservice_route_account
 #: model:ir.model.fields,help:fieldservice_route_account.field_fsm_route_dayroute__invoice_count
@@ -170,3 +188,5 @@ msgid ""
 "Total number of customer invoices generated from the FSM orders on this day-"
 "route."
 msgstr ""
+"Totaal aantal klantfacturen dat is gegenereerd uit de FSM-orders op deze "
+"dagroute."

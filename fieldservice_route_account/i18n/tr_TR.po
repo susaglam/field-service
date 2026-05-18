@@ -10,15 +10,16 @@ msgstr ""
 "PO-Revision-Date: 2026-05-18 09:10+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
+"Language: tr_TR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Plural-Forms: \n"
+"Plural-Forms: nplurals=2; plural=(n>1);\n"
 
 #. module: fieldservice_route_account
 #: model_terms:ir.ui.view,arch_db:fieldservice_route_account.fsm_route_dayroute_inherit_dayroute
 msgid "Accounting"
-msgstr ""
+msgstr "Muhasebe"
 
 #. module: fieldservice_route_account
 #: model:ir.model.fields,help:fieldservice_route_account.field_fsm_route_dayroute_payment__journal_id
@@ -27,6 +28,9 @@ msgid ""
 "Bank, etc.). One row per journal — each row aggregates the collected vs. "
 "counted amounts for that journal."
 msgstr ""
+"Bu güzergâhın ödemelerinin geçtiği muhasebe yevmiyesi (Kasa, Banka, vb.). "
+"Yevmiye başına bir satır — her satır o yevmiyeye toplanan ve sayılan "
+"tutarları biriktirir."
 
 #. module: fieldservice_route_account
 #: model:ir.model.fields,help:fieldservice_route_account.field_fsm_route_dayroute_payment__move_id
@@ -34,6 +38,8 @@ msgid ""
 "Auto-generated account move that reconciles a positive difference into the "
 "worker's receivable account when the day-route stage closes."
 msgstr ""
+"Günlük güzergâh aşaması kapandığında pozitif farkı işçinin alacak hesabına "
+"yansıtan otomatik oluşturulan muhasebe fişi."
 
 #. module: fieldservice_route_account
 #: model:ir.model.fields,help:fieldservice_route_account.field_fsm_route_dayroute_payment__amount_counted
@@ -42,11 +48,14 @@ msgid ""
 "The difference between this and the Collected Amount becomes the day-route's"
 " reconciliation discrepancy."
 msgstr ""
+"Günlük güzergâhın sonunda işçi tarafından fiziksel olarak sayılan nakit / "
+"tutar. Bu tutar ile Tahsil Edilen Tutar arasındaki fark, günlük güzergâhın "
+"mutabakat farkı olur."
 
 #. module: fieldservice_route_account
 #: model:ir.model.fields,field_description:fieldservice_route_account.field_fsm_route_dayroute_payment__amount_collected
 msgid "Collected Amount"
-msgstr ""
+msgstr "Tahsil Edilen Tutar"
 
 #. module: fieldservice_route_account
 #: model:ir.model.fields,help:fieldservice_route_account.field_fsm_route_dayroute_payment__difference
@@ -55,95 +64,98 @@ msgid ""
 "cash (worker owes the company); negative values indicate over-counting "
 "(company owes the worker)."
 msgstr ""
+"Tahsil Edilen Tutar eksi Sayılan Tutar. Pozitif değerler sayılmamış nakdi "
+"(işçi şirkete borçlu) gösterir; negatif değerler fazla sayımı gösterir "
+"(şirket işçiye borçlu)."
 
 #. module: fieldservice_route_account
 #: model:ir.model.fields,field_description:fieldservice_route_account.field_fsm_route_dayroute_payment__amount_counted
 msgid "Counted Amount"
-msgstr ""
+msgstr "Sayılan Tutar"
 
 #. module: fieldservice_route_account
 #: model:ir.model.fields,field_description:fieldservice_route_account.field_fsm_route_dayroute_payment__create_uid
 msgid "Created by"
-msgstr ""
+msgstr "Oluşturan"
 
 #. module: fieldservice_route_account
 #: model:ir.model.fields,field_description:fieldservice_route_account.field_fsm_route_dayroute_payment__create_date
 msgid "Created on"
-msgstr ""
+msgstr "Oluşturulma Tarihi"
 
 #. module: fieldservice_route_account
 #: model:ir.model.fields,field_description:fieldservice_route_account.field_fsm_route_dayroute_payment__dayroute_id
 msgid "Day Route"
-msgstr ""
+msgstr "Günlük Güzergâh"
 
 #. module: fieldservice_route_account
 #: model:ir.model.fields,field_description:fieldservice_route_account.field_fsm_route_dayroute_payment__difference
 msgid "Difference"
-msgstr ""
+msgstr "Fark"
 
 #. module: fieldservice_route_account
 #: model:ir.model.fields,field_description:fieldservice_route_account.field_account_payment__display_name
 #: model:ir.model.fields,field_description:fieldservice_route_account.field_fsm_route_dayroute__display_name
 #: model:ir.model.fields,field_description:fieldservice_route_account.field_fsm_route_dayroute_payment__display_name
 msgid "Display Name"
-msgstr ""
+msgstr "Görünen Ad"
 
 #. module: fieldservice_route_account
 #: model:ir.model,name:fieldservice_route_account.model_fsm_route_dayroute_payment
 msgid "Field Service Dayroute Payment"
-msgstr ""
+msgstr "Saha Servis Günlük Güzergâh Ödemesi"
 
 #. module: fieldservice_route_account
 #: model:ir.model,name:fieldservice_route_account.model_fsm_route_dayroute
 msgid "Field Service Route Dayroute"
-msgstr ""
+msgstr "Saha Servis Günlük Güzergâhı"
 
 #. module: fieldservice_route_account
 #: model:ir.model.fields,field_description:fieldservice_route_account.field_account_payment__id
 #: model:ir.model.fields,field_description:fieldservice_route_account.field_fsm_route_dayroute__id
 #: model:ir.model.fields,field_description:fieldservice_route_account.field_fsm_route_dayroute_payment__id
 msgid "ID"
-msgstr ""
+msgstr "Kimlik"
 
 #. module: fieldservice_route_account
 #: model:ir.model.fields,field_description:fieldservice_route_account.field_fsm_route_dayroute__invoice_count
 msgid "Invoice Count"
-msgstr ""
+msgstr "Fatura Sayısı"
 
 #. module: fieldservice_route_account
 #: model_terms:ir.ui.view,arch_db:fieldservice_route_account.fsm_route_dayroute_inherit_dayroute
 msgid "Invoices/Bills"
-msgstr ""
+msgstr "Faturalar"
 
 #. module: fieldservice_route_account
 #: model:ir.model.fields,field_description:fieldservice_route_account.field_fsm_route_dayroute_payment__journal_id
 msgid "Journal"
-msgstr ""
+msgstr "Yevmiye"
 
 #. module: fieldservice_route_account
 #: model:ir.model.fields,field_description:fieldservice_route_account.field_fsm_route_dayroute_payment__move_id
 msgid "Journal Entry"
-msgstr ""
+msgstr "Yevmiye Fişi"
 
 #. module: fieldservice_route_account
 #: model:ir.model.fields,field_description:fieldservice_route_account.field_fsm_route_dayroute_payment__write_uid
 msgid "Last Updated by"
-msgstr ""
+msgstr "Son Güncelleyen"
 
 #. module: fieldservice_route_account
 #: model:ir.model.fields,field_description:fieldservice_route_account.field_fsm_route_dayroute_payment__write_date
 msgid "Last Updated on"
-msgstr ""
+msgstr "Son Güncelleme"
 
 #. module: fieldservice_route_account
 #: model:ir.model,name:fieldservice_route_account.model_account_payment
 msgid "Payment"
-msgstr ""
+msgstr "Ödeme"
 
 #. module: fieldservice_route_account
 #: model:ir.model.fields,field_description:fieldservice_route_account.field_fsm_route_dayroute__dayroute_payment_ids
 msgid "Payment Summary"
-msgstr ""
+msgstr "Ödeme Özeti"
 
 #. module: fieldservice_route_account
 #: model:ir.model.fields,help:fieldservice_route_account.field_fsm_route_dayroute__dayroute_payment_ids
@@ -151,6 +163,8 @@ msgid ""
 "Per-journal cash count for this day-route. Each row aggregates the payments "
 "collected from this day-route's FSM orders."
 msgstr ""
+"Bu günlük güzergâh için yevmiye başına nakit sayımı. Her satır bu günlük "
+"güzergâhın FSM siparişlerinden tahsil edilen ödemeleri birleştirir."
 
 #. module: fieldservice_route_account
 #: model:ir.model.fields,help:fieldservice_route_account.field_fsm_route_dayroute_payment__amount_collected
@@ -158,11 +172,13 @@ msgid ""
 "Sum of payments that were posted against this day-route's FSM orders on the "
 "selected journal. Auto-computed from account.payment records."
 msgstr ""
+"Seçilen yevmiyede bu günlük güzergâhın FSM siparişlerine işlenen ödemelerin "
+"toplamı. account.payment kayıtlarından otomatik hesaplanır."
 
 #. module: fieldservice_route_account
 #: model:ir.model.fields,help:fieldservice_route_account.field_fsm_route_dayroute_payment__dayroute_id
 msgid "The day-route whose order payments this row aggregates."
-msgstr ""
+msgstr "Bu satırın sipariş ödemelerini topladığı günlük güzergâh."
 
 #. module: fieldservice_route_account
 #: model:ir.model.fields,help:fieldservice_route_account.field_fsm_route_dayroute__invoice_count
@@ -170,3 +186,5 @@ msgid ""
 "Total number of customer invoices generated from the FSM orders on this day-"
 "route."
 msgstr ""
+"Bu günlük güzergâhın FSM siparişlerinden oluşturulan müşteri faturalarının "
+"toplam sayısı."

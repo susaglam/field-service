@@ -10,87 +10,89 @@ msgstr ""
 "PO-Revision-Date: 2026-05-18 09:10+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
+"Language: nl_NL\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Plural-Forms: \n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. module: fieldservice_route_stock
 #: model:ir.model.fields,field_description:fieldservice_route_stock.field_fsm_route_dayroute__product_qty_remaining
 msgid "Available Stock Capacity"
-msgstr ""
+msgstr "Beschikbare voorraadcapaciteit"
 
 #. module: fieldservice_route_stock
 #: model_terms:ir.ui.view,arch_db:fieldservice_route_stock.fsm_route_dayroute_inventory
 msgid "Capacity"
-msgstr ""
+msgstr "Capaciteit"
 
 #. module: fieldservice_route_stock
 #: model:ir.model.fields,help:fieldservice_route_stock.field_fsm_route_dayroute__max_product_qty
 msgid "Capacity of the assigned vehicle for the route's max product."
 msgstr ""
+"Capaciteit van het toegewezen voertuig voor het max-product van de route."
 
 #. module: fieldservice_route_stock
 #: model:ir.model.fields,help:fieldservice_route_stock.field_fsm_route__max_product_uom_id
 msgid "Default unit of measure used for all stock operations."
-msgstr ""
+msgstr "Standaard maateenheid voor alle voorraadbewerkingen."
 
 #. module: fieldservice_route_stock
 #: model:ir.model.fields,field_description:fieldservice_route_stock.field_fsm_route__display_name
 #: model:ir.model.fields,field_description:fieldservice_route_stock.field_fsm_route_dayroute__display_name
 #: model:ir.model.fields,field_description:fieldservice_route_stock.field_fsm_vehicle__display_name
 msgid "Display Name"
-msgstr ""
+msgstr "Weergavenaam"
 
 #. module: fieldservice_route_stock
 #: model:ir.model,name:fieldservice_route_stock.model_fsm_route
 msgid "Field Service Route"
-msgstr ""
+msgstr "Field Service-route"
 
 #. module: fieldservice_route_stock
 #: model:ir.model,name:fieldservice_route_stock.model_fsm_route_dayroute
 msgid "Field Service Route Dayroute"
-msgstr ""
+msgstr "Field Service Route Dagroute"
 
 #. module: fieldservice_route_stock
 #: model:ir.model,name:fieldservice_route_stock.model_fsm_vehicle
 msgid "Field Service Vehicle"
-msgstr ""
+msgstr "Field Service-voertuig"
 
 #. module: fieldservice_route_stock
 #: model:ir.model.fields,field_description:fieldservice_route_stock.field_fsm_route__id
 #: model:ir.model.fields,field_description:fieldservice_route_stock.field_fsm_route_dayroute__id
 #: model:ir.model.fields,field_description:fieldservice_route_stock.field_fsm_vehicle__id
 msgid "ID"
-msgstr ""
+msgstr "ID"
 
 #. module: fieldservice_route_stock
 #: model:ir.model.fields,field_description:fieldservice_route_stock.field_fsm_vehicle__inventory_location_id
 msgid "Inventory Location"
-msgstr ""
+msgstr "Voorraadlocatie"
 
 #. module: fieldservice_route_stock
 #: model:ir.model.fields,field_description:fieldservice_route_stock.field_fsm_route_dayroute__is_limited
 msgid "Is Limited?"
-msgstr ""
+msgstr "Beperkt?"
 
 #. module: fieldservice_route_stock
 #: model:ir.model.fields,field_description:fieldservice_route_stock.field_fsm_route__max_product_id
 #: model:ir.model.fields,field_description:fieldservice_route_stock.field_fsm_route_dayroute__max_product_id
 #: model:ir.model.fields,field_description:fieldservice_route_stock.field_fsm_vehicle__max_product_id
 msgid "Max Capacity Product"
-msgstr ""
+msgstr "Max-capaciteitsproduct"
 
 #. module: fieldservice_route_stock
 #: model:ir.model.fields,field_description:fieldservice_route_stock.field_fsm_route__max_product_qty
 #: model:ir.model.fields,field_description:fieldservice_route_stock.field_fsm_vehicle__max_product_qty
 msgid "Max Product Quantity"
-msgstr ""
+msgstr "Max productaantal"
 
 #. module: fieldservice_route_stock
 #: model:ir.model.fields,field_description:fieldservice_route_stock.field_fsm_route_dayroute__max_product_qty
 msgid "Max Vehicle Capacity"
-msgstr ""
+msgstr "Max voertuigcapaciteit"
 
 #. module: fieldservice_route_stock
 #: model:ir.model.fields,help:fieldservice_route_stock.field_fsm_vehicle__max_product_qty
@@ -99,11 +101,14 @@ msgid ""
 "route-stock module uses this to flag day-routes that would exceed the "
 "vehicle's load capacity."
 msgstr ""
+"Maximale hoeveelheid van het capaciteitsproduct dat op dit voertuig past. "
+"De route-stock-module gebruikt dit om dagroutes te markeren die de "
+"laadcapaciteit van het voertuig zouden overschrijden."
 
 #. module: fieldservice_route_stock
 #: model_terms:ir.ui.view,arch_db:fieldservice_route_stock.fsm_vehicle_stock_form
 msgid "Stock & Capacity"
-msgstr ""
+msgstr "Voorraad & Capaciteit"
 
 #. module: fieldservice_route_stock
 #: model:ir.model.fields,help:fieldservice_route_stock.field_fsm_vehicle__inventory_location_id
@@ -112,6 +117,9 @@ msgid ""
 "route-stock module to derive how much of the route's max product is loaded "
 "on the vehicle."
 msgstr ""
+"Voorraadlocatie waar de on-board voorraad van dit voertuig wordt bijgehouden. "
+"De route-stock-module gebruikt dit om te bepalen hoeveel van het max-product "
+"van de route op het voertuig is geladen."
 
 #. module: fieldservice_route_stock
 #: model:ir.model.fields,help:fieldservice_route_stock.field_fsm_route_dayroute__product_qty
@@ -119,6 +127,8 @@ msgid ""
 "Sum of the route's max product quantity across all moves belonging to this "
 "day-route's orders."
 msgstr ""
+"Som van het max-product-aantal van de route over alle voorraadmutaties die "
+"horen bij de orders van deze dagroute."
 
 #. module: fieldservice_route_stock
 #: model:ir.model.fields,help:fieldservice_route_stock.field_fsm_route__max_product_id
@@ -129,6 +139,11 @@ msgid ""
 "sum order quantities of this product and warn when the total exceeds the "
 "vehicle's max_product_qty."
 msgstr ""
+"Het product waarvan de hoeveelheid de dagcapaciteit van deze route limiteert. "
+"Komt meestal overeen met het capaciteitsproduct van het voertuig (bv. "
+"'Water 19L fles'). Dagroutes tellen de orderhoeveelheden van dit product "
+"op en waarschuwen wanneer het totaal de max_product_qty van het voertuig "
+"overschrijdt."
 
 #. module: fieldservice_route_stock
 #: model:ir.model.fields,help:fieldservice_route_stock.field_fsm_vehicle__max_product_id
@@ -136,6 +151,8 @@ msgid ""
 "The product whose vehicle capacity is tracked (e.g. 'Water 19L bottle'). "
 "Leave empty if this vehicle has no product cap."
 msgstr ""
+"Het product waarvan de voertuigcapaciteit wordt bijgehouden (bv. "
+"'Water 19L fles'). Laat leeg als dit voertuig geen productlimiet heeft."
 
 #. module: fieldservice_route_stock
 #. odoo-python
@@ -144,6 +161,8 @@ msgid ""
 "The vehicle %(vehicle)s is over capacity (%(used).2f > %(max).2f) on "
 "%(date)s."
 msgstr ""
+"Het voertuig %(vehicle)s zit boven de capaciteit "
+"(%(used).2f > %(max).2f) op %(date)s."
 
 #. module: fieldservice_route_stock
 #: model:ir.model.fields,help:fieldservice_route_stock.field_fsm_route__max_product_qty
@@ -151,6 +170,8 @@ msgid ""
 "Theoretical max capacity of the route across all assigned vehicles. Day-"
 "routes still validate per-vehicle capacity at the vehicle level."
 msgstr ""
+"Theoretische max-capaciteit van de route over alle toegewezen voertuigen. "
+"Dagroutes valideren de capaciteit nog steeds per voertuig op voertuigniveau."
 
 #. module: fieldservice_route_stock
 #: model:ir.model.fields,help:fieldservice_route_stock.field_fsm_route_dayroute__is_limited
@@ -158,21 +179,23 @@ msgid ""
 "True if the assigned vehicle has a non-zero max_product_qty set for the "
 "route's max product."
 msgstr ""
+"Waar als het toegewezen voertuig een max_product_qty (>0) heeft ingesteld "
+"voor het max-product van de route."
 
 #. module: fieldservice_route_stock
 #: model:ir.model.fields,field_description:fieldservice_route_stock.field_fsm_route__max_product_uom_id
 msgid "UoM"
-msgstr ""
+msgstr "Maateenheid"
 
 #. module: fieldservice_route_stock
 #: model:ir.model.fields,field_description:fieldservice_route_stock.field_fsm_route_dayroute__product_qty
 msgid "Used Product Quantity"
-msgstr ""
+msgstr "Gebruikt productaantal"
 
 #. module: fieldservice_route_stock
 #: model:ir.model.fields,field_description:fieldservice_route_stock.field_fsm_route_dayroute__fsm_vehicle_id
 msgid "Vehicle"
-msgstr ""
+msgstr "Voertuig"
 
 #. module: fieldservice_route_stock
 #: model:ir.model.fields,help:fieldservice_route_stock.field_fsm_route_dayroute__fsm_vehicle_id
@@ -180,6 +203,8 @@ msgid ""
 "Vehicle assigned to this day-route. Drives capacity validation against the "
 "vehicle's max_product_qty."
 msgstr ""
+"Voertuig dat aan deze dagroute is toegewezen. Bepaalt de "
+"capaciteitsvalidatie tegen de max_product_qty van het voertuig."
 
 #. module: fieldservice_route_stock
 #: model:ir.model.fields,help:fieldservice_route_stock.field_fsm_route_dayroute__product_qty_remaining
@@ -187,3 +212,5 @@ msgid ""
 "max_product_qty minus product_qty. Negative values indicate the day-route "
 "exceeds the vehicle's capacity."
 msgstr ""
+"max_product_qty minus product_qty. Negatieve waarden geven aan dat de "
+"dagroute de capaciteit van het voertuig overschrijdt."
