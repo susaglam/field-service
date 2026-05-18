@@ -18,10 +18,19 @@ class FSMPerson(models.Model):
         ondelete="restrict",
         delegate=True,
         bypass_search_access=True,
+
+        help="Linked partner record (contact info).",
+
     )
-    category_ids = fields.Many2many("fsm.category", string="Categories")
-    calendar_id = fields.Many2one("resource.calendar", string="Working Schedule")
-    mobile = fields.Char()
+    category_ids = fields.Many2many("fsm.category", string="Categories",
+        help="Worker categories / skill groups.",
+    )
+    calendar_id = fields.Many2one("resource.calendar", string="Working Schedule",
+        help="Worker's working hours calendar.",
+    )
+    mobile = fields.Char(
+        help="Worker's mobile number for dispatch.",
+    )
     territory_ids = fields.Many2many("res.territory", string="Territories")
     active = fields.Boolean(default=True)
     active_partner = fields.Boolean(

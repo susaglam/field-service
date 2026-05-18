@@ -50,7 +50,11 @@ class FSMTeam(models.Model):
         for team in self:
             team.order_need_schedule_count = result.get(team.id, 0)
 
-    name = fields.Char(required=True, translate=True)
+    name = fields.Char(required=True, translate=True,
+
+        help="Name of the team (e.g. 'Plumbing Crew A').",
+
+    )
     description = fields.Text(translate=True)
     active = fields.Boolean(default=True)
     color = fields.Integer("Color Index")

@@ -8,9 +8,15 @@ class FSMTag(models.Model):
     _name = "fsm.tag"
     _description = "Field Service Tag"
 
-    name = fields.Char(required=True)
+    name = fields.Char(required=True,
+
+        help="Tag label.",
+
+    )
     parent_id = fields.Many2one("fsm.tag", string="Parent")
-    color = fields.Integer("Color Index", default=10)
+    color = fields.Integer("Color Index", default=10,
+        help="Kanban color index (1–11) for visual grouping.",
+    )
     full_name = fields.Char(compute="_compute_full_name")
     company_id = fields.Many2one(
         "res.company",

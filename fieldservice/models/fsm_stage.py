@@ -17,7 +17,9 @@ class FSMStage(models.Model):
         return [default_team_id] if default_team_id else None
 
     active = fields.Boolean(default=True)
-    name = fields.Char(required=True, translate=True)
+    name = fields.Char(required=True, translate=True,
+        help="Display name of the stage (e.g. 'En Route', 'Completed').",
+    )
     sequence = fields.Integer(default=1, help="Used to order stages. Lower is better.")
     legend_priority = fields.Text(
         "Priority Management Explanation",
@@ -48,6 +50,7 @@ class FSMStage(models.Model):
             ("worker", "Worker"),
         ],
         "Type",
+        help="Which entity this stage applies to (order / route / equipment).",
         required=True,
         default="order",
     )

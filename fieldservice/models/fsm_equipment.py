@@ -10,10 +10,20 @@ class FSMEquipment(models.Model):
     _inherit = ["mail.thread", "mail.activity.mixin", "fsm.model.mixin"]
     _stage_type = "equipment"
 
-    name = fields.Char(required=True)
-    person_id = fields.Many2one("fsm.person", string="Assigned Operator")
-    location_id = fields.Many2one("fsm.location", string="Assigned Location")
-    notes = fields.Html()
+    name = fields.Char(required=True,
+
+        help="Equipment name / asset label.",
+
+    )
+    person_id = fields.Many2one("fsm.person", string="Assigned Operator",
+        help="Worker / owner responsible for this equipment.",
+    )
+    location_id = fields.Many2one("fsm.location", string="Assigned Location",
+        help="Where the equipment currently resides.",
+    )
+    notes = fields.Html(
+        help="Free-text notes about the equipment.",
+    )
     territory_id = fields.Many2one(
         "res.territory",
         string="Territory",
@@ -42,11 +52,17 @@ class FSMEquipment(models.Model):
         store=True,
         readonly=False,
     )
-    current_location_id = fields.Many2one("fsm.location", string="Current Location")
+    current_location_id = fields.Many2one("fsm.location", string="Current Location",
+        help="Tracked current location (may differ from location_id if equipment was moved).",
+    )
     managed_by_id = fields.Many2one("res.partner", string="Managed By")
     owned_by_id = fields.Many2one("res.partner", string="Owned By")
-    parent_id = fields.Many2one("fsm.equipment", string="Parent")
-    child_ids = fields.One2many("fsm.equipment", "parent_id", string="Children")
+    parent_id = fields.Many2one("fsm.equipment", string="Parent",
+        help="Parent equipment (e.g. boiler → pump component).",
+    )
+    child_ids = fields.One2many("fsm.equipment", "parent_id", string="Children",
+        help="Sub-components of this equipment.",
+    )
     color = fields.Integer("Color Index")
     company_id = fields.Many2one(
         "res.company",
