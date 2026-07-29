@@ -209,8 +209,9 @@ msgstr "Portalda Görünür"
 #. module: fieldservice_portal
 #: model_terms:ir.ui.view,arch_db:fieldservice_portal.portal_breadcrumbs
 #: model_terms:ir.ui.view,arch_db:fieldservice_portal.portal_my_fsm_orders
+#: model:portal.entry,name:fieldservice_portal.portal_entry_fsm_order
 msgid "Work Orders"
-msgstr "İş Emirleri"
+msgstr "İş emirleri"
 
 #. module: fieldservice_portal
 #: model_terms:ir.ui.view,arch_db:fieldservice_portal.portal_my_fsm_orders
@@ -240,3 +241,8 @@ msgstr "location_id.name"
 #: code:addons/fieldservice_portal/controllers/fsm_order_portal.py:0
 msgid "name"
 msgstr "ad"
+
+#. module: fieldservice_portal
+#: model:portal.entry,description:fieldservice_portal.portal_entry_fsm_order
+msgid "Follow the progress of the work planned at your address"
+msgstr "Adresinizde planlanan işin ilerleyişini takip edin"

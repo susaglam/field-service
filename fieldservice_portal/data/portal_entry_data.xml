@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!--
+    The portal home card, as saas-19.4 wants it.
+
+    Until 19.4 a module added its own card by inheriting portal.portal_my_home
+    and calling portal.portal_docs_entry with t-set icon/title/text/url. That
+    template was rewritten to read a portal.entry RECORD (entry.name, entry.url,
+    entry.image), so the old idiom silently loses every value it passes and
+    renders whatever `entry` is still in scope — which, right after the card
+    loop, is the LAST card on the page. The visible symptom is not a missing FSM
+    card but a DUPLICATE of somebody else's: on badkamertien.nl the customer
+    portal showed "Verbinding & Beveiliging" twice and no work-order card at all.
+
+    Cards stay hidden until /my/counters answers with a non-zero
+    placeholder_count, exactly like Projects and Tasks — a customer with no work
+    orders is not shown an empty link.
+-->
+<odoo>
+    <record id="portal_entry_fsm_order" model="portal.entry">
+        <field name="name">Work Orders</field>
+        <field name="description">Follow the progress of the work planned at your address</field>
+        <field name="url">/my/fsm_orders</field>
+        <field name="image" type="bytes" file="fieldservice_portal/static/src/img/fsmorder.svg"/>
+        <field name="placeholder_count">fsm_order_count</field>
+        <field name="category">service_category</field>
+        <field name="sequence" eval="105"/>
+    </record>
+</odoo>

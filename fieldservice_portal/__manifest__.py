@@ -1,6 +1,6 @@
 {
     "name": "Field Service - Portal",
-    "version": "saas~19.3.1.0.1",
+    "version": "saas~19.4.1.0.2",
     "summary": """
     Bridge module between fieldservice and portal.
     """,
@@ -14,8 +14,9 @@
     "category": "Field Service",
     "license": "AGPL-3",
     "data": [
-        "security/ir.model.access.csv",
+        "security/ir.access.csv",
         "security/portal_security.xml",
+        "data/portal_entry_data.xml",
         "views/fsm_order_template.xml",
         "views/portal_template.xml",
         "views/fsm_stage.xml",

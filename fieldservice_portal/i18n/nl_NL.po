@@ -211,6 +211,7 @@ msgstr "Zichtbaar in portaal"
 #. module: fieldservice_portal
 #: model_terms:ir.ui.view,arch_db:fieldservice_portal.portal_breadcrumbs
 #: model_terms:ir.ui.view,arch_db:fieldservice_portal.portal_my_fsm_orders
+#: model:portal.entry,name:fieldservice_portal.portal_entry_fsm_order
 msgid "Work Orders"
 msgstr "Werkorders"
 
@@ -242,3 +243,8 @@ msgstr "location_id.name"
 #: code:addons/fieldservice_portal/controllers/fsm_order_portal.py:0
 msgid "name"
 msgstr "naam"
+
+#. module: fieldservice_portal
+#: model:portal.entry,description:fieldservice_portal.portal_entry_fsm_order
+msgid "Follow the progress of the work planned at your address"
+msgstr "Volg de voortgang van het werk dat bij je gepland staat"

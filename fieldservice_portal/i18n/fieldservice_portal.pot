@@ -188,10 +188,16 @@ msgstr ""
 #. module: fieldservice_portal
 #: model_terms:ir.ui.view,arch_db:fieldservice_portal.portal_breadcrumbs
 #: model_terms:ir.ui.view,arch_db:fieldservice_portal.portal_my_fsm_orders
+#: model:portal.entry,name:fieldservice_portal.portal_entry_fsm_order
 msgid "Work Orders"
 msgstr ""
 
 #. module: fieldservice_portal
 #: model_terms:ir.ui.view,arch_db:fieldservice_portal.portal_my_fsm_orders
 msgid "Work Orders for"
+msgstr ""
+
+#. module: fieldservice_portal
+#: model:portal.entry,description:fieldservice_portal.portal_entry_fsm_order
+msgid "Follow the progress of the work planned at your address"
 msgstr ""
