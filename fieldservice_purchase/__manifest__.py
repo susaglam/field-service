@@ -8,13 +8,13 @@
     "website": "https://github.com/OCA/field-service",
     "category": "Field Service",
     "license": "AGPL-3",
-    "version": "saas~19.3.1.0.2",
+    "version": "saas~19.4.1.0.2",
     "depends": [
         "fieldservice",
         "purchase",
     ],
     "data": [
-        "security/ir.model.access.csv",
+        "security/ir.access.csv",
         "views/fsm_person.xml",
     ],
     "development_status": "Beta",

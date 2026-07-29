@@ -3,7 +3,7 @@
 
 {
     "name": "Field Service - Sales - Recurring",
-    "version": "saas~19.3.1.1.1",
+    "version": "saas~19.4.1.1.1",
     "summary": "Sell recurring field services.",
     "category": "Field Service",
     "author": "Open Source Integrators, Odoo Community Association (OCA)",
@@ -14,7 +14,7 @@
         "fieldservice_account",
     ],
     "data": [
-        "security/ir.model.access.csv",
+        "security/ir.access.csv",
         "views/fsm_recurring.xml",
         "views/product_template.xml",
         "views/sale_order.xml",

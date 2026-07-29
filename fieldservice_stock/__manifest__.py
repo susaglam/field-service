@@ -4,7 +4,7 @@
 {
     "name": "Field Service - Stock",
     "summary": "Integrate the logistics operations with Field Service",
-    "version": "saas~19.3.2.0.1",
+    "version": "saas~19.4.2.0.1",
     "category": "Field Service",
     "author": "Open Source Integrators, "
     "Brian McMaster, "
@@ -12,7 +12,7 @@
     "website": "https://github.com/OCA/field-service",
     "depends": ["fieldservice", "stock"],
     "data": [
-        "security/ir.model.access.csv",
+        "security/ir.access.csv",
         "data/fsm_stock_data.xml",
         "views/res_territory.xml",
         "views/fsm_location.xml",

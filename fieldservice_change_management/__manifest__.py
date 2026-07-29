@@ -39,14 +39,14 @@ change journal* tied to FSM locations.
     "author": "Pavlov Media, Odoo Community Association (OCA)",
     "website": "https://github.com/OCA/field-service",
     "category": "Field Service",
-    "version": "saas~19.3.1.0.4",
+    "version": "saas~19.4.1.0.4",
     "license": "AGPL-3",
     "depends": [
         "fieldservice",
     ],
     "data": [
         "security/security.xml",
-        "security/ir.model.access.csv",
+        "security/ir.access.csv",
         "data/ir_sequence.xml",
         "data/change_log_impact.xml",
         "data/change_log_stage.xml",

@@ -4,7 +4,7 @@
 {
     "name": "Field Service Recurring Work Orders",
     "summary": "Manage recurring Field Service orders",
-    "version": "saas~19.3.1.2.1",
+    "version": "saas~19.4.1.2.1",
     "category": "Field Service",
     "author": "Brian McMaster, "
     "Open Source Integrators, "
@@ -14,7 +14,7 @@
     "data": [
         "data/ir_sequence.xml",
         "security/res_groups.xml",
-        "security/ir.model.access.csv",
+        "security/ir.access.csv",
         "security/recurring_security.xml",
         "views/fsm_frequency.xml",
         "views/fsm_frequency_set.xml",

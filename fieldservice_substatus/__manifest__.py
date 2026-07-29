@@ -4,7 +4,7 @@
 {
     "name": "Field Service - Sub-Status",
     "summary": "Add sub-statuses to Field Service orders",
-    "version": "saas~19.3.1.0.2",
+    "version": "saas~19.4.1.0.2",
     "category": "Field Service",
     "author": "Open Source Integrators, "
     "Brian McMaster, "
@@ -17,7 +17,7 @@
         "data/fsm_stage_status.xml",
         "data/fsm_stage.xml",
         "data/mail_data.xml",
-        "security/ir.model.access.csv",
+        "security/ir.access.csv",
         "views/fsm_stage_status.xml",
         "views/fsm_stage.xml",
         "views/fsm_order.xml",

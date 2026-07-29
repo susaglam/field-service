@@ -2,7 +2,7 @@
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 {
     "name": "Field Service - Sales",
-    "version": "saas~19.3.1.2.2",
+    "version": "saas~19.4.1.2.2",
     "summary": "Sell field services.",
     "category": "Field Service",
     "author": "Open Source Integrators, Odoo Community Association (OCA)",
@@ -13,7 +13,7 @@
         "fieldservice_account",
     ],
     "data": [
-        "security/ir.model.access.csv",
+        "security/ir.access.csv",
         "security/res_groups.xml",
         "views/fsm_location.xml",
         "views/fsm_order.xml",

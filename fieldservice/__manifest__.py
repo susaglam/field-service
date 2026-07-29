@@ -3,7 +3,7 @@
 {
     "name": "Field Service",
     "summary": "Manage Field Service Locations, Workers and Orders",
-    "version": "saas~19.3.5.6.2",
+    "version": "saas~19.4.5.6.2",
     "license": "AGPL-3",
     "category": "Field Service",
     "author": "Open Source Integrators, Odoo Community Association (OCA)",
@@ -26,7 +26,7 @@
         "data/fsm_stage.xml",
         "data/fsm_team.xml",
         "security/res_groups.xml",
-        "security/ir.model.access.csv",
+        "security/ir.access.csv",
         "security/ir_rule.xml",
         "report/fsm_order_report_template.xml",
         "views/res_config_settings.xml",

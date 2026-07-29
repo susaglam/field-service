@@ -4,14 +4,14 @@
 {
     "name": "Field Service - Skills",
     "summary": "Manage your Field Service workers skills",
-    "version": "saas~19.3.1.0.2",
+    "version": "saas~19.4.1.0.2",
     "category": "Field Service",
     "license": "AGPL-3",
     "author": "Open Source Integrators, Odoo Community Association (OCA)",
     "website": "https://github.com/OCA/field-service",
     "depends": ["hr_skills", "fieldservice"],
     "data": [
-        "security/ir.model.access.csv",
+        "security/ir.access.csv",
         "views/fsm_person.xml",
         "views/fsm_category.xml",
         "views/fsm_person_skill.xml",

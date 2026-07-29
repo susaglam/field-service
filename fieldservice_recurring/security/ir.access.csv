@@ -1,0 +1,9 @@
+id,name,model_id,group_id/id,operation,domain
+access_fsm_frequency_fsm_user,fsm.frequency.user,fsm.frequency,fieldservice.group_fsm_user,cru,
+access_fsm_frequency_fsm_manager,fsm.frequency.manager,fsm.frequency,fieldservice.group_fsm_manager,crud,
+access_fsm_frequency_fsm_set_user,fsm.frequency.set.user,fsm.frequency.set,fieldservice.group_fsm_user,cru,
+access_fsm_frequency_fsm_set_manager,fsm.frequency.set.manager,fsm.frequency.set,fieldservice.group_fsm_manager,crud,
+access_fsm_recurring_template_fsm_user,fsm.recurring.template.user,fsm.recurring.template,fieldservice.group_fsm_user,r,
+access_fsm_recurring_template_fsm_manager,fsm.recurring.template.manager,fsm.recurring.template,fieldservice.group_fsm_manager,crud,
+access_fsm_recurring_fsm_user,fsm.recurring.user,fsm.recurring,fieldservice.group_fsm_user,cru,
+access_fsm_recurring_fsm_manager,fsm.recurring.manager,fsm.recurring,fieldservice.group_fsm_manager,crud,

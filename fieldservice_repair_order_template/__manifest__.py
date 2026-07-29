@@ -4,7 +4,7 @@
 {
     "name": "Field Service - Repair Order Template",
     "summary": "Use Repair Order Templates when creating a repair orders",
-    "version": "saas~19.3.1.0.1",
+    "version": "saas~19.4.1.0.1",
     "author": "Camptocamp, Odoo Community Association (OCA)",
     "maintainers": ["ivantodorovich"],
     "website": "https://github.com/OCA/field-service",

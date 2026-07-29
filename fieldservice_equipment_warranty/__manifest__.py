@@ -5,7 +5,7 @@
     "name": "Field Service Equipment Warranty",
     "summary": "Field Service equipment warranty",
     "category": "Field Service",
-    "version": "saas~19.3.1.0.1",
+    "version": "saas~19.4.1.0.1",
     "author": "Camptocamp, Odoo Community Association (OCA)",
     "license": "AGPL-3",
     "depends": [

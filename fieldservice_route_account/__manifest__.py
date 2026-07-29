@@ -4,7 +4,7 @@
 
 {
     'name': 'Field Service Route Account',
-    'version': 'saas~19.3.1.1.3',
+    'version': 'saas~19.4.1.1.3',
     'category': 'Field Service',
     'author': 'Open Source Integrators, Odoo Community Association (OCA)',
     'website': 'https://github.com/OCA/field-service',
@@ -13,7 +13,7 @@
         'fieldservice_account_payment'
     ],
     'data': [
-        'security/ir.model.access.csv',
+        'security/ir.access.csv',
         'views/fsm_route_dayroute.xml',
     ],
     'license': 'AGPL-3',

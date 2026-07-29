@@ -5,7 +5,7 @@
 {
     "name": "Field Service Fleet",
     "summary": "Link Field Service vehicles with Odoo Fleet",
-    "version": "saas~19.3.1.0.1",
+    "version": "saas~19.4.1.0.1",
     "category": "Field Service",
     "author": "Brian McMaster, "
     "Open Source Integrators, "
@@ -13,7 +13,7 @@
     "website": "https://github.com/OCA/field-service",
     "depends": ["fieldservice_vehicle", "fleet"],
     "data": [
-        "security/ir.model.access.csv",
+        "security/ir.access.csv",
         "views/fsm_vehicle.xml",
         "views/fleet_vehicle.xml",
         "wizard/fsm_fleet_wizard.xml",
