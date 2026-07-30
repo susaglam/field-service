@@ -1,8 +1,22 @@
 <?xml version='1.0' encoding='utf-8' ?>
 <odoo>
     <template id="portal_my_fsm_orders" name="My Work Orders">
+        <!--
+            breadcrumbs_searchbar is set BEFORE the t-call, and that placement is
+            the whole fix. The flag is an either/or switch between two templates:
+
+              portal_layout:    <div t-if="… and not breadcrumbs_searchbar">
+                                    renders a standalone breadcrumb
+              portal_searchbar: <t t-if="breadcrumbs_searchbar">
+                                    renders the breadcrumb inside the navbar
+
+            Set INSIDE the t-call body — where it used to be — the flag arrives
+            too late: the layout has already decided and drawn its own breadcrumb
+            by the time the body renders, and then the searchbar draws a second
+            one. The page showed "Werkorders" twice, once above the other.
+        -->
+        <t t-set="breadcrumbs_searchbar" t-value="True"/>
         <t t-call="portal.portal_layout">
-            <t t-set="breadcrumbs_searchbar" t-value="True" />
             <t t-call="portal.portal_searchbar">
                 <t t-set="title">Work Orders</t>
             </t>
