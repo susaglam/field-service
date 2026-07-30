@@ -17,9 +17,13 @@
         -->
         <t t-set="breadcrumbs_searchbar" t-value="True"/>
         <t t-call="portal.portal_layout">
-            <t t-call="portal.portal_searchbar">
-                <t t-set="title">Work Orders</t>
-            </t>
+            <!-- saas-19.4: a <t t-set> CHILD of a <t t-call> no longer reaches
+                 the called template — _compile_directive_call builds the
+                 callee's dict fresh from the body, so the t-set lands in the
+                 body scope instead. Set it as a PRECEDING SIBLING, which stays
+                 in the caller's scope and is merged into the callee. -->
+            <t t-set="title">Work Orders</t>
+            <t t-call="portal.portal_searchbar"/>
             <t t-if="not grouped_orders">
                 <p>There are no Work Orders in your account.</p>
             </t>
@@ -149,9 +153,11 @@
                         </t>
                     </div>
                     <h4 class="page-header">History</h4>
-                    <t t-call="portal.message_thread">
-                        <t t-set="object" t-value="fsm_order" />
-                    </t>
+                    <!-- Same saas-19.4 change as the searchbar above. Left
+                         inside the t-call this raised KeyError: 'object' and
+                         the whole order page returned 500. -->
+                    <t t-set="object" t-value="fsm_order" />
+                    <t t-call="portal.message_thread"/>
                 </div>
             </div>
 

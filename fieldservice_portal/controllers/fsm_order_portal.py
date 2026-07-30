@@ -15,10 +15,15 @@ class CustomerPortal(CustomerPortal):
     def _prepare_home_portal_values(self, counters):
         values = super()._prepare_home_portal_values(counters)
         if "fsm_order_count" in counters:
-            fsm_order_count = (
-                request.env["fsm.order"]
-                .sudo()
-                .search_count(self._prepare_fsm_orders_domain())
+            # NOT sudo(). The domain filters on the stage only, so counting as
+            # superuser counted every portal-visible work order in the database
+            # and showed that number to each customer as their own. The list
+            # this tile links to has always applied the record rule, so the
+            # heading and the page underneath disagreed: one row below "143".
+            # The ir.access rule in security/portal_security.xml is what scopes
+            # this to the customer's own locations.
+            fsm_order_count = request.env["fsm.order"].search_count(
+                self._prepare_fsm_orders_domain()
             )
             values["fsm_order_count"] = fsm_order_count
         return values
@@ -111,16 +116,17 @@ class CustomerPortal(CustomerPortal):
         )
 
         if search and search_in:
-            search_domain = []
-            for search_property in [
-                k
-                for (k, v) in searchbar_inputs.items()
-                if search_in in (v["input"], "all") and k != "all"
-            ]:
-                search_domain = Domain.OR(
-                    [search_domain, [(search_property, "ilike", search)]]
-                )
-            domain += search_domain
+            # OR-ing against a seed of [] made the search a no-op: an empty
+            # domain matches EVERYTHING, so OR([[], term]) is TRUE and the
+            # customer's search box returned the full list whatever they typed.
+            # Collect the terms and OR them in one go instead.
+            search_terms = [
+                [(search_property, "ilike", search)]
+                for (search_property, spec) in searchbar_inputs.items()
+                if search_in in (spec["input"], "all") and search_property != "all"
+            ]
+            if search_terms:
+                domain += Domain.OR(search_terms)
 
         # search filters (by stage)
         searchbar_filters = OrderedDict(
