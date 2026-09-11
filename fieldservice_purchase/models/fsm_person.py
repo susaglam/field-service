@@ -11,16 +11,20 @@ class FSMPerson(models.Model):
         compute="_compute_pricelist_count", string="# Pricelists"
     )
 
+    # The vendor on product.supplierinfo is `partner_id` since Odoo 16; it was
+    # `name` before. Searching the old name raised "Invalid field
+    # product.supplierinfo.name" the moment a technician's form was opened,
+    # because the count below is computed for the smart button on that form.
     def _compute_pricelist_count(self):
         for worker in self:
             worker.pricelist_count = self.env["product.supplierinfo"].search_count(
-                [("name", "=", worker.partner_id.id)]
+                [("partner_id", "=", worker.partner_id.id)]
             )
 
     def action_view_pricelists(self):
         for worker in self:
             pricelist = self.env["product.supplierinfo"].search(
-                [("name", "=", worker.partner_id.id)]
+                [("partner_id", "=", worker.partner_id.id)]
             )
             action = self.env["ir.actions.act_window"]._for_xml_id(
                 "product.product_supplierinfo_type_action"
