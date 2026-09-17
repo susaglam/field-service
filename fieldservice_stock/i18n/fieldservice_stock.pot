@@ -4,14 +4,40 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 18.0\n"
+"Project-Id-Version: Odoo Server saas~19.4\n"
 "Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-17 11:27+0000\n"
+"PO-Revision-Date: 2026-09-17 11:27+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: \n"
+
+#. module: fieldservice_stock
+#: model:ir.model.fields,help:fieldservice_stock.field_fsm_location__shipping_address_id
+msgid ""
+"Address that receives deliveries for this location when it is not the "
+"location itself, e.g. the site office that accepts parts for a building. For"
+" reference only: transfers do not use it automatically."
+msgstr ""
+
+#. module: fieldservice_stock
+#: model_terms:ir.ui.view,arch_db:fieldservice_stock.res_config_settings_view_form_fsm_stock
+msgid ""
+"Book the order's delivery and return transfers when the order is completed."
+msgstr ""
+
+#. module: fieldservice_stock
+#: model:ir.model,name:fieldservice_stock.model_res_company
+msgid "Company"
+msgstr ""
+
+#. module: fieldservice_stock
+#: model:ir.model,name:fieldservice_stock.model_res_config_settings
+msgid "Config Settings"
+msgstr ""
 
 #. module: fieldservice_stock
 #: model_terms:ir.ui.view,arch_db:fieldservice_stock.view_fsm_order_form_inherit_stock
@@ -21,6 +47,27 @@ msgstr ""
 #. module: fieldservice_stock
 #: model:ir.model.fields,field_description:fieldservice_stock.field_fsm_order__delivery_count
 msgid "Delivery Orders"
+msgstr ""
+
+#. module: fieldservice_stock
+#: model:ir.model.fields,help:fieldservice_stock.field_fsm_order__picking_ids
+msgid ""
+"Delivery and return transfers linked to this order, e.g. the parts shipped "
+"to the site for the job."
+msgstr ""
+
+#. module: fieldservice_stock
+#: model:ir.model.fields,field_description:fieldservice_stock.field_fsm_location__display_name
+#: model:ir.model.fields,field_description:fieldservice_stock.field_fsm_order__display_name
+#: model:ir.model.fields,field_description:fieldservice_stock.field_fsm_wizard__display_name
+#: model:ir.model.fields,field_description:fieldservice_stock.field_res_company__display_name
+#: model:ir.model.fields,field_description:fieldservice_stock.field_res_config_settings__display_name
+#: model:ir.model.fields,field_description:fieldservice_stock.field_res_territory__display_name
+#: model:ir.model.fields,field_description:fieldservice_stock.field_stock_move__display_name
+#: model:ir.model.fields,field_description:fieldservice_stock.field_stock_picking__display_name
+#: model:ir.model.fields,field_description:fieldservice_stock.field_stock_reference__display_name
+#: model:ir.model.fields,field_description:fieldservice_stock.field_stock_rule__display_name
+msgid "Display Name"
 msgstr ""
 
 #. module: fieldservice_stock
@@ -40,10 +87,49 @@ msgstr ""
 
 #. module: fieldservice_stock
 #: model:ir.model,name:fieldservice_stock.model_fsm_order
-#: model:ir.model.fields,field_description:fieldservice_stock.field_procurement_group__fsm_order_id
 #: model:ir.model.fields,field_description:fieldservice_stock.field_stock_move__fsm_order_id
 #: model:ir.model.fields,field_description:fieldservice_stock.field_stock_picking__fsm_order_id
 msgid "Field Service Order"
+msgstr ""
+
+#. module: fieldservice_stock
+#: model:ir.model.fields,field_description:fieldservice_stock.field_stock_reference__fsm_order_ids
+msgid "Field Service Orders"
+msgstr ""
+
+#. module: fieldservice_stock
+#: model:ir.model.fields,help:fieldservice_stock.field_stock_move__fsm_order_id
+msgid ""
+"Field service order this stock move belongs to; the move is listed on that "
+"order's Operations tab. Filled from the transfer when empty."
+msgstr ""
+
+#. module: fieldservice_stock
+#: model:ir.model.fields,help:fieldservice_stock.field_stock_picking__fsm_order_id
+msgid ""
+"Field service order this transfer supplies. Its lines are then listed on "
+"that order's Operations tab."
+msgstr ""
+
+#. module: fieldservice_stock
+#: model:ir.model.fields,help:fieldservice_stock.field_stock_reference__fsm_order_ids
+msgid ""
+"Field service orders that belong to this reference, e.g. the installation "
+"order created by the sale this reference groups."
+msgstr ""
+
+#. module: fieldservice_stock
+#: model:ir.model.fields,field_description:fieldservice_stock.field_fsm_location__id
+#: model:ir.model.fields,field_description:fieldservice_stock.field_fsm_order__id
+#: model:ir.model.fields,field_description:fieldservice_stock.field_fsm_wizard__id
+#: model:ir.model.fields,field_description:fieldservice_stock.field_res_company__id
+#: model:ir.model.fields,field_description:fieldservice_stock.field_res_config_settings__id
+#: model:ir.model.fields,field_description:fieldservice_stock.field_res_territory__id
+#: model:ir.model.fields,field_description:fieldservice_stock.field_stock_move__id
+#: model:ir.model.fields,field_description:fieldservice_stock.field_stock_picking__id
+#: model:ir.model.fields,field_description:fieldservice_stock.field_stock_reference__id
+#: model:ir.model.fields,field_description:fieldservice_stock.field_stock_rule__id
+msgid "ID"
 msgstr ""
 
 #. module: fieldservice_stock
@@ -64,9 +150,32 @@ msgid "Operations"
 msgstr ""
 
 #. module: fieldservice_stock
-#: model:ir.model,name:fieldservice_stock.model_procurement_group
-#: model:ir.model.fields,field_description:fieldservice_stock.field_fsm_order__procurement_group_id
-msgid "Procurement Group"
+#. odoo-python
+#: code:addons/fieldservice_stock/models/fsm_order.py:0
+msgid ""
+"Order %(order)s cannot be completed by you yet: completing it also books "
+"transfer %(picking)s, and that needs Inventory rights. Ask a warehouse user "
+"to complete the order, or ask an administrator to give you Inventory access."
+msgstr ""
+
+#. module: fieldservice_stock
+#. odoo-python
+#: code:addons/fieldservice_stock/models/fsm_order.py:0
+msgid ""
+"Order %(order)s cannot be completed yet: transfer %(picking)s asks for a "
+"confirmation step before it can be validated. Open the transfer, validate it"
+" there, then complete the order."
+msgstr ""
+
+#. module: fieldservice_stock
+#. odoo-python
+#: code:addons/fieldservice_stock/models/fsm_order.py:0
+msgid ""
+"Order %(order)s cannot be completed yet: transfer %(picking)s has "
+"%(available)s of the %(demand)s %(uom)s of %(product)s it needs. Receive or "
+"move the missing stock and complete the order again, or turn off 'Validate "
+"Transfers on Order Completion' in Field Service settings to complete the "
+"order and book the transfer by hand."
 msgstr ""
 
 #. module: fieldservice_stock
@@ -82,6 +191,11 @@ msgstr ""
 #. module: fieldservice_stock
 #: model_terms:ir.ui.view,arch_db:fieldservice_stock.view_fsm_order_form_inherit_stock
 msgid "Reference"
+msgstr ""
+
+#. module: fieldservice_stock
+#: model:ir.model,name:fieldservice_stock.model_stock_reference
+msgid "Reference between stock documents"
 msgstr ""
 
 #. module: fieldservice_stock
@@ -110,8 +224,31 @@ msgid "Stock Move"
 msgstr ""
 
 #. module: fieldservice_stock
+#: model:ir.model.fields,field_description:fieldservice_stock.field_fsm_order__reference_ids
+msgid "Stock References"
+msgstr ""
+
+#. module: fieldservice_stock
 #: model:ir.model,name:fieldservice_stock.model_stock_rule
 msgid "Stock Rule"
+msgstr ""
+
+#. module: fieldservice_stock
+#: model:ir.model.fields,help:fieldservice_stock.field_fsm_order__move_ids
+msgid ""
+"Stock moves of this order's delivery and return transfers, shown on the "
+"Operations tab. A line added to a transfer of this order is listed here "
+"automatically."
+msgstr ""
+
+#. module: fieldservice_stock
+#: model:ir.model.fields,help:fieldservice_stock.field_fsm_order__reference_ids
+msgid ""
+"Stock references (the grouping of transfers that replaced procurement "
+"groups) this order is part of. Filled when the sale that created the order "
+"is confirmed, so the order and its sale share the same transfers. Example: "
+"sale S00042 -> reference S00042 -> the delivery of its tiles and the order "
+"installing them."
 msgstr ""
 
 #. module: fieldservice_stock
@@ -135,12 +272,37 @@ msgid "Unit of Measure"
 msgstr ""
 
 #. module: fieldservice_stock
+#: model:ir.model.fields,field_description:fieldservice_stock.field_res_company__fsm_auto_validate_pickings
+#: model:ir.model.fields,field_description:fieldservice_stock.field_res_config_settings__fsm_auto_validate_pickings
+msgid "Validate Transfers on Order Completion"
+msgstr ""
+
+#. module: fieldservice_stock
 #: model:ir.model.fields,field_description:fieldservice_stock.field_fsm_order__warehouse_id
 #: model:ir.model.fields,field_description:fieldservice_stock.field_res_territory__warehouse_id
 msgid "Warehouse"
 msgstr ""
 
 #. module: fieldservice_stock
+#: model:ir.model.fields,help:fieldservice_stock.field_res_territory__warehouse_id
+msgid ""
+"Warehouse that serves this territory. For reference only: an order takes its"
+" warehouse from the order form, not from its territory."
+msgstr ""
+
+#. module: fieldservice_stock
 #: model:ir.model.fields,help:fieldservice_stock.field_fsm_order__warehouse_id
 msgid "Warehouse used to ship the materials"
+msgstr ""
+
+#. module: fieldservice_stock
+#: model:ir.model.fields,help:fieldservice_stock.field_res_company__fsm_auto_validate_pickings
+#: model:ir.model.fields,help:fieldservice_stock.field_res_config_settings__fsm_auto_validate_pickings
+msgid ""
+"When a field service order is completed, validate its open delivery and "
+"return transfers in the same step, so stock reflects what the technician "
+"used. Completion is blocked with an explanation if a transfer lacks stock or"
+" needs a confirmation step. Example: the technician finishes a bathroom "
+"installation, the order is marked Completed and the 2 mixer taps on its "
+"delivery are booked out of the warehouse at the same moment."
 msgstr ""

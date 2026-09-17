@@ -17,6 +17,36 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. module: fieldservice_stock
+#: model:ir.model.fields,help:fieldservice_stock.field_fsm_location__shipping_address_id
+msgid ""
+"Address that receives deliveries for this location when it is not the "
+"location itself, e.g. the site office that accepts parts for a building. For"
+" reference only: transfers do not use it automatically."
+msgstr ""
+"Adres dat de leveringen voor deze locatie ontvangt als dat niet de locatie "
+"zelf is, bijvoorbeeld het bouwkeet-kantoor dat onderdelen voor een gebouw "
+"aanneemt. Alleen ter informatie: verzendingen gebruiken het niet "
+"automatisch."
+
+#. module: fieldservice_stock
+#: model_terms:ir.ui.view,arch_db:fieldservice_stock.res_config_settings_view_form_fsm_stock
+msgid ""
+"Book the order's delivery and return transfers when the order is completed."
+msgstr ""
+"Boek de leverings- en retourverzendingen van de order zodra de order wordt "
+"afgerond."
+
+#. module: fieldservice_stock
+#: model:ir.model,name:fieldservice_stock.model_res_company
+msgid "Company"
+msgstr "Bedrijf"
+
+#. module: fieldservice_stock
+#: model:ir.model,name:fieldservice_stock.model_res_config_settings
+msgid "Config Settings"
+msgstr "Configuratie-instellingen"
+
+#. module: fieldservice_stock
 #: model_terms:ir.ui.view,arch_db:fieldservice_stock.view_fsm_order_form_inherit_stock
 msgid "Deliveries"
 msgstr "Leveringen"
@@ -27,12 +57,24 @@ msgid "Delivery Orders"
 msgstr "Leveringsorders"
 
 #. module: fieldservice_stock
+#: model:ir.model.fields,help:fieldservice_stock.field_fsm_order__picking_ids
+msgid ""
+"Delivery and return transfers linked to this order, e.g. the parts shipped "
+"to the site for the job."
+msgstr ""
+"Leverings- en retourverzendingen die aan deze order gekoppeld zijn, "
+"bijvoorbeeld de onderdelen die voor de klus naar de locatie worden gestuurd."
+
+#. module: fieldservice_stock
 #: model:ir.model.fields,field_description:fieldservice_stock.field_fsm_location__display_name
 #: model:ir.model.fields,field_description:fieldservice_stock.field_fsm_order__display_name
 #: model:ir.model.fields,field_description:fieldservice_stock.field_fsm_wizard__display_name
+#: model:ir.model.fields,field_description:fieldservice_stock.field_res_company__display_name
+#: model:ir.model.fields,field_description:fieldservice_stock.field_res_config_settings__display_name
 #: model:ir.model.fields,field_description:fieldservice_stock.field_res_territory__display_name
 #: model:ir.model.fields,field_description:fieldservice_stock.field_stock_move__display_name
 #: model:ir.model.fields,field_description:fieldservice_stock.field_stock_picking__display_name
+#: model:ir.model.fields,field_description:fieldservice_stock.field_stock_reference__display_name
 #: model:ir.model.fields,field_description:fieldservice_stock.field_stock_rule__display_name
 msgid "Display Name"
 msgstr "Weergavenaam"
@@ -60,12 +102,49 @@ msgid "Field Service Order"
 msgstr "Field Service-order"
 
 #. module: fieldservice_stock
+#: model:ir.model.fields,field_description:fieldservice_stock.field_stock_reference__fsm_order_ids
+msgid "Field Service Orders"
+msgstr "Field Service-orders"
+
+#. module: fieldservice_stock
+#: model:ir.model.fields,help:fieldservice_stock.field_stock_move__fsm_order_id
+msgid ""
+"Field service order this stock move belongs to; the move is listed on that "
+"order's Operations tab. Filled from the transfer when empty."
+msgstr ""
+"Field service-order waar deze voorraadmutatie bij hoort; de mutatie wordt op"
+" het tabblad Bewerkingen van die order getoond. Wordt vanuit de verzending "
+"ingevuld als het leeg is."
+
+#. module: fieldservice_stock
+#: model:ir.model.fields,help:fieldservice_stock.field_stock_picking__fsm_order_id
+msgid ""
+"Field service order this transfer supplies. Its lines are then listed on "
+"that order's Operations tab."
+msgstr ""
+"Field service-order die deze verzending bevoorraadt. De regels ervan worden "
+"dan op het tabblad Bewerkingen van die order getoond."
+
+#. module: fieldservice_stock
+#: model:ir.model.fields,help:fieldservice_stock.field_stock_reference__fsm_order_ids
+msgid ""
+"Field service orders that belong to this reference, e.g. the installation "
+"order created by the sale this reference groups."
+msgstr ""
+"Field service-orders die bij deze referentie horen, bijvoorbeeld de "
+"installatieorder die is aangemaakt door de verkoop die deze referentie "
+"groepeert."
+
+#. module: fieldservice_stock
 #: model:ir.model.fields,field_description:fieldservice_stock.field_fsm_location__id
 #: model:ir.model.fields,field_description:fieldservice_stock.field_fsm_order__id
 #: model:ir.model.fields,field_description:fieldservice_stock.field_fsm_wizard__id
+#: model:ir.model.fields,field_description:fieldservice_stock.field_res_company__id
+#: model:ir.model.fields,field_description:fieldservice_stock.field_res_config_settings__id
 #: model:ir.model.fields,field_description:fieldservice_stock.field_res_territory__id
 #: model:ir.model.fields,field_description:fieldservice_stock.field_stock_move__id
 #: model:ir.model.fields,field_description:fieldservice_stock.field_stock_picking__id
+#: model:ir.model.fields,field_description:fieldservice_stock.field_stock_reference__id
 #: model:ir.model.fields,field_description:fieldservice_stock.field_stock_rule__id
 msgid "ID"
 msgstr "ID"
@@ -88,6 +167,47 @@ msgid "Operations"
 msgstr "Bewerkingen"
 
 #. module: fieldservice_stock
+#. odoo-python
+#: code:addons/fieldservice_stock/models/fsm_order.py:0
+msgid ""
+"Order %(order)s cannot be completed by you yet: completing it also books "
+"transfer %(picking)s, and that needs Inventory rights. Ask a warehouse user "
+"to complete the order, or ask an administrator to give you Inventory access."
+msgstr ""
+"U kunt order %(order)s nog niet afronden: bij het afronden wordt ook "
+"verzending %(picking)s geboekt, en daarvoor zijn voorraadrechten nodig. "
+"Vraag een magazijnmedewerker de order af te ronden, of vraag een beheerder u"
+" toegang tot Voorraad te geven."
+
+#. module: fieldservice_stock
+#. odoo-python
+#: code:addons/fieldservice_stock/models/fsm_order.py:0
+msgid ""
+"Order %(order)s cannot be completed yet: transfer %(picking)s asks for a "
+"confirmation step before it can be validated. Open the transfer, validate it"
+" there, then complete the order."
+msgstr ""
+"Order %(order)s kan nog niet worden afgerond: verzending %(picking)s vraagt "
+"om een bevestigingsstap voordat deze kan worden gevalideerd. Open de "
+"verzending, valideer deze daar en rond daarna de order af."
+
+#. module: fieldservice_stock
+#. odoo-python
+#: code:addons/fieldservice_stock/models/fsm_order.py:0
+msgid ""
+"Order %(order)s cannot be completed yet: transfer %(picking)s has "
+"%(available)s of the %(demand)s %(uom)s of %(product)s it needs. Receive or "
+"move the missing stock and complete the order again, or turn off 'Validate "
+"Transfers on Order Completion' in Field Service settings to complete the "
+"order and book the transfer by hand."
+msgstr ""
+"Order %(order)s kan nog niet worden afgerond: verzending %(picking)s heeft "
+"%(available)s van de %(demand)s %(uom)s %(product)s die nodig zijn. Ontvang "
+"of verplaats de ontbrekende voorraad en rond de order opnieuw af, of zet "
+"'Verzendingen valideren bij afronden van de order' uit in de Field Service-"
+"instellingen om de order af te ronden en de verzending handmatig te boeken."
+
+#. module: fieldservice_stock
 #: model:ir.ui.menu,name:fieldservice_stock.menu_fsm_product
 msgid "Products"
 msgstr "Producten"
@@ -101,6 +221,11 @@ msgstr "Aantal"
 #: model_terms:ir.ui.view,arch_db:fieldservice_stock.view_fsm_order_form_inherit_stock
 msgid "Reference"
 msgstr "Referentie"
+
+#. module: fieldservice_stock
+#: model:ir.model,name:fieldservice_stock.model_stock_reference
+msgid "Reference between stock documents"
+msgstr "Referentie tussen voorraaddocumenten"
 
 #. module: fieldservice_stock
 #: model_terms:ir.ui.view,arch_db:fieldservice_stock.view_fsm_order_form_inherit_stock
@@ -128,9 +253,41 @@ msgid "Stock Move"
 msgstr "Voorraadmutatie"
 
 #. module: fieldservice_stock
+#: model:ir.model.fields,field_description:fieldservice_stock.field_fsm_order__reference_ids
+msgid "Stock References"
+msgstr "Voorraadreferenties"
+
+#. module: fieldservice_stock
 #: model:ir.model,name:fieldservice_stock.model_stock_rule
 msgid "Stock Rule"
 msgstr "Voorraadregel"
+
+#. module: fieldservice_stock
+#: model:ir.model.fields,help:fieldservice_stock.field_fsm_order__move_ids
+msgid ""
+"Stock moves of this order's delivery and return transfers, shown on the "
+"Operations tab. A line added to a transfer of this order is listed here "
+"automatically."
+msgstr ""
+"Voorraadmutaties van de leverings- en retourverzendingen van deze order, "
+"getoond op het tabblad Bewerkingen. Een regel die aan een verzending van "
+"deze order wordt toegevoegd, verschijnt hier automatisch."
+
+#. module: fieldservice_stock
+#: model:ir.model.fields,help:fieldservice_stock.field_fsm_order__reference_ids
+msgid ""
+"Stock references (the grouping of transfers that replaced procurement "
+"groups) this order is part of. Filled when the sale that created the order "
+"is confirmed, so the order and its sale share the same transfers. Example: "
+"sale S00042 -> reference S00042 -> the delivery of its tiles and the order "
+"installing them."
+msgstr ""
+"Voorraadreferenties (de groepering van verzendingen die de "
+"verwervingsgroepen vervangt) waar deze order bij hoort. Wordt ingevuld "
+"wanneer de verkoop die de order heeft aangemaakt wordt bevestigd, zodat de "
+"order en de verkoop dezelfde verzendingen delen. Voorbeeld: verkoop S00042 "
+"-> referentie S00042 -> de levering van de tegels en de order die ze "
+"plaatst."
 
 #. module: fieldservice_stock
 #: model:ir.model,name:fieldservice_stock.model_res_territory
@@ -153,12 +310,46 @@ msgid "Unit of Measure"
 msgstr "Maateenheid"
 
 #. module: fieldservice_stock
+#: model:ir.model.fields,field_description:fieldservice_stock.field_res_company__fsm_auto_validate_pickings
+#: model:ir.model.fields,field_description:fieldservice_stock.field_res_config_settings__fsm_auto_validate_pickings
+msgid "Validate Transfers on Order Completion"
+msgstr "Verzendingen valideren bij afronden van de order"
+
+#. module: fieldservice_stock
 #: model:ir.model.fields,field_description:fieldservice_stock.field_fsm_order__warehouse_id
 #: model:ir.model.fields,field_description:fieldservice_stock.field_res_territory__warehouse_id
 msgid "Warehouse"
 msgstr "Magazijn"
 
 #. module: fieldservice_stock
+#: model:ir.model.fields,help:fieldservice_stock.field_res_territory__warehouse_id
+msgid ""
+"Warehouse that serves this territory. For reference only: an order takes its"
+" warehouse from the order form, not from its territory."
+msgstr ""
+"Magazijn dat dit gebied bedient. Alleen ter informatie: een order neemt zijn"
+" magazijn van het orderformulier, niet van zijn gebied."
+
+#. module: fieldservice_stock
 #: model:ir.model.fields,help:fieldservice_stock.field_fsm_order__warehouse_id
 msgid "Warehouse used to ship the materials"
 msgstr "Magazijn dat gebruikt wordt om de materialen te verzenden"
+
+#. module: fieldservice_stock
+#: model:ir.model.fields,help:fieldservice_stock.field_res_company__fsm_auto_validate_pickings
+#: model:ir.model.fields,help:fieldservice_stock.field_res_config_settings__fsm_auto_validate_pickings
+msgid ""
+"When a field service order is completed, validate its open delivery and "
+"return transfers in the same step, so stock reflects what the technician "
+"used. Completion is blocked with an explanation if a transfer lacks stock or"
+" needs a confirmation step. Example: the technician finishes a bathroom "
+"installation, the order is marked Completed and the 2 mixer taps on its "
+"delivery are booked out of the warehouse at the same moment."
+msgstr ""
+"Wanneer een field service-order wordt afgerond, worden de openstaande "
+"leverings- en retourverzendingen in dezelfde stap gevalideerd, zodat de "
+"voorraad laat zien wat de monteur heeft gebruikt. Afronden wordt met uitleg "
+"geblokkeerd als een verzending te weinig voorraad heeft of een "
+"bevestigingsstap nodig heeft. Voorbeeld: de monteur rondt een "
+"badkamerinstallatie af, de order wordt op Afgerond gezet en de 2 mengkranen "
+"op de levering worden op hetzelfde moment uit het magazijn geboekt."

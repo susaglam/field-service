@@ -17,6 +17,33 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n>1);\n"
 
 #. module: fieldservice_stock
+#: model:ir.model.fields,help:fieldservice_stock.field_fsm_location__shipping_address_id
+msgid ""
+"Address that receives deliveries for this location when it is not the "
+"location itself, e.g. the site office that accepts parts for a building. For"
+" reference only: transfers do not use it automatically."
+msgstr ""
+"Bu konumun teslimatlarını, konumun kendisi değilse teslim alan adres; "
+"örneğin bir bina için parçaları kabul eden şantiye ofisi. Yalnızca bilgi "
+"amaçlıdır: transferler bunu otomatik kullanmaz."
+
+#. module: fieldservice_stock
+#: model_terms:ir.ui.view,arch_db:fieldservice_stock.res_config_settings_view_form_fsm_stock
+msgid ""
+"Book the order's delivery and return transfers when the order is completed."
+msgstr "Sipariş tamamlandığında teslimat ve iade transferlerini kaydet."
+
+#. module: fieldservice_stock
+#: model:ir.model,name:fieldservice_stock.model_res_company
+msgid "Company"
+msgstr "Şirket"
+
+#. module: fieldservice_stock
+#: model:ir.model,name:fieldservice_stock.model_res_config_settings
+msgid "Config Settings"
+msgstr "Yapılandırma Ayarları"
+
+#. module: fieldservice_stock
 #: model_terms:ir.ui.view,arch_db:fieldservice_stock.view_fsm_order_form_inherit_stock
 msgid "Deliveries"
 msgstr "Teslimatlar"
@@ -27,12 +54,24 @@ msgid "Delivery Orders"
 msgstr "Teslimat Siparişleri"
 
 #. module: fieldservice_stock
+#: model:ir.model.fields,help:fieldservice_stock.field_fsm_order__picking_ids
+msgid ""
+"Delivery and return transfers linked to this order, e.g. the parts shipped "
+"to the site for the job."
+msgstr ""
+"Bu siparişe bağlı teslimat ve iade transferleri; örneğin iş için sahaya "
+"gönderilen parçalar."
+
+#. module: fieldservice_stock
 #: model:ir.model.fields,field_description:fieldservice_stock.field_fsm_location__display_name
 #: model:ir.model.fields,field_description:fieldservice_stock.field_fsm_order__display_name
 #: model:ir.model.fields,field_description:fieldservice_stock.field_fsm_wizard__display_name
+#: model:ir.model.fields,field_description:fieldservice_stock.field_res_company__display_name
+#: model:ir.model.fields,field_description:fieldservice_stock.field_res_config_settings__display_name
 #: model:ir.model.fields,field_description:fieldservice_stock.field_res_territory__display_name
 #: model:ir.model.fields,field_description:fieldservice_stock.field_stock_move__display_name
 #: model:ir.model.fields,field_description:fieldservice_stock.field_stock_picking__display_name
+#: model:ir.model.fields,field_description:fieldservice_stock.field_stock_reference__display_name
 #: model:ir.model.fields,field_description:fieldservice_stock.field_stock_rule__display_name
 msgid "Display Name"
 msgstr "Görünen Ad"
@@ -60,12 +99,47 @@ msgid "Field Service Order"
 msgstr "Saha Servis Siparişi"
 
 #. module: fieldservice_stock
+#: model:ir.model.fields,field_description:fieldservice_stock.field_stock_reference__fsm_order_ids
+msgid "Field Service Orders"
+msgstr "Saha Servis Siparişleri"
+
+#. module: fieldservice_stock
+#: model:ir.model.fields,help:fieldservice_stock.field_stock_move__fsm_order_id
+msgid ""
+"Field service order this stock move belongs to; the move is listed on that "
+"order's Operations tab. Filled from the transfer when empty."
+msgstr ""
+"Bu stok hareketinin ait olduğu saha servis siparişi; hareket o siparişin "
+"Operasyonlar sekmesinde listelenir. Boşsa transferden doldurulur."
+
+#. module: fieldservice_stock
+#: model:ir.model.fields,help:fieldservice_stock.field_stock_picking__fsm_order_id
+msgid ""
+"Field service order this transfer supplies. Its lines are then listed on "
+"that order's Operations tab."
+msgstr ""
+"Bu transferin malzeme sağladığı saha servis siparişi. Satırları o siparişin "
+"Operasyonlar sekmesinde listelenir."
+
+#. module: fieldservice_stock
+#: model:ir.model.fields,help:fieldservice_stock.field_stock_reference__fsm_order_ids
+msgid ""
+"Field service orders that belong to this reference, e.g. the installation "
+"order created by the sale this reference groups."
+msgstr ""
+"Bu referansa ait saha servis siparişleri; örneğin bu referansın grupladığı "
+"satışın oluşturduğu montaj siparişi."
+
+#. module: fieldservice_stock
 #: model:ir.model.fields,field_description:fieldservice_stock.field_fsm_location__id
 #: model:ir.model.fields,field_description:fieldservice_stock.field_fsm_order__id
 #: model:ir.model.fields,field_description:fieldservice_stock.field_fsm_wizard__id
+#: model:ir.model.fields,field_description:fieldservice_stock.field_res_company__id
+#: model:ir.model.fields,field_description:fieldservice_stock.field_res_config_settings__id
 #: model:ir.model.fields,field_description:fieldservice_stock.field_res_territory__id
 #: model:ir.model.fields,field_description:fieldservice_stock.field_stock_move__id
 #: model:ir.model.fields,field_description:fieldservice_stock.field_stock_picking__id
+#: model:ir.model.fields,field_description:fieldservice_stock.field_stock_reference__id
 #: model:ir.model.fields,field_description:fieldservice_stock.field_stock_rule__id
 msgid "ID"
 msgstr "Kimlik"
@@ -88,6 +162,47 @@ msgid "Operations"
 msgstr "Operasyonlar"
 
 #. module: fieldservice_stock
+#. odoo-python
+#: code:addons/fieldservice_stock/models/fsm_order.py:0
+msgid ""
+"Order %(order)s cannot be completed by you yet: completing it also books "
+"transfer %(picking)s, and that needs Inventory rights. Ask a warehouse user "
+"to complete the order, or ask an administrator to give you Inventory access."
+msgstr ""
+"%(order)s siparişini henüz siz tamamlayamazsınız: tamamlamak %(picking)s "
+"transferini de kaydeder ve bunun için Envanter yetkisi gerekir. Siparişi bir"
+" depo kullanıcısının tamamlamasını isteyin ya da bir yöneticiden size "
+"Envanter erişimi vermesini isteyin."
+
+#. module: fieldservice_stock
+#. odoo-python
+#: code:addons/fieldservice_stock/models/fsm_order.py:0
+msgid ""
+"Order %(order)s cannot be completed yet: transfer %(picking)s asks for a "
+"confirmation step before it can be validated. Open the transfer, validate it"
+" there, then complete the order."
+msgstr ""
+"%(order)s siparişi henüz tamamlanamıyor: %(picking)s transferi doğrulanmadan"
+" önce bir onay adımı istiyor. Transferi açıp orada doğrulayın, ardından "
+"siparişi tamamlayın."
+
+#. module: fieldservice_stock
+#. odoo-python
+#: code:addons/fieldservice_stock/models/fsm_order.py:0
+msgid ""
+"Order %(order)s cannot be completed yet: transfer %(picking)s has "
+"%(available)s of the %(demand)s %(uom)s of %(product)s it needs. Receive or "
+"move the missing stock and complete the order again, or turn off 'Validate "
+"Transfers on Order Completion' in Field Service settings to complete the "
+"order and book the transfer by hand."
+msgstr ""
+"%(order)s siparişi henüz tamamlanamıyor: %(picking)s transferinde gereken "
+"%(demand)s %(uom)s %(product)s ürününden yalnızca %(available)s var. Eksik "
+"stoku teslim alın veya taşıyın ve siparişi yeniden tamamlayın; ya da "
+"siparişi tamamlayıp transferi elle kaydetmek için Saha Servis ayarlarında "
+"'Sipariş Tamamlanınca Transferleri Doğrula' seçeneğini kapatın."
+
+#. module: fieldservice_stock
 #: model:ir.ui.menu,name:fieldservice_stock.menu_fsm_product
 msgid "Products"
 msgstr "Ürünler"
@@ -101,6 +216,11 @@ msgstr "Miktar"
 #: model_terms:ir.ui.view,arch_db:fieldservice_stock.view_fsm_order_form_inherit_stock
 msgid "Reference"
 msgstr "Referans"
+
+#. module: fieldservice_stock
+#: model:ir.model,name:fieldservice_stock.model_stock_reference
+msgid "Reference between stock documents"
+msgstr "Stok belgeleri arasındaki referans"
 
 #. module: fieldservice_stock
 #: model_terms:ir.ui.view,arch_db:fieldservice_stock.view_fsm_order_form_inherit_stock
@@ -128,9 +248,39 @@ msgid "Stock Move"
 msgstr "Stok Hareketi"
 
 #. module: fieldservice_stock
+#: model:ir.model.fields,field_description:fieldservice_stock.field_fsm_order__reference_ids
+msgid "Stock References"
+msgstr "Stok Referansları"
+
+#. module: fieldservice_stock
 #: model:ir.model,name:fieldservice_stock.model_stock_rule
 msgid "Stock Rule"
 msgstr "Stok Kuralı"
+
+#. module: fieldservice_stock
+#: model:ir.model.fields,help:fieldservice_stock.field_fsm_order__move_ids
+msgid ""
+"Stock moves of this order's delivery and return transfers, shown on the "
+"Operations tab. A line added to a transfer of this order is listed here "
+"automatically."
+msgstr ""
+"Bu siparişin teslimat ve iade transferlerindeki stok hareketleri; "
+"Operasyonlar sekmesinde gösterilir. Bu siparişin bir transferine eklenen "
+"satır burada otomatik listelenir."
+
+#. module: fieldservice_stock
+#: model:ir.model.fields,help:fieldservice_stock.field_fsm_order__reference_ids
+msgid ""
+"Stock references (the grouping of transfers that replaced procurement "
+"groups) this order is part of. Filled when the sale that created the order "
+"is confirmed, so the order and its sale share the same transfers. Example: "
+"sale S00042 -> reference S00042 -> the delivery of its tiles and the order "
+"installing them."
+msgstr ""
+"Bu siparişin dahil olduğu stok referansları (tedarik gruplarının yerini alan"
+" transfer gruplaması). Siparişi oluşturan satış onaylandığında doldurulur; "
+"böylece sipariş ve satış aynı transferleri paylaşır. Örnek: satış S00042 -> "
+"referans S00042 -> fayansların teslimatı ve onları döşeyen sipariş."
 
 #. module: fieldservice_stock
 #: model:ir.model,name:fieldservice_stock.model_res_territory
@@ -153,12 +303,45 @@ msgid "Unit of Measure"
 msgstr "Ölçü Birimi"
 
 #. module: fieldservice_stock
+#: model:ir.model.fields,field_description:fieldservice_stock.field_res_company__fsm_auto_validate_pickings
+#: model:ir.model.fields,field_description:fieldservice_stock.field_res_config_settings__fsm_auto_validate_pickings
+msgid "Validate Transfers on Order Completion"
+msgstr "Sipariş Tamamlanınca Transferleri Doğrula"
+
+#. module: fieldservice_stock
 #: model:ir.model.fields,field_description:fieldservice_stock.field_fsm_order__warehouse_id
 #: model:ir.model.fields,field_description:fieldservice_stock.field_res_territory__warehouse_id
 msgid "Warehouse"
 msgstr "Depo"
 
 #. module: fieldservice_stock
+#: model:ir.model.fields,help:fieldservice_stock.field_res_territory__warehouse_id
+msgid ""
+"Warehouse that serves this territory. For reference only: an order takes its"
+" warehouse from the order form, not from its territory."
+msgstr ""
+"Bu bölgeye hizmet veren depo. Yalnızca bilgi amaçlıdır: bir sipariş deposunu"
+" bölgesinden değil, sipariş formundan alır."
+
+#. module: fieldservice_stock
 #: model:ir.model.fields,help:fieldservice_stock.field_fsm_order__warehouse_id
 msgid "Warehouse used to ship the materials"
 msgstr "Malzemelerin sevk edileceği depo"
+
+#. module: fieldservice_stock
+#: model:ir.model.fields,help:fieldservice_stock.field_res_company__fsm_auto_validate_pickings
+#: model:ir.model.fields,help:fieldservice_stock.field_res_config_settings__fsm_auto_validate_pickings
+msgid ""
+"When a field service order is completed, validate its open delivery and "
+"return transfers in the same step, so stock reflects what the technician "
+"used. Completion is blocked with an explanation if a transfer lacks stock or"
+" needs a confirmation step. Example: the technician finishes a bathroom "
+"installation, the order is marked Completed and the 2 mixer taps on its "
+"delivery are booked out of the warehouse at the same moment."
+msgstr ""
+"Bir saha servis siparişi tamamlandığında açık teslimat ve iade transferleri "
+"aynı adımda doğrulanır; böylece stok, teknisyenin kullandığı malzemeyi "
+"gösterir. Bir transferde yeterli stok yoksa veya transfer bir onay adımı "
+"gerektiriyorsa tamamlama bir açıklamayla engellenir. Örnek: teknisyen banyo "
+"montajını bitirir, sipariş Tamamlandı olarak işaretlenir ve teslimattaki 2 "
+"batarya aynı anda depodan düşülür."

@@ -26,8 +26,10 @@ class SaleOrder(models.Model):
                     ("sale_line_id", "=", False),
                 ]
             )
-            # procurement.group removed in saas-19.3; fsm_order tagging on the
-            # group is no longer applicable. Only pickings/moves get tagged.
+            # procurement.group removed in saas-19.3; its place is taken by
+            # stock.reference, so the order joins the sale's references.
+            if fsm_order and rec.stock_reference_ids:
+                fsm_order.reference_ids |= rec.stock_reference_ids
             for picking in rec.picking_ids:
                 picking.write(rec.prepare_fsm_values_for_stock_picking(fsm_order))
                 for move in picking.move_ids:
