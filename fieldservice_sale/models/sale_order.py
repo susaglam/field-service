@@ -66,18 +66,26 @@ class SaleOrder(models.Model):
         self.ensure_one()
         templates = line.product_id.fsm_order_template_id
         vals = self._prepare_fsm_values(
-            so_id=self.id, sol_id=line.id, template_id=templates.id
+            so_id=self.id, sol_id=line.id, templates=templates
         )
         return vals
 
     def _prepare_fsm_values(self, **kwargs):
         """
         Prepare the values to create a new FSM Order from a sale order.
+
+        Pass the templates as a recordset in ``templates``. The older
+        ``template_id`` / ``template_ids`` keywords are still read, so an
+        override written against them keeps working.
         """
         self.ensure_one()
-        template_id = kwargs.get("template_id", False)
-        template_ids = kwargs.get("template_ids", [template_id])
-        templates = self.env["fsm.template"].search([("id", "in", template_ids)])
+        templates = kwargs.get("templates")
+        if templates is None:
+            template_ids = kwargs.get("template_ids") or [kwargs.get("template_id")]
+            templates = self.env["fsm.template"].browse(
+                [tid for tid in template_ids if tid]
+            )
+        template_id = templates.id if len(templates) == 1 else False
         note = ""
         hours = 0.0
         categories = self.env["fsm.category"]
@@ -85,7 +93,10 @@ class SaleOrder(models.Model):
             note += template.instructions or ""
             hours += template.duration
             categories |= template.category_ids
-        return {
+        # The template's order type is otherwise only applied by the form
+        # onchange, so orders created from a sale lost it.
+        order_types = templates.type_id
+        vals = {
             "location_id": self.fsm_location_id.id,
             "location_directions": self.fsm_location_id.direction,
             "request_early": self.expected_date,
@@ -98,6 +109,11 @@ class SaleOrder(models.Model):
             "template_id": template_id,
             "company_id": self.company_id.id,
         }
+        # Only when the templates agree on one type; otherwise leave the key
+        # out rather than blanking a type another module may default.
+        if len(order_types) == 1:
+            vals["type"] = order_types.id
+        return vals
 
     def _field_service_generate_sale_fsm_orders(self, new_fsm_sol):
         """
@@ -112,12 +128,10 @@ class SaleOrder(models.Model):
             )
             if not fsm_by_sale:
                 templates = new_fsm_sol.product_id.fsm_order_template_id
-                vals = self._prepare_fsm_values(
-                    so_id=self.id, template_ids=templates.ids
-                )
+                vals = self._prepare_fsm_values(so_id=self.id, templates=templates)
                 fsm_by_sale = self.env["fsm.order"].sudo().create(vals)
                 new_fsm_orders |= fsm_by_sale
-            new_fsm_sol.write({"fsm_order_id": fsm_by_sale.id})
+            new_fsm_sol.fsm_order_id = fsm_by_sale.id
 
         return new_fsm_orders
 
@@ -133,7 +147,7 @@ class SaleOrder(models.Model):
         for line in new_fsm_sol:
             vals = self._prepare_line_fsm_values(line)
             fsm_by_line = self.env["fsm.order"].sudo().create(vals)
-            line.write({"fsm_order_id": fsm_by_line.id})
+            line.fsm_order_id = fsm_by_line.id
             new_fsm_orders |= fsm_by_line
 
         return new_fsm_orders
