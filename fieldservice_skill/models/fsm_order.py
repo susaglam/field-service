@@ -44,7 +44,9 @@ class FSMOrder(models.Model):
         worker_ids = []
         req_skills = self.skill_ids.ids
         if not self.skill_ids:
-            worker_ids = self.env["fsm.person"].search([]).ids
+            # no skill required: every worker qualifies
+            persons = self.env["fsm.person"]
+            worker_ids = persons.search([]).ids  # pylint: disable=no-search-all
         else:
             FPS = self.env["fsm.person.skill"]
             potential_workers = FPS.search(

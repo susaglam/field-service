@@ -6,7 +6,7 @@ from datetime import datetime, timedelta
 
 from markupsafe import Markup
 
-from odoo import Command, _, api, fields, models
+from odoo import Command, api, fields, models
 from odoo.exceptions import UserError, ValidationError
 
 from . import fsm_stage
@@ -29,7 +29,7 @@ class FSMOrder(models.Model):
         )
         if stage:
             return stage
-        raise ValidationError(_("You must create an FSM order stage first."))
+        raise ValidationError(self.env._("You must create an FSM order stage first."))
 
     def _default_team_id(self):
         team = self.env["fsm.team"].search(
@@ -39,7 +39,7 @@ class FSMOrder(models.Model):
         )
         if team:
             return team
-        raise ValidationError(_("You must create an FSM team first."))
+        raise ValidationError(self.env._("You must create an FSM team first."))
 
     @api.depends(
         "location_id",
@@ -97,7 +97,8 @@ class FSMOrder(models.Model):
         copy=False,
         group_expand="_read_group_stage_ids",
         default=lambda self: self._default_stage_id(),
-        help="Current stage of this Field Service order — drives the order workflow (Draft → Scheduled → Assigned → En Route → Completed/Cancelled).",
+        help="Current stage of this Field Service order — drives the order workflow "
+        "(Draft → Scheduled → Assigned → En Route → Completed/Cancelled).",
     )
     is_closed = fields.Boolean(
         "Is closed",
@@ -107,7 +108,8 @@ class FSMOrder(models.Model):
         fsm_stage.AVAILABLE_PRIORITIES,
         index=True,
         default=fsm_stage.AVAILABLE_PRIORITIES[0][0],
-        help="Order priority (Low/Normal/High/Urgent). Affects scheduling buffers and dispatcher sorting.",
+        help="Order priority (Low/Normal/High/Urgent). Affects scheduling buffers and "
+        "dispatcher sorting.",
     )
     tag_ids = fields.Many2many(
         "fsm.tag",
@@ -136,7 +138,7 @@ class FSMOrder(models.Model):
         required=True,
         index=True,
         copy=False,
-        default=lambda self: _("New"),
+        default=lambda self: self.env._("New"),
     )
 
     location_id = fields.Many2one(
@@ -227,12 +229,14 @@ class FSMOrder(models.Model):
     person_phone = fields.Char(related="person_id.phone", string="Worker Phone")
     scheduled_date_start = fields.Datetime(
         string="Scheduled Start (ETA)",
-        help="When this service is planned to begin. Drives day-route slotting and worker calendar entries.",
+        help="When this service is planned to begin. Drives day-route slotting and "
+        "worker calendar entries.",
     )
     scheduled_duration = fields.Float(help="Scheduled duration of the work in hours")
     scheduled_date_end = fields.Datetime(
         string="Scheduled End",
-        help="Auto-computed from scheduled_date_start + scheduled_duration. Edit duration instead of this directly.",
+        help="Auto-computed from scheduled_date_start + scheduled_duration. Edit "
+        "duration instead of this directly.",
     )
     sequence = fields.Integer(default=10)
     todo = fields.Html(
@@ -250,7 +254,8 @@ class FSMOrder(models.Model):
     )
     date_start = fields.Datetime(
         string="Actual Start",
-        help="Actual start datetime, written when the worker hits 'Start' on the order.",
+        help="Actual start datetime, written when the worker hits 'Start' on the "
+        "order.",
     )
     date_end = fields.Datetime(
         string="Actual End",
@@ -258,7 +263,7 @@ class FSMOrder(models.Model):
     )
     duration = fields.Float(
         string="Actual duration",
-        compute=_compute_duration,
+        compute="_compute_duration",
         help="Actual duration in hours",
     )
     current_date = fields.Datetime(
@@ -300,7 +305,8 @@ class FSMOrder(models.Model):
     template_id = fields.Many2one(
         "fsm.template",
         string="Template",
-        help="Order template that pre-fills activities, instructions, expected duration, etc.",
+        help="Order template that pre-fills activities, instructions, expected "
+        "duration, etc.",
     )
     category_ids = fields.Many2many(
         "fsm.category",
@@ -317,7 +323,8 @@ class FSMOrder(models.Model):
     )
     type = fields.Many2one(
         "fsm.order.type",
-        help="Order type (e.g. Installation / Repair / Inspection / Maintenance). Drives templating.",
+        help="Order type (e.g. Installation / Repair / Inspection / Maintenance). "
+        "Drives templating.",
     )
 
     internal_type = fields.Selection(related="type.internal_type")
@@ -378,10 +385,10 @@ class FSMOrder(models.Model):
     @api.model_create_multi
     def create(self, vals_list):
         for vals in vals_list:
-            if vals.get("name", _("New")) == _("New"):
-                vals["name"] = self.env["ir.sequence"].next_by_code("fsm.order") or _(
-                    "New"
-                )
+            if vals.get("name", self.env._("New")) == self.env._("New"):
+                vals["name"] = self.env["ir.sequence"].next_by_code(
+                    "fsm.order"
+                ) or self.env._("New")
             self._calc_scheduled_dates(vals)
             if not vals.get("request_late"):
                 vals = self._calc_request_late(vals)
@@ -393,7 +400,7 @@ class FSMOrder(models.Model):
             and (stage_id := vals.get("stage_id"))
             and stage_id == self.env.ref("fieldservice.fsm_stage_completed").id
         ):
-            raise UserError(_("Cannot move to completed from Kanban"))
+            raise UserError(self.env._("Cannot move to completed from Kanban"))
         self._calc_scheduled_dates(vals)
         res = super().write(vals)
         return res
@@ -402,10 +409,12 @@ class FSMOrder(models.Model):
         """:return True if the order can be deleted, False otherwise"""
         return self.stage_id == self._default_stage_id()
 
-    def unlink(self):
-        if all(order.can_unlink() for order in self):
-            return super().unlink()
-        raise ValidationError(_("You cannot delete this order."))
+    @api.ondelete(at_uninstall=False)
+    def _unlink_except_not_new(self):
+        # E8140: raise from an ondelete hook, not from unlink() itself; same
+        # rule (only orders still in the default stage), skipped on uninstall.
+        if not all(order.can_unlink() for order in self):
+            raise ValidationError(self.env._("You cannot delete this order."))
 
     def _calc_scheduled_dates(self, vals):
         """Calculate scheduled dates and duration"""
@@ -519,7 +528,15 @@ class FSMOrder(models.Model):
                 ]
             )
             if holidays:
-                msg = (
-                    f"{rec.scheduled_date_start.date()} is a holiday {holidays[0].name}"
+                # Was _(f"...") — an f-string is never found in the catalogue,
+                # so this message could not be translated.
+                raise ValidationError(
+                    self.env._(
+                        "Order %(order)s starts on %(date)s, which is a holiday "
+                        "(%(holiday)s). Pick another start date, or remove the "
+                        "day from the holidays of the working-hours calendar.",
+                        order=rec.name,
+                        date=rec.scheduled_date_start.date(),
+                        holiday=holidays[0].name,
+                    )
                 )
-                raise ValidationError(_(msg))

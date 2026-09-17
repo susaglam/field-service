@@ -1,7 +1,7 @@
 from collections import OrderedDict
 from operator import itemgetter
 
-from odoo import _, http
+from odoo import http
 from odoo.exceptions import AccessError
 from odoo.fields import Domain
 from odoo.http import request
@@ -78,38 +78,41 @@ class CustomerPortal(CustomerPortal):
         domain = self._prepare_fsm_orders_domain()
 
         searchbar_sortings = {
-            "date": {"label": _("Newest"), "order": "request_early desc"},
-            "name": {"label": _("Name"), "order": "name"},
-            "stage": {"label": _("Stage"), "order": "stage_id"},
-            "location": {"label": _("Location"), "order": "location_id"},
-            "type": {"label": _("Type"), "order": "type"},
+            "date": {"label": request.env._("Newest"), "order": "request_early desc"},
+            "name": {"label": request.env._("Name"), "order": "name"},
+            "stage": {"label": request.env._("Stage"), "order": "stage_id"},
+            "location": {"label": request.env._("Location"), "order": "location_id"},
+            "type": {"label": request.env._("Type"), "order": "type"},
         }
 
         searchbar_groupby = {
-            "none": {"input": "none", "label": _("None")},
-            "location_id": {"input": "location", "label": _("Location")},
-            "ticket_id": {"input": "ticket", "label": _("Ticket")},
-            "stage_id": {"input": "stage", "label": _("Stage")},
-            "type": {"input": "type", "label": _("Type")},
+            "none": {"input": "none", "label": request.env._("None")},
+            "location_id": {"input": "location", "label": request.env._("Location")},
+            "ticket_id": {"input": "ticket", "label": request.env._("Ticket")},
+            "stage_id": {"input": "stage", "label": request.env._("Stage")},
+            "type": {"input": "type", "label": request.env._("Type")},
         }
 
         # search input (text)
         searchbar_inputs = OrderedDict(
             (
-                ("all", {"input": "all", "label": _("Search in All")}),
-                ("name", {"input": "name", "label": _("Search in WO Number")}),
+                ("all", {"input": "all", "label": request.env._("Search in All")}),
+                (
+                    "name",
+                    {"input": "name", "label": request.env._("Search in WO Number")},
+                ),
                 (
                     "description",
                     {
                         "input": "description",
-                        "label": _("Search in Description"),
+                        "label": request.env._("Search in Description"),
                     },
                 ),
                 (
                     "location_id.name",
                     {
                         "input": "location",
-                        "label": _("Search in Location Numbers"),
+                        "label": request.env._("Search in Location Numbers"),
                     },
                 ),
             )
@@ -146,8 +149,11 @@ class CustomerPortal(CustomerPortal):
         )
         searchbar_filters.update(
             {
-                "all": {"label": _("All"), "domain": []},
-                "open": {"label": _("Open"), "domain": [("is_closed", "=", False)]},
+                "all": {"label": request.env._("All"), "domain": []},
+                "open": {
+                    "label": request.env._("Open"),
+                    "domain": [("is_closed", "=", False)],
+                },
             }
         )
 

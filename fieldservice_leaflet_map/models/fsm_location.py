@@ -1,13 +1,16 @@
 # Copyright 2026 saas-19.3 port
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
+import logging
+
 from odoo import api, fields, models
+
+_logger = logging.getLogger(__name__)
 
 
 class FSMLocation(models.Model):
     _inherit = "fsm.location"
 
     description = fields.Text(
-        string="Description",
         help="Free-text description of this Field Service location. Shown "
         "as an italic block in the Leaflet map popup so dispatchers see "
         "site-specific notes (access codes, parking, contact tips) at a "
@@ -26,10 +29,14 @@ class FSMLocation(models.Model):
                 continue
             try:
                 partner.geo_localize()
-            except Exception:
+            except Exception as error:
                 # Nominatim rate-limit / network glitch — don't break the
                 # create/write transaction over a best-effort geocode.
-                pass
+                _logger.info(
+                    "Auto-geocoding FSM location %s skipped: %s",
+                    rec.display_name,
+                    error,
+                )
 
     @api.model_create_multi
     def create(self, vals_list):

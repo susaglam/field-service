@@ -2230,6 +2230,18 @@ msgid "Order"
 msgstr "Order"
 
 #. module: fieldservice
+#. odoo-python
+#: code:addons/fieldservice/models/fsm_order.py:0
+msgid ""
+"Order %(order)s starts on %(date)s, which is a holiday (%(holiday)s). Pick "
+"another start date, or remove the day from the holidays of the working-hours"
+" calendar."
+msgstr ""
+"Order %(order)s begint op %(date)s, en dat is een feestdag (%(holiday)s). "
+"Kies een andere begindatum, of haal de dag uit de feestdagen van de "
+"werktijdenkalender."
+
+#. module: fieldservice
 #: model:mail.message.subtype,name:fieldservice.mt_order_assigned
 msgid "Order Assigned"
 msgstr "Order toegewezen"

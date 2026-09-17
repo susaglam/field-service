@@ -13,7 +13,7 @@ class FSMOrder(models.Model):
     vehicle_id = fields.Many2one(
         "fsm.vehicle",
         string="Vehicle",
-        default=_get_default_vehicle,
+        default=lambda self: self._get_default_vehicle(),
         help="Vehicle Id. Linked record reference.",
     )
 

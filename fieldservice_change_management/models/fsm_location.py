@@ -1,7 +1,7 @@
 # Copyright (c) 2020 Pavlov Media <https://www.pavlovmedia.com>
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
-from odoo import _, fields, models
+from odoo import fields, models
 
 
 class FSMLocation(models.Model):
@@ -27,7 +27,7 @@ class FSMLocation(models.Model):
     def action_open_change_logs(self):
         for location in self:
             vals = {
-                "name": _("Change Logs"),
+                "name": self.env._("Change Logs"),
                 "view_mode": "tree,form",
                 "res_model": "change.log",
                 "type": "ir.actions.act_window",

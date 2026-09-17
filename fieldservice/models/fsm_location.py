@@ -136,7 +136,8 @@ class FSMLocation(models.Model):
     fsm_parent_id = fields.Many2one(
         string="Deprecated Parent",
         related="parent_id",
-        help="Parent FSM location — use to model multi-site customers (e.g. HQ → site → floor → room).",
+        help="Parent FSM location — use to model multi-site customers (e.g. HQ → site "
+        "→ floor → room).",
     )
 
     @api.model_create_multi

@@ -10,7 +10,6 @@ from . import (
     stock_rule,
     stock_picking,
     stock_reference,
-    fsm_wizard,
     fsm_stock_mcp,
     res_company,
     res_config_settings,

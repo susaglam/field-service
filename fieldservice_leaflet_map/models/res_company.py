@@ -9,7 +9,8 @@ class ResCompany(models.Model):
     fsm_map_default_zoom = fields.Integer(
         string="Default Map Zoom",
         default=7,
-        help="Initial zoom level when the Field Service map opens (1=world, 18=street).",
+        help="Initial zoom level when the Field Service map opens (1=world, "
+        "18=street).",
     )
     fsm_map_default_latitude = fields.Float(
         string="Default Map Latitude",

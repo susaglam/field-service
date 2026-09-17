@@ -39,7 +39,7 @@ class TestFsmOrderPortal(HttpCase):
     @classmethod
     def _make_customer(cls, name, login):
         partner = cls.env["res.partner"].create(
-            {"name": name, "email": "%s@example.invalid" % login}
+            {"name": name, "email": f"{login}@example.invalid"}
         )
         cls.env["res.users"].create(
             {
@@ -56,7 +56,7 @@ class TestFsmOrderPortal(HttpCase):
     def _make_order(cls, owner, description):
         location = cls.env["fsm.location"].create(
             {
-                "name": "Location for %s" % owner.name,
+                "name": f"Location for {owner.name}",
                 "partner_id": owner.id,
                 "owner_id": owner.id,
             }
@@ -106,15 +106,13 @@ class TestFsmOrderPortal(HttpCase):
     # ------------------------------------------------------------------
     def test_my_order_opens(self):
         self.authenticate("fsm_portal_customer", "fsm_portal_customer")
-        response = self.url_open("/my/fsm_order/%d" % self.my_order.id)
+        response = self.url_open(f"/my/fsm_order/{self.my_order.id}")
         self.assertEqual(response.status_code, 200)
         self.assertIn(self.my_order.name, response.text)
 
     def test_query_parameters_are_tolerated(self):
         self.authenticate("fsm_portal_customer", "fsm_portal_customer")
-        response = self.url_open(
-            "/my/fsm_order/%d?success='success'" % self.my_order.id
-        )
+        response = self.url_open(f"/my/fsm_order/{self.my_order.id}?success='success'")
         self.assertEqual(response.status_code, 200)
 
     @mute_logger("odoo.http")
@@ -129,7 +127,7 @@ class TestFsmOrderPortal(HttpCase):
         """
         self.authenticate("fsm_portal_customer", "fsm_portal_customer")
         response = self.url_open(
-            "/my/fsm_order/%d" % self.their_order.id, allow_redirects=False
+            f"/my/fsm_order/{self.their_order.id}", allow_redirects=False
         )
         self.assertIn(
             response.status_code,
@@ -138,7 +136,7 @@ class TestFsmOrderPortal(HttpCase):
         )
         self.assertURLEqual(response.headers.get("Location", ""), "/my")
 
-        followed = self.url_open("/my/fsm_order/%d" % self.their_order.id)
+        followed = self.url_open(f"/my/fsm_order/{self.their_order.id}")
         self.assertNotIn(
             self.their_order.name,
             followed.text,

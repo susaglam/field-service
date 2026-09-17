@@ -51,8 +51,6 @@ repos:
       - id: oca-update-pre-commit-excluded-addons
       - id: oca-fix-manifest-website
         args: ["https://github.com/OCA/field-service"]
-        # fork-only addon, not in any OCA branch: keeps the fork's URL
-        exclude: ^fieldservice_leaflet_map/
       - id: oca-gen-addon-readme
         args:
           - --addons-dir=.

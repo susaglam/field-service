@@ -2,7 +2,7 @@
 # Copyright (C) 2019 Serpent Consulting Services
 # Copyright 2026 saas-19.3 port
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
-from odoo import _, api, fields, models
+from odoo import api, fields, models
 from odoo.exceptions import ValidationError
 
 
@@ -86,7 +86,7 @@ class FSMRouteDayRoute(models.Model):
         for rec in self:
             if rec.is_limited and rec.product_qty_remaining < 0:
                 raise ValidationError(
-                    _(
+                    self.env._(
                         "The vehicle %(vehicle)s is over capacity "
                         "(%(used).2f > %(max).2f) on %(date)s.",
                         vehicle=rec.fsm_vehicle_id.name,

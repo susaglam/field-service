@@ -116,14 +116,12 @@ msgstr "Değişiklik Kaydı etkisi"
 #. module: fieldservice_change_management
 #. odoo-python
 #: code:addons/fieldservice_change_management/models/fsm_location.py:0
-#: model:ir.actions.act_window,name:fieldservice_change_management.change_log_action
 #: model:ir.actions.report,name:fieldservice_change_management.change_log_document
 #: model:ir.actions.report,name:fieldservice_change_management.location_change_log_document
 #: model:ir.actions.report,print_report_name:fieldservice_change_management.change_log_document
 #: model:ir.actions.report,print_report_name:fieldservice_change_management.location_change_log_document
 #: model:ir.model.fields,field_description:fieldservice_change_management.field_fsm_location__change_log_ids
 #: model:ir.module.category,name:fieldservice_change_management.module_change_log_category
-#: model:ir.ui.menu,name:fieldservice_change_management.change_log_menu
 #: model:ir.ui.menu,name:fieldservice_change_management.change_log_root_menu
 #: model_terms:ir.ui.view,arch_db:fieldservice_change_management.fsm_location_change_log_form
 #: model_terms:ir.ui.view,arch_db:fieldservice_change_management.report_change_log_document

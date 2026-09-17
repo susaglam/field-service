@@ -64,7 +64,7 @@ class FSMTeam(models.Model):
         "team_id",
         "stage_id",
         string="Stages",
-        default=_default_stages,
+        default=lambda self: self._default_stages(),
         help="Stage Ids. Many-to-many / one-to-many relation collection.",
     )
     order_ids = fields.One2many(

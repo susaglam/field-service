@@ -7,7 +7,7 @@
     "license": "AGPL-3",
     "category": "Field Service",
     "author": "saas-19.3 port, Odoo Community Association (OCA)",
-    "website": "https://github.com/susaglam/field-service",
+    "website": "https://github.com/OCA/field-service",
     "depends": [
         "fieldservice",
         "web_view_leaflet_map",

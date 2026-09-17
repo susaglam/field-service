@@ -29,7 +29,8 @@ class FsmLocationLevelMcp(models.TransientModel):
         risk="low",
     )
     def action_mcp_list_levels(self):
-        rows = self.search([])
+        # a short configuration list: listing all of it is the point
+        rows = self.search([])  # pylint: disable=no-search-all
         return {
             "count": len(rows),
             "levels": [

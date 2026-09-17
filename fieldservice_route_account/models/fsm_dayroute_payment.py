@@ -36,7 +36,6 @@ class FSMRoutePayment(models.Model):
         "discrepancy.",
     )
     difference = fields.Float(
-        string="Difference",
         compute="_compute_amount_difference",
         help="Collected Amount minus Counted Amount. Positive values "
         "indicate uncounted cash (worker owes the company); negative "

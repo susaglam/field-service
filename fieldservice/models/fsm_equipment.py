@@ -58,7 +58,8 @@ class FSMEquipment(models.Model):
     current_location_id = fields.Many2one(
         "fsm.location",
         string="Current Location",
-        help="Tracked current location (may differ from location_id if equipment was moved).",
+        help="Tracked current location (may differ from location_id if equipment was "
+        "moved).",
     )
     managed_by_id = fields.Many2one(
         "res.partner",

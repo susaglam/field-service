@@ -1,7 +1,7 @@
 # Copyright (C) 2018 Open Source Integrators
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
-from odoo import _, api, fields, models
+from odoo import api, fields, models
 
 
 class MaintenanceRequest(models.Model):
@@ -31,7 +31,7 @@ class MaintenanceRequest(models.Model):
                 odoobot = self.env.ref("base.partner_root")
                 request._message_log(
                     subject="Missing location",
-                    body=_(
+                    body=self.env._(
                         "Order was not created because the "
                         "equipment's location is not set"
                     ),

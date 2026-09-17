@@ -78,7 +78,7 @@ msgstr "Rastreamento de Serviços de Campo"
 #. module: fieldservice_sale_recurring
 #. odoo-python
 #: code:addons/fieldservice_sale_recurring/models/sale_order_line.py:0
-msgid "Field Service recurring Created ({product_name}): "
+msgid "Field Service recurring Created (%(product_name)s): "
 msgstr ""
 
 #. module: fieldservice_sale_recurring
@@ -127,7 +127,7 @@ msgstr ""
 #. module: fieldservice_sale_recurring
 #. odoo-python
 #: code:addons/fieldservice_sale_recurring/models/sale_order_line.py:0
-msgid "This recurring has been created ({product_name}) from: "
+msgid "This recurring has been created (%(product_name)s) from: "
 msgstr ""
 
 #~ msgid "Product Template"

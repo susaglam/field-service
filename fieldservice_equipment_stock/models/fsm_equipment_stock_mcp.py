@@ -25,7 +25,8 @@ class FieldserviceEquipmentStockMcp(models.Model):
 
     @ai_tool(
         name="fsm_equipment_stock.get_stock_info",
-        description="Return current stock-location, product, and lot of an FSM equipment.",
+        description="Return current stock-location, product, and lot of an FSM "
+        "equipment.",
         input_schema={
             "type": "object",
             "properties": {"equipment_id": {"type": "integer"}},

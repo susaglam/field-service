@@ -82,8 +82,8 @@ msgstr "Saha Servis Takibi"
 #. module: fieldservice_sale_recurring
 #. odoo-python
 #: code:addons/fieldservice_sale_recurring/models/sale_order_line.py:0
-msgid "Field Service recurring Created ({product_name}): "
-msgstr "Saha Servis yinelenen oluşturuldu ({product_name}): "
+msgid "Field Service recurring Created (%(product_name)s): "
+msgstr "Saha Servis yinelenen oluşturuldu (%(product_name)s): "
 
 #. module: fieldservice_sale_recurring
 #: model:ir.model.fields,field_description:fieldservice_sale_recurring.field_fsm_recurring__id
@@ -138,5 +138,5 @@ msgstr "Oluşturulacak bir saha servis yinelenen sipariş şablonu seçin"
 #. module: fieldservice_sale_recurring
 #. odoo-python
 #: code:addons/fieldservice_sale_recurring/models/sale_order_line.py:0
-msgid "This recurring has been created ({product_name}) from: "
-msgstr "Bu yinelenen ({product_name}) şu kaynaktan oluşturuldu: "
+msgid "This recurring has been created (%(product_name)s) from: "
+msgstr "Bu yinelenen (%(product_name)s) şu kaynaktan oluşturuldu: "

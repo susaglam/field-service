@@ -16,7 +16,6 @@ class FSMRouteDayRoute(models.Model):
         "the payments collected from this day-route's FSM orders.",
     )
     invoice_count = fields.Integer(
-        string="Invoice Count",
         compute="_compute_invoice_count",
         readonly=True,
         help="Total number of customer invoices generated from the FSM orders "
@@ -52,7 +51,9 @@ class FSMRouteDayRoute(models.Model):
                         0,
                         {
                             "name": rec.name,
-                            "account_id": route_payment.journal_id.default_account_id.id,
+                            "account_id": (
+                                route_payment.journal_id.default_account_id.id
+                            ),
                             "credit": amount,
                         },
                     ),

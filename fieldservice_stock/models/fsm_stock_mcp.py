@@ -25,7 +25,8 @@ class FieldserviceStockMcp(models.Model):
 
     @ai_tool(
         name="fsm_stock.get_stock_info",
-        description="Return stock info (warehouse, inv-location, deliveries, returns, transfers) for an FSM order.",
+        description="Return stock info (warehouse, inv-location, deliveries, returns, "
+        "transfers) for an FSM order.",
         input_schema={
             "type": "object",
             "properties": {"order_id": {"type": "integer"}},

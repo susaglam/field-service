@@ -15,6 +15,9 @@ valid-odoo-versions=19.0
 manifest-version-format=^(saas~19\.4|{valid_odoo_versions})\.\d+\.\d+\.\d+$
 
 [MESSAGES CONTROL]
+# consider-merging-classes-inherited is not mandatory here: every model's AI/MCP
+# tools live in a sibling <model>_mcp.py file on purpose (the cs_* stack rule).
+# It still shows as advisory output from .pylintrc.
 disable=all
 
 enable=anomalous-backslash-in-string,
@@ -47,7 +50,6 @@ enable=anomalous-backslash-in-string,
     unreachable,
     use-vim-comment,
     attribute-string-redundant,
-    consider-merging-classes-inherited,
     context-overridden,
     except-pass,
     invalid-commit,

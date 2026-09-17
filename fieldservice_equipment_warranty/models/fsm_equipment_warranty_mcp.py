@@ -25,7 +25,8 @@ class FieldserviceEquipmentWarrantyMcp(models.Model):
 
     @ai_tool(
         name="fsm_equipment_warranty.get_warranty",
-        description="Return warranty info (duration, start, end, type) for FSM equipment.",
+        description="Return warranty info (duration, start, end, type) for FSM "
+        "equipment.",
         input_schema={
             "type": "object",
             "properties": {"equipment_id": {"type": "integer"}},

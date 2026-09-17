@@ -6,7 +6,7 @@ from datetime import datetime
 from dateutil.relativedelta import relativedelta
 from dateutil.rrule import rruleset
 
-from odoo import _, api, fields, models
+from odoo import api, fields, models
 
 
 class FSMRecurringOrder(models.Model):
@@ -25,7 +25,7 @@ class FSMRecurringOrder(models.Model):
         required=True,
         index=True,
         copy=False,
-        default=lambda self: _("New"),
+        default=lambda self: self.env._("New"),
     )
     state = fields.Selection(
         [
@@ -140,10 +140,10 @@ class FSMRecurringOrder(models.Model):
     @api.model_create_multi
     def create(self, vals_list):
         for vals in vals_list:
-            if vals.get("name", _("New")) == _("New"):
+            if vals.get("name", self.env._("New")) == self.env._("New"):
                 vals["name"] = self.env["ir.sequence"].next_by_code(
                     "fsm.recurring"
-                ) or _("New")
+                ) or self.env._("New")
         return super().create(vals_list)
 
     def action_start(self):

@@ -15,7 +15,7 @@ class FSMStage(models.Model):
         "fsm.stage.status",
         string="Default Sub-Status",
         store=True,
-        default=_default_sub_stage,
+        default=lambda self: self._default_sub_stage(),
         help="Sub Stage Id. Linked record reference.",
     )
     sub_stage_ids = fields.Many2many(

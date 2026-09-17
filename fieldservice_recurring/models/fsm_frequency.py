@@ -17,7 +17,7 @@ from dateutil.rrule import (
     rrule,
 )
 
-from odoo import _, api, fields, models
+from odoo import api, fields, models
 from odoo.exceptions import UserError
 
 WEEKDAYS = {"mo": MO, "tu": TU, "we": WE, "th": TH, "fr": FR, "sa": SA, "su": SU}
@@ -115,14 +115,16 @@ class FSMFrequency(models.Model):
         for rec in self:
             if rec.use_setpos:
                 if not (-366 < rec.set_pos < 366):
-                    raise UserError(_("Position must be between -366 and 366"))
+                    raise UserError(self.env._("Position must be between -366 and 366"))
 
     @api.constrains("month_day")
     def _check_month_day(self):
         for rec in self:
             if rec.use_bymonthday:
                 if not (1 <= rec.month_day <= 31):
-                    raise UserError(_("'Day of Month must be between 1 and 31"))
+                    raise UserError(
+                        self.env._("'Day of Month must be between 1 and 31")
+                    )
 
     def _get_rrule(self, dtstart=None, until=None, tz=None):
         self.ensure_one()
