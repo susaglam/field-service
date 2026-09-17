@@ -2,6 +2,7 @@
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
 from odoo import api, fields, models
+from odoo.fields import Domain
 
 
 class FSMStageStatus(models.Model):
@@ -11,13 +12,22 @@ class FSMStageStatus(models.Model):
     name = fields.Char(required=True)
 
     @api.model
-    def _search(self, args, offset=0, limit=None, order=None, **kwargs):
-        # saas-19.3: _search dropped 'count' and 'access_rights_uid' kwargs;
-        # 'bypass_access' added. **kwargs forward-compat catch-all.
-        context = self._context or {}
-        if context.get("fsm_order_stage_id"):
-            stage_id = self.env["fsm.stage"].browse(context.get("fsm_order_stage_id"))
-            sub_stage_ids = stage_id.sub_stage_id + stage_id.sub_stage_ids
-            if sub_stage_ids:
-                args = [("id", "in", sub_stage_ids.ids)]
-        return super()._search(args, offset=offset, limit=limit, order=order, **kwargs)
+    def _search(self, domain, *args, **kwargs):
+        # The order form passes its stage as fsm_order_stage_id so the
+        # sub-status dropdown only offers what that stage allows.
+        stage_id = self.env.context.get("fsm_order_stage_id")
+        if stage_id:
+            # Read the stage WITHOUT that key: on saas-19.4 reading a many2many
+            # searches its comodel, which is this method, and kept the key in
+            # context, so the dropdown died with RecursionError.
+            stage = (
+                self.env["fsm.stage"]
+                .with_context(fsm_order_stage_id=False)
+                .browse(stage_id)
+            )
+            allowed = stage.sub_stage_id | stage.sub_stage_ids
+            if allowed:
+                # Narrow the caller's domain instead of replacing it, so the
+                # text typed into the dropdown still filters.
+                domain = Domain(domain) & Domain("id", "in", allowed.ids)
+        return super()._search(domain, *args, **kwargs)

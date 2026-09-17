@@ -4,7 +4,7 @@
 {
     "name": "Field Service - Sub-Status",
     "summary": "Add sub-statuses to Field Service orders",
-    "version": "saas~19.4.1.0.2",
+    "version": "saas~19.4.1.0.3",
     "category": "Field Service",
     "author": "Open Source Integrators, "
     "Brian McMaster, "

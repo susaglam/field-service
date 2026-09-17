@@ -8,7 +8,7 @@ from odoo.tests.common import TransactionCase
 
 class FSMSubstatusCase(TransactionCase):
     def setUp(self):
-        super(FSMSubstatusCase, self).setUp()
+        super().setUp()
         self.WorkOrder = self.env["fsm.order"]
         self.stage_id = self.WorkOrder._default_stage_id()
         self.init_values = {"sub_stage_id": self.stage_id.sub_stage_id.id}
@@ -49,11 +49,23 @@ class FSMSubstatusCase(TransactionCase):
                 "request_early": fields.Datetime.today(),
             }
         )
-        order._track_subtype(self.init_values)
-        order._track_subtype({})
+        order._track_log_get_default_subtype(self.init_values)
+        order._track_log_get_default_subtype({})
         self.stage.onchange_sub_stage_id()
         stage_status_id = self.StageStatus.with_context(
             fsm_order_stage_id=self.stage_id.id
         ).create({"name": "Test"})
         stage_status_id.search([])
         order.stage_id = self.stage.id
+
+    def test_sub_status_dropdown_for_stage(self):
+        """The order form's sub-status dropdown offers only what the order's
+        stage allows, and still filters on the text typed into it."""
+        extra = self.StageStatus.create({"name": "Waiting for parts"})
+        other = self.StageStatus.create({"name": "Not for this stage"})
+        self.stage.sub_stage_ids = extra
+        Status = self.StageStatus.with_context(fsm_order_stage_id=self.stage.id)
+        allowed = Status.search([])
+        self.assertEqual(allowed, self.stage.sub_stage_id | extra)
+        self.assertNotIn(other, allowed)
+        self.assertEqual(Status.search([("name", "=", "Waiting for parts")]), extra)

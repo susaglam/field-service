@@ -23,10 +23,11 @@ class FSMOrder(models.Model):
             )
             if sub_stage_id:
                 vals.update({"sub_stage_id": sub_stage_id.id})
-        return super(FSMOrder, self).write(vals)
+        return super().write(vals)
 
-    def _track_subtype(self, init_values):
+    def _track_log_get_default_subtype(self, track_init_values):
+        # saas-19.4 name of mail.thread._track_subtype (see fieldservice)
         self.ensure_one()
-        if "sub_stage_id" in init_values:
+        if "sub_stage_id" in track_init_values:
             return self.env.ref("fieldservice_substatus.fso_substatus_changed")
-        return super()._track_subtype(init_values)
+        return super()._track_log_get_default_subtype(track_init_values)
