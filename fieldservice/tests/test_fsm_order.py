@@ -194,11 +194,11 @@ class TestFSMOrder(TransactionCase):
         config.module_fieldservice_repair = True
         config._onchange_group_fsm_equipment()
         config._onchange_module_fieldservice_repair()
-        order3._track_subtype(self.init_values)
-        order4._track_subtype(self.init_values)
-        order3._track_subtype(self.init_values_2)
-        order4._track_subtype(self.init_values_2)
-        order4._track_subtype(self.init_values2)
+        order3._track_log_get_default_subtype(self.init_values)
+        order4._track_log_get_default_subtype(self.init_values)
+        order3._track_log_get_default_subtype(self.init_values_2)
+        order4._track_log_get_default_subtype(self.init_values_2)
+        order4._track_log_get_default_subtype(self.init_values2)
         order4.action_complete()
         order3.action_cancel()
         self.env.user.company_id.auto_populate_equipments_on_order = True
@@ -249,7 +249,7 @@ class TestFSMOrder(TransactionCase):
         with Form(self.env["fsm.location"], view=view_id) as f:
             f.name = "Child Location"
             f.parent_id = self.test_location
-        location = f.save()
+        f.save()
         self.test_team = self.env["fsm.team"].create({"name": "Test Team"})
         order_type = self.env["fsm.order.type"].create(
             {"name": "Test Type", "internal_type": "fsm"}
@@ -289,7 +289,7 @@ class TestFSMOrder(TransactionCase):
             .with_context(**{"default_team_id": self.test_team.id})
             .with_user(self.env.user)
             ._read_group(
-                [("id", "=", location.id)],
+                [("id", "=", order.id)],
                 groupby=["stage_id"],
                 aggregates=["__count"],
             )
@@ -297,6 +297,30 @@ class TestFSMOrder(TransactionCase):
         self.assertTrue(data, "It should be able to read group")
         order.can_unlink()
         order.unlink()
+
+    def test_stage_change_order_subtype(self):
+        """Completed / cancelled orders map to the subtypes followers subscribe
+        to. saas-19.4 mail.thread calls _track_log_get_default_subtype; under
+        its old name (_track_subtype) this override was never reached."""
+        MailThread = type(self.env["mail.thread"])
+        self.assertIsNot(
+            type(self.Order)._track_log_get_default_subtype,
+            MailThread._track_log_get_default_subtype,
+        )
+        order_done = self.Order.create({"location_id": self.test_location.id})
+        order_void = self.Order.create({"location_id": self.test_location.id})
+        order_done.action_complete()
+        order_void.action_cancel()
+        changed = {"stage_id": self.env.ref("fieldservice.fsm_stage_new").id}
+        self.assertEqual(
+            order_done._track_log_get_default_subtype(changed),
+            self.env.ref("fieldservice.mt_order_completed"),
+        )
+        self.assertEqual(
+            order_void._track_log_get_default_subtype(changed),
+            self.env.ref("fieldservice.mt_order_cancelled"),
+        )
+        self.assertFalse(order_done._track_log_get_default_subtype({}))
 
     def test_order_move_to_completed(self):
         """Test move to completed

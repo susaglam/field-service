@@ -31,6 +31,27 @@ msgid "# of Owned Locations"
 msgstr "# eigen locaties"
 
 #. module: fieldservice
+#. odoo-python
+#: code:addons/fieldservice/wizard/fsm_wizard.py:0
+msgid ""
+"%(name)s is already a Field Service location, so no second location was "
+"created. Open the existing one from the contact's Field Service tab."
+msgstr ""
+"%(name)s is al een Field Service-locatie, dus er is geen tweede locatie "
+"aangemaakt. Open de bestaande via het tabblad Field Service van het contact."
+
+#. module: fieldservice
+#. odoo-python
+#: code:addons/fieldservice/wizard/fsm_wizard.py:0
+msgid ""
+"%(name)s is already a Field Service worker, so no second worker was created."
+" Find the existing one under Field Service > Master Data > Workers."
+msgstr ""
+"%(name)s is al een Field Service-medewerker, dus er is geen tweede "
+"medewerker aangemaakt. U vindt de bestaande onder Field Service > "
+"Stamgegevens > Medewerkers."
+
+#. module: fieldservice
 #: model:ir.actions.report,print_report_name:fieldservice.action_report_fsm_order
 msgid "'Service Order - %s' % (object.name)"
 msgstr "'Service-order - %s' % (object.name)"
@@ -64,18 +85,6 @@ msgstr "<strong>ETA:</strong>"
 #: model_terms:ir.ui.view,arch_db:fieldservice.fsm_person_form
 msgid "<strong>The contact linked to this user is still active</strong>"
 msgstr "<strong>De contactpersoon gekoppeld aan deze gebruiker is nog actief</strong>"
-
-#. module: fieldservice
-#. odoo-python
-#: code:addons/fieldservice/wizard/fsm_wizard.py:0
-msgid "A Field Service Location related to that partner already exists."
-msgstr "Er bestaat al een Field Service-locatie gekoppeld aan die relatie."
-
-#. module: fieldservice
-#. odoo-python
-#: code:addons/fieldservice/wizard/fsm_wizard.py:0
-msgid "A Field Service Worker related to that partner already exists."
-msgstr "Er bestaat al een Field Service-medewerker gekoppeld aan die relatie."
 
 #. module: fieldservice
 #: model:ir.model.fields,field_description:fieldservice.field_fsm_equipment__message_needaction
@@ -705,6 +714,16 @@ msgid "Convert"
 msgstr "Converteren"
 
 #. module: fieldservice
+#: model_terms:ir.ui.view,arch_db:fieldservice.fsm_partner_fields
+msgid "Convert to FS Location"
+msgstr "Converteren naar FS-locatie"
+
+#. module: fieldservice
+#: model_terms:ir.ui.view,arch_db:fieldservice.fsm_partner_fields
+msgid "Convert to FS Worker"
+msgstr "Converteren naar FS-medewerker"
+
+#. module: fieldservice
 #: model:ir.actions.act_window,name:fieldservice.partner_fsm_action
 msgid "Convert to FSM Record"
 msgstr "Converteren naar FSM-record"
@@ -749,6 +768,24 @@ msgstr "Klant aanmaken"
 #: model_terms:ir.actions.act_window,help:fieldservice.action_fsm_customer
 msgid "Create a Customer."
 msgstr "Klant aanmaken."
+
+#. module: fieldservice
+#: model_terms:ir.ui.view,arch_db:fieldservice.fsm_partner_fields
+msgid ""
+"Create a Field Service location for this contact so orders can be planned at"
+" its address."
+msgstr ""
+"Maak een Field Service-locatie voor dit contact aan, zodat er opdrachten op "
+"dit adres gepland kunnen worden."
+
+#. module: fieldservice
+#: model_terms:ir.ui.view,arch_db:fieldservice.fsm_partner_fields
+msgid ""
+"Create a Field Service worker for this contact so orders can be assigned to "
+"them."
+msgstr ""
+"Maak een Field Service-medewerker voor dit contact aan, zodat er opdrachten "
+"aan toegewezen kunnen worden."
 
 #. module: fieldservice
 #: model_terms:ir.actions.act_window,help:fieldservice.action_fsm_location
@@ -2354,6 +2391,19 @@ msgid "Owner"
 msgstr "Eigenaar"
 
 #. module: fieldservice
+#: model:ir.model.fields,help:fieldservice.field_fsm_location__owner_id
+#: model:ir.model.fields,help:fieldservice.field_fsm_location_person__owner_id
+msgid ""
+"Owner of this location (the customer that contracts with us). Leave it empty"
+" and it is filled in on save: a sub-location takes the owner of its parent "
+"location, a top-level location owns itself."
+msgstr ""
+"Eigenaar van deze locatie (de klant met wie wij het contract hebben). Laat "
+"het leeg, dan wordt het bij opslaan ingevuld: een sublocatie krijgt de "
+"eigenaar van de bovenliggende locatie, een locatie op het hoogste niveau is "
+"eigenaar van zichzelf."
+
+#. module: fieldservice
 #: model:ir.model.fields,field_description:fieldservice.field_fsm_category__parent_id
 #: model:ir.model.fields,field_description:fieldservice.field_fsm_equipment__parent_id
 #: model:ir.model.fields,field_description:fieldservice.field_fsm_location__parent_id
@@ -3257,4 +3307,3 @@ msgstr "sjabloon"
 #: model_terms:ir.ui.view,arch_db:fieldservice.fsm_person_form
 msgid "x"
 msgstr "x"
-

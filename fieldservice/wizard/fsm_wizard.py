@@ -1,7 +1,7 @@
 # Copyright (C) 2018 - TODAY, Open Source Integrators
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
-from odoo import _, fields, models
+from odoo import fields, models
 from odoo.exceptions import UserError
 
 
@@ -19,7 +19,8 @@ class FSMWizard(models.TransientModel):
     )
 
     def action_convert(self):
-        partners = self.env["res.partner"].browse(self._context.get("active_ids", []))
+        active_ids = self.env.context.get("active_ids", [])
+        partners = self.env["res.partner"].browse(active_ids)
         for partner in partners:
             if self.fsm_record_type == "person":
                 self.action_convert_person(partner)
@@ -28,17 +29,30 @@ class FSMWizard(models.TransientModel):
         return {"type": "ir.actions.act_window_close"}
 
     def _prepare_fsm_location(self, partner):
-        return {"partner_id": partner.id, "owner_id": partner.id}
+        # A child contact (a site of a customer) is owned by that customer and
+        # sits under the customer's own location when it has one.
+        owner = partner.parent_id or partner
+        vals = {"partner_id": partner.id, "owner_id": owner.id}
+        if partner.parent_id:
+            parent_location = partner.parent_id.fsm_location_ids[:1]
+            if parent_location:
+                vals["parent_id"] = parent_location.id
+        return vals
 
     def action_convert_location(self, partner):
         fl_model = self.env["fsm.location"]
         if fl_model.search_count([("partner_id", "=", partner.id)]) == 0:
             fl_model.create(self._prepare_fsm_location(partner))
-            partner.write({"fsm_location": True})
+            partner.write({"fsm_location": True, "type": "fsm_location"})
             self.action_other_address(partner)
         else:
             raise UserError(
-                _("A Field Service Location related to that" " partner already exists.")
+                self.env._(
+                    "%(name)s is already a Field Service location, so no second "
+                    "location was created. Open the existing one from the "
+                    "contact's Field Service tab.",
+                    name=partner.display_name,
+                )
             )
 
     def action_convert_person(self, partner):
@@ -48,7 +62,12 @@ class FSMWizard(models.TransientModel):
             partner.write({"fsm_person": True})
         else:
             raise UserError(
-                _("A Field Service Worker related to that" " partner already exists.")
+                self.env._(
+                    "%(name)s is already a Field Service worker, so no second "
+                    "worker was created. Find the existing one under Field "
+                    "Service > Master Data > Workers.",
+                    name=partner.display_name,
+                )
             )
 
     def action_other_address(self, partner):

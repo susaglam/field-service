@@ -1,6 +1,7 @@
 # Copyright (C) 2019 - TODAY, Open Source Integrators
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
+from odoo.tests import Form
 from odoo.tests.common import TransactionCase
 
 
@@ -64,3 +65,12 @@ class FSMPerson(TransactionCase):
         search_domain = [("location_ids", "=", "Location")]
         workers = self.Worker.search(search_domain)
         self.assertEqual(len(workers), 3, "Incorrect search number result")
+
+    def test_create_fsm_worker_from_form(self):
+        """A worker can be saved from the Field Service form, in debug mode
+        too, where the related partner field is shown read-only."""
+        with Form(self.Worker, view="fieldservice.fsm_person_form") as f:
+            f.name = "Worker From Form"
+        worker = f.save()
+        self.assertTrue(worker.partner_id)
+        self.assertTrue(worker.fsm_person)

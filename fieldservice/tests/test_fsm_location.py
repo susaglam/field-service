@@ -52,6 +52,14 @@ class FSMLocation(TransactionCase):
         ]:
             self.assertEqual(location[x], self.test_location[x])
 
+        # A location saved without a contact gets its own partner, filed under
+        # the owner and typed as a location
+        self.assertTrue(location.fsm_location)
+        self.assertFalse(location.fsm_person)
+        self.assertNotEqual(location.partner_id, self.test_location.partner_id)
+        self.assertEqual(location.partner_id.parent_id, location.owner_id)
+        self.assertEqual(location.type, "fsm_location")
+
         # Test initial stage
         self.assertEqual(
             location.stage_id, self.env.ref("fieldservice.location_stage_1")
@@ -153,7 +161,7 @@ class FSMLocation(TransactionCase):
 
         # Test recursion exception
         with (
-            self.assertRaisesRegex(UserError, "Recursion Detected"),
+            self.assertRaisesRegex(UserError, "creating a loop"),
             self.env.cr.savepoint(),
         ):
             self.test_location.parent_id = self.location_3
@@ -304,3 +312,68 @@ class FSMLocation(TransactionCase):
                 [("active", "=", False), ("id", "in", children_loc.ids)]
             )
         )
+
+    def test_create_root_fsm_location(self):
+        """A root location saved without contact or owner owns itself."""
+        location = self.Location.create({"name": "Root Location"})
+        self.assertTrue(location.fsm_location)
+        self.assertEqual(location.type, "fsm_location")
+        self.assertEqual(location.owner_id, location.partner_id)
+        self.assertFalse(location.partner_id.parent_id)
+        # Exactly one location for the new partner, not a second one created
+        # by res.partner's "type = fsm_location" hook
+        self.assertEqual(location.partner_id.fsm_location_ids, location)
+
+    def test_create_root_fsm_location_from_form(self):
+        """The form saves a root location with owner left empty."""
+        with Form(self.Location, view="fieldservice.fsm_location_form_view") as f:
+            f.name = "Root Location From Form"
+        location = f.save()
+        self.assertEqual(location.owner_id, location.partner_id)
+
+    def test_create_sublocation_inherits_owner_from_parent(self):
+        """A sub-location without owner takes the parent location's owner."""
+        location = self.Location.create(
+            {"name": "Sub Without Owner", "parent_id": self.test_location.id}
+        )
+        self.assertEqual(location.owner_id, self.test_location.owner_id)
+        self.assertEqual(location.partner_id.parent_id, self.test_location.owner_id)
+
+    def test_create_location_for_existing_partner(self):
+        """An existing contact keeps its parent and its type: it is usually a
+        customer on quotes and invoices (cs_project_fieldservice creates
+        locations exactly like this)."""
+        company = self.env["res.partner"].create(
+            {"name": "Customer Company", "is_company": True}
+        )
+        partner = self.env["res.partner"].create(
+            {"name": "Customer Contact", "parent_id": company.id, "type": "contact"}
+        )
+        location = self.Location.create(
+            {
+                "name": "Existing Partner Location",
+                "partner_id": partner.id,
+                "owner_id": partner.id,
+            }
+        )
+        self.assertEqual(location.partner_id, partner)
+        self.assertEqual(partner.parent_id, company)
+        self.assertEqual(partner.type, "contact")
+        self.assertTrue(partner.fsm_location)
+
+    def test_child_partner_location_gets_parent_fsm_location(self):
+        """A child contact typed as location lands under its parent's location."""
+        test_partner = self.env.ref("fieldservice.test_partner")
+        self.env["fsm.wizard"].action_convert_location(test_partner)
+        parent_location = test_partner.fsm_location_ids[:1]
+        child = self.env["res.partner"].create(
+            {
+                "parent_id": test_partner.id,
+                "name": "Child Location",
+                "type": "fsm_location",
+            }
+        )
+        child_location = child.fsm_location_ids
+        self.assertEqual(len(child_location), 1)
+        self.assertEqual(child_location.parent_id, parent_location)
+        self.assertEqual(child_location.owner_id, test_partner)

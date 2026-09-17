@@ -32,7 +32,9 @@ class FSMLocation(models.Model):
         required=True,
         ondelete="restrict",
         bypass_search_access=True,
-        help="Owner of this location (the customer that contracts with us).",
+        help="Owner of this location (the customer that contracts with us). "
+        "Leave it empty and it is filled in on save: a sub-location takes the "
+        "owner of its parent location, a top-level location owns itself.",
     )
     contact_id = fields.Many2one(
         "res.partner",
@@ -119,10 +121,42 @@ class FSMLocation(models.Model):
     )
 
     @api.model_create_multi
-    def create(self, vals):
-        res = super().create(vals)
-        res.write({"fsm_location": True})
-        return res
+    def create(self, vals_list):
+        # A location saved without a contact gets a new delegated partner: typed
+        # "fsm_location" and filed under the owner. The owner falls back to the
+        # parent location's owner, and a root location owns itself.
+        # A location made for an EXISTING contact leaves that contact's type and
+        # parent alone. The ORM writes delegated values onto an existing partner,
+        # and that partner is usually a customer used on quotes and invoices
+        # (cs_project_fieldservice creates locations this way).
+        new_partner_indexes = []
+        root_indexes = []
+        for index, vals in enumerate(vals_list):
+            vals["fsm_location"] = True
+            if vals.get("partner_id"):
+                continue
+            new_partner_indexes.append(index)
+            vals.setdefault("type", "fsm_location")
+            if not vals.get("owner_id"):
+                parent_id = vals.get("parent_id") or vals.get("fsm_parent_id")
+                if parent_id:
+                    vals["owner_id"] = self.browse(parent_id).owner_id.id
+                if not vals.get("owner_id"):
+                    # Placeholder for the required field, replaced below by the
+                    # location's own partner once that partner exists.
+                    root_indexes.append(index)
+                    vals["owner_id"] = self.env.company.partner_id.id
+        locations = super(
+            FSMLocation, self.with_context(creating_fsm_location=True)
+        ).create(vals_list)
+        for index in new_partner_indexes:
+            location = locations[index]
+            if index in root_indexes:
+                location.owner_id = location.partner_id
+                location.partner_id.parent_id = False
+            elif location.partner_id.parent_id != location.owner_id:
+                location.partner_id.parent_id = location.owner_id
+        return locations
 
     @api.depends("partner_id.name", "parent_id.complete_name", "ref")
     def _compute_complete_name(self):

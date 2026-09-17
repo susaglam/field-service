@@ -14,6 +14,7 @@ from . import (
     fsm_location,
     fsm_location_person,
     res_partner,
+    res_partner_mcp,
     fsm_equipment,
     fsm_order,
     fsm_order_mcp,

@@ -31,6 +31,27 @@ msgid "# of Owned Locations"
 msgstr "# sahip olunan konum"
 
 #. module: fieldservice
+#. odoo-python
+#: code:addons/fieldservice/wizard/fsm_wizard.py:0
+msgid ""
+"%(name)s is already a Field Service location, so no second location was "
+"created. Open the existing one from the contact's Field Service tab."
+msgstr ""
+"%(name)s zaten bir Saha Servis konumu, bu yüzden ikinci bir konum "
+"oluşturulmadı. Mevcut konumu kişinin Saha Servis sekmesinden açabilirsiniz."
+
+#. module: fieldservice
+#. odoo-python
+#: code:addons/fieldservice/wizard/fsm_wizard.py:0
+msgid ""
+"%(name)s is already a Field Service worker, so no second worker was created."
+" Find the existing one under Field Service > Master Data > Workers."
+msgstr ""
+"%(name)s zaten bir Saha Servis çalışanı, bu yüzden ikinci bir çalışan "
+"oluşturulmadı. Mevcut çalışanı Saha Servis > Ana Veri > Çalışanlar altında "
+"bulabilirsiniz."
+
+#. module: fieldservice
 #: model:ir.actions.report,print_report_name:fieldservice.action_report_fsm_order
 msgid "'Service Order - %s' % (object.name)"
 msgstr "'Servis Siparişi - %s' % (object.name)"
@@ -64,18 +85,6 @@ msgstr "<strong>Tahmini Varış:</strong>"
 #: model_terms:ir.ui.view,arch_db:fieldservice.fsm_person_form
 msgid "<strong>The contact linked to this user is still active</strong>"
 msgstr "<strong>Bu kullanıcıya bağlı kişi hâlâ aktif</strong>"
-
-#. module: fieldservice
-#. odoo-python
-#: code:addons/fieldservice/wizard/fsm_wizard.py:0
-msgid "A Field Service Location related to that partner already exists."
-msgstr "Bu iş ortağına bağlı bir Saha Servis Konumu zaten mevcut."
-
-#. module: fieldservice
-#. odoo-python
-#: code:addons/fieldservice/wizard/fsm_wizard.py:0
-msgid "A Field Service Worker related to that partner already exists."
-msgstr "Bu iş ortağına bağlı bir Saha Servis Çalışanı zaten mevcut."
 
 #. module: fieldservice
 #: model:ir.model.fields,field_description:fieldservice.field_fsm_equipment__message_needaction
@@ -705,6 +714,16 @@ msgid "Convert"
 msgstr "Dönüştür"
 
 #. module: fieldservice
+#: model_terms:ir.ui.view,arch_db:fieldservice.fsm_partner_fields
+msgid "Convert to FS Location"
+msgstr "FS Konumuna Dönüştür"
+
+#. module: fieldservice
+#: model_terms:ir.ui.view,arch_db:fieldservice.fsm_partner_fields
+msgid "Convert to FS Worker"
+msgstr "FS Çalışanına Dönüştür"
+
+#. module: fieldservice
 #: model:ir.actions.act_window,name:fieldservice.partner_fsm_action
 msgid "Convert to FSM Record"
 msgstr "FSM Kaydına Dönüştür"
@@ -749,6 +768,24 @@ msgstr "Müşteri Oluştur"
 #: model_terms:ir.actions.act_window,help:fieldservice.action_fsm_customer
 msgid "Create a Customer."
 msgstr "Müşteri Oluştur."
+
+#. module: fieldservice
+#: model_terms:ir.ui.view,arch_db:fieldservice.fsm_partner_fields
+msgid ""
+"Create a Field Service location for this contact so orders can be planned at"
+" its address."
+msgstr ""
+"Bu kişi için bir Saha Servis konumu oluşturur; böylece bu adreste iş "
+"emirleri planlanabilir."
+
+#. module: fieldservice
+#: model_terms:ir.ui.view,arch_db:fieldservice.fsm_partner_fields
+msgid ""
+"Create a Field Service worker for this contact so orders can be assigned to "
+"them."
+msgstr ""
+"Bu kişi için bir Saha Servis çalışanı oluşturur; böylece ona iş emirleri "
+"atanabilir."
 
 #. module: fieldservice
 #: model_terms:ir.actions.act_window,help:fieldservice.action_fsm_location
@@ -2354,6 +2391,18 @@ msgid "Owner"
 msgstr "Sahip"
 
 #. module: fieldservice
+#: model:ir.model.fields,help:fieldservice.field_fsm_location__owner_id
+#: model:ir.model.fields,help:fieldservice.field_fsm_location_person__owner_id
+msgid ""
+"Owner of this location (the customer that contracts with us). Leave it empty"
+" and it is filled in on save: a sub-location takes the owner of its parent "
+"location, a top-level location owns itself."
+msgstr ""
+"Bu konumun sahibi (bizimle sözleşme yapan müşteri). Boş bırakırsanız "
+"kaydederken doldurulur: bir alt konum, üst konumunun sahibini alır; en üst "
+"düzeydeki bir konum kendisinin sahibi olur."
+
+#. module: fieldservice
 #: model:ir.model.fields,field_description:fieldservice.field_fsm_category__parent_id
 #: model:ir.model.fields,field_description:fieldservice.field_fsm_equipment__parent_id
 #: model:ir.model.fields,field_description:fieldservice.field_fsm_location__parent_id
@@ -3257,4 +3306,3 @@ msgstr "şablon"
 #: model_terms:ir.ui.view,arch_db:fieldservice.fsm_person_form
 msgid "x"
 msgstr "x"
-

@@ -54,7 +54,19 @@ class ResPartner(models.Model):
                 action["res_id"] = owned_location_ids.ids[0]
             return action
 
+    def action_fsm_convert_to_location(self):
+        self.ensure_one()
+        self.env["fsm.wizard"].action_convert_location(self)
+
+    def action_fsm_convert_to_person(self):
+        self.ensure_one()
+        self.env["fsm.wizard"].action_convert_person(self)
+
     def _create_missing_fsm_location(self):
+        # fsm.location.create() is creating this partner itself; converting it
+        # here as well would give the partner a second location.
+        if self.env.context.get("creating_fsm_location"):
+            return
         for rec in self:
             if rec.type != "fsm_location":
                 continue
