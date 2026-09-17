@@ -10,6 +10,9 @@ manifest-required-keys=license
 manifest-deprecated-keys=description,active
 license-allowed=AGPL-3,GPL-2,GPL-2 or any later version,GPL-3,GPL-3 or any later version,LGPL-3
 valid-odoo-versions=19.0
+# This fork versions its addons saas~19.4.x.y.z; 19.0 stays the parseable
+# series for pylint-odoo's version-dependent checks.
+manifest-version-format=^(saas~19\.4|{valid_odoo_versions})\.\d+\.\d+\.\d+$
 
 [MESSAGES CONTROL]
 disable=all

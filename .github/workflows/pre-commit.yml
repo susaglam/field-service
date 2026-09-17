@@ -3,11 +3,11 @@ name: pre-commit
 on:
   pull_request:
     branches:
-      - "saas-19.3*"
+      - "saas-19.4*"
   push:
     branches:
-      - "saas-19.3"
-      - "saas-19.3-ocabot-*"
+      - "saas-19.4"
+      - "saas-19.4-ocabot-*"
 
 jobs:
   pre-commit:
