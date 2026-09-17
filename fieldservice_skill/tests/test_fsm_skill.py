@@ -143,6 +143,10 @@ class TestFSMSkill(BaseCommon):
             {
                 "name": "Field Service Skills 2",
                 "skill_ids": [Command.set(cls.category_02_skills)],
+                # saas-19.4 hr_skills: a skill type with skills needs a level
+                "skill_level_ids": [
+                    Command.create({"name": "Basic", "level_progress": 100})
+                ],
             }
         )
         # Create a template that requires great skills
