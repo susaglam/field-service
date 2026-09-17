@@ -107,10 +107,11 @@ class FSMWizard(TransactionCase):
 
     def test_prepare_fsm_location_root_partner(self):
         vals = self.Wizard._prepare_fsm_location(self.test_partner)
-        self.assertEqual(
-            vals,
-            {"partner_id": self.test_partner.id, "owner_id": self.test_partner.id},
-        )
+        # Compare only the keys this module sets: fieldservice_stock adds
+        # inventory_location_id to the same dict
+        self.assertEqual(vals["partner_id"], self.test_partner.id)
+        self.assertEqual(vals["owner_id"], self.test_partner.id)
+        self.assertNotIn("parent_id", vals)
 
     def test_prepare_fsm_location_child_under_fsm_parent(self):
         self.Wizard.action_convert_location(self.test_partner)
