@@ -11,10 +11,12 @@ class FSMOrder(models.Model):
 
     @api.depends("scheduled_date_start", "scheduled_date_end")
     def _compute_schedule_time_range(self):
+        # saas-19.4 removed ir.config_parameter.get_param; this raised
+        # AttributeError for every order card on the kanban.
         time_range_format = (
             self.env["ir.config_parameter"]
             .sudo()
-            .get_param("fieldservice.schedule_time_range_format", "time_only")
+            .get_str("fieldservice.schedule_time_range_format", "time_only")
         )
 
         lang = self.env.user.lang
