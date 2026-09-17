@@ -21,15 +21,18 @@ class TestFieldServicePurchase(TransactionCase):
         self.product_supplierinfo_obj = self.env["product.supplierinfo"]
         self.fsm_person_obj = self.env["fsm.person"]
         self.product = self.env["product.template"].create(
-            {"name": "Tiles bought from this technician"})
+            {"name": "Tiles bought from this technician"}
+        )
 
     def _price_list(self, person, min_qty, price):
-        return self.product_supplierinfo_obj.create({
-            "partner_id": person.partner_id.id,
-            "product_tmpl_id": self.product.id,
-            "min_qty": min_qty,
-            "price": price,
-        })
+        return self.product_supplierinfo_obj.create(
+            {
+                "partner_id": person.partner_id.id,
+                "product_tmpl_id": self.product.id,
+                "min_qty": min_qty,
+                "price": price,
+            }
+        )
 
     def test_fieldservice_purchase(self):
         fsm_person = self.fsm_person_obj.create({"name": "Test FSM Person"})

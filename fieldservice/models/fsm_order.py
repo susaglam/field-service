@@ -140,10 +140,11 @@ class FSMOrder(models.Model):
     )
 
     location_id = fields.Many2one(
-        "fsm.location", string="Location", index=True, required=True,
-
+        "fsm.location",
+        string="Location",
+        index=True,
+        required=True,
         help="Where the service will be performed.",
-
     )
     location_directions = fields.Char(
         compute="_compute_location_directions",
@@ -169,7 +170,9 @@ class FSMOrder(models.Model):
     # Signature
     signed_by = fields.Char(copy=False, readonly=True, help="Signed By.")
     signed_on = fields.Datetime(copy=False, readonly=True, help="Signed On.")
-    signature = fields.Image(copy=False, max_width=1024, max_height=1024, readonly=True, help="Signature.")
+    signature = fields.Image(
+        copy=False, max_width=1024, max_height=1024, readonly=True, help="Signature."
+    )
     require_signature = fields.Boolean(related="stage_id.require_signature")
 
     def _calc_request_late(self, vals):
@@ -196,10 +199,9 @@ class FSMOrder(models.Model):
             )
         return vals
 
-    request_late = fields.Datetime(string="Latest Request Date",
-
+    request_late = fields.Datetime(
+        string="Latest Request Date",
         help="Customer-stated latest acceptable date — hard deadline.",
-
     )
     description = fields.Html(
         compute="_compute_description",
@@ -209,10 +211,17 @@ class FSMOrder(models.Model):
         help="Customer-facing description of the work requested.",
     )
 
-    person_ids = fields.Many2many("fsm.person", string="Field Service Workers", help="Person Ids. Many-to-many / one-to-many relation collection.")
+    person_ids = fields.Many2many(
+        "fsm.person",
+        string="Field Service Workers",
+        help="Person Ids. Many-to-many / one-to-many relation collection.",
+    )
 
     # Planning
-    person_id = fields.Many2one("fsm.person", string="Assigned To", index=True,
+    person_id = fields.Many2one(
+        "fsm.person",
+        string="Assigned To",
+        index=True,
         help="Worker assigned to this order.",
     )
     person_phone = fields.Char(related="person_id.phone", string="Worker Phone")
@@ -220,8 +229,9 @@ class FSMOrder(models.Model):
         string="Scheduled Start (ETA)",
         help="When this service is planned to begin. Drives day-route slotting and worker calendar entries.",
     )
-    scheduled_duration = fields.Float(help="Scheduled duration of the work in" " hours")
-    scheduled_date_end = fields.Datetime(string="Scheduled End",
+    scheduled_duration = fields.Float(help="Scheduled duration of the work in hours")
+    scheduled_date_end = fields.Datetime(
+        string="Scheduled End",
         help="Auto-computed from scheduled_date_start + scheduled_duration. Edit duration instead of this directly.",
     )
     sequence = fields.Integer(default=10)
@@ -238,10 +248,12 @@ class FSMOrder(models.Model):
     resolution = fields.Html(
         help="Worker's notes on what was done and the outcome.",
     )
-    date_start = fields.Datetime(string="Actual Start",
+    date_start = fields.Datetime(
+        string="Actual Start",
         help="Actual start datetime, written when the worker hits 'Start' on the order.",
     )
-    date_end = fields.Datetime(string="Actual End",
+    date_end = fields.Datetime(
+        string="Actual End",
         help="Actual end datetime, written when the order is marked Completed.",
     )
     duration = fields.Float(
@@ -249,7 +261,9 @@ class FSMOrder(models.Model):
         compute=_compute_duration,
         help="Actual duration in hours",
     )
-    current_date = fields.Datetime(default=fields.Datetime.now, store=True, help="Current Date. Date value.")
+    current_date = fields.Datetime(
+        default=fields.Datetime.now, store=True, help="Current Date. Date value."
+    )
 
     # Location
     territory_id = fields.Many2one(
@@ -283,10 +297,14 @@ class FSMOrder(models.Model):
     custom_color = fields.Char(related="stage_id.custom_color", string="Stage Color")
 
     # Template
-    template_id = fields.Many2one("fsm.template", string="Template",
+    template_id = fields.Many2one(
+        "fsm.template",
+        string="Template",
         help="Order template that pre-fills activities, instructions, expected duration, etc.",
     )
-    category_ids = fields.Many2many("fsm.category", string="Categories",
+    category_ids = fields.Many2many(
+        "fsm.category",
+        string="Categories",
         help="Skill categories the order touches. Drives worker-matching.",
     )
     equipment_ids = fields.Many2many(
@@ -297,7 +315,8 @@ class FSMOrder(models.Model):
         store=True,
         readonly=False,
     )
-    type = fields.Many2one("fsm.order.type",
+    type = fields.Many2one(
+        "fsm.order.type",
         help="Order type (e.g. Installation / Repair / Inspection / Maintenance). Drives templating.",
     )
 

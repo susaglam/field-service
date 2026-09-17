@@ -50,10 +50,10 @@ class FSMTeam(models.Model):
         for team in self:
             team.order_need_schedule_count = result.get(team.id, 0)
 
-    name = fields.Char(required=True, translate=True,
-
+    name = fields.Char(
+        required=True,
+        translate=True,
         help="Name of the team (e.g. 'Plumbing Crew A').",
-
     )
     description = fields.Text(translate=True, help="Description.")
     active = fields.Boolean(default=True)
@@ -92,6 +92,6 @@ class FSMTeam(models.Model):
     )
 
     _name_uniq = models.Constraint(
-        'unique (name)',
-        'Team name already exists!',
+        "unique (name)",
+        "Team name already exists!",
     )

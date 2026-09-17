@@ -21,8 +21,8 @@
 // cs_dealer_portal/static/src/js/dealer_portal_home.esm.js already had the
 // correct shape; this is the same pattern.
 
-import { patch } from "@web/core/utils/patch";
-import { PortalHomeCounters } from "@portal/interactions/portal_home_counters";
+import {patch} from "@web/core/utils/patch";
+import {PortalHomeCounters} from "@portal/interactions/portal_home_counters";
 
 patch(PortalHomeCounters.prototype, {
     getCountersAlwaysDisplayed() {

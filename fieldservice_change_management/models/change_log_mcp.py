@@ -3,6 +3,7 @@
 """MCP / @ai_tool surface for change_log."""
 
 from odoo import models
+
 try:
     from odoo.addons.cs_mcp_bridge.tools import ai_tool
 except ImportError:
@@ -11,6 +12,7 @@ except ImportError:
     def ai_tool(**_kwargs):
         def _decorator(fn):
             return fn
+
         return _decorator
 
 
@@ -63,9 +65,7 @@ class ChangeLogMcp(models.Model):
                 {
                     "id": cl.id,
                     "title": cl.name,
-                    "location": cl.location_id.display_name
-                    if cl.location_id
-                    else None,
+                    "location": cl.location_id.display_name if cl.location_id else None,
                     "stage": cl.stage_id.name if cl.stage_id else None,
                     "impact": cl.impact_id.name if cl.impact_id else None,
                     "type": cl.type_id.name if cl.type_id else None,
@@ -81,8 +81,7 @@ class ChangeLogMcp(models.Model):
     @ai_tool(
         name="change_log.create",
         description=(
-            "Create a new change log entry attached to a Field Service "
-            "location."
+            "Create a new change log entry attached to a Field Service location."
         ),
         input_schema={
             "type": "object",

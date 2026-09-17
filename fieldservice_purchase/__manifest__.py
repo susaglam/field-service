@@ -4,7 +4,7 @@
 {
     "name": "Field Service - Purchase",
     "summary": "Manage FSM Purchases",
-    "author": "Open Source Integrators, " "Odoo Community Association (OCA)",
+    "author": "Open Source Integrators, Odoo Community Association (OCA)",
     "website": "https://github.com/OCA/field-service",
     "category": "Field Service",
     "license": "AGPL-3",

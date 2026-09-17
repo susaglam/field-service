@@ -22,7 +22,10 @@
         <field name="view_mode">kanban,list,form,leaflet_map</field>
     </record>
 
-    <record id="action_fsm_location_view_leaflet_map" model="ir.actions.act_window.view">
+    <record
+        id="action_fsm_location_view_leaflet_map"
+        model="ir.actions.act_window.view"
+    >
         <field name="sequence" eval="3" />
         <field name="view_mode">leaflet_map</field>
         <field name="view_id" ref="view_fsm_location_leaflet_map" />

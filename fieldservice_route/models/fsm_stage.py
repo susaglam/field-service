@@ -9,6 +9,7 @@ class FSMStage(models.Model):
     _inherit = "fsm.stage"
 
     stage_type = fields.Selection(
-        selection_add=[("route", "Route")], ondelete={"route": "cascade"},
+        selection_add=[("route", "Route")],
+        ondelete={"route": "cascade"},
         help="Stage Type.",
     )

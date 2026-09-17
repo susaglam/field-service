@@ -10,5 +10,4 @@
         <field name="description">Sample Type 2</field>
         <field name="log_type_sequence">1</field>
     </record>
-
 </odoo>

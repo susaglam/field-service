@@ -1,3 +1,7 @@
+.. image:: https://odoo-community.org/readme-banner-image
+   :target: https://odoo-community.org/get-involved?utm_source=readme
+   :alt: Odoo Community Association
+
 ==========================
 Field Service - Sub-Status
 ==========================
@@ -13,31 +17,32 @@ Field Service - Sub-Status
 .. |badge1| image:: https://img.shields.io/badge/maturity-Beta-yellow.png
     :target: https://odoo-community.org/page/development-status
     :alt: Beta
-.. |badge2| image:: https://img.shields.io/badge/licence-AGPL--3-blue.png
+.. |badge2| image:: https://img.shields.io/badge/license-AGPL--3-blue.png
     :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
     :alt: License: AGPL-3
 .. |badge3| image:: https://img.shields.io/badge/github-OCA%2Ffield--service-lightgray.png?logo=github
-    :target: https://github.com/OCA/field-service/tree/15.0/fieldservice_substatus
+    :target: https://github.com/OCA/field-service/tree/saas-19.4/fieldservice_substatus
     :alt: OCA/field-service
 .. |badge4| image:: https://img.shields.io/badge/weblate-Translate%20me-F47D42.png
-    :target: https://translation.odoo-community.org/projects/field-service-15-0/field-service-15-0-fieldservice_substatus
+    :target: https://translation.odoo-community.org/projects/field-service-saas-19-4/field-service-saas-19-4-fieldservice_substatus
     :alt: Translate me on Weblate
 .. |badge5| image:: https://img.shields.io/badge/runboat-Try%20me-875A7B.png
-    :target: https://runboat.odoo-community.org/builds?repo=OCA/field-service&target_branch=15.0
+    :target: https://runboat.odoo-community.org/builds?repo=OCA/field-service&target_branch=saas-19.4
     :alt: Try me on Runboat
 
 |badge1| |badge2| |badge3| |badge4| |badge5|
 
-Odoo and the Field Service App do not provide a way to track what is required
-and/or missing at the different stages of the FSM order process. Some
-organizations needs a way to track documentation, materials, signature
-and various activities.
+Odoo and the Field Service App do not provide a way to track what is
+required and/or missing at the different stages of the FSM order
+process. Some organizations needs a way to track documentation,
+materials, signature and various activities.
 
-This module allows you to have a list of sub-statuses and set them as default
-or potential sub-statuses on each FSM stage. The stage configuration will drive:
+This module allows you to have a list of sub-statuses and set them as
+default or potential sub-statuses on each FSM stage. The stage
+configuration will drive:
 
-* the sub-status set when entering a stage
-* the list of potential sub-statuses available depending on the stage
+- the sub-status set when entering a stage
+- the list of potential sub-statuses available depending on the stage
 
 **Table of contents**
 
@@ -47,7 +52,8 @@ or potential sub-statuses on each FSM stage. The stage configuration will drive:
 Installation
 ============
 
-To install Field Service and have the mapping features, you need to install GeoEngine.
+To install Field Service and have the mapping features, you need to
+install GeoEngine.
 
 Please refer to the installation instructions available at:
 https://github.com/OCA/geospatial/tree/11.0/base_geoengine
@@ -57,31 +63,32 @@ Configuration
 
 To configure this module, you need to:
 
-* Go to Field Service > Configuration > Orders > Sub-Statuses
-* Create your list of sub-statuses
-* Go to Field Service > Configuration > Orders > Stages
-* Select a stage and set the default sub-statuses as well as the potential sub-statuses
+- Go to Field Service > Configuration > Orders > Sub-Statuses
+- Create your list of sub-statuses
+- Go to Field Service > Configuration > Orders > Stages
+- Select a stage and set the default sub-statuses as well as the
+  potential sub-statuses
 
 Usage
 =====
 
 To use this module, you need to:
 
-* Go to Field Service > Operations > Orders
-* Create a new service order.
+- Go to Field Service > Operations > Orders
+- Create a new service order.
 
-  * The sub-status is set to the default sub-status of the New stage.
-  * The list of sub-statuses is filtered based on the potential sub-statuses
-    of the New stage.
+  - The sub-status is set to the default sub-status of the New stage.
+  - The list of sub-statuses is filtered based on the potential
+    sub-statuses of the New stage.
 
-* Move the service order in the process. The sub-status is set and filtered
-  according to the stage.
+- Move the service order in the process. The sub-status is set and
+  filtered according to the stage.
 
 Known issues / Roadmap
 ======================
 
 The roadmap of the Field Service application is documented on
-`Github <https://github.com/OCA/field-service/issues/1>`_.
+`Github <https://github.com/OCA/field-service/issues/1>`__.
 
 Bug Tracker
 ===========
@@ -89,7 +96,7 @@ Bug Tracker
 Bugs are tracked on `GitHub Issues <https://github.com/OCA/field-service/issues>`_.
 In case of trouble, please check there if your issue has already been reported.
 If you spotted it first, help us to smash it by providing a detailed and welcomed
-`feedback <https://github.com/OCA/field-service/issues/new?body=module:%20fieldservice_substatus%0Aversion:%2015.0%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**>`_.
+`feedback <https://github.com/OCA/field-service/issues/new?body=module:%20fieldservice_substatus%0Aversion:%20saas-19.4%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**>`_.
 
 Do not contact contributors directly about support or help with technical issues.
 
@@ -97,28 +104,29 @@ Credits
 =======
 
 Authors
-~~~~~~~
+-------
 
 * Open Source Integrators
 * Brian McMaster
 
 Contributors
-~~~~~~~~~~~~
+------------
 
-* Brian McMaster <brian@mcmpest.com>
-* Bhavesh Odedra <bodedra@opensourceintegrators.com>
-* Freni Patel <fpatel@opensourceintegrators.com>
-* Serpent Consulting Services Pvt. Ltd. <support@serpentcs.com>
+- Brian McMaster <brian@mcmpest.com>
+- Bhavesh Odedra <bodedra@opensourceintegrators.com>
+- Freni Patel <fpatel@opensourceintegrators.com>
+- Serpent Consulting Services Pvt. Ltd. <support@serpentcs.com>
 
 Other credits
-~~~~~~~~~~~~~
+-------------
 
 The development of this module has been financially supported by:
 
-* Open Source Integrators <https://opensourceintegrators.com>
+- Open Source Integrators
+  <`https://opensourceintegrators.com\\> <https://opensourceintegrators.com\>>`__
 
 Maintainers
-~~~~~~~~~~~
+-----------
 
 This module is maintained by the OCA.
 
@@ -144,6 +152,6 @@ Current `maintainers <https://odoo-community.org/page/maintainer-role>`__:
 
 |maintainer-max3903| |maintainer-brian10048| |maintainer-bodedra| 
 
-This module is part of the `OCA/field-service <https://github.com/OCA/field-service/tree/15.0/fieldservice_substatus>`_ project on GitHub.
+This module is part of the `OCA/field-service <https://github.com/OCA/field-service/tree/saas-19.4/fieldservice_substatus>`_ project on GitHub.
 
 You are welcome to contribute. To learn how please visit https://odoo-community.org/page/Contribute.

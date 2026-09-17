@@ -3,6 +3,7 @@
 """MCP / @ai_tool surface for repair.order ↔ FSM-order link."""
 
 from odoo import models
+
 try:
     from odoo.addons.cs_mcp_bridge.tools import ai_tool
 except ImportError:
@@ -11,6 +12,7 @@ except ImportError:
     def ai_tool(**_kwargs):
         def _decorator(fn):
             return fn
+
         return _decorator
 
 
@@ -43,12 +45,8 @@ class FsmOrderRepairMcp(models.Model):
                     "id": r.id,
                     "name": r.name,
                     "state": r.state,
-                    "product": r.product_id.display_name
-                    if r.product_id
-                    else None,
-                    "location": r.location_id.display_name
-                    if r.location_id
-                    else None,
+                    "product": r.product_id.display_name if r.product_id else None,
+                    "location": r.location_id.display_name if r.location_id else None,
                 }
                 for r in order.repair_ids
             ],

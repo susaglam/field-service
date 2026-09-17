@@ -7,6 +7,7 @@ so AI clients can fetch them without scraping the order_read payload.
 """
 
 from odoo import models
+
 try:
     from odoo.addons.cs_mcp_bridge.tools import ai_tool
 except ImportError:
@@ -15,6 +16,7 @@ except ImportError:
     def ai_tool(**_kwargs):
         def _decorator(fn):
             return fn
+
         return _decorator
 
 
@@ -39,7 +41,11 @@ class FieldserviceEquipmentWarrantyMcp(models.Model):
             "id": rec.id,
             "name": rec.display_name,
             "product_warranty": rec.product_warranty,
-            "warranty_start_date": rec.warranty_start_date.isoformat() if rec.warranty_start_date else None,
-            "warranty_end_date": rec.warranty_end_date.isoformat() if rec.warranty_end_date else None,
+            "warranty_start_date": rec.warranty_start_date.isoformat()
+            if rec.warranty_start_date
+            else None,
+            "warranty_end_date": rec.warranty_end_date.isoformat()
+            if rec.warranty_end_date
+            else None,
             "product_warranty_type": rec.product_warranty_type,
         }

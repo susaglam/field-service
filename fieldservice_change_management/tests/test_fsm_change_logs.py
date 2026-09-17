@@ -9,7 +9,7 @@ from odoo.tests.common import TransactionCase
 class FSMChangeLogCase(TransactionCase):
     @classmethod
     def setUpClass(cls):
-        super(FSMChangeLogCase, cls).setUpClass()
+        super().setUpClass()
         cls.cl = cls.env["change.log"]
         cls.test_location = cls.env.ref("fieldservice.test_location")
         cls.test_location2 = cls.env.ref("fieldservice.location_1")

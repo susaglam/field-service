@@ -7,7 +7,7 @@ from odoo.tests.common import TransactionCase
 
 class FSMLocationBuilderWizardCase(TransactionCase):
     def setUp(self):
-        super(FSMLocationBuilderWizardCase, self).setUp()
+        super().setUp()
         self.fsm_order = self.env["fsm.order"]
         self.Wizard = self.env["fsm.location.builder.wizard"]
         self.test_location = self.env.ref("fieldservice.test_location")

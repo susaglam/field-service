@@ -3,6 +3,7 @@
 """MCP / @ai_tool surface for fsm.recurring."""
 
 from odoo import models
+
 try:
     from odoo.addons.cs_mcp_bridge.tools import ai_tool
 except ImportError:
@@ -11,6 +12,7 @@ except ImportError:
     def ai_tool(**_kwargs):
         def _decorator(fn):
             return fn
+
         return _decorator
 
 
@@ -68,9 +70,7 @@ class FsmRecurringMcp(models.Model):
                     "frequency_set": r.fsm_frequency_set_id.name
                     if r.fsm_frequency_set_id
                     else None,
-                    "start_date": r.start_date.isoformat()
-                    if r.start_date
-                    else None,
+                    "start_date": r.start_date.isoformat() if r.start_date else None,
                     "end_date": r.end_date.isoformat() if r.end_date else None,
                     "order_count": r.fsm_order_count,
                 }

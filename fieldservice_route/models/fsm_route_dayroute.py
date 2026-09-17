@@ -20,7 +20,11 @@ class FSMRouteDayRoute(models.Model):
         store=True,
         readonly=False,
     )
-    route_id = fields.Many2one(comodel_name="fsm.route", string="Route", help="Route Id. Linked record reference.")
+    route_id = fields.Many2one(
+        comodel_name="fsm.route",
+        string="Route",
+        help="Route Id. Linked record reference.",
+    )
     date = fields.Date(required=True, help="Date.")
     team_id = fields.Many2one(
         comodel_name="fsm.team",
@@ -40,7 +44,8 @@ class FSMRouteDayRoute(models.Model):
     longitude = fields.Float(help="Longitude.")
     latitude = fields.Float(help="Latitude.")
     last_location_id = fields.Many2one(
-        comodel_name="fsm.location", string="Last Location",
+        comodel_name="fsm.location",
+        string="Last Location",
         help="Last Location Id. Linked record reference.",
     )
     date_start_planned = fields.Datetime(
@@ -50,20 +55,27 @@ class FSMRouteDayRoute(models.Model):
         readonly=False,
     )
     start_location_id = fields.Many2one(
-        comodel_name="fsm.location", string="Start Location",
+        comodel_name="fsm.location",
+        string="Start Location",
         help="Start Location Id. Linked record reference.",
     )
     end_location_id = fields.Many2one(
-        comodel_name="fsm.location", string="End Location",
+        comodel_name="fsm.location",
+        string="End Location",
         help="End Location Id. Linked record reference.",
     )
-    work_time = fields.Float(string="Time before overtime (in hours)", default=8.0, help="Work Time.")
+    work_time = fields.Float(
+        string="Time before overtime (in hours)", default=8.0, help="Work Time."
+    )
     max_allow_time = fields.Float(
-        string="Maximal Allowable Time (in hours)", default=10.0,
+        string="Maximal Allowable Time (in hours)",
+        default=10.0,
         help="Max Allow Time. Upper-bound constraint.",
     )
     order_ids = fields.One2many(
-        comodel_name="fsm.order", inverse_name="dayroute_id", string="Orders",
+        comodel_name="fsm.order",
+        inverse_name="dayroute_id",
+        string="Orders",
         help="Order Ids. Many-to-many / one-to-many relation collection.",
     )
     order_count = fields.Integer(

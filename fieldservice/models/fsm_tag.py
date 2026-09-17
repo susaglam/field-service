@@ -8,13 +8,16 @@ class FSMTag(models.Model):
     _name = "fsm.tag"
     _description = "Field Service Tag"
 
-    name = fields.Char(required=True,
-
+    name = fields.Char(
+        required=True,
         help="Tag label.",
-
     )
-    parent_id = fields.Many2one("fsm.tag", string="Parent", help="Parent Id. Linked record reference.")
-    color = fields.Integer("Color Index", default=10,
+    parent_id = fields.Many2one(
+        "fsm.tag", string="Parent", help="Parent Id. Linked record reference."
+    )
+    color = fields.Integer(
+        "Color Index",
+        default=10,
         help="Kanban color index (1–11) for visual grouping.",
     )
     full_name = fields.Char(compute="_compute_full_name")
@@ -28,8 +31,8 @@ class FSMTag(models.Model):
     )
 
     _name_uniq = models.Constraint(
-        'unique (name)',
-        'Tag name already exists!',
+        "unique (name)",
+        "Tag name already exists!",
     )
 
     def _compute_full_name(self):

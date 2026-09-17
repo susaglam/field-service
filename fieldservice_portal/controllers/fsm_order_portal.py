@@ -3,8 +3,8 @@ from operator import itemgetter
 
 from odoo import _, http
 from odoo.exceptions import AccessError
-from odoo.http import request
 from odoo.fields import Domain
+from odoo.http import request
 from odoo.tools import groupby as groupbyelem
 
 from odoo.addons.portal.controllers.portal import CustomerPortal

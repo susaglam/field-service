@@ -3,23 +3,20 @@
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
 {
-    'name': 'Field Service Route Account',
-    'version': 'saas~19.4.1.1.3',
-    'category': 'Field Service',
-    'author': 'Open Source Integrators, Odoo Community Association (OCA)',
-    'website': 'https://github.com/OCA/field-service',
-    'depends': [
-        'fieldservice_route',
-        'fieldservice_account_payment'
+    "name": "Field Service Route Account",
+    "version": "saas~19.4.1.1.3",
+    "category": "Field Service",
+    "author": "Open Source Integrators, Odoo Community Association (OCA)",
+    "website": "https://github.com/OCA/field-service",
+    "depends": ["fieldservice_route", "fieldservice_account_payment"],
+    "data": [
+        "security/ir.access.csv",
+        "views/fsm_route_dayroute.xml",
     ],
-    'data': [
-        'security/ir.access.csv',
-        'views/fsm_route_dayroute.xml',
+    "license": "AGPL-3",
+    "development_status": "Beta",
+    "maintainers": [
+        "max3903",
     ],
-    'license': 'AGPL-3',
-    'development_status': 'Beta',
-    'maintainers': [
-        'max3903',
-    ],
-    'installable': True,
+    "installable": True,
 }

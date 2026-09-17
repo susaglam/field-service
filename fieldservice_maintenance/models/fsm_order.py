@@ -7,7 +7,11 @@ from odoo import api, fields, models
 class FSMOrder(models.Model):
     _inherit = "fsm.order"
 
-    request_id = fields.Many2one("maintenance.request", string="Maintenance Request", help="Request Id. Linked record reference.")
+    request_id = fields.Many2one(
+        "maintenance.request",
+        string="Maintenance Request",
+        help="Request Id. Linked record reference.",
+    )
 
     @api.model
     def create(self, vals):

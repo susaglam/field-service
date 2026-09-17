@@ -10,7 +10,7 @@
     "category": "Field Service",
     "author": "Open Source Integrators, "
     "Odoo Community Association (OCA), saas-19.3 port",
-    "website": "https://github.com/susaglam/field-service",
+    "website": "https://github.com/OCA/field-service",
     "depends": [
         "stock",
         "fieldservice_route",

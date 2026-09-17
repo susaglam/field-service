@@ -12,7 +12,10 @@ class ChangeLogStage(models.Model):
     name = fields.Char(string="Stage", required=True)
     description = fields.Text(help="Description.")
     fold = fields.Boolean(string="Folded", help="Fold.")
-    is_close = fields.Boolean(string="Closing Kanban Stage", help="Is Close. Boolean flag — true when the condition holds.")
+    is_close = fields.Boolean(
+        string="Closing Kanban Stage",
+        help="Is Close. Boolean flag — true when the condition holds.",
+    )
     stage_sequence = fields.Integer(
         required=True,
         default=lambda self: self.env["ir.sequence"].next_by_code("res.log.impact")

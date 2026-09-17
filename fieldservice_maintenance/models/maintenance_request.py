@@ -7,7 +7,11 @@ from odoo import _, api, fields, models
 class MaintenanceRequest(models.Model):
     _inherit = "maintenance.request"
 
-    fsm_order_id = fields.Many2one("fsm.order", "Field Service Order", help="Fsm Order Id. Linked record reference.")
+    fsm_order_id = fields.Many2one(
+        "fsm.order",
+        "Field Service Order",
+        help="Fsm Order Id. Linked record reference.",
+    )
 
     @api.model
     def create(self, vals):

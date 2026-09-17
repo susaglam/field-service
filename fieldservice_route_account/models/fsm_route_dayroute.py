@@ -28,9 +28,7 @@ class FSMRouteDayRoute(models.Model):
         if not values.get("stage_id"):
             return result
         for rec in self:
-            if not (
-                rec.stage_id.stage_type == "route" and rec.stage_id.is_closed
-            ):
+            if not (rec.stage_id.stage_type == "route" and rec.stage_id.is_closed):
                 continue
             for route_payment in rec.dayroute_payment_ids:
                 if route_payment.difference <= 0:
@@ -39,24 +37,33 @@ class FSMRouteDayRoute(models.Model):
                 account = partner.property_account_receivable_id
                 amount = route_payment.difference
                 lines = [
-                    (0, 0, {
-                        "name": rec.name,
-                        "account_id": account.id,
-                        "partner_id": partner.id,
-                        "debit": amount,
-                    }),
-                    (0, 0, {
-                        "name": rec.name,
-                        "account_id":
-                            route_payment.journal_id.default_account_id.id,
-                        "credit": amount,
-                    }),
+                    (
+                        0,
+                        0,
+                        {
+                            "name": rec.name,
+                            "account_id": account.id,
+                            "partner_id": partner.id,
+                            "debit": amount,
+                        },
+                    ),
+                    (
+                        0,
+                        0,
+                        {
+                            "name": rec.name,
+                            "account_id": route_payment.journal_id.default_account_id.id,
+                            "credit": amount,
+                        },
+                    ),
                 ]
-                move = self.env["account.move"].create({
-                    "journal_id": route_payment.journal_id.id,
-                    "ref": rec.name,
-                    "line_ids": lines,
-                })
+                move = self.env["account.move"].create(
+                    {
+                        "journal_id": route_payment.journal_id.id,
+                        "ref": rec.name,
+                        "line_ids": lines,
+                    }
+                )
                 route_payment.move_id = move
                 move.action_post()
         return result

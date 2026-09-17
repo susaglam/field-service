@@ -7,6 +7,7 @@ so AI clients can fetch them without scraping the order_read payload.
 """
 
 from odoo import models
+
 try:
     from odoo.addons.cs_mcp_bridge.tools import ai_tool
 except ImportError:
@@ -15,6 +16,7 @@ except ImportError:
     def ai_tool(**_kwargs):
         def _decorator(fn):
             return fn
+
         return _decorator
 
 
@@ -38,6 +40,8 @@ class FieldserviceRepairOrderTemplateMcp(models.Model):
         return {
             "id": rec.id,
             "name": rec.display_name,
-            "repair_order_template_id": rec.repair_order_template_id.display_name if rec.repair_order_template_id else None,
+            "repair_order_template_id": rec.repair_order_template_id.display_name
+            if rec.repair_order_template_id
+            else None,
             "type_internal": rec.type_internal,
         }

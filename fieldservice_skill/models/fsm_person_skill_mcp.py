@@ -3,6 +3,7 @@
 """MCP / @ai_tool surface for fsm.person.skill."""
 
 from odoo import models
+
 try:
     from odoo.addons.cs_mcp_bridge.tools import ai_tool
 except ImportError:
@@ -11,6 +12,7 @@ except ImportError:
     def ai_tool(**_kwargs):
         def _decorator(fn):
             return fn
+
         return _decorator
 
 
@@ -73,9 +75,7 @@ class FsmPersonSkillMcp(models.Model):
         for r in rows:
             by_person.setdefault(r.person_id.id, set()).add(r.skill_id.id)
         wanted = set(skill_ids)
-        qualified = [
-            pid for pid, sids in by_person.items() if wanted.issubset(sids)
-        ]
+        qualified = [pid for pid, sids in by_person.items() if wanted.issubset(sids)]
         persons = self.env["fsm.person"].browse(qualified)
         return {
             "count": len(persons),

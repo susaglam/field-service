@@ -39,21 +39,29 @@ class FSMLocation(models.Model):
     contact_id = fields.Many2one(
         "res.partner",
         string="Primary Contact",
-        domain="[('is_company', '=', False)," " ('fsm_location', '=', False)]",
+        domain="[('is_company', '=', False), ('fsm_location', '=', False)]",
         index=True,
         help="Contact Id. Linked record reference.",
     )
     description = fields.Char(help="Description.")
-    territory_id = fields.Many2one("res.territory", string="Territory",
+    territory_id = fields.Many2one(
+        "res.territory",
+        string="Territory",
         help="Which sales/service territory this location belongs to.",
     )
-    branch_id = fields.Many2one("res.branch", string="Branch",
+    branch_id = fields.Many2one(
+        "res.branch",
+        string="Branch",
         help="Sub-territory / branch grouping below the territory.",
     )
-    district_id = fields.Many2one("res.district", string="District",
+    district_id = fields.Many2one(
+        "res.district",
+        string="District",
         help="Sub-branch / district grouping below the branch.",
     )
-    region_id = fields.Many2one("res.region", string="Region",
+    region_id = fields.Many2one(
+        "res.region",
+        string="Region",
         help="Top-level region grouping above the territory.",
     )
     territory_manager_id = fields.Many2one(
@@ -69,12 +77,17 @@ class FSMLocation(models.Model):
         string="Branch Manager", related="branch_id.partner_id"
     )
 
-    calendar_id = fields.Many2one("resource.calendar", string="Office Hours",
-
+    calendar_id = fields.Many2one(
+        "resource.calendar",
+        string="Office Hours",
         help="Working hours calendar for this location.",
-
     )
-    parent_id = fields.Many2one("fsm.location", string="Parent", index=True, help="Parent Id. Linked record reference.")
+    parent_id = fields.Many2one(
+        "fsm.location",
+        string="Parent",
+        index=True,
+        help="Parent Id. Linked record reference.",
+    )
     parent_path = fields.Char(index=True, help="Parent Path.")
     child_ids = fields.One2many(
         string="Children Locations",
@@ -83,10 +96,14 @@ class FSMLocation(models.Model):
         readonly=True,
         help="Sub-locations of this location.",
     )
-    notes = fields.Html(string="Location Notes",
+    notes = fields.Html(
+        string="Location Notes",
         help="Free-text dispatcher notes (parking, gate codes, customer preferences).",
     )
-    person_ids = fields.One2many("fsm.location.person", "location_id", string="Workers",
+    person_ids = fields.One2many(
+        "fsm.location.person",
+        "location_id",
+        string="Workers",
         help="Workers assigned to service this location.",
     )
     team_id = fields.Many2one(
@@ -116,7 +133,9 @@ class FSMLocation(models.Model):
     # This field is added for backward compatibility. But it's deprecated.
     # Use `parent_id` instead.
     # TODO: Remove this field in the 19.0 migration.
-    fsm_parent_id = fields.Many2one(string="Deprecated Parent", related="parent_id",
+    fsm_parent_id = fields.Many2one(
+        string="Deprecated Parent",
+        related="parent_id",
         help="Parent FSM location — use to model multi-site customers (e.g. HQ → site → floor → room).",
     )
 
@@ -346,6 +365,8 @@ class FSMPerson(models.Model):
     _inherit = "fsm.person"
 
     location_ids = fields.One2many(
-        "fsm.location.person", "person_id", string="Linked Locations",
+        "fsm.location.person",
+        "person_id",
+        string="Linked Locations",
         help="Location Ids. Many-to-many / one-to-many relation collection.",
     )

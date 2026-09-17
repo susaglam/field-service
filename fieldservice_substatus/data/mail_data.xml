@@ -1,5 +1,4 @@
 <odoo noupdate="1">
-
     <record id="fso_substatus_changed" model="mail.message.subtype">
         <field name="name">Substatus Changed</field>
         <field name="sequence">10</field>
@@ -8,5 +7,4 @@
         <field name="internal" eval="True" />
         <field name="description">Substatus Changed</field>
     </record>
-
 </odoo>

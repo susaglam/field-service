@@ -9,6 +9,7 @@ that an AI agent typically needs.
 """
 
 from odoo import models
+
 try:
     from odoo.addons.cs_mcp_bridge.tools import ai_tool
 except ImportError:
@@ -17,6 +18,7 @@ except ImportError:
     def ai_tool(**_kwargs):
         def _decorator(fn):
             return fn
+
         return _decorator
 
 
@@ -159,8 +161,7 @@ class FsmOrderMcp(models.Model):
     @ai_tool(
         name="fieldservice.order_cancel",
         description=(
-            "Cancel an FSM order. Sets its stage to 'Cancelled'. "
-            "Returns the new stage."
+            "Cancel an FSM order. Sets its stage to 'Cancelled'. Returns the new stage."
         ),
         input_schema={
             "type": "object",

@@ -9,16 +9,25 @@ class FSMSize(models.Model):
     _description = "Field Service Size"
 
     name = fields.Char(required=True)
-    type_id = fields.Many2one("fsm.order.type", string="Order Type", help="Type Id. Linked record reference.")
-    parent_id = fields.Many2one("fsm.size", string="Parent Size", index=True, help="Parent Id. Linked record reference.")
-    uom_id = fields.Many2one("uom.uom", string="Unit of Measure", help="Uom Id. Linked record reference.")
+    type_id = fields.Many2one(
+        "fsm.order.type", string="Order Type", help="Type Id. Linked record reference."
+    )
+    parent_id = fields.Many2one(
+        "fsm.size",
+        string="Parent Size",
+        index=True,
+        help="Parent Id. Linked record reference.",
+    )
+    uom_id = fields.Many2one(
+        "uom.uom", string="Unit of Measure", help="Uom Id. Linked record reference."
+    )
     is_order_size = fields.Boolean(
         string="Is the Order Size?", help="The default size for orders of this type"
     )
 
     _name_uniq = models.Constraint(
-        'unique (name)',
-        'Size name already exists!',
+        "unique (name)",
+        "Size name already exists!",
     )
 
     @api.constrains("is_order_size", "type_id")

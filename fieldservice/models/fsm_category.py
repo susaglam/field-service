@@ -9,7 +9,9 @@ class FSMCategory(models.Model):
     _description = "Field Service Worker Category"
 
     name = fields.Char(required=True)
-    parent_id = fields.Many2one("fsm.category", string="Parent", help="Parent Id. Linked record reference.")
+    parent_id = fields.Many2one(
+        "fsm.category", string="Parent", help="Parent Id. Linked record reference."
+    )
     color = fields.Integer("Color Index", default=10)
     full_name = fields.Char(compute="_compute_full_name")
     description = fields.Char(help="Description.")
@@ -22,8 +24,8 @@ class FSMCategory(models.Model):
     )
 
     _name_uniq = models.Constraint(
-        'unique (name)',
-        'Category name already exists!',
+        "unique (name)",
+        "Category name already exists!",
     )
 
     def _compute_full_name(self):

@@ -18,20 +18,26 @@ class FSMPerson(models.Model):
         ondelete="restrict",
         delegate=True,
         bypass_search_access=True,
-
         help="Linked partner record (contact info).",
-
     )
-    category_ids = fields.Many2many("fsm.category", string="Categories",
+    category_ids = fields.Many2many(
+        "fsm.category",
+        string="Categories",
         help="Worker categories / skill groups.",
     )
-    calendar_id = fields.Many2one("resource.calendar", string="Working Schedule",
+    calendar_id = fields.Many2one(
+        "resource.calendar",
+        string="Working Schedule",
         help="Worker's working hours calendar.",
     )
     mobile = fields.Char(
         help="Worker's mobile number for dispatch.",
     )
-    territory_ids = fields.Many2many("res.territory", string="Territories", help="Territory Ids. Many-to-many / one-to-many relation collection.")
+    territory_ids = fields.Many2many(
+        "res.territory",
+        string="Territories",
+        help="Territory Ids. Many-to-many / one-to-many relation collection.",
+    )
     active = fields.Boolean(default=True)
     active_partner = fields.Boolean(
         related="partner_id.active", readonly=True, string="Partner is Active"
@@ -81,9 +87,7 @@ class FSMPerson(models.Model):
                     else:
                         arg_2 = "%" + arg[2] + "%"
                         self.env.cr.execute(
-                            "SELECT id "
-                            "FROM fsm_location "
-                            "WHERE complete_name like %s",
+                            "SELECT id FROM fsm_location WHERE complete_name like %s",
                             (arg_2,),
                         )
                         location_ids = self.env.cr.fetchall()

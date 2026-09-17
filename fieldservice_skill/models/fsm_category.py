@@ -7,4 +7,8 @@ from odoo import fields, models
 class FSMCategory(models.Model):
     _inherit = "fsm.category"
 
-    skill_ids = fields.Many2many("hr.skill", string="Required Skills", help="Skill Ids. Many-to-many / one-to-many relation collection.")
+    skill_ids = fields.Many2many(
+        "hr.skill",
+        string="Required Skills",
+        help="Skill Ids. Many-to-many / one-to-many relation collection.",
+    )

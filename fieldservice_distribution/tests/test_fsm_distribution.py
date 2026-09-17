@@ -6,7 +6,7 @@ from odoo.tests.common import TransactionCase
 
 class TestFSMSDistribution(TransactionCase):
     def setUp(self):
-        super(TestFSMSDistribution, self).setUp()
+        super().setUp()
         self.location = self.env["fsm.location"]
         self.FSMOrder = self.env["fsm.order"]
         self.test_loc_partner = self.env["res.partner"].create(

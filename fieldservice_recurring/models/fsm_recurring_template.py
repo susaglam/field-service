@@ -12,7 +12,11 @@ class FSMRecurringTemplate(models.Model):
     name = fields.Char(required=True)
     active = fields.Boolean(default=True)
     description = fields.Text(help="Description.")
-    fsm_frequency_set_id = fields.Many2one("fsm.frequency.set", "Frequency Set", help="Fsm Frequency Set Id. Linked record reference.")
+    fsm_frequency_set_id = fields.Many2one(
+        "fsm.frequency.set",
+        "Frequency Set",
+        help="Fsm Frequency Set Id. Linked record reference.",
+    )
     max_orders = fields.Integer(
         string="Maximum Orders", help="Maximium number of orders that will be created"
     )
@@ -21,4 +25,6 @@ class FSMRecurringTemplate(models.Model):
         string="Order Template",
         help="This is the order template that will be recurring",
     )
-    company_id = fields.Many2one("res.company", "Company", help="Company Id. Linked record reference.")
+    company_id = fields.Many2one(
+        "res.company", "Company", help="Company Id. Linked record reference."
+    )

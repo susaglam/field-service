@@ -17,11 +17,16 @@ class FSMPersonCalendarFilter(models.Model):
         ondelete="cascade",
         help="User Id. Linked record reference.",
     )
-    person_id = fields.Many2one("fsm.person", "FSM Worker", required=True, help="Person Id. Linked record reference.")
+    person_id = fields.Many2one(
+        "fsm.person",
+        "FSM Worker",
+        required=True,
+        help="Person Id. Linked record reference.",
+    )
     active = fields.Boolean(default=True)
     person_checked = fields.Boolean(default=True, help="Person Checked.")
 
     _user_id_fsm_person_id_unique = models.Constraint(
-        'UNIQUE(user_id,person_id)',
-        'You cannot have the same worker twice.',
+        "UNIQUE(user_id,person_id)",
+        "You cannot have the same worker twice.",
     )

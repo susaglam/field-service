@@ -1,5 +1,4 @@
 <odoo>
-
     <!-- Field Service Stage Status -->
     <record id="fsm_stage_status_tree_view" model="ir.ui.view">
         <field name="name">Order Sub-Status</field>
@@ -21,8 +20,7 @@
                         <group>
                             <field name="name" />
                         </group>
-                        <group>
-                        </group>
+                        <group />
                     </group>
                 </sheet>
             </form>
@@ -48,5 +46,4 @@
         parent="fieldservice.menu_fsm_config_order"
         sequence="21"
     />
-
 </odoo>

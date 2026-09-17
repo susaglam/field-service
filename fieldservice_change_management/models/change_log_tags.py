@@ -14,6 +14,6 @@ class ChangeLogTags(models.Model):
     color = fields.Integer(string="Color Index")
 
     _name_uniq = models.Constraint(
-        'unique (name)',
-        'Tag name already exists!',
+        "unique (name)",
+        "Tag name already exists!",
     )

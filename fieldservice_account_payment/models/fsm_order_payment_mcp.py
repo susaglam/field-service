@@ -3,6 +3,7 @@
 """MCP / @ai_tool surface for account.payment ↔ FSM-order link."""
 
 from odoo import models
+
 try:
     from odoo.addons.cs_mcp_bridge.tools import ai_tool
 except ImportError:
@@ -11,6 +12,7 @@ except ImportError:
     def ai_tool(**_kwargs):
         def _decorator(fn):
             return fn
+
         return _decorator
 
 

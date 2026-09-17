@@ -11,11 +11,17 @@ class FSMLocationPerson(models.Model):
     _order = "sequence"
 
     location_id = fields.Many2one(
-        "fsm.location", string="Location", required=True, index=True,
+        "fsm.location",
+        string="Location",
+        required=True,
+        index=True,
         help="Location Id. Linked record reference.",
     )
     person_id = fields.Many2one(
-        "fsm.person", string="Worker", required=True, index=True,
+        "fsm.person",
+        string="Worker",
+        required=True,
+        index=True,
         help="Person Id. Linked record reference.",
     )
     sequence = fields.Integer(required=True, default="10")
@@ -25,6 +31,6 @@ class FSMLocationPerson(models.Model):
     contact_id = fields.Many2one(related="location_id.contact_id", string="Contact")
 
     _location_person_uniq = models.Constraint(
-        'unique(location_id,person_id)',
-        'The worker is already linked to this location.',
+        "unique(location_id,person_id)",
+        "The worker is already linked to this location.",
     )

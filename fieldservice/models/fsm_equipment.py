@@ -10,15 +10,18 @@ class FSMEquipment(models.Model):
     _inherit = ["mail.thread", "mail.activity.mixin", "fsm.model.mixin"]
     _stage_type = "equipment"
 
-    name = fields.Char(required=True,
-
+    name = fields.Char(
+        required=True,
         help="Equipment name / asset label.",
-
     )
-    person_id = fields.Many2one("fsm.person", string="Assigned Operator",
+    person_id = fields.Many2one(
+        "fsm.person",
+        string="Assigned Operator",
         help="Worker / owner responsible for this equipment.",
     )
-    location_id = fields.Many2one("fsm.location", string="Assigned Location",
+    location_id = fields.Many2one(
+        "fsm.location",
+        string="Assigned Location",
         help="Where the equipment currently resides.",
     )
     notes = fields.Html(
@@ -52,15 +55,28 @@ class FSMEquipment(models.Model):
         store=True,
         readonly=False,
     )
-    current_location_id = fields.Many2one("fsm.location", string="Current Location",
+    current_location_id = fields.Many2one(
+        "fsm.location",
+        string="Current Location",
         help="Tracked current location (may differ from location_id if equipment was moved).",
     )
-    managed_by_id = fields.Many2one("res.partner", string="Managed By", help="Managed By Id. Linked record reference.")
-    owned_by_id = fields.Many2one("res.partner", string="Owned By", help="Owned By Id. Linked record reference.")
-    parent_id = fields.Many2one("fsm.equipment", string="Parent",
+    managed_by_id = fields.Many2one(
+        "res.partner",
+        string="Managed By",
+        help="Managed By Id. Linked record reference.",
+    )
+    owned_by_id = fields.Many2one(
+        "res.partner", string="Owned By", help="Owned By Id. Linked record reference."
+    )
+    parent_id = fields.Many2one(
+        "fsm.equipment",
+        string="Parent",
         help="Parent equipment (e.g. boiler → pump component).",
     )
-    child_ids = fields.One2many("fsm.equipment", "parent_id", string="Children",
+    child_ids = fields.One2many(
+        "fsm.equipment",
+        "parent_id",
+        string="Children",
         help="Sub-components of this equipment.",
     )
     color = fields.Integer("Color Index")
@@ -74,8 +90,8 @@ class FSMEquipment(models.Model):
     )
 
     _name_uniq = models.Constraint(
-        'unique (name)',
-        'Equipment name already exists!',
+        "unique (name)",
+        "Equipment name already exists!",
     )
 
     @api.depends("location_id")

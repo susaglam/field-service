@@ -7,4 +7,9 @@ from odoo import fields, models
 class FSMPerson(models.Model):
     _inherit = "fsm.person"
 
-    skill_ids = fields.One2many("fsm.person.skill", "person_id", string="Skills", help="Skill Ids. Many-to-many / one-to-many relation collection.")
+    skill_ids = fields.One2many(
+        "fsm.person.skill",
+        "person_id",
+        string="Skills",
+        help="Skill Ids. Many-to-many / one-to-many relation collection.",
+    )

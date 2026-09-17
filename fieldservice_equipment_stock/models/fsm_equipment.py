@@ -7,8 +7,12 @@ from odoo import api, fields, models
 class FSMEquipment(models.Model):
     _inherit = "fsm.equipment"
 
-    product_id = fields.Many2one("product.product", string="Product", help="Product Id. Linked record reference.")
-    lot_id = fields.Many2one("stock.lot", string="Serial #", help="Lot Id. Linked record reference.")
+    product_id = fields.Many2one(
+        "product.product", string="Product", help="Product Id. Linked record reference."
+    )
+    lot_id = fields.Many2one(
+        "stock.lot", string="Serial #", help="Lot Id. Linked record reference."
+    )
     current_stock_location_id = fields.Many2one(
         "stock.location",
         string="Current Inventory Location",

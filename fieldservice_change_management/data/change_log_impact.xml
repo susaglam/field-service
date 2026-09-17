@@ -16,5 +16,4 @@
         <field name="description">High Impact</field>
         <field name="log_impact_sequence">1</field>
     </record>
-
 </odoo>

@@ -10,7 +10,10 @@ class FSMOrder(models.Model):
     _inherit = "fsm.order"
 
     repair_ids = fields.One2many(
-        "repair.order", "fsm_order_id", string="Repair Orders", readonly=True,
+        "repair.order",
+        "fsm_order_id",
+        string="Repair Orders",
+        readonly=True,
         help="Repair Ids. Many-to-many / one-to-many relation collection.",
     )
     repair_count = fields.Integer(

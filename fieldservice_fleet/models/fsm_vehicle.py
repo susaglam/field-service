@@ -18,8 +18,8 @@ class FSMVehicle(models.Model):
     )
 
     _fsm_vehicle_fleet_uniq = models.Constraint(
-        'unique(id,fleet_vehicle_id)',
-        'FSM vehicle can only be linked to one fleet vehicle',
+        "unique(id,fleet_vehicle_id)",
+        "FSM vehicle can only be linked to one fleet vehicle",
     )
 
     @api.model_create_multi

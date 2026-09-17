@@ -7,22 +7,28 @@ class ResConfigSettings(models.TransientModel):
     _inherit = "res.config.settings"
 
     fsm_map_default_zoom = fields.Integer(
-        related="company_id.fsm_map_default_zoom", readonly=False,
+        related="company_id.fsm_map_default_zoom",
+        readonly=False,
     )
     fsm_map_default_latitude = fields.Float(
-        related="company_id.fsm_map_default_latitude", readonly=False,
+        related="company_id.fsm_map_default_latitude",
+        readonly=False,
     )
     fsm_map_default_longitude = fields.Float(
-        related="company_id.fsm_map_default_longitude", readonly=False,
+        related="company_id.fsm_map_default_longitude",
+        readonly=False,
     )
     fsm_map_fit_bounds = fields.Boolean(
-        related="company_id.fsm_map_fit_bounds", readonly=False,
+        related="company_id.fsm_map_fit_bounds",
+        readonly=False,
     )
     fsm_map_auto_geocode = fields.Boolean(
-        related="company_id.fsm_map_auto_geocode", readonly=False,
+        related="company_id.fsm_map_auto_geocode",
+        readonly=False,
     )
     fsm_map_default_layer = fields.Selection(
-        related="company_id.fsm_map_default_layer", readonly=False,
+        related="company_id.fsm_map_default_layer",
+        readonly=False,
     )
 
     def action_fsm_geocode_all_locations(self):

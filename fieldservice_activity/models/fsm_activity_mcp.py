@@ -3,6 +3,7 @@
 """MCP / @ai_tool surface for fsm.activity (order checklist activities)."""
 
 from odoo import models
+
 try:
     from odoo.addons.cs_mcp_bridge.tools import ai_tool
 except ImportError:
@@ -11,6 +12,7 @@ except ImportError:
     def ai_tool(**_kwargs):
         def _decorator(fn):
             return fn
+
         return _decorator
 
 
@@ -52,9 +54,7 @@ class FsmActivityMcp(models.Model):
 
     @ai_tool(
         name="fsm_activity.complete",
-        description=(
-            "Mark a single checklist activity on an FSM order as completed."
-        ),
+        description=("Mark a single checklist activity on an FSM order as completed."),
         input_schema={
             "type": "object",
             "properties": {"activity_id": {"type": "integer"}},

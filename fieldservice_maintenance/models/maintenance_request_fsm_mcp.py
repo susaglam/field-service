@@ -3,6 +3,7 @@
 """MCP / @ai_tool surface for maintenance.request ↔ FSM-order link."""
 
 from odoo import models
+
 try:
     from odoo.addons.cs_mcp_bridge.tools import ai_tool
 except ImportError:
@@ -11,6 +12,7 @@ except ImportError:
     def ai_tool(**_kwargs):
         def _decorator(fn):
             return fn
+
         return _decorator
 
 
@@ -20,8 +22,7 @@ class MaintenanceRequestFsmMcp(models.Model):
     @ai_tool(
         name="fsm_maintenance.get_fsm_order",
         description=(
-            "Get the Field Service order linked to a maintenance request "
-            "(if any)."
+            "Get the Field Service order linked to a maintenance request (if any)."
         ),
         input_schema={
             "type": "object",

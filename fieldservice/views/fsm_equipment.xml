@@ -165,7 +165,11 @@
         <field name="name">fsm.equipment.kanban</field>
         <field name="model">fsm.equipment</field>
         <field name="arch" type="xml">
-            <kanban default_group_by="person_id" class="o_kanban_small_column" highlight_color="color">
+            <kanban
+                default_group_by="person_id"
+                class="o_kanban_small_column"
+                highlight_color="color"
+            >
                 <field name="name" />
                 <field name="location_id" />
                 <field name="person_id" />

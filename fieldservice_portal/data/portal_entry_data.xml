@@ -18,11 +18,17 @@
 <odoo>
     <record id="portal_entry_fsm_order" model="portal.entry">
         <field name="name">Work Orders</field>
-        <field name="description">Follow the progress of the work planned at your address</field>
+        <field
+            name="description"
+        >Follow the progress of the work planned at your address</field>
         <field name="url">/my/fsm_orders</field>
-        <field name="image" type="bytes" file="fieldservice_portal/static/src/img/fsmorder.svg"/>
+        <field
+            name="image"
+            type="bytes"
+            file="fieldservice_portal/static/src/img/fsmorder.svg"
+        />
         <field name="placeholder_count">fsm_order_count</field>
         <field name="category">service_category</field>
-        <field name="sequence" eval="105"/>
+        <field name="sequence" eval="105" />
     </record>
 </odoo>

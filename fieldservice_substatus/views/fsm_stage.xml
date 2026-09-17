@@ -1,5 +1,4 @@
 <odoo>
-
     <!-- Fieldservice Stage Form View-->
     <record id="fsm_sub_stage_form_view" model="ir.ui.view">
         <field name="name">fsm.sub.stage.form</field>

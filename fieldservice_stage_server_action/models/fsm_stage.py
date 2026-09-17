@@ -7,4 +7,8 @@ from odoo import fields, models
 class FSMStage(models.Model):
     _inherit = "fsm.stage"
 
-    action_id = fields.Many2one("ir.actions.server", string="Server Action", help="Action Id. Linked record reference.")
+    action_id = fields.Many2one(
+        "ir.actions.server",
+        string="Server Action",
+        help="Action Id. Linked record reference.",
+    )

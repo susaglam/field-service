@@ -22,8 +22,12 @@ class FSMActivity(models.Model):
     completed_on = fields.Datetime(readonly=True, help="Completed On.")
     completed_by = fields.Many2one("res.users", readonly=True, help="Completed By.")
     ref = fields.Char("Reference", readonly=True, help="Ref.")
-    fsm_order_id = fields.Many2one("fsm.order", "FSM Order", help="Fsm Order Id. Linked record reference.")
-    fsm_template_id = fields.Many2one("fsm.template", "FSM Template", help="Fsm Template Id. Linked record reference.")
+    fsm_order_id = fields.Many2one(
+        "fsm.order", "FSM Order", help="Fsm Order Id. Linked record reference."
+    )
+    fsm_template_id = fields.Many2one(
+        "fsm.template", "FSM Template", help="Fsm Template Id. Linked record reference."
+    )
     state = fields.Selection(
         [("todo", "To Do"), ("done", "Completed"), ("cancel", "Cancelled")],
         readonly=True,

@@ -13,57 +13,57 @@
         <field name="binding_type">report</field>
     </record>
 
-  <template id="report_change_log_document">
-    <t t-name="fieldservice_change_management.report_change_log_document">
+    <template id="report_change_log_document">
         <t t-name="fieldservice_change_management.report_change_log_document">
-            <t t-call="web.html_container">
-                <t t-call="web.external_layout">
-                    <div align="center">
-                        <h3>Change Logs</h3>
-                    </div>
-                    <t t-foreach="docs" t-as="doc">
-                        <h4>
+            <t t-name="fieldservice_change_management.report_change_log_document">
+                <t t-call="web.html_container">
+                    <t t-call="web.external_layout">
+                        <div align="center">
+                            <h3>Change Logs</h3>
+                        </div>
+                        <t t-foreach="docs" t-as="doc">
+                            <h4>
                             <span t-field="doc.location_id.ref" /> - <span
-                                    t-field="doc.location_id"
-                                />
+                                t-field="doc.location_id"
+                            />
                         </h4>
-                    <table class="table table-sm o_main_table">
-                        <thead>
-                            <tr>
-                                <t t-set="colspan" t-value="4" />
-                                <th class="text-left">Title</th>
-                                <th class="text-left">Type</th>
-                                <th class="text-left">Description</th>
-                                <th class="text-left">Changed On</th>
-                                <th class="text-left">Changed By</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>
-                                    <span t-field="doc.name" />
-                                </td>
-                                <td class="text-left">
-                                    <span t-field="doc.type_id" />
-                                </td>
-                                <td class="text-left">
-                                    <span t-field="doc.description" />
-                                </td>
-                                <td class="text-left">
-                                    <span t-field="doc.implemented_on" />
-                                </td>
-                                <td class="text-left">
-                                    <span t-field="doc.user_id" />
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
+                            <table class="table table-sm o_main_table">
+                                <thead>
+                                    <tr>
+                                        <t t-set="colspan" t-value="4" />
+                                        <th class="text-left">Title</th>
+                                        <th class="text-left">Type</th>
+                                        <th class="text-left">Description</th>
+                                        <th class="text-left">Changed On</th>
+                                        <th class="text-left">Changed By</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <span t-field="doc.name" />
+                                        </td>
+                                        <td class="text-left">
+                                            <span t-field="doc.type_id" />
+                                        </td>
+                                        <td class="text-left">
+                                            <span t-field="doc.description" />
+                                        </td>
+                                        <td class="text-left">
+                                            <span t-field="doc.implemented_on" />
+                                        </td>
+                                        <td class="text-left">
+                                            <span t-field="doc.user_id" />
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </t>
+                    </t>
                 </t>
-              </t>
             </t>
         </t>
-    </t>
-  </template>
+    </template>
 
     <record id="location_change_log_document" model="ir.actions.report">
         <field name="name">Change Logs</field>
@@ -89,8 +89,8 @@
                         <t t-call="web.external_layout">
                             <div align="center">
                                 <h3>Change Logs for <span t-field="doc.ref" /> - <span
-                                        t-field="doc.name"
-                                    /></h3>
+                                    t-field="doc.name"
+                                /></h3>
                             </div>
                             <table class="table table-sm o_main_table">
                                 <thead>
@@ -131,5 +131,4 @@
             </t>
         </t>
     </template>
-
 </odoo>

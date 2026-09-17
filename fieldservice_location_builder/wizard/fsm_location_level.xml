@@ -1,5 +1,4 @@
 <odoo>
-
     <!-- Location Level Tree View -->
     <record id="fsm_location_level_tree_view" model="ir.ui.view">
         <field name="name">fsm.location.level.tree</field>
@@ -25,7 +24,9 @@
             <form string="Location Level">
                 <sheet>
                     <label for="name" class="oe_edit_only" />
-                    <h1> <field name="name" /></h1>
+                    <h1>
+                        <field name="name" />
+                    </h1>
                     <group>
                         <field name="spacer" />
                         <field name="start_number" />
@@ -37,5 +38,4 @@
             </form>
         </field>
     </record>
-
 </odoo>

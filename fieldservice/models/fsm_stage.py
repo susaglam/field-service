@@ -17,7 +17,9 @@ class FSMStage(models.Model):
         return [default_team_id] if default_team_id else None
 
     active = fields.Boolean(default=True)
-    name = fields.Char(required=True, translate=True,
+    name = fields.Char(
+        required=True,
+        translate=True,
         help="Display name of the stage (e.g. 'En Route', 'Completed').",
     )
     sequence = fields.Integer(default=1, help="Used to order stages. Lower is better.")
@@ -35,7 +37,7 @@ class FSMStage(models.Model):
         "there are no record in that stage to display.",
     )
     is_closed = fields.Boolean(
-        "Is a close stage", help="Services in this stage are considered " "as closed."
+        "Is a close stage", help="Services in this stage are considered as closed."
     )
     is_default = fields.Boolean("Is a default stage", help="Used a default stage")
     custom_color = fields.Char(

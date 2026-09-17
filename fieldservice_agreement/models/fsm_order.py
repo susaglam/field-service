@@ -7,4 +7,6 @@ from odoo import fields, models
 class FSMOrder(models.Model):
     _inherit = "fsm.order"
 
-    agreement_id = fields.Many2one("agreement", string="Agreement", help="Agreement Id. Linked record reference.")
+    agreement_id = fields.Many2one(
+        "agreement", string="Agreement", help="Agreement Id. Linked record reference."
+    )

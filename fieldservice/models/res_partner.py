@@ -18,7 +18,8 @@ class ResPartner(models.Model):
         help="Fsm Location Ids. Many-to-many / one-to-many relation collection.",
     )
     service_location_id = fields.Many2one(
-        "fsm.location", string="Primary Service Location",
+        "fsm.location",
+        string="Primary Service Location",
         help="Service Location Id. Linked record reference.",
     )
     owned_location_ids = fields.One2many(

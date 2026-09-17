@@ -57,7 +57,9 @@ class FSMFrequency(models.Model):
         help="""Checking this box will make this an exclusive rule. Exclusive
             rules prevent the configured days from being a schedule option""",
     )
-    company_id = fields.Many2one("res.company", "Company", help="Company Id. Linked record reference.")
+    company_id = fields.Many2one(
+        "res.company", "Company", help="Company Id. Linked record reference."
+    )
     use_bymonthday = fields.Boolean(
         string="Use Day of Month",
         help="""When selected you will be able to specify which calendar day
@@ -78,7 +80,10 @@ class FSMFrequency(models.Model):
     sa = fields.Boolean("Saturday", help="Sa.")
     su = fields.Boolean("Sunday", help="Su.")
 
-    use_bymonth = fields.Boolean(string="Use Months", help="Use Bymonth. Toggle that enables the related behaviour.")
+    use_bymonth = fields.Boolean(
+        string="Use Months",
+        help="Use Bymonth. Toggle that enables the related behaviour.",
+    )
     jan = fields.Boolean("January", help="Jan.")
     feb = fields.Boolean("February", help="Feb.")
     mar = fields.Boolean("March", help="Mar.")
@@ -92,7 +97,10 @@ class FSMFrequency(models.Model):
     nov = fields.Boolean("November", help="Nov.")
     dec = fields.Boolean("December", help="Dec.")
 
-    use_setpos = fields.Boolean(string="Use Position", help="Use Setpos. Toggle that enables the related behaviour.")
+    use_setpos = fields.Boolean(
+        string="Use Position",
+        help="Use Setpos. Toggle that enables the related behaviour.",
+    )
     set_pos = fields.Integer(
         string="By Position",
         help="""Specify an occurrence number, positive or negative,
