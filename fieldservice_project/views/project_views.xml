@@ -5,7 +5,11 @@
         <field name="inherit_id" ref="project.edit_project" />
         <field name="arch" type="xml">
             <notebook position="inside">
-                <page string="Service Orders" groups="fieldservice.group_fsm_user">
+                <page
+                    string="Service Orders"
+                    name="fsm_orders"
+                    groups="fieldservice.group_fsm_user"
+                >
                     <button
                         name="action_create_order"
                         string="Create FSM Order"

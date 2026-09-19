@@ -7,7 +7,7 @@ access_fsm_person_user,fsm.person.user,fsm.person,fieldservice.group_fsm_user_ow
 access_fsm_person_manager,fsm.person.manager,fsm.person,fieldservice.group_fsm_manager,crud,
 access_fsm_location_user,fsm.location.user,fsm.location,fieldservice.group_fsm_user_own,ru,
 access_fsm_location_dispatcher,fsm.location.dispatcher,fsm.location,fieldservice.group_fsm_dispatcher,cru,
-access_fsm_order_user,fsm.order.user,fsm.order,fieldservice.group_fsm_user_own,ru,
+access_fsm_order_user,fsm.order.user,fsm.order,fieldservice.group_fsm_user_own,ru,"['|', ('person_id.partner_id.user_ids', 'in', [user.id]), ('person_ids.partner_id.user_ids', 'in', [user.id])]"
 access_fsm_order_dispatcher,fsm.order.dispatcher,fsm.order,fieldservice.group_fsm_dispatcher,crud,
 access_fsm_equipment_fsm_user,fsm.equipment.user,fsm.equipment,fieldservice.group_fsm_user_own,r,
 access_fsm_equipment_fsm_manager,fsm.equipment.manager,fsm.equipment,fieldservice.group_fsm_manager,crud,

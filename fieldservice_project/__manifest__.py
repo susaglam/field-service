@@ -3,7 +3,7 @@
 {
     "name": "Field Service - Project",
     "summary": "Create field service orders from a project or project task",
-    "version": "saas~19.4.1.0.2",
+    "version": "saas~19.4.1.0.4",
     "license": "AGPL-3",
     "author": "Pavlov Media, Odoo Community Association (OCA)",
     "category": "Project",
