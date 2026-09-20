@@ -89,18 +89,17 @@ msgstr "Weergavenaam"
 msgid ""
 "Enable to display field service orders based on it's stage in the portal"
 msgstr ""
-"Schakel in om Field Service-orders op basis van hun fase in het portaal te "
-"tonen"
+"Schakel in om werkbonnen op basis van hun fase in het portaal te tonen"
 
 #. module: fieldservice_portal
 #: model_terms:ir.ui.view,arch_db:fieldservice_portal.portal_my_home_fsm_order
 msgid "FSM Orders"
-msgstr "FSM-orders"
+msgstr "Werkbonnen"
 
 #. module: fieldservice_portal
 #: model:ir.model,name:fieldservice_portal.model_fsm_stage
 msgid "Field Service Stage"
-msgstr "Field Service-fase"
+msgstr "Buitendienstfase"
 
 #. module: fieldservice_portal
 #: model_terms:ir.ui.view,arch_db:fieldservice_portal.portal_fieldservice_order_page
@@ -201,7 +200,7 @@ msgstr "Type"
 #. module: fieldservice_portal
 #: model_terms:ir.ui.view,arch_db:fieldservice_portal.portal_my_home_fsm_order
 msgid "View your fieldservice orders"
-msgstr "Bekijk uw Field Service-orders"
+msgstr "Bekijk uw werkbonnen"
 
 #. module: fieldservice_portal
 #: model:ir.model.fields,field_description:fieldservice_portal.field_fsm_stage__portal_visible

@@ -70,12 +70,12 @@ msgstr "Activiteit-type-icoon"
 #. module: fieldservice_recurring
 #: model_terms:ir.actions.act_window,help:fieldservice_recurring.action_fsm_recurring
 msgid "Add a Field Service Recurring Orders here."
-msgstr "Voeg hier een Field Service Terugkerende order toe."
+msgstr "Voeg hier een Buitendienst Terugkerende order toe."
 
 #. module: fieldservice_recurring
 #: model_terms:ir.actions.act_window,help:fieldservice_recurring.action_fsm_recurring_template
 msgid "Add a Field Service Recurring Template here."
-msgstr "Voeg hier een Field Service Terugkerend sjabloon toe."
+msgstr "Voeg hier een Buitendienst Terugkerend sjabloon toe."
 
 #. module: fieldservice_recurring
 #: model:ir.model.fields,field_description:fieldservice_recurring.field_fsm_frequency__apr
@@ -174,7 +174,8 @@ msgstr ""
 #. module: fieldservice_recurring
 #: model_terms:ir.actions.act_window,help:fieldservice_recurring.action_fsm_frequency
 msgid "Define a Frequency for scheduling recurring orders here."
-msgstr "Definieer hier een frequentie voor het plannen van terugkerende orders."
+msgstr ""
+"Definieer hier een frequentie voor het plannen van terugkerende orders."
 
 #. module: fieldservice_recurring
 #: model:ir.model.fields,field_description:fieldservice_recurring.field_fsm_recurring__description
@@ -237,37 +238,37 @@ msgstr "Februari"
 #. module: fieldservice_recurring
 #: model:ir.actions.act_window,name:fieldservice_recurring.action_fsm_frequency
 msgid "Field Service Frequencies"
-msgstr "Field Service-frequenties"
+msgstr "Buitendienst-frequenties"
 
 #. module: fieldservice_recurring
 #: model:ir.actions.act_window,name:fieldservice_recurring.action_fsm_frequency_set
 msgid "Field Service Frequency Rule Sets"
-msgstr "Field Service-frequentie-regelsets"
+msgstr "Buitendienst-frequentie-regelsets"
 
 #. module: fieldservice_recurring
 #: model:ir.model,name:fieldservice_recurring.model_fsm_order
 msgid "Field Service Order"
-msgstr "Field Service-order"
+msgstr "Werkbon"
 
 #. module: fieldservice_recurring
 #: model:ir.actions.act_window,name:fieldservice_recurring.action_fsm_recurring
 msgid "Field Service Recurring Orders"
-msgstr "Field Service terugkerende orders"
+msgstr "Buitendienst terugkerende orders"
 
 #. module: fieldservice_recurring
 #: model:ir.actions.act_window,name:fieldservice_recurring.action_fsm_recurring_template
 msgid "Field Service Recurring Templates"
-msgstr "Field Service terugkerende sjablonen"
+msgstr "Buitendienst terugkerende sjablonen"
 
 #. module: fieldservice_recurring
 #: model:ir.model,name:fieldservice_recurring.model_fsm_team
 msgid "Field Service Team"
-msgstr "Field Service-team"
+msgstr "Buitendienstteam"
 
 #. module: fieldservice_recurring
 #: model:ir.actions.server,name:fieldservice_recurring.recurring_orders_cron_ir_actions_server
 msgid "Field Service: generate recurring orders"
-msgstr "Field Service: terugkerende orders genereren"
+msgstr "Buitendienst: terugkerende orders genereren"
 
 #. module: fieldservice_recurring
 #: model:ir.model.fields,field_description:fieldservice_recurring.field_fsm_frequency__message_follower_ids
@@ -319,12 +320,12 @@ msgstr "Frequentieregel-set-naam"
 #. module: fieldservice_recurring
 #: model:ir.model,name:fieldservice_recurring.model_fsm_frequency_set
 msgid "Frequency Rule Set for Field Service Orders"
-msgstr "Frequentieregel-set voor Field Service-orders"
+msgstr "Frequentieregel-set voor werkbonnen"
 
 #. module: fieldservice_recurring
 #: model:ir.model,name:fieldservice_recurring.model_fsm_frequency
 msgid "Frequency Rule for Field Service Orders"
-msgstr "Frequentieregel voor Field Service-orders"
+msgstr "Frequentieregel voor werkbonnen"
 
 #. module: fieldservice_recurring
 #: model:ir.model.fields,field_description:fieldservice_recurring.field_fsm_frequency_set__fsm_frequency_ids
@@ -625,12 +626,12 @@ msgstr "Beoordelingen"
 #. module: fieldservice_recurring
 #: model:ir.model,name:fieldservice_recurring.model_fsm_recurring
 msgid "Recurring Field Service Order"
-msgstr "Terugkerende Field Service-order"
+msgstr "Terugkerende werkbon"
 
 #. module: fieldservice_recurring
 #: model:ir.model,name:fieldservice_recurring.model_fsm_recurring_template
 msgid "Recurring Field Service Order Template"
-msgstr "Terugkerende Field Service-order-sjabloon"
+msgstr "Terugkerende werkbon-sjabloon"
 
 #. module: fieldservice_recurring
 #: model:ir.model.fields,field_description:fieldservice_recurring.field_fsm_order__fsm_recurring_id

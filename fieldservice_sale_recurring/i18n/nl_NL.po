@@ -38,8 +38,8 @@ msgid ""
 msgstr ""
 "Bepaalt wat er gebeurt bij bevestiging van de verkooporder:\n"
 "                - Geen: niets extra, standaardgedrag.\n"
-"                - Per Verkooporder: Eén FSM-order wordt aangemaakt voor de verkoop.\n"
-"                - Per Verkooporderregel: Eén FSM-order voor elke verkooporderregel\n"
+"                - Per Verkooporder: Eén werkbon wordt aangemaakt voor de verkoop.\n"
+"                - Per Verkooporderregel: Eén werkbon voor elke verkooporderregel\n"
 "                wordt aangemaakt."
 
 #. module: fieldservice_sale_recurring
@@ -71,8 +71,7 @@ msgstr "Field Service Terugkerende sjabloon"
 #. module: fieldservice_sale_recurring
 #: model:ir.model.fields,field_description:fieldservice_sale_recurring.field_sale_order__fsm_recurring_ids
 msgid "Field Service Recurring orders associated to this sale"
-msgstr ""
-"Field Service Terugkerende orders gekoppeld aan deze verkoop"
+msgstr "Field Service Terugkerende orders gekoppeld aan deze verkoop"
 
 #. module: fieldservice_sale_recurring
 #: model:ir.model.fields,field_description:fieldservice_sale_recurring.field_product_product__field_service_tracking
@@ -135,8 +134,8 @@ msgstr "Verkooporders"
 #: model:ir.model.fields,help:fieldservice_sale_recurring.field_product_template__fsm_recurring_template_id
 msgid "Select a field service recurring order template to be created"
 msgstr ""
-"Selecteer een Field Service terugkerende order-sjabloon dat aangemaakt "
-"moet worden"
+"Selecteer een Field Service terugkerende order-sjabloon dat aangemaakt moet "
+"worden"
 
 #. module: fieldservice_sale_recurring
 #. odoo-python

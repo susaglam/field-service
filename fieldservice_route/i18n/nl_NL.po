@@ -330,8 +330,7 @@ msgstr "Team"
 #. odoo-python
 #: code:addons/fieldservice_route/models/fsm_route_dayroute.py:0
 msgid "The day route is exceeding the maximum number of orders of the route."
-msgstr ""
-"De dagroute overschrijdt het maximum aantal orders van de route."
+msgstr "De dagroute overschrijdt het maximum aantal orders van de route."
 
 #. module: fieldservice_route
 #. odoo-python
@@ -373,7 +372,7 @@ msgstr "Woensdag"
 #. odoo-python
 #: code:addons/fieldservice_route/models/fsm_route_dayroute.py:0
 msgid "You must create a FSM team first."
-msgstr "U moet eerst een FSM-team aanmaken."
+msgstr "U moet eerst een buitendienstteam aanmaken."
 
 #. module: fieldservice_route
 #: model_terms:ir.ui.view,arch_db:fieldservice_route.fsm_route_form

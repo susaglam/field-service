@@ -76,7 +76,7 @@ msgstr "Weergavenaam"
 #. module: fieldservice_activity
 #: model:ir.model.fields,field_description:fieldservice_activity.field_fsm_activity__fsm_order_id
 msgid "FSM Order"
-msgstr "FSM-order"
+msgstr "Werkbon"
 
 #. module: fieldservice_activity
 #: model:ir.model.fields,field_description:fieldservice_activity.field_fsm_activity__fsm_template_id
@@ -156,5 +156,4 @@ msgstr "Te doen"
 msgid ""
 "You must complete activity '%s' before                     completing this "
 "order."
-msgstr ""
-"U moet activiteit '%s' voltooien voordat u deze order kunt voltooien."
+msgstr "U moet activiteit '%s' voltooien voordat u deze order kunt voltooien."

@@ -37,8 +37,8 @@ msgid ""
 "%(name)s is already a Field Service location, so no second location was "
 "created. Open the existing one from the contact's Field Service tab."
 msgstr ""
-"%(name)s is al een Field Service-locatie, dus er is geen tweede locatie "
-"aangemaakt. Open de bestaande via het tabblad Field Service van het contact."
+"%(name)s is al een buitendienstlocatie, dus er is geen tweede locatie "
+"aangemaakt. Open de bestaande via het tabblad Buitendienst van het contact."
 
 #. module: fieldservice
 #. odoo-python
@@ -47,14 +47,14 @@ msgid ""
 "%(name)s is already a Field Service worker, so no second worker was created."
 " Find the existing one under Field Service > Master Data > Workers."
 msgstr ""
-"%(name)s is al een Field Service-medewerker, dus er is geen tweede "
-"medewerker aangemaakt. U vindt de bestaande onder Field Service > "
-"Stamgegevens > Medewerkers."
+"%(name)s is al een buitendienstmedewerker, dus er is geen tweede medewerker "
+"aangemaakt. U vindt de bestaande onder Buitendienst > Stamgegevens > "
+"Medewerkers."
 
 #. module: fieldservice
 #: model:ir.actions.report,print_report_name:fieldservice.action_report_fsm_order
 msgid "'Service Order - %s' % (object.name)"
-msgstr "'Service-order - %s' % (object.name)"
+msgstr "'Werkbon - %s' % (object.name)"
 
 #. module: fieldservice
 #: model_terms:ir.ui.view,arch_db:fieldservice.view_team_kanban
@@ -84,7 +84,9 @@ msgstr "<strong>ETA:</strong>"
 #. module: fieldservice
 #: model_terms:ir.ui.view,arch_db:fieldservice.fsm_person_form
 msgid "<strong>The contact linked to this user is still active</strong>"
-msgstr "<strong>De contactpersoon gekoppeld aan deze gebruiker is nog actief</strong>"
+msgstr ""
+"<strong>De contactpersoon gekoppeld aan deze gebruiker is nog "
+"actief</strong>"
 
 #. module: fieldservice
 #: model:ir.model.fields,field_description:fieldservice.field_fsm_equipment__message_needaction
@@ -178,18 +180,18 @@ msgstr "Werkelijke duur in uren"
 #. module: fieldservice
 #: model_terms:ir.actions.act_window,help:fieldservice.action_fsm_person
 msgid "Add Field Service Workers here."
-msgstr "Voeg hier Field Service-medewerkers toe."
+msgstr "Voeg hier buitendienstmedewerkers toe."
 
 #. module: fieldservice
 #: model_terms:ir.actions.act_window,help:fieldservice.action_fsm_dash_equipment
 #: model_terms:ir.actions.act_window,help:fieldservice.action_fsm_equipment
 msgid "Add a Field Service Equipment here."
-msgstr "Voeg hier een Field Service-apparaat toe."
+msgstr "Voeg hier een buitendienstapparaat toe."
 
 #. module: fieldservice
 #: model_terms:ir.actions.act_window,help:fieldservice.action_fsm_category
 msgid "Add a Field Service Worker Category here."
-msgstr "Voeg hier een Field Service-medewerker-categorie toe."
+msgstr "Voeg hier een buitendienstmedewerker-categorie toe."
 
 #. module: fieldservice
 #: model_terms:ir.ui.view,arch_db:fieldservice.fsm_order_form
@@ -273,7 +275,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:fieldservice.field_res_config_settings__module_fieldservice_timeline
 #: model_terms:ir.ui.view,arch_db:fieldservice.res_config_settings_view_form
 msgid "Allow Field Service Web Timeline View"
-msgstr "Field Service-tijdlijnweergave toestaan"
+msgstr "Tijdlijnweergave buitendienst toestaan"
 
 #. module: fieldservice
 #: model_terms:ir.ui.view,arch_db:fieldservice.fsm_person_form
@@ -508,7 +510,8 @@ msgstr "Kanalen"
 #: model:ir.model.fields,help:fieldservice.field_fsm_location__is_company
 #: model:ir.model.fields,help:fieldservice.field_fsm_person__is_company
 msgid "Check if the contact is a company, otherwise it is a person"
-msgstr "Vink aan als de contactpersoon een bedrijf is, anders is het een persoon"
+msgstr ""
+"Vink aan als de contactpersoon een bedrijf is, anders is het een persoon"
 
 #. module: fieldservice
 #: model:ir.model.fields,help:fieldservice.field_fsm_location__country_enforce_cities
@@ -726,12 +729,12 @@ msgstr "Converteren naar FS-medewerker"
 #. module: fieldservice
 #: model:ir.actions.act_window,name:fieldservice.partner_fsm_action
 msgid "Convert to FSM Record"
-msgstr "Converteren naar FSM-record"
+msgstr "Converteren naar buitendienstrecord"
 
 #. module: fieldservice
 #: model_terms:ir.ui.view,arch_db:fieldservice.partner_wizard_view
 msgid "Convert to a Field Service Worker or Location"
-msgstr "Converteren naar een Field Service-medewerker of -locatie"
+msgstr "Converteren naar een buitendienstmedewerker of -locatie"
 
 #. module: fieldservice
 #: model:ir.model.fields,help:fieldservice.field_fsm_location__message_bounce
@@ -757,7 +760,7 @@ msgstr "Landcode"
 #. module: fieldservice
 #: model_terms:ir.ui.view,arch_db:fieldservice.res_config_settings_view_form
 msgid "Create FSM Orders from Opportunities"
-msgstr "FSM-orders aanmaken vanuit verkoopkansen"
+msgstr "Werkbonnen aanmaken vanuit verkoopkansen"
 
 #. module: fieldservice
 #: model:ir.model,website_form_label:fieldservice.model_res_partner
@@ -775,7 +778,7 @@ msgid ""
 "Create a Field Service location for this contact so orders can be planned at"
 " its address."
 msgstr ""
-"Maak een Field Service-locatie voor dit contact aan, zodat er opdrachten op "
+"Maak een buitendienstlocatie voor dit contact aan, zodat er opdrachten op "
 "dit adres gepland kunnen worden."
 
 #. module: fieldservice
@@ -784,7 +787,7 @@ msgid ""
 "Create a Field Service worker for this contact so orders can be assigned to "
 "them."
 msgstr ""
-"Maak een Field Service-medewerker voor dit contact aan, zodat er opdrachten "
+"Maak een buitendienstmedewerker voor dit contact aan, zodat er opdrachten "
 "aan toegewezen kunnen worden."
 
 #. module: fieldservice
@@ -1119,27 +1122,27 @@ msgstr "FSM-locaties"
 #. module: fieldservice
 #: model_terms:ir.ui.view,arch_db:fieldservice.fsm_order_search_view
 msgid "FSM Order Name"
-msgstr "FSM-ordernaam"
+msgstr "Werkbonnaam"
 
 #. module: fieldservice
 #: model:ir.model,name:fieldservice.model_fsm_order_sign_wizard
 msgid "FSM Order Sign Wizard"
-msgstr "FSM-ordertekenwizard"
+msgstr "Werkbon ondertekenen"
 
 #. module: fieldservice
 #: model_terms:ir.ui.view,arch_db:fieldservice.fsm_order_calendar_view
 msgid "FSM Orders"
-msgstr "FSM-orders"
+msgstr "Werkbonnen"
 
 #. module: fieldservice
 #: model:ir.model,name:fieldservice.model_fsm_person_calendar_filter
 msgid "FSM Person Calendar Filter"
-msgstr "FSM-persoon agendafilter"
+msgstr "Agendafilter buitendienstmedewerker"
 
 #. module: fieldservice
 #: model:ir.model,name:fieldservice.model_fsm_wizard
 msgid "FSM Record Conversion"
-msgstr "FSM-recordconversie"
+msgstr "Record omzetten naar buitendienst"
 
 #. module: fieldservice
 #: model:ir.model.fields,field_description:fieldservice.field_fsm_person_calendar_filter__person_id
@@ -1152,70 +1155,70 @@ msgstr "FSM-medewerker"
 #: model_terms:ir.ui.view,arch_db:fieldservice.fsm_partner_fields
 #: model_terms:ir.ui.view,arch_db:fieldservice.res_config_settings_view_form
 msgid "Field Service"
-msgstr "Field Service"
+msgstr "Buitendienst"
 
 #. module: fieldservice
 #: model:ir.actions.act_window,name:fieldservice.action_fsm_category
 msgid "Field Service Category"
-msgstr "Field Service-categorie"
+msgstr "Buitendienstcategorie"
 
 #. module: fieldservice
 #: model:ir.actions.act_window,name:fieldservice.action_fsm_dash_equipment
 #: model:ir.actions.act_window,name:fieldservice.action_fsm_equipment
 #: model:ir.model,name:fieldservice.model_fsm_equipment
 msgid "Field Service Equipment"
-msgstr "Field Service-apparaat"
+msgstr "Buitendienstapparaat"
 
 #. module: fieldservice
 #: model:ir.model,name:fieldservice.model_fsm_location
 msgid "Field Service Location"
-msgstr "Field Service-locatie"
+msgstr "Buitendienstlocatie"
 
 #. module: fieldservice
 #: model:ir.model,name:fieldservice.model_fsm_location_person
 msgid "Field Service Location Person Info"
-msgstr "Field Service-locatie persoonsinfo"
+msgstr "Buitendienstlocatie persoonsinfo"
 
 #. module: fieldservice
 #: model:ir.model,name:fieldservice.model_fsm_order
 msgid "Field Service Order"
-msgstr "Field Service-order"
+msgstr "Werkbon"
 
 #. module: fieldservice
 #: model:ir.model,name:fieldservice.model_fsm_template
 msgid "Field Service Order Template"
-msgstr "Field Service-ordersjabloon"
+msgstr "Werkbonsjabloon"
 
 #. module: fieldservice
 #: model:ir.model,name:fieldservice.model_fsm_order_type
 msgid "Field Service Order Type"
-msgstr "Field Service-ordertype"
+msgstr "Werkbontype"
 
 #. module: fieldservice
 #: model:ir.model,name:fieldservice.model_fsm_stage
 msgid "Field Service Stage"
-msgstr "Field Service-fase"
+msgstr "Buitendienstfase"
 
 #. module: fieldservice
 #: model:ir.model,name:fieldservice.model_fsm_tag
 msgid "Field Service Tag"
-msgstr "Field Service-tag"
+msgstr "Buitendiensttag"
 
 #. module: fieldservice
 #: model:ir.model,name:fieldservice.model_fsm_team
 msgid "Field Service Team"
-msgstr "Field Service-team"
+msgstr "Buitendienstteam"
 
 #. module: fieldservice
 #: model:ir.model,name:fieldservice.model_fsm_person
 #: model_terms:ir.ui.view,arch_db:fieldservice.fsm_person_form
 msgid "Field Service Worker"
-msgstr "Field Service-medewerker"
+msgstr "Buitendienstmedewerker"
 
 #. module: fieldservice
 #: model:ir.model,name:fieldservice.model_fsm_category
 msgid "Field Service Worker Category"
-msgstr "Field Service-medewerkercategorie"
+msgstr "Buitendienstmedewerker-categorie"
 
 #. module: fieldservice
 #: model:ir.actions.act_window,name:fieldservice.action_fsm_person
@@ -1223,7 +1226,7 @@ msgstr "Field Service-medewerkercategorie"
 #: model:ir.model.fields,field_description:fieldservice.field_res_territory__person_ids
 #: model_terms:ir.ui.view,arch_db:fieldservice.res_territory_form_view_inherit
 msgid "Field Service Workers"
-msgstr "Field Service-medewerkers"
+msgstr "Buitendienstmedewerkers"
 
 #. module: fieldservice
 #: model:ir.model.fields,help:fieldservice.field_fsm_location__phone_sanitized
@@ -1288,7 +1291,7 @@ msgstr ""
 #. module: fieldservice
 #: model:ir.model,name:fieldservice.model_fsm_model_mixin
 msgid "Fsm Model Mixin"
-msgstr "FSM-model-mixin"
+msgstr "Buitendienstmodel-mixin"
 
 #. module: fieldservice
 #: model:ir.model.fields,field_description:fieldservice.field_fsm_category__full_name
@@ -1512,12 +1515,12 @@ msgstr "Intern type"
 #. module: fieldservice
 #: model:ir.model.fields,field_description:fieldservice.field_res_config_settings__module_fieldservice_account
 msgid "Invoice your FSM orders"
-msgstr "Factureer uw FSM-orders"
+msgstr "Factureer uw werkbonnen"
 
 #. module: fieldservice
 #: model_terms:ir.ui.view,arch_db:fieldservice.res_config_settings_view_form
 msgid "Invoice your Service Orders"
-msgstr "Factureer uw service-orders"
+msgstr "Factureer uw werkbonnen"
 
 #. module: fieldservice
 #: model:ir.model.fields,field_description:fieldservice.field_fsm_equipment__message_is_follower
@@ -1656,12 +1659,12 @@ msgstr "Breedtegraad"
 #. module: fieldservice
 #: model:ir.model.fields,field_description:fieldservice.field_res_config_settings__module_fieldservice_repair
 msgid "Link FSM orders to MRP Repair orders"
-msgstr "Koppel FSM-orders aan MRP-reparatieorders"
+msgstr "Koppel werkbonnen aan MRP-reparatieorders"
 
 #. module: fieldservice
 #: model:ir.model.fields,field_description:fieldservice.field_res_config_settings__module_fieldservice_maintenance
 msgid "Link FSM orders to maintenance requests"
-msgstr "Koppel FSM-orders aan onderhoudsverzoeken"
+msgstr "Koppel werkbonnen aan onderhoudsverzoeken"
 
 #. module: fieldservice
 #: model:ir.model.fields,field_description:fieldservice.field_res_config_settings__module_fieldservice_fleet
@@ -1671,7 +1674,7 @@ msgstr "Koppel FSM-voertuigen aan wagenparkvoertuigen"
 #. module: fieldservice
 #: model_terms:ir.ui.view,arch_db:fieldservice.res_config_settings_view_form
 msgid "Link Field Service vehicles with Fleet vehicles"
-msgstr "Koppel Field Service-voertuigen aan wagenparkvoertuigen"
+msgstr "Koppel buitendienstvoertuigen aan wagenparkvoertuigen"
 
 #. module: fieldservice
 #: model_terms:ir.ui.view,arch_db:fieldservice.res_config_settings_view_form
@@ -1681,17 +1684,17 @@ msgstr "Koppelen aan wagenparkvoertuigen"
 #. module: fieldservice
 #: model_terms:ir.ui.view,arch_db:fieldservice.res_config_settings_view_form
 msgid "Link your FSM orders to MRP repair orders"
-msgstr "Koppel uw FSM-orders aan MRP-reparatieorders"
+msgstr "Koppel uw werkbonnen aan MRP-reparatieorders"
 
 #. module: fieldservice
 #: model_terms:ir.ui.view,arch_db:fieldservice.res_config_settings_view_form
 msgid "Link your FSM orders to Projects and Project Tasks"
-msgstr "Koppel uw FSM-orders aan projecten en projecttaken"
+msgstr "Koppel uw werkbonnen aan projecten en projecttaken"
 
 #. module: fieldservice
 #: model_terms:ir.ui.view,arch_db:fieldservice.res_config_settings_view_form
 msgid "Link your FSM orders to maintenance requests"
-msgstr "Koppel uw FSM-orders aan onderhoudsverzoeken"
+msgstr "Koppel uw werkbonnen aan onderhoudsverzoeken"
 
 #. module: fieldservice
 #: model:ir.model.fields,field_description:fieldservice.field_fsm_person__location_ids
@@ -1786,7 +1789,9 @@ msgstr "Hoofdgebruiker"
 #. module: fieldservice
 #: model_terms:ir.ui.view,arch_db:fieldservice.res_config_settings_view_form
 msgid "Make sure to send the right worker with the appropriate skills"
-msgstr "Zorg ervoor dat de juiste medewerker met de juiste vaardigheden wordt gestuurd"
+msgstr ""
+"Zorg ervoor dat de juiste medewerker met de juiste vaardigheden wordt "
+"gestuurd"
 
 #. module: fieldservice
 #: model:ir.model.fields,field_description:fieldservice.field_res_config_settings__module_fieldservice_agreement
@@ -1824,27 +1829,27 @@ msgstr "FSM-activiteiten beheren"
 #. module: fieldservice
 #: model:res.groups,name:fieldservice.group_fsm_equipment
 msgid "Manage Field Service Equipment"
-msgstr "Field Service-apparatuur beheren"
+msgstr "Buitendienstapparatuur beheren"
 
 #. module: fieldservice
 #: model:res.groups,name:fieldservice.group_fsm_template
 msgid "Manage Field Service Order Templates"
-msgstr "Field Service-ordersjablonen beheren"
+msgstr "Werkbonsjablonen beheren"
 
 #. module: fieldservice
 #: model:res.groups,name:fieldservice.group_fsm_tag
 msgid "Manage Field Service Tags"
-msgstr "Field Service-tags beheren"
+msgstr "Buitendiensttags beheren"
 
 #. module: fieldservice
 #: model:res.groups,name:fieldservice.group_fsm_team
 msgid "Manage Field Service Teams"
-msgstr "Field Service-teams beheren"
+msgstr "Buitendienstteams beheren"
 
 #. module: fieldservice
 #: model:res.groups,name:fieldservice.group_fsm_category
 msgid "Manage Field Service Worker Categories"
-msgstr "Field Service-medewerkerscategorieën beheren"
+msgstr "Buitendienstmedewerker-categorieën beheren"
 
 #. module: fieldservice
 #: model_terms:ir.ui.view,arch_db:fieldservice.res_config_settings_view_form
@@ -1940,12 +1945,12 @@ msgstr "Overeenkomsten en contracten beheren"
 #. module: fieldservice
 #: model_terms:ir.ui.view,arch_db:fieldservice.res_config_settings_view_form
 msgid "Manage different categories of Field Service workers"
-msgstr "Verschillende categorieën Field Service-medewerkers beheren"
+msgstr "Verschillende categorieën buitendienstmedewerkers beheren"
 
 #. module: fieldservice
 #: model_terms:ir.ui.view,arch_db:fieldservice.res_config_settings_view_form
 msgid "Manage different teams of Field Service workers"
-msgstr "Verschillende teams van Field Service-medewerkers beheren"
+msgstr "Verschillende teams van buitendienstmedewerkers beheren"
 
 #. module: fieldservice
 #: model_terms:ir.ui.view,arch_db:fieldservice.res_config_settings_view_form
@@ -1962,7 +1967,7 @@ msgstr ""
 #. module: fieldservice
 #: model_terms:ir.ui.view,arch_db:fieldservice.res_config_settings_view_form
 msgid "Manage recurrence of field service orders"
-msgstr "Herhaling van Field Service-orders beheren"
+msgstr "Herhaling van werkbonnen beheren"
 
 #. module: fieldservice
 #: model:ir.model.fields,field_description:fieldservice.field_res_config_settings__module_fieldservice_route
@@ -1998,7 +2003,7 @@ msgstr "Onderaannemers met prijslijsten beheren"
 #. module: fieldservice
 #: model_terms:ir.ui.view,arch_db:fieldservice.res_config_settings_view_form
 msgid "Manage tags on service orders"
-msgstr "Tags op service-orders beheren"
+msgstr "Tags op werkbonnen beheren"
 
 #. module: fieldservice
 #: model_terms:ir.ui.view,arch_db:fieldservice.res_config_settings_view_form
@@ -2013,7 +2018,7 @@ msgstr "Gebieden, filialen, districten en regio's beheren"
 #. module: fieldservice
 #: model_terms:ir.ui.view,arch_db:fieldservice.res_config_settings_view_form
 msgid "Manage vehicles for Field Service operations"
-msgstr "Voertuigen voor Field Service-operaties beheren"
+msgstr "Voertuigen voor buitendienstwerk beheren"
 
 #. module: fieldservice
 #: model_terms:ir.ui.view,arch_db:fieldservice.res_config_settings_view_form
@@ -2220,7 +2225,7 @@ msgstr "Kantooruren"
 #. module: fieldservice
 #: model:ir.ui.menu,name:fieldservice.operations
 msgid "Operations"
-msgstr "Bewerkingen"
+msgstr "Uitvoering"
 
 #. module: fieldservice
 #: model:ir.model.fields,field_description:fieldservice.field_fsm_order_sign_wizard__order_id
@@ -2548,7 +2553,7 @@ msgstr "Basisdefinitie eigenschappen"
 #. module: fieldservice
 #: model_terms:ir.ui.view,arch_db:fieldservice.res_config_settings_view_form
 msgid "Purchase Field Services"
-msgstr "Field Services inkopen"
+msgstr "Buitendienstwerk inkopen"
 
 #. module: fieldservice
 #: model:ir.model.fields,field_description:fieldservice.field_fsm_equipment__rating_ids
@@ -2720,7 +2725,7 @@ msgstr "FSM-locatie zoeken"
 #. module: fieldservice
 #: model_terms:ir.ui.view,arch_db:fieldservice.view_team_search
 msgid "Search FSM Teams"
-msgstr "FSM-teams zoeken"
+msgstr "Buitendienstteams zoeken"
 
 #. module: fieldservice
 #: model_terms:ir.ui.view,arch_db:fieldservice.fsm_person_search_view
@@ -2761,17 +2766,17 @@ msgstr "Zelf"
 #. module: fieldservice
 #: model:ir.model.fields,field_description:fieldservice.field_res_config_settings__module_fieldservice_sale
 msgid "Sell FSM orders"
-msgstr "FSM-orders verkopen"
+msgstr "Werkbonnen verkopen"
 
 #. module: fieldservice
 #: model_terms:ir.ui.view,arch_db:fieldservice.res_config_settings_view_form
 msgid "Sell Field Service Orders"
-msgstr "Field Service-orders verkopen"
+msgstr "Werkbonnen verkopen"
 
 #. module: fieldservice
 #: model_terms:ir.ui.view,arch_db:fieldservice.res_config_settings_view_form
 msgid "Sell products that generate field service orders"
-msgstr "Producten verkopen die Field Service-orders genereren"
+msgstr "Producten verkopen die werkbonnen genereren"
 
 #. module: fieldservice
 #: model:ir.model.fields,field_description:fieldservice.field_fsm_location_person__sequence
@@ -2790,14 +2795,14 @@ msgstr "Servicelocaties"
 #. module: fieldservice
 #: model:ir.actions.report,name:fieldservice.action_report_fsm_order
 msgid "Service Order"
-msgstr "Service-order"
+msgstr "Werkbon"
 
 #. module: fieldservice
 #: model_terms:ir.ui.view,arch_db:fieldservice.fsm_order_graph_view
 #: model_terms:ir.ui.view,arch_db:fieldservice.fsm_order_pivot_view
 #: model_terms:ir.ui.view,arch_db:fieldservice.res_config_settings_view_form
 msgid "Service Orders"
-msgstr "Service-orders"
+msgstr "Werkbonnen"
 
 #. module: fieldservice
 #: model:ir.model.fields,help:fieldservice.field_fsm_order__is_closed
@@ -3039,7 +3044,8 @@ msgstr ""
 #: model:ir.model.fields,help:fieldservice.field_fsm_location__user_id
 #: model:ir.model.fields,help:fieldservice.field_fsm_person__user_id
 msgid "The internal user in charge of this contact."
-msgstr "De interne gebruiker die verantwoordelijk is voor deze contactpersoon."
+msgstr ""
+"De interne gebruiker die verantwoordelijk is voor deze contactpersoon."
 
 #. module: fieldservice
 #: model:ir.model.fields,help:fieldservice.field_fsm_location__company_registry
@@ -3284,13 +3290,13 @@ msgstr "U kunt deze order niet verwijderen."
 #. odoo-python
 #: code:addons/fieldservice/models/fsm_order.py:0
 msgid "You must create an FSM order stage first."
-msgstr "U moet eerst een FSM-orderfase aanmaken."
+msgstr "U moet eerst een werkbonfase aanmaken."
 
 #. module: fieldservice
 #. odoo-python
 #: code:addons/fieldservice/models/fsm_order.py:0
 msgid "You must create an FSM team first."
-msgstr "U moet eerst een FSM-team aanmaken."
+msgstr "U moet eerst een buitendienstteam aanmaken."
 
 #. module: fieldservice
 #: model_terms:ir.ui.view,arch_db:fieldservice.fsm_location_form_view
