@@ -219,11 +219,15 @@ class SaleOrder(models.Model):
     def _action_confirm(self):
         """On SO confirmation, some lines generate field service orders."""
         result = super()._action_confirm()
+        # Every display type, not a list of them: saas-19.4 added
+        # "line_subsection", which the old ("line_section", "line_note") list
+        # let through as if it were a product line. A heading carries no
+        # product, False != "no" held, and confirming any quotation with a
+        # sub-heading raised "FSM Location must be set" for a sale with no
+        # field service in it at all.
         if any(
             sol.product_id.field_service_tracking != "no"
-            for sol in self.order_line.filtered(
-                lambda x: x.display_type not in ("line_section", "line_note")
-            )
+            for sol in self.order_line.filtered(lambda x: not x.display_type)
         ):
             if not self.fsm_location_id:
                 raise ValidationError(self.env._("FSM Location must be set"))

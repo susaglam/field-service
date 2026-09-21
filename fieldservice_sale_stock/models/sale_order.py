@@ -17,10 +17,18 @@ class SaleOrder(models.Model):
         }
 
     def _link_pickings_to_fsm(self):
-        for rec in self:
+        # Elevated: this runs inside EVERY sale confirmation, and it is the
+        # system tying its own records together, not the salesperson acting
+        # on field service. Run as the user it searched fsm.order with the
+        # salesperson's rights, and a seller with no field-service access -
+        # which is what a salesperson is once the blanket read for every
+        # internal user is gone - could not confirm a quotation at all:
+        # AccessError on 'Field Service Order', for a sale with no visit in it.
+        for rec in self.sudo():
             # TODO: We may want to split the picking to have one picking
             # per FSM order
-            fsm_order = self.env["fsm.order"].search(
+            # rec.env, not self.env: only the loop variable carries the sudo.
+            fsm_order = rec.env["fsm.order"].search(
                 [
                     ("sale_id", "=", rec.id),
                     ("sale_line_id", "=", False),
