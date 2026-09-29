@@ -1,0 +1,70 @@
+<odoo>
+    <!-- Copyright (C) 2019 Open Source Integrators
+         License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+    <!-- saas-19.4: ir.rule + ir.model.access merged into ir.access.
+         GLOBAL (no group_id) = restriction (AND'd for every user) — was
+         <field name="global" eval="True"/>. GROUP rule = permission with
+         group_id (OR'd across the user's groups, AND'd with restrictions);
+         the global company restriction above keeps everyone company-scoped
+         so the semantics are preserved. domain_force -> domain; an ir.rule
+         with no perm_* meant all four True -> operation="crud". -->
+    <record id="fsm_order_comp_rule" model="ir.access">
+        <field name="name">FSM Orders Entry</field>
+        <field name="model_id" ref="model_fsm_order" />
+        <field name="operation">crud</field>
+        <field name="domain">[('company_id', 'in', company_ids + [False])]</field>
+    </record>
+
+    <!-- 2026-09-20: the 19.4 ACL migration turned two RESTRICTING record rules
+         into GRANTING permissions, and permissions are OR'd. "User (only own
+         documents)" was given create/read/write/DELETE on every order in the
+         company - the opposite of its own name - and plain "User" the same
+         everywhere, although the CSV means them to read and write only. The
+         own-documents level now sees the visits it is on (see the domain on
+         access_fsm_order_user in ir.access.csv) and the plain user level reads
+         and writes, while creating and deleting stays with the dispatcher. -->
+    <record id="fsm_order_user" model="ir.access">
+        <field name="name">FSM Orders Entry</field>
+        <field name="model_id" ref="model_fsm_order" />
+        <field name="group_id" ref="fieldservice.group_fsm_user" />
+        <field name="operation">ru</field>
+        <field name="domain">[(1, '=', 1)]</field>
+    </record>
+
+    <record id="fsm_template_comp_rule" model="ir.access">
+        <field name="name">FSM Templates Entry</field>
+        <field name="model_id" ref="model_fsm_template" />
+        <field name="operation">crud</field>
+        <field name="domain">[('company_id', 'in', company_ids + [False])]</field>
+    </record>
+    <record id="fsm_team_comp_rule" model="ir.access">
+        <field name="name">FSM Teams Entry</field>
+        <field name="model_id" ref="model_fsm_team" />
+        <field name="operation">crud</field>
+        <field name="domain">[('company_id', 'in', company_ids + [False])]</field>
+    </record>
+    <record id="fsm_tag_comp_rule" model="ir.access">
+        <field name="name">FSM Tags Entry</field>
+        <field name="model_id" ref="model_fsm_tag" />
+        <field name="operation">crud</field>
+        <field name="domain">[('company_id', 'in', company_ids + [False])]</field>
+    </record>
+    <record id="fsm_category_comp_rule" model="ir.access">
+        <field name="name">FSM Categories Entry</field>
+        <field name="model_id" ref="model_fsm_category" />
+        <field name="operation">crud</field>
+        <field name="domain">[('company_id', 'in', company_ids + [False])]</field>
+    </record>
+    <record id="fsm_equipment_comp_rule" model="ir.access">
+        <field name="name">FSM Equipments Entry</field>
+        <field name="model_id" ref="model_fsm_equipment" />
+        <field name="operation">crud</field>
+        <field name="domain">[('company_id', 'in', company_ids + [False])]</field>
+    </record>
+    <record id="fsm_stage_comp_rule" model="ir.access">
+        <field name="name">FSM Stage Entry</field>
+        <field name="model_id" ref="model_fsm_stage" />
+        <field name="operation">crud</field>
+        <field name="domain">[('company_id', 'in', company_ids + [False])]</field>
+    </record>
+</odoo>

@@ -1,0 +1,371 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* fieldservice_skill
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 20.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-18 09:27+0000\n"
+"PO-Revision-Date: 2026-05-18 09:27+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: nl_NL\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. module: fieldservice_skill
+#: model:ir.model.fields,help:fieldservice_skill.field_fsm_order__skill_worker_ids
+msgid "Available workers based on skill requirements"
+msgstr "Beschikbare medewerkers op basis van vaardigheidsvereisten"
+
+#. module: fieldservice_skill
+#: model:ir.model.fields,field_description:fieldservice_skill.field_hr_skill__color
+msgid "Color Index"
+msgstr "Kleurindex"
+
+#. module: fieldservice_skill
+#: model:ir.model.fields,field_description:fieldservice_skill.field_fsm_person_skill__create_uid
+msgid "Created by"
+msgstr "Aangemaakt door"
+
+#. module: fieldservice_skill
+#: model:ir.model.fields,field_description:fieldservice_skill.field_fsm_person_skill__create_date
+msgid "Created on"
+msgstr "Aangemaakt op"
+
+#. module: fieldservice_skill
+#: model:ir.model.fields,field_description:fieldservice_skill.field_fsm_category__display_name
+#: model:ir.model.fields,field_description:fieldservice_skill.field_fsm_order__display_name
+#: model:ir.model.fields,field_description:fieldservice_skill.field_fsm_person__display_name
+#: model:ir.model.fields,field_description:fieldservice_skill.field_fsm_person_skill__display_name
+#: model:ir.model.fields,field_description:fieldservice_skill.field_fsm_template__display_name
+#: model:ir.model.fields,field_description:fieldservice_skill.field_hr_skill__display_name
+msgid "Display Name"
+msgstr "Weergavenaam"
+
+#. module: fieldservice_skill
+#: model:ir.model,name:fieldservice_skill.model_fsm_order
+msgid "Field Service Order"
+msgstr "Werkbon"
+
+#. module: fieldservice_skill
+#: model:ir.model,name:fieldservice_skill.model_fsm_template
+msgid "Field Service Order Template"
+msgstr "Werkbonsjabloon"
+
+#. module: fieldservice_skill
+#: model:ir.model,name:fieldservice_skill.model_fsm_person
+#: model:ir.model.fields,field_description:fieldservice_skill.field_fsm_person_skill__person_id
+msgid "Field Service Worker"
+msgstr "Buitendienstmedewerker"
+
+#. module: fieldservice_skill
+#: model:ir.model,name:fieldservice_skill.model_fsm_category
+msgid "Field Service Worker Category"
+msgstr "Buitendienstmedewerker-categorie"
+
+#. module: fieldservice_skill
+#: model:ir.model,name:fieldservice_skill.model_fsm_person_skill
+msgid "Field Service Worker Skill"
+msgstr "Buitendienstmedewerkervaardigheid"
+
+#. module: fieldservice_skill
+#: model:ir.model.fields,field_description:fieldservice_skill.field_fsm_category__id
+#: model:ir.model.fields,field_description:fieldservice_skill.field_fsm_order__id
+#: model:ir.model.fields,field_description:fieldservice_skill.field_fsm_person__id
+#: model:ir.model.fields,field_description:fieldservice_skill.field_fsm_person_skill__id
+#: model:ir.model.fields,field_description:fieldservice_skill.field_fsm_template__id
+#: model:ir.model.fields,field_description:fieldservice_skill.field_hr_skill__id
+msgid "ID"
+msgstr "ID"
+
+#. module: fieldservice_skill
+#: model:ir.model.fields,field_description:fieldservice_skill.field_fsm_person_skill__write_uid
+msgid "Last Updated by"
+msgstr "Laatst bijgewerkt door"
+
+#. module: fieldservice_skill
+#: model:ir.model.fields,field_description:fieldservice_skill.field_fsm_person_skill__write_date
+msgid "Last Updated on"
+msgstr "Laatst bijgewerkt op"
+
+#. module: fieldservice_skill
+#: model:ir.model.fields,field_description:fieldservice_skill.field_fsm_person_skill__level_progress
+msgid "Progress"
+msgstr "Voortgang"
+
+#. module: fieldservice_skill
+#: model:ir.model.fields,help:fieldservice_skill.field_fsm_person_skill__level_progress
+msgid "Progress from zero knowledge (0%) to fully mastered (100%)."
+msgstr "Voortgang van geen kennis (0%) tot volledige beheersing (100%)."
+
+#. module: fieldservice_skill
+#: model:ir.model.fields,field_description:fieldservice_skill.field_fsm_category__skill_ids
+#: model:ir.model.fields,field_description:fieldservice_skill.field_fsm_order__skill_ids
+#: model:ir.model.fields,field_description:fieldservice_skill.field_fsm_template__skill_ids
+msgid "Required Skills"
+msgstr "Vereiste vaardigheden"
+
+#. module: fieldservice_skill
+#: model:ir.model,name:fieldservice_skill.model_hr_skill
+#: model:ir.model.fields,field_description:fieldservice_skill.field_fsm_person_skill__skill_id
+msgid "Skill"
+msgstr "Vaardigheid"
+
+#. module: fieldservice_skill
+#: model:ir.model.fields,field_description:fieldservice_skill.field_fsm_person_skill__skill_level_id
+msgid "Skill Level"
+msgstr "Vaardigheidsniveau"
+
+#. module: fieldservice_skill
+#: model:ir.model.fields,field_description:fieldservice_skill.field_fsm_person_skill__skill_type_id
+msgid "Skill Type"
+msgstr "Vaardigheidstype"
+
+#. module: fieldservice_skill
+#: model:ir.model.fields,field_description:fieldservice_skill.field_fsm_order__skill_worker_ids
+msgid "Skill Worker"
+msgstr "Vaardigheidsmedewerker"
+
+#. module: fieldservice_skill
+#: model:ir.model.fields,field_description:fieldservice_skill.field_fsm_person__skill_ids
+#: model:ir.ui.menu,name:fieldservice_skill.menu_hr_skill
+#: model_terms:ir.ui.view,arch_db:fieldservice_skill.fsm_category_form
+#: model_terms:ir.ui.view,arch_db:fieldservice_skill.fsm_person_form
+msgid "Skills"
+msgstr "Vaardigheden"
+
+#. module: fieldservice_skill
+#. odoo-python
+#: code:addons/fieldservice_skill/models/fsm_person_skill.py:0
+msgid ""
+"The skill '%(skill)s'                         and skill type '%(skilltype)s'"
+" doesn't match"
+msgstr ""
+"De vaardigheid '%(skill)s' en vaardigheidstype '%(skilltype)s' komen niet "
+"overeen"
+
+#. module: fieldservice_skill
+#. odoo-python
+#: code:addons/fieldservice_skill/models/fsm_person_skill.py:0
+msgid ""
+"The skill level '%(skilllevel)s'                         is not valid for "
+"skill type: '%(skilltype)s' "
+msgstr ""
+"Het vaardigheidsniveau '%(skilllevel)s' is niet geldig voor "
+"vaardigheidstype: '%(skilltype)s' "
+
+#. module: fieldservice_skill
+#: model:ir.actions.act_window,name:fieldservice_skill.action_fsm_person_skill_report
+#: model:ir.ui.menu,name:fieldservice_skill.menu_fsm_person_skill_reporting
+#: model_terms:ir.ui.view,arch_db:fieldservice_skill.fsm_person_skill_form
+#: model_terms:ir.ui.view,arch_db:fieldservice_skill.view_fsm_person_skill_graph
+#: model_terms:ir.ui.view,arch_db:fieldservice_skill.view_fsm_person_skill_pivot
+msgid "Worker Skills"
+msgstr "Medewerkervaardigheden"
+
+#. module: fieldservice_skill
+#: model_terms:ir.actions.act_window,help:fieldservice_skill.action_fsm_person_skill_report
+msgid "Worker Skills Report"
+msgstr "Medewerkervaardigheden-rapport"
+
+#. module: fieldservice_skill
+#: model:ir.module.module,description:base.module_fieldservice_skill
+msgid ""
+".. image:: https://odoo-community.org/readme-banner-image\n"
+"   :target: https://odoo-community.org/get-involved?utm_source=readme\n"
+"   :alt: Odoo Community Association\n"
+"\n"
+"======================\n"
+"Field Service - Skills\n"
+"======================\n"
+"\n"
+".. \n"
+"   !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n"
+"   !! This file is generated by oca-gen-addon-readme !!\n"
+"   !! changes will be overwritten.                   !!\n"
+"   !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n"
+"   !! source digest: sha256:8650b933166f81d2518acdd951c1c4361b071a670df0257215ae3938ca5c9bb5\n"
+"   !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n"
+"\n"
+".. |badge1| image:: https://img.shields.io/badge/maturity-Beta-yellow.png\n"
+"    :target: https://odoo-community.org/page/development-status\n"
+"    :alt: Beta\n"
+".. |badge2| image:: https://img.shields.io/badge/license-AGPL--3-blue.png\n"
+"    :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html\n"
+"    :alt: License: AGPL-3\n"
+".. |badge3| image:: https://img.shields.io/badge/github-OCA%2Ffield--service-lightgray.png?logo=github\n"
+"    :target: https://github.com/OCA/field-service/tree/saas-19.4/fieldservice_skill\n"
+"    :alt: OCA/field-service\n"
+".. |badge4| image:: https://img.shields.io/badge/weblate-Translate%20me-F47D42.png\n"
+"    :target: https://translation.odoo-community.org/projects/field-service-saas-19-4/field-service-saas-19-4-fieldservice_skill\n"
+"    :alt: Translate me on Weblate\n"
+".. |badge5| image:: https://img.shields.io/badge/runboat-Try%20me-875A7B.png\n"
+"    :target: https://runboat.odoo-community.org/builds?repo=OCA/field-service&target_branch=saas-19.4\n"
+"    :alt: Try me on Runboat\n"
+"\n"
+"|badge1| |badge2| |badge3| |badge4| |badge5|\n"
+"\n"
+"Odoo Field Service App allows to assign any FS worker to any FS order.\n"
+"For some organizations, they cannot assign any FS worker to any order.\n"
+"They needs to manage the skills of the FS workers and reduce the list of\n"
+"potential FS workers on an order to avoid wrong assignment and\n"
+"mis-configuration. The skills of the selectable FS workers on a service\n"
+"order needs to match the required skills to perform the order.\n"
+"\n"
+"This modules allows you to set skills on categories to automatically set\n"
+"those skills on the order. It also allows you to set the skills to the\n"
+"field service worker with their level. On the order, the list of field\n"
+"service workers is filtered with the skills and the location so you can\n"
+"only assign the right worker to the order.\n"
+"\n"
+"**Table of contents**\n"
+"\n"
+".. contents::\n"
+"   :local:\n"
+"\n"
+"Configuration\n"
+"=============\n"
+"\n"
+"To configure this module, you need to:\n"
+"\n"
+"- Create or edit your categories to set skills\n"
+"- Create or edit your workers to set their skills and skill levels\n"
+"- Create or edit your territories to set their field service workers\n"
+"- Create or edit your locations to set their territories\n"
+"\n"
+"Usage\n"
+"=====\n"
+"\n"
+"To use this module, you need to:\n"
+"\n"
+"- Create an order, set the template and the location\n"
+"\n"
+"  - The categories and skills are set based on the template.\n"
+"  - The field service worker is set to the preferred worker if skills\n"
+"    matches.\n"
+"  - The list of field service workers is filtered with the one serving\n"
+"    the location and having the skills\n"
+"\n"
+"Known issues / Roadmap\n"
+"======================\n"
+"\n"
+"The roadmap of the Field Service application is documented on\n"
+"`Github <https://github.com/OCA/field-service/issues/1>`__.\n"
+"\n"
+"Bug Tracker\n"
+"===========\n"
+"\n"
+"Bugs are tracked on `GitHub Issues <https://github.com/OCA/field-service/issues>`_.\n"
+"In case of trouble, please check there if your issue has already been reported.\n"
+"If you spotted it first, help us to smash it by providing a detailed and welcomed\n"
+"`feedback <https://github.com/OCA/field-service/issues/new?body=module:%20fieldservice_skill%0Aversion:%20saas-19.4%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**>`_.\n"
+"\n"
+"Do not contact contributors directly about support or help with technical issues.\n"
+"\n"
+"Credits\n"
+"=======\n"
+"\n"
+"Authors\n"
+"-------\n"
+"\n"
+"* Open Source Integrators\n"
+"\n"
+"Contributors\n"
+"------------\n"
+"\n"
+"- Wolfgang Hall <whall@opensourceintegrators.com>\n"
+"- Maxime Chambreuil <mchambreuil@opensourceintegrators.com>\n"
+"- Steve Campbell <scampbell@opensourceintegrators.com>\n"
+"- Serpent Consulting Services Pvt. Ltd. <support@serpentcs.com>\n"
+"- Brian McMaster <brian@mcmpest.com>\n"
+"- `Tecnativa <https://www.tecnativa.com>`__:\n"
+"\n"
+"  - Stefan Ungureanu\n"
+"\n"
+"- `Heliconia Solutions Pvt. Ltd. <https://www.heliconia.io>`__\n"
+"\n"
+"  - Bhavesh Heliconia\n"
+"\n"
+"Other credits\n"
+"-------------\n"
+"\n"
+"The development of this module has been financially supported by:\n"
+"\n"
+"- Open Source Integrators\n"
+"  <`https://opensourceintegrators.com\\\\> <https://opensourceintegrators.com\\>>`__\n"
+"\n"
+"Maintainers\n"
+"-----------\n"
+"\n"
+"This module is maintained by the OCA.\n"
+"\n"
+".. image:: https://odoo-community.org/logo.png\n"
+"   :alt: Odoo Community Association\n"
+"   :target: https://odoo-community.org\n"
+"\n"
+"OCA, or the Odoo Community Association, is a nonprofit organization whose\n"
+"mission is to support the collaborative development of Odoo features and\n"
+"promote its widespread use.\n"
+"\n"
+".. |maintainer-osi-scampbell| image:: https://github.com/osi-scampbell.png?size=40px\n"
+"    :target: https://github.com/osi-scampbell\n"
+"    :alt: osi-scampbell\n"
+".. |maintainer-max3903| image:: https://github.com/max3903.png?size=40px\n"
+"    :target: https://github.com/max3903\n"
+"    :alt: max3903\n"
+"\n"
+"Current `maintainers <https://odoo-community.org/page/maintainer-role>`__:\n"
+"\n"
+"|maintainer-osi-scampbell| |maintainer-max3903| \n"
+"\n"
+"This module is part of the `OCA/field-service <https://github.com/OCA/field-service/tree/saas-19.4/fieldservice_skill>`_ project on GitHub.\n"
+"\n"
+"You are welcome to contribute. To learn how please visit https://odoo-community.org/page/Contribute.\n"
+msgstr ""
+
+#. module: fieldservice_skill
+#: model:ir.module.module,shortdesc:base.module_fieldservice_skill
+msgid "Field Service - Skills"
+msgstr "Buitendienst - Vaardigheden"
+
+#. module: fieldservice_skill
+#: model:ir.module.module,summary:base.module_fieldservice_skill
+msgid "Manage your Field Service workers skills"
+msgstr "Beheer de vaardigheden van uw buitendienstmedewerkers"
+
+#. module: fieldservice_skill
+#: model:ir.model.fields,help:fieldservice_skill.field_fsm_person_skill__person_id
+msgid "Person Id. Linked record reference."
+msgstr "Medewerker. Verwijzing naar het gekoppelde record."
+
+#. module: fieldservice_skill
+#: model:ir.model.fields,help:fieldservice_skill.field_fsm_person_skill__skill_id
+msgid "Skill Id. Linked record reference."
+msgstr "Vaardigheid. Verwijzing naar het gekoppelde record."
+
+#. module: fieldservice_skill
+#: model:ir.model.fields,help:fieldservice_skill.field_fsm_category__skill_ids
+#: model:ir.model.fields,help:fieldservice_skill.field_fsm_order__skill_ids
+#: model:ir.model.fields,help:fieldservice_skill.field_fsm_person__skill_ids
+#: model:ir.model.fields,help:fieldservice_skill.field_fsm_template__skill_ids
+msgid "Skill Ids. Many-to-many / one-to-many relation collection."
+msgstr "Vaardigheden. Verzameling gekoppelde records."
+
+#. module: fieldservice_skill
+#: model:ir.model.fields,help:fieldservice_skill.field_fsm_person_skill__skill_level_id
+msgid "Skill Level Id. Linked record reference."
+msgstr "Vaardigheidsniveau. Verwijzing naar het gekoppelde record."
+
+#. module: fieldservice_skill
+#: model:ir.model.fields,help:fieldservice_skill.field_fsm_person_skill__skill_type_id
+msgid "Skill Type Id. Linked record reference."
+msgstr "Vaardigheidstype. Verwijzing naar het gekoppelde record."
+
+#. module: fieldservice_skill
+#: model:ir.model.constraint,message:fieldservice_skill.constraint_fsm_person_skill_person_skill_uniq
+msgid "This person already has that skill!"
+msgstr "Deze medewerker heeft die vaardigheid al!"
