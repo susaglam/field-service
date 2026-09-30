@@ -9,7 +9,6 @@ from odoo import fields
 from odoo.exceptions import UserError, ValidationError
 from odoo.tests import Form
 from odoo.tests.common import TransactionCase
-from odoo.tools import mute_logger
 
 TEST_IMAGE_BASE64 = "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAACklEQVR4nGP4DwABAQEAGN2N9wAAAABJRU5ErkJggg=="  # noqa: E501
 
@@ -67,14 +66,28 @@ class TestFSMOrder(TransactionCase):
             Form(self.Order, view=view_id)
 
     def test_fsm_order_default_team(self):
+        """An order has no team to default to in a company without one.
+
+        Checked in a company of its own rather than by deleting every team:
+        an order's team is required, so any order that demo data of another
+        installed module keeps on a team (fieldservice_portal ships one)
+        makes that delete fail.
+        """
         view_id = "fieldservice.fsm_order_form"
-        with mute_logger("odoo.models.unlink"):
-            self.order.unlink()
-            self.env["fsm.team"].search([]).unlink()
+        company = self.env["res.company"].create({"name": "FSM company without team"})
+        # Stages belong to a company too; give it one so only the team is missing.
+        self.env["fsm.stage"].create(
+            {
+                "name": "New",
+                "stage_type": "order",
+                "is_default": True,
+                "company_id": company.id,
+            }
+        )
         with self.assertRaisesRegex(
             ValidationError, "You must create an FSM team first."
         ):
-            Form(self.Order, view=view_id)
+            Form(self.Order.with_company(company), view=view_id)
 
     def test_fsm_order_default_team_from_location(self):
         """The default team for an order comes from its location."""
@@ -96,6 +109,11 @@ class TestFSMOrder(TransactionCase):
         self.assertEqual(order.team_id, team)
 
     def test_fsm_order_create(self):
+        # The holiday refusal asserted below is this module's rule. A module
+        # installed alongside may turn it off (_check_day_refuses_holiday), so
+        # the test pins the rule it checks instead of depending on what else
+        # is installed.
+        self.patch(type(self.Order), "_check_day_refuses_holiday", lambda order: True)
         priority_vs_late_days = {"0": 3, "1": 2, "2": 1, "3": 1 / 3}
         vals = {
             "location_id": self.test_location.id,

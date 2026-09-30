@@ -529,10 +529,22 @@ class FSMOrder(models.Model):
         )
         return location_id.complete_direction
 
+    def _check_day_refuses_holiday(self):
+        """Whether check_day refuses this order when a holiday lies within its
+        scheduled dates.
+
+        True here: such an order cannot be saved. A module that lets orders be
+        planned across a holiday on purpose (and warns instead) returns False
+        rather than replacing check_day, so the constraint stays declared and
+        the change of rule is made in one visible place.
+        """
+        self.ensure_one()
+        return True
+
     @api.constrains("scheduled_date_start")
     def check_day(self):
         for rec in self:
-            if not rec.scheduled_date_start:
+            if not rec.scheduled_date_start or not rec._check_day_refuses_holiday():
                 continue
 
             holidays = self.env["resource.calendar.leaves"].search(

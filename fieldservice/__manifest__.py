@@ -3,7 +3,7 @@
 {
     "name": "Field Service",
     "summary": "Manage Field Service Locations, Workers and Orders",
-    "version": "20.0.5.7.0",
+    "version": "20.0.5.7.1",
     "license": "AGPL-3",
     "category": "Field Service",
     "author": "Open Source Integrators, Odoo Community Association (OCA)",
