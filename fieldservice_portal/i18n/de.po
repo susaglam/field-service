@@ -1,0 +1,264 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* fieldservice_portal
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 20.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2025-10-28 11:47+0000\n"
+"Last-Translator: c2cdidier <didier.donze@camptocamp.com>\n"
+"Language-Team: none\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.10.4\n"
+
+#. module: fieldservice_portal
+#: model_terms:ir.ui.view,arch_db:fieldservice_portal.portal_fieldservice_order_page
+msgid ""
+"<br/>\n"
+"                                <strong>Arrival On Site:</strong>"
+msgstr ""
+"<br/>\n"
+"                                <strong>Ankunft vor Ort:</strong>"
+
+#. module: fieldservice_portal
+#: model_terms:ir.ui.view,arch_db:fieldservice_portal.portal_fieldservice_order_page
+msgid ""
+"<br/>\n"
+"                                <strong>City:</strong>"
+msgstr ""
+"<br/>\n"
+"                                <strong>Stadt:</strong>"
+
+#. module: fieldservice_portal
+#: model_terms:ir.ui.view,arch_db:fieldservice_portal.portal_fieldservice_order_page
+msgid ""
+"<br/>\n"
+"                                <strong>Country:</strong>"
+msgstr ""
+"<br/>\n"
+"                                <strong>Land:</strong>"
+
+#. module: fieldservice_portal
+#: model_terms:ir.ui.view,arch_db:fieldservice_portal.portal_fieldservice_order_page
+msgid ""
+"<br/>\n"
+"                                <strong>Work Type:</strong>"
+msgstr ""
+"<br/>\n"
+"                                <strong>Art der Arbeit:</strong>"
+
+#. module: fieldservice_portal
+#: model_terms:ir.ui.view,arch_db:fieldservice_portal.portal_fieldservice_order_page
+msgid "<span>N/A</span>"
+msgstr "<span>N/A</span>"
+
+#. module: fieldservice_portal
+#: model_terms:ir.ui.view,arch_db:fieldservice_portal.portal_fieldservice_order_page
+msgid "<strong>Location:</strong>"
+msgstr "<strong>Standort:</strong>"
+
+#. module: fieldservice_portal
+#: model_terms:ir.ui.view,arch_db:fieldservice_portal.portal_fieldservice_order_page
+msgid "<strong>Stage:</strong>"
+msgstr "<strong>Etappe:</strong>"
+
+#. module: fieldservice_portal
+#: model_terms:ir.ui.view,arch_db:fieldservice_portal.portal_fieldservice_order_page
+#: model_terms:ir.ui.view,arch_db:fieldservice_portal.portal_my_fsm_orders
+msgid "Description"
+msgstr "Beschreibung"
+
+#. module: fieldservice_portal
+#: model:ir.model,name:fieldservice_portal.model_fsm_stage
+msgid "Field Service Stage"
+msgstr "Field-Service Phase"
+
+#. module: fieldservice_portal
+#: model_terms:ir.ui.view,arch_db:fieldservice_portal.portal_fieldservice_order_page
+msgid "History"
+msgstr "Historie"
+
+#. module: fieldservice_portal
+#: model_terms:ir.ui.view,arch_db:fieldservice_portal.portal_my_fsm_orders
+msgid "Location"
+msgstr "Standort"
+
+#. module: fieldservice_portal
+#: model_terms:ir.ui.view,arch_db:fieldservice_portal.portal_my_fsm_orders
+msgid "Name"
+msgstr "Name"
+
+#. module: fieldservice_portal
+#: model_terms:ir.ui.view,arch_db:fieldservice_portal.portal_fieldservice_order_page
+msgid "Not started yet"
+msgstr "Noch nicht gestartet"
+
+#. module: fieldservice_portal
+#: model_terms:ir.ui.view,arch_db:fieldservice_portal.portal_my_fsm_orders
+msgid "Stage"
+msgstr "Phase"
+
+#. module: fieldservice_portal
+#: model_terms:ir.ui.view,arch_db:fieldservice_portal.portal_my_fsm_orders
+msgid "There are no Work Orders in your account."
+msgstr "Es gibt keine Arbeitsaufträge in Ihrem Konto."
+
+#. module: fieldservice_portal
+#: model_terms:ir.ui.view,arch_db:fieldservice_portal.portal_my_fsm_orders
+msgid "Type"
+msgstr "Art"
+
+#. module: fieldservice_portal
+#: model:portal.entry,name:fieldservice_portal.portal_entry_fsm_order
+#: model_terms:ir.ui.view,arch_db:fieldservice_portal.portal_breadcrumbs
+#: model_terms:ir.ui.view,arch_db:fieldservice_portal.portal_my_fsm_orders
+msgid "Work Orders"
+msgstr "Arbeitsaufträge"
+
+#. module: fieldservice_portal
+#: model_terms:ir.ui.view,arch_db:fieldservice_portal.portal_my_fsm_orders
+msgid "Work Orders for"
+msgstr "Arbeitsaufträge für"
+
+#. module: fieldservice_portal
+#: model:ir.module.module,summary:base.module_fieldservice_portal
+msgid ""
+"\n"
+"    Bridge module between fieldservice and portal.\n"
+"    "
+msgstr ""
+"\n"
+"    Brückenmodul zwischen Außendienst und Portal.\n"
+"    "
+
+#. module: fieldservice_portal
+#: model:ir.module.module,description:base.module_fieldservice_portal
+msgid ""
+".. image:: https://odoo-community.org/readme-banner-image\n"
+"   :target: https://odoo-community.org/get-involved?utm_source=readme\n"
+"   :alt: Odoo Community Association\n"
+"\n"
+"======================\n"
+"Field Service - Portal\n"
+"======================\n"
+"\n"
+".. \n"
+"   !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n"
+"   !! This file is generated by oca-gen-addon-readme !!\n"
+"   !! changes will be overwritten.                   !!\n"
+"   !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n"
+"   !! source digest: sha256:d42657f8ad31e1578ac0b3b818980f11adb4e1c7fd2d15e47a3d681911e94187\n"
+"   !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n"
+"\n"
+".. |badge1| image:: https://img.shields.io/badge/maturity-Beta-yellow.png\n"
+"    :target: https://odoo-community.org/page/development-status\n"
+"    :alt: Beta\n"
+".. |badge2| image:: https://img.shields.io/badge/license-AGPL--3-blue.png\n"
+"    :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html\n"
+"    :alt: License: AGPL-3\n"
+".. |badge3| image:: https://img.shields.io/badge/github-OCA%2Ffield--service-lightgray.png?logo=github\n"
+"    :target: https://github.com/OCA/field-service/tree/saas-19.4/fieldservice_portal\n"
+"    :alt: OCA/field-service\n"
+".. |badge4| image:: https://img.shields.io/badge/weblate-Translate%20me-F47D42.png\n"
+"    :target: https://translation.odoo-community.org/projects/field-service-saas-19-4/field-service-saas-19-4-fieldservice_portal\n"
+"    :alt: Translate me on Weblate\n"
+".. |badge5| image:: https://img.shields.io/badge/runboat-Try%20me-875A7B.png\n"
+"    :target: https://runboat.odoo-community.org/builds?repo=OCA/field-service&target_branch=saas-19.4\n"
+"    :alt: Try me on Runboat\n"
+"\n"
+"|badge1| |badge2| |badge3| |badge4| |badge5|\n"
+"\n"
+"Bridge module between fieldservice and portal that allows portal users\n"
+"to monitor work orders related to their locations.\n"
+"\n"
+"**Table of contents**\n"
+"\n"
+".. contents::\n"
+"   :local:\n"
+"\n"
+"Configuration\n"
+"=============\n"
+"\n"
+"Set Portal Visibility for Order Stages\n"
+"\n"
+"You are able to control which stages of field service orders are visible\n"
+"to portal users by enabling or disabling portal visiblity option on a\n"
+"stage. By default, all stages are visible in the portal. Disable the\n"
+"option to hide\n"
+"\n"
+"1. Go to Field Service > Configuration > Stages\n"
+"2. Select an order stage.\n"
+"3. Toggle the Visible in Portal option as desired\n"
+"\n"
+"Bug Tracker\n"
+"===========\n"
+"\n"
+"Bugs are tracked on `GitHub Issues <https://github.com/OCA/field-service/issues>`_.\n"
+"In case of trouble, please check there if your issue has already been reported.\n"
+"If you spotted it first, help us to smash it by providing a detailed and welcomed\n"
+"`feedback <https://github.com/OCA/field-service/issues/new?body=module:%20fieldservice_portal%0Aversion:%20saas-19.4%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**>`_.\n"
+"\n"
+"Do not contact contributors directly about support or help with technical issues.\n"
+"\n"
+"Credits\n"
+"=======\n"
+"\n"
+"Authors\n"
+"-------\n"
+"\n"
+"* PyTech SRL\n"
+"\n"
+"Contributors\n"
+"------------\n"
+"\n"
+"- `PyTech SRL <https://www.pytech.it>`__:\n"
+"\n"
+"     - Alessio Renda <alessio.renda@pytech.it>\n"
+"\n"
+"- `APSL-Nagarro <https://apsl.tech>`__:\n"
+"\n"
+"     - Antoni Marroig <amarroig@apsl.net>\n"
+"\n"
+"Maintainers\n"
+"-----------\n"
+"\n"
+"This module is maintained by the OCA.\n"
+"\n"
+".. image:: https://odoo-community.org/logo.png\n"
+"   :alt: Odoo Community Association\n"
+"   :target: https://odoo-community.org\n"
+"\n"
+"OCA, or the Odoo Community Association, is a nonprofit organization whose\n"
+"mission is to support the collaborative development of Odoo features and\n"
+"promote its widespread use.\n"
+"\n"
+".. |maintainer-aleuffre| image:: https://github.com/aleuffre.png?size=40px\n"
+"    :target: https://github.com/aleuffre\n"
+"    :alt: aleuffre\n"
+".. |maintainer-renda-dev| image:: https://github.com/renda-dev.png?size=40px\n"
+"    :target: https://github.com/renda-dev\n"
+"    :alt: renda-dev\n"
+"\n"
+"Current `maintainers <https://odoo-community.org/page/maintainer-role>`__:\n"
+"\n"
+"|maintainer-aleuffre| |maintainer-renda-dev| \n"
+"\n"
+"This module is part of the `OCA/field-service <https://github.com/OCA/field-service/tree/saas-19.4/fieldservice_portal>`_ project on GitHub.\n"
+"\n"
+"You are welcome to contribute. To learn how please visit https://odoo-community.org/page/Contribute.\n"
+msgstr ""
+
+#. module: fieldservice_portal
+#: model:ir.module.module,shortdesc:base.module_fieldservice_portal
+msgid "Field Service - Portal"
+msgstr "Außendienst - Portal"
+
+#. module: fieldservice_portal
+#: model:portal.entry,description:fieldservice_portal.portal_entry_fsm_order
+msgid "Follow the progress of the work planned at your address"
+msgstr "Verfolgen Sie den Fortschritt der an Ihrer Adresse geplanten Arbeiten"

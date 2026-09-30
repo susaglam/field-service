@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--
+  Work Orders, drawn in Odoo's own portal-card language.
+
+  What this replaces was a black outline pin from a different icon family
+  (every path fill="black", no palette at all), which is why it stood out
+  against every other card on My Account. Odoo's native portal icons use a
+  fixed four-colour vocabulary with a role per colour:
+
+    #FBDBD0  peach   the offset layer behind, giving depth
+    #FFFFFF  white   the front face
+    #C1DBF6  blue    the accent object
+    #374874  navy    the outlines
+
+  A calendar rather than another pin: portal-addresses.svg is already a pin, and
+  two pins on one page read as the same thing. The card's own text is "the work
+  that is PLANNED for you", so a calendar is what it says.
+-->
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- depth -->
+  <rect x="8" y="17" width="42" height="40" rx="4" fill="#FBDBD0"/>
+
+  <!-- face -->
+  <rect x="13" y="13" width="42" height="40" rx="4" fill="white" stroke="#374874" stroke-width="1.4"/>
+
+  <!-- header band -->
+  <path d="M13 17C13 14.7909 14.7909 13 17 13H51C53.2091 13 55 14.7909 55 17V22H13V17Z" fill="#C1DBF6"/>
+  <path d="M13 22H55" stroke="#374874" stroke-width="1.4"/>
+
+  <!-- rings -->
+  <rect x="22" y="8" width="4.4" height="9" rx="2.2" fill="white" stroke="#374874" stroke-width="1.4"/>
+  <rect x="41.6" y="8" width="4.4" height="9" rx="2.2" fill="white" stroke="#374874" stroke-width="1.4"/>
+
+  <!-- the days -->
+  <rect x="19" y="28" width="7" height="6" rx="1.4" fill="#C1DBF6"/>
+  <rect x="30.5" y="28" width="7" height="6" rx="1.4" fill="#C1DBF6"/>
+  <rect x="42" y="28" width="7" height="6" rx="1.4" fill="#C1DBF6"/>
+  <rect x="19" y="38" width="7" height="6" rx="1.4" fill="#C1DBF6"/>
+  <rect x="42" y="38" width="7" height="6" rx="1.4" fill="#C1DBF6"/>
+
+  <!-- the one that is booked -->
+  <rect x="29.6" y="37.1" width="8.8" height="7.8" rx="1.8" fill="white" stroke="#374874" stroke-width="1.4"/>
+  <path d="M31.6 41.2L33.4 43L36.4 39.2" stroke="#374874" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
