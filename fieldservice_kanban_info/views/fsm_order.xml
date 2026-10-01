@@ -10,12 +10,20 @@
         <field name="arch" type="xml">
             <xpath expr="//div[hasclass('o_kanban_record_bottom')]" position="before">
                 <div invisible="not schedule_time_range">
-                    <i class="oi text-dark me-1" data-icon="schedule" title="Scheduled time" />
+                    <i
+                        class="oi text-dark me-1"
+                        data-icon="schedule"
+                        title="Scheduled time"
+                    />
                     <field name="schedule_time_range" />
                 </div>
 
                 <div invisible="not street and not city and not zip">
-                    <i class="oi text-danger me-2" data-icon="location_on" title="Address" />
+                    <i
+                        class="oi text-danger me-2"
+                        data-icon="location_on"
+                        title="Address"
+                    />
                     <field name="street" class="o_address_street" />
                     <field name="street2" class="o_address_street" />
                     <field name="city" class="o_address_city" />
