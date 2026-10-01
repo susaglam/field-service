@@ -65,6 +65,17 @@ class TestFsmOrderPortal(HttpCase):
             {"location_id": location.id, "description": description}
         )
 
+    def url_open(self, url, *args, timeout=60, **kwargs):
+        """A page of the website, with time to build its assets.
+
+        Every test rolls back, the asset bundles it compiled included, so the
+        first page of EACH test compiles the frontend bundle again. Installed
+        beside a webshop and ninety other modules that alone takes 22-27 s
+        (measured in the combined install of a whole site, 2026-10-01) and
+        the default 12 s turned all eight page tests into timeouts.
+        """
+        return super().url_open(url, *args, timeout=timeout, **kwargs)
+
     # ------------------------------------------------------------------
     # The list
     # ------------------------------------------------------------------
