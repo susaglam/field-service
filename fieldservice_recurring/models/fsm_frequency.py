@@ -131,7 +131,7 @@ class FSMFrequency(models.Model):
         freq = FREQUENCIES[self.interval_type]
         # localize dtstart and until to user timezone
         tz = pytz.timezone(
-            tz or self._context.get("tz", None) or self.env.user.tz or "UTC"
+            tz or self.env.context.get("tz", None) or self.env.user.tz or "UTC"
         )
 
         if dtstart:
