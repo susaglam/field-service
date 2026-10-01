@@ -22,9 +22,12 @@ class FSMLocation(models.Model):
             project_ids = self.env["project.project"].search(
                 [("fsm_location_id", "=", location.id)]
             )
-            action = self.env.ref(
+            # _for_xml_id, not env.ref().read(): reading ir.actions.act_window
+            # is admin-only on 20.0, so the button raised AccessError for
+            # every other user
+            action = self.env["ir.actions.act_window"]._for_xml_id(
                 "fieldservice_project.action_fsm_location_project"
-            ).read()[0]
+            )
             action["context"] = {}
             if len(project_ids) == 1:
                 action["views"] = [(self.env.ref("project.edit_project").id, "form")]
