@@ -1,0 +1,297 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* fieldservice_route_account
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 20.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2025-01-25 16:06+0000\n"
+"Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
+"Language-Team: none\n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.6.2\n"
+
+#. module: fieldservice_route_account
+#: model_terms:ir.ui.view,arch_db:fieldservice_route_account.fsm_route_dayroute_inherit_dayroute
+msgid "Accounting"
+msgstr "Contabilità"
+
+#. module: fieldservice_route_account
+#: model:ir.model.fields,field_description:fieldservice_route_account.field_fsm_route_dayroute_payment__amount_collected
+msgid "Collected Amount"
+msgstr "Importo raccolto"
+
+#. module: fieldservice_route_account
+#: model:ir.model.fields,field_description:fieldservice_route_account.field_fsm_route_dayroute_payment__amount_counted
+msgid "Counted Amount"
+msgstr "Importo calcolato"
+
+#. module: fieldservice_route_account
+#: model:ir.model.fields,field_description:fieldservice_route_account.field_fsm_route_dayroute_payment__create_uid
+msgid "Created by"
+msgstr "Creato da"
+
+#. module: fieldservice_route_account
+#: model:ir.model.fields,field_description:fieldservice_route_account.field_fsm_route_dayroute_payment__create_date
+msgid "Created on"
+msgstr "Creato il"
+
+#. module: fieldservice_route_account
+#: model:ir.model.fields,field_description:fieldservice_route_account.field_fsm_route_dayroute_payment__dayroute_id
+msgid "Day Route"
+msgstr "Viaggio diurno"
+
+#. module: fieldservice_route_account
+#: model:ir.model.fields,field_description:fieldservice_route_account.field_fsm_route_dayroute_payment__difference
+msgid "Difference"
+msgstr "Differenza"
+
+#. module: fieldservice_route_account
+#: model:ir.model.fields,field_description:fieldservice_route_account.field_account_payment__display_name
+#: model:ir.model.fields,field_description:fieldservice_route_account.field_fsm_route_dayroute__display_name
+#: model:ir.model.fields,field_description:fieldservice_route_account.field_fsm_route_dayroute_payment__display_name
+msgid "Display Name"
+msgstr "Nome visualizzato"
+
+#. module: fieldservice_route_account
+#: model:ir.model,name:fieldservice_route_account.model_fsm_route_dayroute_payment
+msgid "Field Service Dayroute Payment"
+msgstr "Pagamento viaggio diurno assistenza sul campo"
+
+#. module: fieldservice_route_account
+#: model:ir.model,name:fieldservice_route_account.model_fsm_route_dayroute
+msgid "Field Service Route Dayroute"
+msgstr "Itinerario percorso assistenza sul campo"
+
+#. module: fieldservice_route_account
+#: model:ir.model.fields,field_description:fieldservice_route_account.field_account_payment__id
+#: model:ir.model.fields,field_description:fieldservice_route_account.field_fsm_route_dayroute__id
+#: model:ir.model.fields,field_description:fieldservice_route_account.field_fsm_route_dayroute_payment__id
+msgid "ID"
+msgstr "ID"
+
+#. module: fieldservice_route_account
+#: model:ir.model.fields,field_description:fieldservice_route_account.field_fsm_route_dayroute__invoice_count
+msgid "Invoice Count"
+msgstr "Numero fatture"
+
+#. module: fieldservice_route_account
+#: model_terms:ir.ui.view,arch_db:fieldservice_route_account.fsm_route_dayroute_inherit_dayroute
+msgid "Invoices/Bills"
+msgstr "Fatture cliente/fornitore"
+
+#. module: fieldservice_route_account
+#: model:ir.model.fields,field_description:fieldservice_route_account.field_fsm_route_dayroute_payment__journal_id
+msgid "Journal"
+msgstr "Registro"
+
+#. module: fieldservice_route_account
+#: model:ir.model.fields,field_description:fieldservice_route_account.field_fsm_route_dayroute_payment__move_id
+msgid "Journal Entry"
+msgstr "Registrazione contabile"
+
+#. module: fieldservice_route_account
+#: model:ir.model.fields,field_description:fieldservice_route_account.field_fsm_route_dayroute_payment__write_uid
+msgid "Last Updated by"
+msgstr "Ultimo aggiornamento di"
+
+#. module: fieldservice_route_account
+#: model:ir.model.fields,field_description:fieldservice_route_account.field_fsm_route_dayroute_payment__write_date
+msgid "Last Updated on"
+msgstr "Ultimo aggiornamento il"
+
+#. module: fieldservice_route_account
+#: model:ir.model.fields,field_description:fieldservice_route_account.field_fsm_route_dayroute__dayroute_payment_ids
+msgid "Payment Summary"
+msgstr "Riepilogo pagamento"
+
+#. module: fieldservice_route_account
+#: model:ir.module.module,description:base.module_fieldservice_route_account
+msgid ""
+".. image:: https://odoo-community.org/readme-banner-image\n"
+"   :target: https://odoo-community.org/get-involved?utm_source=readme\n"
+"   :alt: Odoo Community Association\n"
+"\n"
+"===========================\n"
+"Field Service Route Account\n"
+"===========================\n"
+"\n"
+".. \n"
+"   !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n"
+"   !! This file is generated by oca-gen-addon-readme !!\n"
+"   !! changes will be overwritten.                   !!\n"
+"   !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n"
+"   !! source digest: sha256:1dad2610c802dbddef11e967c3f65ad55cdc828c8a3a9dfbc48e6dff79901b3b\n"
+"   !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n"
+"\n"
+".. |badge1| image:: https://img.shields.io/badge/maturity-Beta-yellow.png\n"
+"    :target: https://odoo-community.org/page/development-status\n"
+"    :alt: Beta\n"
+".. |badge2| image:: https://img.shields.io/badge/license-AGPL--3-blue.png\n"
+"    :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html\n"
+"    :alt: License: AGPL-3\n"
+".. |badge3| image:: https://img.shields.io/badge/github-OCA%2Ffield--service-lightgray.png?logo=github\n"
+"    :target: https://github.com/OCA/field-service/tree/saas-19.4/fieldservice_route_account\n"
+"    :alt: OCA/field-service\n"
+".. |badge4| image:: https://img.shields.io/badge/weblate-Translate%20me-F47D42.png\n"
+"    :target: https://translation.odoo-community.org/projects/field-service-saas-19-4/field-service-saas-19-4-fieldservice_route_account\n"
+"    :alt: Translate me on Weblate\n"
+".. |badge5| image:: https://img.shields.io/badge/runboat-Try%20me-875A7B.png\n"
+"    :target: https://runboat.odoo-community.org/builds?repo=OCA/field-service&target_branch=saas-19.4\n"
+"    :alt: Try me on Runboat\n"
+"\n"
+"|badge1| |badge2| |badge3| |badge4| |badge5|\n"
+"\n"
+"This module allows you to check and reconcile:\n"
+"\n"
+"- The payments collected by the worker during the day\n"
+"- The amount given to his manager at the end of the day\n"
+"\n"
+"If the difference is positive, a journal entry is created and the amount\n"
+"is due by the driver.\n"
+"\n"
+"**Table of contents**\n"
+"\n"
+".. contents::\n"
+"   :local:\n"
+"\n"
+"Usage\n"
+"=====\n"
+"\n"
+"To use this module, you need to:\n"
+"\n"
+"- Go to Field Service > Operations > Day Routes\n"
+"- Select a day route\n"
+"- Go to the Accounting tab\n"
+"- Enter the counted amount for each journal\n"
+"\n"
+"Bug Tracker\n"
+"===========\n"
+"\n"
+"Bugs are tracked on `GitHub Issues <https://github.com/OCA/field-service/issues>`_.\n"
+"In case of trouble, please check there if your issue has already been reported.\n"
+"If you spotted it first, help us to smash it by providing a detailed and welcomed\n"
+"`feedback <https://github.com/OCA/field-service/issues/new?body=module:%20fieldservice_route_account%0Aversion:%20saas-19.4%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**>`_.\n"
+"\n"
+"Do not contact contributors directly about support or help with technical issues.\n"
+"\n"
+"Credits\n"
+"=======\n"
+"\n"
+"Authors\n"
+"-------\n"
+"\n"
+"* Open Source Integrators\n"
+"\n"
+"Contributors\n"
+"------------\n"
+"\n"
+"- Maxime Chambreuil <mchambreuil@opensourceintegrators.com>\n"
+"- Serpent Consulting Services Pvt. Ltd. <support@serpentcs.com>\n"
+"\n"
+"Other credits\n"
+"-------------\n"
+"\n"
+"The development of this module has been financially supported by:\n"
+"\n"
+"- Open Source Integrators\n"
+"  <`https://opensourceintegrators.com\\\\> <https://opensourceintegrators.com\\>>`__\n"
+"- Serpent Consulting Services Pvt. Ltd. <support@serpentcs.com>\n"
+"\n"
+"Maintainers\n"
+"-----------\n"
+"\n"
+"This module is maintained by the OCA.\n"
+"\n"
+".. image:: https://odoo-community.org/logo.png\n"
+"   :alt: Odoo Community Association\n"
+"   :target: https://odoo-community.org\n"
+"\n"
+"OCA, or the Odoo Community Association, is a nonprofit organization whose\n"
+"mission is to support the collaborative development of Odoo features and\n"
+"promote its widespread use.\n"
+"\n"
+".. |maintainer-max3903| image:: https://github.com/max3903.png?size=40px\n"
+"    :target: https://github.com/max3903\n"
+"    :alt: max3903\n"
+"\n"
+"Current `maintainer <https://odoo-community.org/page/maintainer-role>`__:\n"
+"\n"
+"|maintainer-max3903| \n"
+"\n"
+"This module is part of the `OCA/field-service <https://github.com/OCA/field-service/tree/saas-19.4/fieldservice_route_account>`_ project on GitHub.\n"
+"\n"
+"You are welcome to contribute. To learn how please visit https://odoo-community.org/page/Contribute.\n"
+msgstr ""
+
+#. module: fieldservice_route_account
+#: model:ir.model.fields,help:fieldservice_route_account.field_fsm_route_dayroute_payment__journal_id
+msgid ""
+"Accounting journal that received the payments for this day-route (Cash, "
+"Bank, etc.). One row per journal — each row aggregates the collected vs. "
+"counted amounts for that journal."
+msgstr ""
+
+#. module: fieldservice_route_account
+#: model:ir.model.fields,help:fieldservice_route_account.field_fsm_route_dayroute_payment__move_id
+msgid ""
+"Auto-generated account move that reconciles a positive difference into the "
+"worker's receivable account when the day-route stage closes."
+msgstr ""
+
+#. module: fieldservice_route_account
+#: model:ir.model.fields,help:fieldservice_route_account.field_fsm_route_dayroute_payment__amount_counted
+msgid ""
+"Cash / amount physically counted by the worker at the end of the day-route. "
+"The difference between this and the Collected Amount becomes the day-route's"
+" reconciliation discrepancy."
+msgstr ""
+
+#. module: fieldservice_route_account
+#: model:ir.model.fields,help:fieldservice_route_account.field_fsm_route_dayroute_payment__difference
+msgid ""
+"Collected Amount minus Counted Amount. Positive values indicate uncounted "
+"cash (worker owes the company); negative values indicate over-counting "
+"(company owes the worker)."
+msgstr ""
+
+#. module: fieldservice_route_account
+#: model:ir.module.module,shortdesc:base.module_fieldservice_route_account
+msgid "Field Service Route Account"
+msgstr ""
+
+#. module: fieldservice_route_account
+#: model:ir.model,name:fieldservice_route_account.model_account_payment
+msgid "Payment"
+msgstr ""
+
+#. module: fieldservice_route_account
+#: model:ir.model.fields,help:fieldservice_route_account.field_fsm_route_dayroute__dayroute_payment_ids
+msgid ""
+"Per-journal cash count for this day-route. Each row aggregates the payments "
+"collected from this day-route's FSM orders."
+msgstr ""
+
+#. module: fieldservice_route_account
+#: model:ir.model.fields,help:fieldservice_route_account.field_fsm_route_dayroute_payment__amount_collected
+msgid ""
+"Sum of payments that were posted against this day-route's FSM orders on the "
+"selected journal. Auto-computed from account.payment records."
+msgstr ""
+
+#. module: fieldservice_route_account
+#: model:ir.model.fields,help:fieldservice_route_account.field_fsm_route_dayroute_payment__dayroute_id
+msgid "The day-route whose order payments this row aggregates."
+msgstr ""
+
+#. module: fieldservice_route_account
+#: model:ir.model.fields,help:fieldservice_route_account.field_fsm_route_dayroute__invoice_count
+msgid ""
+"Total number of customer invoices generated from the FSM orders on this day-"
+"route."
+msgstr ""

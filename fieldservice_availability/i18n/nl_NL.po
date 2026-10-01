@@ -1,0 +1,368 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* fieldservice_availability
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 20.0\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: nl_NL\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. module: fieldservice_availability
+#: model:ir.model.constraint,message:fieldservice_availability.constraint_fsm_blackout_day_unique_blackout_day
+msgid "A blackout day with this date already exists!"
+msgstr "Er bestaat al een blokkadedag met deze datum!"
+
+#. module: fieldservice_availability
+#: model:ir.model.constraint,message:fieldservice_availability.constraint_fsm_stress_day_unique_stress_day
+msgid "A stress day with this date already exists!"
+msgstr "Er bestaat al een drukke dag met deze datum!"
+
+#. module: fieldservice_availability
+#: model_terms:ir.actions.act_window,help:fieldservice_availability.action_fsm_blackout_days
+msgid "Add a Field Service Blackout Day here."
+msgstr "Voeg hier een blokkadedag voor de buitendienst toe."
+
+#. module: fieldservice_availability
+#: model_terms:ir.actions.act_window,help:fieldservice_availability.action_fsm_blackout_groups
+msgid "Add a Field Service Blackout Group here."
+msgstr "Voeg hier een blokkadegroep voor de buitendienst toe."
+
+#. module: fieldservice_availability
+#: model_terms:ir.actions.act_window,help:fieldservice_availability.action_fsm_delivery_time_range
+msgid "Add a Field Service Delivery Time Range here."
+msgstr "Voeg hier een levertijdvak voor de buitendienst toe."
+
+#. module: fieldservice_availability
+#: model_terms:ir.actions.act_window,help:fieldservice_availability.action_fsm_stress_days
+msgid "Add a Field Service Stress Day here."
+msgstr "Voeg hier een drukke dag voor de buitendienst toe."
+
+#. module: fieldservice_availability
+#: model:ir.ui.menu,name:fieldservice_availability.menu_fsm_config_availability
+msgid "Availability"
+msgstr "Beschikbaarheid"
+
+#. module: fieldservice_availability
+#: model:ir.model.fields,field_description:fieldservice_availability.field_fsm_blackout_day__date
+msgid "Blackout Day"
+msgstr "Blokkadedag"
+
+#. module: fieldservice_availability
+#: model:ir.actions.act_window,name:fieldservice_availability.action_fsm_blackout_days
+#: model:ir.ui.menu,name:fieldservice_availability.menu_fsm_blackout_days_root
+msgid "Blackout Days"
+msgstr "Blokkadedagen"
+
+#. module: fieldservice_availability
+#: model:ir.model,name:fieldservice_availability.model_fsm_blackout_day
+msgid "Blackout Days (No Service)"
+msgstr "Blokkadedagen (geen service)"
+
+#. module: fieldservice_availability
+#: model:ir.model,name:fieldservice_availability.model_fsm_blackout_group
+msgid "Blackout Group"
+msgstr "Blokkadegroep"
+
+#. module: fieldservice_availability
+#: model:ir.actions.act_window,name:fieldservice_availability.action_fsm_blackout_groups
+#: model:ir.ui.menu,name:fieldservice_availability.menu_fsm_blackout_group_root
+msgid "Blackout Groups"
+msgstr "Blokkadegroepen"
+
+#. module: fieldservice_availability
+#: model:ir.model.fields,field_description:fieldservice_availability.field_fsm_blackout_day__create_uid
+#: model:ir.model.fields,field_description:fieldservice_availability.field_fsm_blackout_group__create_uid
+#: model:ir.model.fields,field_description:fieldservice_availability.field_fsm_delivery_time_range__create_uid
+#: model:ir.model.fields,field_description:fieldservice_availability.field_fsm_stress_day__create_uid
+msgid "Created by"
+msgstr "Aangemaakt door"
+
+#. module: fieldservice_availability
+#: model:ir.model.fields,field_description:fieldservice_availability.field_fsm_blackout_day__create_date
+#: model:ir.model.fields,field_description:fieldservice_availability.field_fsm_blackout_group__create_date
+#: model:ir.model.fields,field_description:fieldservice_availability.field_fsm_delivery_time_range__create_date
+#: model:ir.model.fields,field_description:fieldservice_availability.field_fsm_stress_day__create_date
+msgid "Created on"
+msgstr "Aangemaakt op"
+
+#. module: fieldservice_availability
+#: model:ir.model.fields,help:fieldservice_availability.field_fsm_delivery_time_range__sequence
+msgid "Customize the order of time ranges. Lower numbers are shown first."
+msgstr "Bepaal de volgorde van de tijdvakken. Lagere nummers staan bovenaan."
+
+#. module: fieldservice_availability
+#: model:ir.model.fields,field_description:fieldservice_availability.field_fsm_blackout_group__fsm_blackout_day_ids
+msgid "Days"
+msgstr "Dagen"
+
+#. module: fieldservice_availability
+#: model:ir.model,name:fieldservice_availability.model_fsm_delivery_time_range
+#: model_terms:ir.ui.view,arch_db:fieldservice_availability.view_fsm_delivery_time_range_form
+msgid "Delivery Time Range"
+msgstr "Levertijdvak"
+
+#. module: fieldservice_availability
+#: model:ir.actions.act_window,name:fieldservice_availability.action_fsm_delivery_time_range
+#: model:ir.ui.menu,name:fieldservice_availability.menu_fsm_delivery_time_range
+msgid "Delivery Time Ranges"
+msgstr "Levertijdvakken"
+
+#. module: fieldservice_availability
+#: model:ir.model.fields,field_description:fieldservice_availability.field_fsm_blackout_day__name
+#: model:ir.model.fields,field_description:fieldservice_availability.field_fsm_stress_day__name
+msgid "Description"
+msgstr "Omschrijving"
+
+#. module: fieldservice_availability
+#: model:ir.model.fields,field_description:fieldservice_availability.field_fsm_blackout_day__display_name
+#: model:ir.model.fields,field_description:fieldservice_availability.field_fsm_blackout_group__display_name
+#: model:ir.model.fields,field_description:fieldservice_availability.field_fsm_delivery_time_range__display_name
+#: model:ir.model.fields,field_description:fieldservice_availability.field_fsm_stress_day__display_name
+msgid "Display Name"
+msgstr "Weergavenaam"
+
+#. module: fieldservice_availability
+#: model:ir.model.fields,field_description:fieldservice_availability.field_fsm_delivery_time_range__end_time
+msgid "End Time"
+msgstr "Eindtijd"
+
+#. module: fieldservice_availability
+#: model:ir.model,name:fieldservice_availability.model_fsm_stress_day
+msgid "High-Demand Days"
+msgstr "Dagen met grote drukte"
+
+#. module: fieldservice_availability
+#: model:ir.model.fields,field_description:fieldservice_availability.field_fsm_blackout_day__id
+#: model:ir.model.fields,field_description:fieldservice_availability.field_fsm_blackout_group__id
+#: model:ir.model.fields,field_description:fieldservice_availability.field_fsm_delivery_time_range__id
+#: model:ir.model.fields,field_description:fieldservice_availability.field_fsm_stress_day__id
+msgid "ID"
+msgstr "ID"
+
+#. module: fieldservice_availability
+#: model:ir.model.fields,field_description:fieldservice_availability.field_fsm_blackout_day__write_uid
+#: model:ir.model.fields,field_description:fieldservice_availability.field_fsm_blackout_group__write_uid
+#: model:ir.model.fields,field_description:fieldservice_availability.field_fsm_delivery_time_range__write_uid
+#: model:ir.model.fields,field_description:fieldservice_availability.field_fsm_stress_day__write_uid
+msgid "Last Updated by"
+msgstr "Laatst bijgewerkt door"
+
+#. module: fieldservice_availability
+#: model:ir.model.fields,field_description:fieldservice_availability.field_fsm_blackout_day__write_date
+#: model:ir.model.fields,field_description:fieldservice_availability.field_fsm_blackout_group__write_date
+#: model:ir.model.fields,field_description:fieldservice_availability.field_fsm_delivery_time_range__write_date
+#: model:ir.model.fields,field_description:fieldservice_availability.field_fsm_stress_day__write_date
+msgid "Last Updated on"
+msgstr "Laatst bijgewerkt op"
+
+#. module: fieldservice_availability
+#: model:ir.model.fields,field_description:fieldservice_availability.field_fsm_blackout_group__name
+#: model:ir.model.fields,field_description:fieldservice_availability.field_fsm_delivery_time_range__name
+msgid "Name"
+msgstr "Naam"
+
+#. module: fieldservice_availability
+#: model:ir.model.fields,field_description:fieldservice_availability.field_fsm_delivery_time_range__route_id
+msgid "Route"
+msgstr "Route"
+
+#. module: fieldservice_availability
+#: model:ir.model.fields,field_description:fieldservice_availability.field_fsm_delivery_time_range__sequence
+msgid "Sequence"
+msgstr "Volgorde"
+
+#. module: fieldservice_availability
+#: model:ir.model.fields,help:fieldservice_availability.field_fsm_delivery_time_range__route_id
+msgid ""
+"Specific route this time range applies to. Leave empty for global time "
+"ranges."
+msgstr ""
+"De route waarvoor dit tijdvak geldt. Laat leeg voor tijdvakken die overal "
+"gelden."
+
+#. module: fieldservice_availability
+#: model:ir.model.fields,field_description:fieldservice_availability.field_fsm_delivery_time_range__start_time
+msgid "Start Time"
+msgstr "Begintijd"
+
+#. module: fieldservice_availability
+#: model:ir.model.fields,field_description:fieldservice_availability.field_fsm_stress_day__date
+msgid "Stress Day"
+msgstr "Drukke dag"
+
+#. module: fieldservice_availability
+#: model:ir.actions.act_window,name:fieldservice_availability.action_fsm_stress_days
+#: model:ir.ui.menu,name:fieldservice_availability.menu_fsm_stress_days_root
+msgid "Stress Days"
+msgstr "Drukke dagen"
+
+#. module: fieldservice_availability
+#. odoo-python
+#: code:addons/fieldservice_availability/models/fsm_delivery_time_range.py:0
+msgid "The start time must be earlier than the end time."
+msgstr "De begintijd moet vóór de eindtijd liggen."
+
+#. module: fieldservice_availability
+#: model:ir.module.module,description:base.module_fieldservice_availability
+msgid ""
+".. image:: https://odoo-community.org/readme-banner-image\n"
+"   :target: https://odoo-community.org/get-involved?utm_source=readme\n"
+"   :alt: Odoo Community Association\n"
+"\n"
+"=========================\n"
+"Fieldservice Availability\n"
+"=========================\n"
+"\n"
+".. \n"
+"   !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n"
+"   !! This file is generated by oca-gen-addon-readme !!\n"
+"   !! changes will be overwritten.                   !!\n"
+"   !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n"
+"   !! source digest: sha256:45ba27349be2b7224c790187375371e4612a3a88e0cc36674212f8cd0ce50272\n"
+"   !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n"
+"\n"
+".. |badge1| image:: https://img.shields.io/badge/maturity-Beta-yellow.png\n"
+"    :target: https://odoo-community.org/page/development-status\n"
+"    :alt: Beta\n"
+".. |badge2| image:: https://img.shields.io/badge/license-AGPL--3-blue.png\n"
+"    :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html\n"
+"    :alt: License: AGPL-3\n"
+".. |badge3| image:: https://img.shields.io/badge/github-OCA%2Ffield--service-lightgray.png?logo=github\n"
+"    :target: https://github.com/OCA/field-service/tree/saas-19.4/fieldservice_availability\n"
+"    :alt: OCA/field-service\n"
+".. |badge4| image:: https://img.shields.io/badge/weblate-Translate%20me-F47D42.png\n"
+"    :target: https://translation.odoo-community.org/projects/field-service-saas-19-4/field-service-saas-19-4-fieldservice_availability\n"
+"    :alt: Translate me on Weblate\n"
+".. |badge5| image:: https://img.shields.io/badge/runboat-Try%20me-875A7B.png\n"
+"    :target: https://runboat.odoo-community.org/builds?repo=OCA/field-service&target_branch=saas-19.4\n"
+"    :alt: Try me on Runboat\n"
+"\n"
+"|badge1| |badge2| |badge3| |badge4| |badge5|\n"
+"\n"
+"This module defines blackout days (non-operational days), stress days\n"
+"(high-demand periods), and delivery time ranges for field service\n"
+"operations. It provides the necessary models to store this information,\n"
+"which can be used by other modules to manage scheduling, availability,\n"
+"and workload adjustments.\n"
+"\n"
+"- **Blackout Days (\\`fsm.blackout.day\\`)**: Represent dates when field\n"
+"  service operations are unavailable (e.g., holidays, company-wide\n"
+"  closures).\n"
+"- **Blackout Groups (\\`fsm.blackout.group\\`)**: Represent groups of days\n"
+"  when field service operations are unavailable (e.g., holidays,\n"
+"  company-wide closures).\n"
+"- **Stress Days (\\`fsm.stress.day\\`)**: Indicate dates with increased\n"
+"  service demand (e.g., peak business periods requiring additional\n"
+"  workforce).\n"
+"- **Delivery Time Ranges (\\`fsm.delivery.time.range\\`)**: Define\n"
+"  available time slots for scheduling field service operations.\n"
+"\n"
+"This is a technical module and does not provide functionality on its\n"
+"own. Extend this module to integrate availability management into field\n"
+"service workflows.\n"
+"\n"
+"**Table of contents**\n"
+"\n"
+".. contents::\n"
+"   :local:\n"
+"\n"
+"Usage\n"
+"=====\n"
+"\n"
+"Navigate to Field Service > Configuration > Scheduling. Once there, you\n"
+"can select Delivery Time Ranges, Blackout Days, Blackout Groups or\n"
+"Festive Days to create new records.\n"
+"\n"
+"Bug Tracker\n"
+"===========\n"
+"\n"
+"Bugs are tracked on `GitHub Issues <https://github.com/OCA/field-service/issues>`_.\n"
+"In case of trouble, please check there if your issue has already been reported.\n"
+"If you spotted it first, help us to smash it by providing a detailed and welcomed\n"
+"`feedback <https://github.com/OCA/field-service/issues/new?body=module:%20fieldservice_availability%0Aversion:%20saas-19.4%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**>`_.\n"
+"\n"
+"Do not contact contributors directly about support or help with technical issues.\n"
+"\n"
+"Credits\n"
+"=======\n"
+"\n"
+"Authors\n"
+"-------\n"
+"\n"
+"* APSL-Nagarro\n"
+"\n"
+"Contributors\n"
+"------------\n"
+"\n"
+"- `APSL-Nagarro <https://www.apsl.tech>`__:\n"
+"\n"
+"  - Patryk Pyczko <ppyczko@apsl.net>\n"
+"  - Antoni Marroig <amarroig@apsl.net>\n"
+"\n"
+"Maintainers\n"
+"-----------\n"
+"\n"
+"This module is maintained by the OCA.\n"
+"\n"
+".. image:: https://odoo-community.org/logo.png\n"
+"   :alt: Odoo Community Association\n"
+"   :target: https://odoo-community.org\n"
+"\n"
+"OCA, or the Odoo Community Association, is a nonprofit organization whose\n"
+"mission is to support the collaborative development of Odoo features and\n"
+"promote its widespread use.\n"
+"\n"
+".. |maintainer-ppyczko| image:: https://github.com/ppyczko.png?size=40px\n"
+"    :target: https://github.com/ppyczko\n"
+"    :alt: ppyczko\n"
+"\n"
+"Current `maintainer <https://odoo-community.org/page/maintainer-role>`__:\n"
+"\n"
+"|maintainer-ppyczko| \n"
+"\n"
+"This module is part of the `OCA/field-service <https://github.com/OCA/field-service/tree/saas-19.4/fieldservice_availability>`_ project on GitHub.\n"
+"\n"
+"You are welcome to contribute. To learn how please visit https://odoo-community.org/page/Contribute.\n"
+msgstr ""
+
+#. module: fieldservice_availability
+#: model:ir.model.fields,help:fieldservice_availability.field_fsm_blackout_day__date
+#: model:ir.model.fields,help:fieldservice_availability.field_fsm_stress_day__date
+msgid "Date."
+msgstr "Datum."
+
+#. module: fieldservice_availability
+#: model:ir.model.fields,help:fieldservice_availability.field_fsm_delivery_time_range__end_time
+msgid "End Time."
+msgstr "Eindtijd."
+
+#. module: fieldservice_availability
+#: model:ir.module.module,shortdesc:base.module_fieldservice_availability
+msgid "Fieldservice Availability"
+msgstr "Buitendienst - Beschikbaarheid"
+
+#. module: fieldservice_availability
+#: model:ir.model.fields,help:fieldservice_availability.field_fsm_blackout_group__fsm_blackout_day_ids
+msgid "Fsm Blackout Day Ids. Many-to-many / one-to-many relation collection."
+msgstr "Gekoppelde records: blokkadedagen."
+
+#. module: fieldservice_availability
+#: model:ir.module.module,summary:base.module_fieldservice_availability
+msgid ""
+"Provides models for defining blackout days, stress days, and delivery time "
+"ranges for FSM availability management."
+msgstr ""
+"Blokkadedagen, drukke dagen en levertijdvakken vastleggen voor het beheer "
+"van de beschikbaarheid van de buitendienst."
+
+#. module: fieldservice_availability
+#: model:ir.model.fields,help:fieldservice_availability.field_fsm_delivery_time_range__start_time
+msgid "Start Time."
+msgstr "Begintijd."

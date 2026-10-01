@@ -1,0 +1,3 @@
+id,name,model_id,group_id/id,operation,domain
+access_fsm_dayroute_payment_user,fsm.route.dayroute.payment.user,fsm.route.dayroute.payment,fieldservice.group_fsm_user,ru,
+access_fsm_dayroute_payment_dispatcher,fsm.route.dayroute.payment.dispatcher,fsm.route.dayroute.payment,fieldservice.group_fsm_dispatcher,crud,
