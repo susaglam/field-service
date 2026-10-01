@@ -1,0 +1,380 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* fieldservice_activity
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 20.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2025-07-08 09:58+0000\n"
+"Last-Translator: Interactive AV-IT <mariusz@interactiveavit.com>\n"
+"Language-Team: none\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 5.10.4\n"
+
+#. module: fieldservice_activity
+#: model:ir.model.fields,field_description:fieldservice_activity.field_fsm_template__temp_activity_ids
+#: model_terms:ir.ui.view,arch_db:fieldservice_activity.view_fsm_order_form_add_activity
+#: model_terms:ir.ui.view,arch_db:fieldservice_activity.view_fsm_template_form_add_activity
+msgid "Activities"
+msgstr ""
+
+#. module: fieldservice_activity
+#: model_terms:ir.ui.view,arch_db:fieldservice_activity.view_fsm_order_form_add_activity
+#: model_terms:ir.ui.view,arch_db:fieldservice_activity.view_fsm_template_form_add_activity
+msgid "Cancel"
+msgstr ""
+
+#. module: fieldservice_activity
+#: model:ir.model.fields.selection,name:fieldservice_activity.selection__fsm_activity__state__cancel
+msgid "Cancelled"
+msgstr ""
+
+#. module: fieldservice_activity
+#: model_terms:ir.ui.view,arch_db:fieldservice_activity.view_fsm_order_form_add_activity
+#: model_terms:ir.ui.view,arch_db:fieldservice_activity.view_fsm_template_form_add_activity
+msgid "Complete"
+msgstr "Zakończ"
+
+#. module: fieldservice_activity
+#: model:ir.model.fields,field_description:fieldservice_activity.field_fsm_activity__completed
+#: model:ir.model.fields.selection,name:fieldservice_activity.selection__fsm_activity__state__done
+msgid "Completed"
+msgstr "Zakończone"
+
+#. module: fieldservice_activity
+#: model:ir.model.fields,field_description:fieldservice_activity.field_fsm_activity__completed_by
+msgid "Completed By"
+msgstr "Zakończone przez"
+
+#. module: fieldservice_activity
+#: model:ir.model.fields,field_description:fieldservice_activity.field_fsm_activity__completed_on
+msgid "Completed On"
+msgstr ""
+
+#. module: fieldservice_activity
+#: model:ir.model.fields,field_description:fieldservice_activity.field_fsm_activity__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: fieldservice_activity
+#: model:ir.model.fields,field_description:fieldservice_activity.field_fsm_activity__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: fieldservice_activity
+#: model:ir.model.fields,field_description:fieldservice_activity.field_fsm_activity__display_name
+#: model:ir.model.fields,field_description:fieldservice_activity.field_fsm_order__display_name
+#: model:ir.model.fields,field_description:fieldservice_activity.field_fsm_template__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: fieldservice_activity
+#: model:ir.model.fields,field_description:fieldservice_activity.field_fsm_activity__fsm_order_id
+msgid "FSM Order"
+msgstr ""
+
+#. module: fieldservice_activity
+#: model:ir.model.fields,field_description:fieldservice_activity.field_fsm_activity__fsm_template_id
+msgid "FSM Template"
+msgstr ""
+
+#. module: fieldservice_activity
+#: model:ir.model,name:fieldservice_activity.model_fsm_activity
+#: model:ir.module.module,shortdesc:base.module_fieldservice_activity
+msgid "Field Service Activity"
+msgstr ""
+
+#. module: fieldservice_activity
+#: model:ir.model,name:fieldservice_activity.model_fsm_order
+msgid "Field Service Order"
+msgstr ""
+
+#. module: fieldservice_activity
+#: model:ir.model,name:fieldservice_activity.model_fsm_template
+msgid "Field Service Order Template"
+msgstr ""
+
+#. module: fieldservice_activity
+#: model:ir.model.fields,field_description:fieldservice_activity.field_fsm_activity__id
+#: model:ir.model.fields,field_description:fieldservice_activity.field_fsm_order__id
+#: model:ir.model.fields,field_description:fieldservice_activity.field_fsm_template__id
+msgid "ID"
+msgstr "ID"
+
+#. module: fieldservice_activity
+#: model:ir.model.fields,field_description:fieldservice_activity.field_fsm_activity__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: fieldservice_activity
+#: model:ir.model.fields,field_description:fieldservice_activity.field_fsm_activity__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: fieldservice_activity
+#: model:ir.model.fields,field_description:fieldservice_activity.field_fsm_activity__name
+msgid "Name"
+msgstr "Nazwa"
+
+#. module: fieldservice_activity
+#: model:ir.model.fields,field_description:fieldservice_activity.field_fsm_order__order_activity_ids
+msgid "Order Activities"
+msgstr ""
+
+#. module: fieldservice_activity
+#: model:ir.model.fields,field_description:fieldservice_activity.field_fsm_activity__ref
+msgid "Reference"
+msgstr "Odniesienie"
+
+#. module: fieldservice_activity
+#: model:ir.model.fields,field_description:fieldservice_activity.field_fsm_activity__required
+msgid "Required"
+msgstr ""
+
+#. module: fieldservice_activity
+#: model:ir.model.fields,field_description:fieldservice_activity.field_fsm_activity__sequence
+msgid "Sequence"
+msgstr ""
+
+#. module: fieldservice_activity
+#: model:ir.model.fields,field_description:fieldservice_activity.field_fsm_activity__state
+msgid "State"
+msgstr ""
+
+#. module: fieldservice_activity
+#: model:ir.model.fields.selection,name:fieldservice_activity.selection__fsm_activity__state__todo
+msgid "To Do"
+msgstr ""
+
+#. module: fieldservice_activity
+#. odoo-python
+#: code:addons/fieldservice_activity/models/fsm_order.py:0
+msgid ""
+"You must complete activity '%s' before                     completing this "
+"order."
+msgstr ""
+
+#. module: fieldservice_activity
+#: model:ir.module.module,description:base.module_fieldservice_activity
+msgid ""
+".. image:: https://odoo-community.org/readme-banner-image\n"
+"   :target: https://odoo-community.org/get-involved?utm_source=readme\n"
+"   :alt: Odoo Community Association\n"
+"\n"
+"======================\n"
+"Field Service Activity\n"
+"======================\n"
+"\n"
+".. \n"
+"   !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n"
+"   !! This file is generated by oca-gen-addon-readme !!\n"
+"   !! changes will be overwritten.                   !!\n"
+"   !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n"
+"   !! source digest: sha256:5967f5809fab0c74a28a040258f366ae3f648452e5ed812ee0f29d40f1d84b34\n"
+"   !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n"
+"\n"
+".. |badge1| image:: https://img.shields.io/badge/maturity-Beta-yellow.png\n"
+"    :target: https://odoo-community.org/page/development-status\n"
+"    :alt: Beta\n"
+".. |badge2| image:: https://img.shields.io/badge/license-AGPL--3-blue.png\n"
+"    :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html\n"
+"    :alt: License: AGPL-3\n"
+".. |badge3| image:: https://img.shields.io/badge/github-OCA%2Ffield--service-lightgray.png?logo=github\n"
+"    :target: https://github.com/OCA/field-service/tree/saas-19.4/fieldservice_activity\n"
+"    :alt: OCA/field-service\n"
+".. |badge4| image:: https://img.shields.io/badge/weblate-Translate%20me-F47D42.png\n"
+"    :target: https://translation.odoo-community.org/projects/field-service-saas-19-4/field-service-saas-19-4-fieldservice_activity\n"
+"    :alt: Translate me on Weblate\n"
+".. |badge5| image:: https://img.shields.io/badge/runboat-Try%20me-875A7B.png\n"
+"    :target: https://runboat.odoo-community.org/builds?repo=OCA/field-service&target_branch=saas-19.4\n"
+"    :alt: Try me on Runboat\n"
+"\n"
+"|badge1| |badge2| |badge3| |badge4| |badge5|\n"
+"\n"
+"A Field Service Activity gives the user the ability to define a list of\n"
+"tasks/activities on a service order\n"
+"\n"
+"The user can add tasks/activities to the FSM order to the ones created\n"
+"from the template.\n"
+"\n"
+"**Table of contents**\n"
+"\n"
+".. contents::\n"
+"   :local:\n"
+"\n"
+"Configuration\n"
+"=============\n"
+"\n"
+"To use this module, you need to:\n"
+"\n"
+"- Go to Field Service > Configuration > Manage Order Activities\n"
+"\n"
+"Usage\n"
+"=====\n"
+"\n"
+"Activities in a FSM Order\n"
+"-------------------------\n"
+"\n"
+"- Go to **Field Service** application.\n"
+"- Create or select an FSM Order.\n"
+"- Under the tab *Activities\"*, add as many *Activities* as needed\n"
+"\n"
+"`FSM Order Activities\n"
+"Tab <../static/description/fsm_order_activity_tab.png>`__\n"
+"\n"
+"Activities in a FSM Order Template\n"
+"----------------------------------\n"
+"\n"
+"- As a user with Setting access, go to *Field Service > Configuration >\n"
+"  Settings*.\n"
+"\n"
+"- Activate the *Manage Order Templates* feature and **Save**.\n"
+"\n"
+"`Field Service Settings Manage\n"
+"Templates <../static/description/field_service_settings_manage_templates.png>`__\n"
+"\n"
+"- As a Field Service User, go to *Field Service > Master Data >\n"
+"  Templates*.\n"
+"\n"
+"`Field Service\n"
+"Templates <../static/description/field_service_template.png>`__\n"
+"\n"
+"- Under the new *Activities* tab, create or add activities.\n"
+"\n"
+"`Field Service Template\n"
+"Activities <../static/description/field_service_template_activities.png>`__\n"
+"\n"
+"Using a template with activities for a FSM Order\n"
+"~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n"
+"\n"
+"- From the form view of a FSM Order, choose the template you created the\n"
+"  activities for.\n"
+"\n"
+"- Under the tab *Activities*, you can noticed that the template\n"
+"  activities have been copied.\n"
+"\n"
+"Bug Tracker\n"
+"===========\n"
+"\n"
+"Bugs are tracked on `GitHub Issues <https://github.com/OCA/field-service/issues>`_.\n"
+"In case of trouble, please check there if your issue has already been reported.\n"
+"If you spotted it first, help us to smash it by providing a detailed and welcomed\n"
+"`feedback <https://github.com/OCA/field-service/issues/new?body=module:%20fieldservice_activity%0Aversion:%20saas-19.4%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**>`_.\n"
+"\n"
+"Do not contact contributors directly about support or help with technical issues.\n"
+"\n"
+"Credits\n"
+"=======\n"
+"\n"
+"Authors\n"
+"-------\n"
+"\n"
+"* Open Source Integrators\n"
+"\n"
+"Contributors\n"
+"------------\n"
+"\n"
+"- Maxime Chambreuil <mchambreuil@opensourceintegrators.com>\n"
+"\n"
+"- Steve Campbell <scampbells@opensourceintegrators.com>\n"
+"\n"
+"- Bhavesh Odedra <bodedra@opensourceintegrators.com>\n"
+"\n"
+"- Freni Patel <fpatel@opensourceintegrators.com>\n"
+"\n"
+"- `Binhex Systems Solutions <https://binhex.cloud>`__:\n"
+"\n"
+"  - Deriman Alonso <d.alonso@binhex.cloud>\n"
+"\n"
+"Other credits\n"
+"-------------\n"
+"\n"
+"The development of this module has been financially supported by:\n"
+"\n"
+"- Open Source Integrators <https://opensourceintegrators.com>\n"
+"\n"
+"Maintainers\n"
+"-----------\n"
+"\n"
+"This module is maintained by the OCA.\n"
+"\n"
+".. image:: https://odoo-community.org/logo.png\n"
+"   :alt: Odoo Community Association\n"
+"   :target: https://odoo-community.org\n"
+"\n"
+"OCA, or the Odoo Community Association, is a nonprofit organization whose\n"
+"mission is to support the collaborative development of Odoo features and\n"
+"promote its widespread use.\n"
+"\n"
+".. |maintainer-max3903| image:: https://github.com/max3903.png?size=40px\n"
+"    :target: https://github.com/max3903\n"
+"    :alt: max3903\n"
+".. |maintainer-osi-scampbell| image:: https://github.com/osi-scampbell.png?size=40px\n"
+"    :target: https://github.com/osi-scampbell\n"
+"    :alt: osi-scampbell\n"
+"\n"
+"Current `maintainers <https://odoo-community.org/page/maintainer-role>`__:\n"
+"\n"
+"|maintainer-max3903| |maintainer-osi-scampbell| \n"
+"\n"
+"This module is part of the `OCA/field-service <https://github.com/OCA/field-service/tree/saas-19.4/fieldservice_activity>`_ project on GitHub.\n"
+"\n"
+"You are welcome to contribute. To learn how please visit https://odoo-community.org/page/Contribute.\n"
+msgstr ""
+
+#. module: fieldservice_activity
+#: model:ir.model.fields,help:fieldservice_activity.field_fsm_activity__completed_by
+msgid "Completed By."
+msgstr ""
+
+#. module: fieldservice_activity
+#: model:ir.model.fields,help:fieldservice_activity.field_fsm_activity__completed_on
+msgid "Completed On."
+msgstr ""
+
+#. module: fieldservice_activity
+#: model:ir.model.fields,help:fieldservice_activity.field_fsm_activity__completed
+msgid "Completed."
+msgstr ""
+
+#. module: fieldservice_activity
+#: model:ir.module.module,summary:base.module_fieldservice_activity
+msgid ""
+"Field Service Activities are a set of actions\n"
+"     that need to be performed on a service order"
+msgstr ""
+
+#. module: fieldservice_activity
+#: model:ir.model.fields,help:fieldservice_activity.field_fsm_activity__fsm_order_id
+msgid "Fsm Order Id. Linked record reference."
+msgstr ""
+
+#. module: fieldservice_activity
+#: model:ir.model.fields,help:fieldservice_activity.field_fsm_activity__fsm_template_id
+msgid "Fsm Template Id. Linked record reference."
+msgstr ""
+
+#. module: fieldservice_activity
+#: model:ir.model.fields,help:fieldservice_activity.field_fsm_activity__ref
+msgid "Ref."
+msgstr ""
+
+#. module: fieldservice_activity
+#: model:ir.model.fields,help:fieldservice_activity.field_fsm_activity__required
+msgid "Required."
+msgstr ""
+
+#. module: fieldservice_activity
+#: model:ir.model.fields,help:fieldservice_activity.field_fsm_activity__state
+msgid "State. Current state of the record."
+msgstr ""
+
+#. module: fieldservice_activity
+#: model:ir.model.fields,help:fieldservice_activity.field_fsm_template__temp_activity_ids
+msgid "Temp Activity Ids. Many-to-many / one-to-many relation collection."
+msgstr ""

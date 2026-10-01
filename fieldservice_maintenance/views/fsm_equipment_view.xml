@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <!-- Field Service maintenance Form View-->
+    <record id="fsm_equipment_form_view_maintenance" model="ir.ui.view">
+        <field name="name">fsm.equipment.form.maintenance</field>
+        <field name="model">fsm.equipment</field>
+        <field name="inherit_id" ref="fieldservice.fsm_equipment_form_view" />
+        <field name="arch" type="xml">
+            <group id="secondary" position="inside">
+                <group string="Maintenance">
+                    <field name="maintenance_team_id" />
+                    <field name="category_id" />
+                    <field name="model" />
+                </group>
+            </group>
+        </field>
+    </record>
+
+    <!--
+        Tree view inheritance dropped in saas-19.3: list-view validation runs
+        before _inherits delegate-field resolution, so 'category_id' (delegate
+        from maintenance.equipment) is rejected as "Field does not exist".
+        Form view inheritance below works because form validation tolerates it.
+        Restore this block when a proper saas-19.3 pattern emerges.
+    -->
+</odoo>

@@ -1,0 +1,2 @@
+id,name,model_id,group_id/id,operation,domain
+access_crm_lead_fsm_user,crm.lead.fsm.user,crm.lead,fieldservice.group_fsm_user,r,

@@ -1,0 +1,283 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* fieldservice_vehicle
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 20.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2021-12-08 22:39+0000\n"
+"Last-Translator: marcos-mendez <mendez.foto@gmail.com>\n"
+"Language-Team: none\n"
+"Language: pt_BR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 4.3.2\n"
+
+#. module: fieldservice_vehicle
+#: model_terms:ir.actions.act_window,help:fieldservice_vehicle.action_fsm_vehicle
+msgid "Add a Field Service Vehicle here."
+msgstr "Adicione um Veículo de Serviço de Campo aqui."
+
+#. module: fieldservice_vehicle
+#: model:ir.model.fields,field_description:fieldservice_vehicle.field_fsm_vehicle__person_id
+msgid "Assigned Driver"
+msgstr "Motorista Designado"
+
+#. module: fieldservice_vehicle
+#: model:ir.model.fields,field_description:fieldservice_vehicle.field_fsm_vehicle__create_uid
+msgid "Created by"
+msgstr "Criado por"
+
+#. module: fieldservice_vehicle
+#: model:ir.model.fields,field_description:fieldservice_vehicle.field_fsm_vehicle__create_date
+msgid "Created on"
+msgstr "Criado em"
+
+#. module: fieldservice_vehicle
+#: model:ir.model.fields,field_description:fieldservice_vehicle.field_fsm_person__vehicle_id
+msgid "Default Vehicle"
+msgstr "Veículo Padrão"
+
+#. module: fieldservice_vehicle
+#: model:ir.model.fields,field_description:fieldservice_vehicle.field_fsm_order__display_name
+#: model:ir.model.fields,field_description:fieldservice_vehicle.field_fsm_person__display_name
+#: model:ir.model.fields,field_description:fieldservice_vehicle.field_fsm_vehicle__display_name
+msgid "Display Name"
+msgstr "Exibir Nome"
+
+#. module: fieldservice_vehicle
+#: model:ir.model,name:fieldservice_vehicle.model_fsm_order
+msgid "Field Service Order"
+msgstr "Ordem de Serviço de Campo"
+
+#. module: fieldservice_vehicle
+#: model:ir.model,name:fieldservice_vehicle.model_fsm_vehicle
+msgid "Field Service Vehicle"
+msgstr "Veículo de Serviço de Campo"
+
+#. module: fieldservice_vehicle
+#: model:ir.actions.act_window,name:fieldservice_vehicle.action_fsm_vehicle
+#: model:ir.module.module,shortdesc:base.module_fieldservice_vehicle
+msgid "Field Service Vehicles"
+msgstr "Veículos de Serviço de Campo"
+
+#. module: fieldservice_vehicle
+#: model:ir.model,name:fieldservice_vehicle.model_fsm_person
+msgid "Field Service Worker"
+msgstr "Trabalhador do Serviço de Campo"
+
+#. module: fieldservice_vehicle
+#: model:ir.model.fields,field_description:fieldservice_vehicle.field_fsm_order__id
+#: model:ir.model.fields,field_description:fieldservice_vehicle.field_fsm_person__id
+#: model:ir.model.fields,field_description:fieldservice_vehicle.field_fsm_vehicle__id
+msgid "ID"
+msgstr "ID"
+
+#. module: fieldservice_vehicle
+#: model:ir.model.fields,field_description:fieldservice_vehicle.field_fsm_vehicle__write_uid
+msgid "Last Updated by"
+msgstr "Última Atualização Feita por"
+
+#. module: fieldservice_vehicle
+#: model:ir.model.fields,field_description:fieldservice_vehicle.field_fsm_vehicle__write_date
+msgid "Last Updated on"
+msgstr "Última Atualização Feita em"
+
+#. module: fieldservice_vehicle
+#: model:res.groups,name:fieldservice_vehicle.group_fsm_vehicle
+msgid "Manage Vehicles"
+msgstr "Gerenciar Veículos"
+
+#. module: fieldservice_vehicle
+#: model:ir.model.fields,field_description:fieldservice_vehicle.field_fsm_vehicle__name
+msgid "Name"
+msgstr "Nome"
+
+#. module: fieldservice_vehicle
+#: model:ir.model.fields,field_description:fieldservice_vehicle.field_fsm_order__vehicle_id
+msgid "Vehicle"
+msgstr "Veículo"
+
+#. module: fieldservice_vehicle
+#: model:ir.model.constraint,message:fieldservice_vehicle.constraint_fsm_vehicle_name_uniq
+msgid "Vehicle name already exists!"
+msgstr "O nome do veículo já existe!"
+
+#. module: fieldservice_vehicle
+#: model:ir.actions.act_window,name:fieldservice_vehicle.action_fsm_report_vehicle
+#: model:ir.ui.menu,name:fieldservice_vehicle.menu_fsm_report_vehicle
+#: model:ir.ui.menu,name:fieldservice_vehicle.menu_fsm_vehicle
+#: model_terms:ir.ui.view,arch_db:fieldservice_vehicle.fsm_vehicle_graph_view
+#: model_terms:ir.ui.view,arch_db:fieldservice_vehicle.fsm_vehicle_pivot_view
+msgid "Vehicles"
+msgstr "Veículos"
+
+#. module: fieldservice_vehicle
+#: model_terms:ir.actions.act_window,help:fieldservice_vehicle.action_fsm_report_vehicle
+msgid "Vehicles Report"
+msgstr "Relatório de Veículos"
+
+#. module: fieldservice_vehicle
+#: model:ir.module.module,description:base.module_fieldservice_vehicle
+msgid ""
+".. image:: https://odoo-community.org/readme-banner-image\n"
+"   :target: https://odoo-community.org/get-involved?utm_source=readme\n"
+"   :alt: Odoo Community Association\n"
+"\n"
+"======================\n"
+"Field Service Vehicles\n"
+"======================\n"
+"\n"
+".. \n"
+"   !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n"
+"   !! This file is generated by oca-gen-addon-readme !!\n"
+"   !! changes will be overwritten.                   !!\n"
+"   !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n"
+"   !! source digest: sha256:47b2c159ad6f7cebeb03849e562fa7d1b0eb5e23fd6839fb71d73a81132e0aeb\n"
+"   !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n"
+"\n"
+".. |badge1| image:: https://img.shields.io/badge/maturity-Beta-yellow.png\n"
+"    :target: https://odoo-community.org/page/development-status\n"
+"    :alt: Beta\n"
+".. |badge2| image:: https://img.shields.io/badge/license-AGPL--3-blue.png\n"
+"    :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html\n"
+"    :alt: License: AGPL-3\n"
+".. |badge3| image:: https://img.shields.io/badge/github-OCA%2Ffield--service-lightgray.png?logo=github\n"
+"    :target: https://github.com/OCA/field-service/tree/saas-19.4/fieldservice_vehicle\n"
+"    :alt: OCA/field-service\n"
+".. |badge4| image:: https://img.shields.io/badge/weblate-Translate%20me-F47D42.png\n"
+"    :target: https://translation.odoo-community.org/projects/field-service-saas-19-4/field-service-saas-19-4-fieldservice_vehicle\n"
+"    :alt: Translate me on Weblate\n"
+".. |badge5| image:: https://img.shields.io/badge/runboat-Try%20me-875A7B.png\n"
+"    :target: https://runboat.odoo-community.org/builds?repo=OCA/field-service&target_branch=saas-19.4\n"
+"    :alt: Try me on Runboat\n"
+"\n"
+"|badge1| |badge2| |badge3| |badge4| |badge5|\n"
+"\n"
+"This module allows you to manage your vehicles and assign them to a\n"
+"worker.\n"
+"\n"
+"**Table of contents**\n"
+"\n"
+".. contents::\n"
+"   :local:\n"
+"\n"
+"Installation\n"
+"============\n"
+"\n"
+"To install Field Service and have the mapping features, you need to\n"
+"install GeoEngine.\n"
+"\n"
+"Please refer to the installation instructions available at:\n"
+"https://github.com/OCA/geospatial/tree/13.0/base_geoengine\n"
+"\n"
+"Configuration\n"
+"=============\n"
+"\n"
+"To configure this module, you need to:\n"
+"\n"
+"- Go to Field Service > Master Data > Vehicles\n"
+"- Create your vehicles and assign them to a worker\n"
+"\n"
+"Usage\n"
+"=====\n"
+"\n"
+"To use this module, you need to:\n"
+"\n"
+"- Go to Field Service\n"
+"- Create or select an order and assign it\n"
+"- Follow the process\n"
+"\n"
+"Known issues / Roadmap\n"
+"======================\n"
+"\n"
+"The roadmap of the Field Service application is documented on\n"
+"`Github <https://github.com/OCA/field-service/issues/1>`__.\n"
+"\n"
+"Bug Tracker\n"
+"===========\n"
+"\n"
+"Bugs are tracked on `GitHub Issues <https://github.com/OCA/field-service/issues>`_.\n"
+"In case of trouble, please check there if your issue has already been reported.\n"
+"If you spotted it first, help us to smash it by providing a detailed and welcomed\n"
+"`feedback <https://github.com/OCA/field-service/issues/new?body=module:%20fieldservice_vehicle%0Aversion:%20saas-19.4%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**>`_.\n"
+"\n"
+"Do not contact contributors directly about support or help with technical issues.\n"
+"\n"
+"Credits\n"
+"=======\n"
+"\n"
+"Authors\n"
+"-------\n"
+"\n"
+"* Open Source Integrators\n"
+"\n"
+"Contributors\n"
+"------------\n"
+"\n"
+"- Wolfgang Hall <whall@opensourceintegrators.com>\n"
+"- Maxime Chambreuil <mchambreuil@opensourceintegrators.com>\n"
+"- Steve Campbell <scampbell@opensourceintegrators.com>\n"
+"- Bhavesh Odedra <bodedra@opensourceintegrators.com>\n"
+"- Michael Allen <mallen@opensourceintegrators.com>\n"
+"- Serpent Consulting Services Pvt. Ltd. <support@serpentcs.com>\n"
+"- Brian McMaster <brian@mcmpest.com>\n"
+"- Vandan Pandeji <vpandeji@opensourceintegrators.com>\n"
+"- `APSL <https://apsl.tech>`__:\n"
+"\n"
+"  - Antoni Marroig <amarroig@apsl.net>\n"
+"\n"
+"Other credits\n"
+"-------------\n"
+"\n"
+"The development of this module has been financially supported by:\n"
+"\n"
+"- Open Source Integrators <https://opensourceintegrators.com>\n"
+"\n"
+"Maintainers\n"
+"-----------\n"
+"\n"
+"This module is maintained by the OCA.\n"
+"\n"
+".. image:: https://odoo-community.org/logo.png\n"
+"   :alt: Odoo Community Association\n"
+"   :target: https://odoo-community.org\n"
+"\n"
+"OCA, or the Odoo Community Association, is a nonprofit organization whose\n"
+"mission is to support the collaborative development of Odoo features and\n"
+"promote its widespread use.\n"
+"\n"
+".. |maintainer-wolfhall| image:: https://github.com/wolfhall.png?size=40px\n"
+"    :target: https://github.com/wolfhall\n"
+"    :alt: wolfhall\n"
+".. |maintainer-max3903| image:: https://github.com/max3903.png?size=40px\n"
+"    :target: https://github.com/max3903\n"
+"    :alt: max3903\n"
+"\n"
+"Current `maintainers <https://odoo-community.org/page/maintainer-role>`__:\n"
+"\n"
+"|maintainer-wolfhall| |maintainer-max3903| \n"
+"\n"
+"This module is part of the `OCA/field-service <https://github.com/OCA/field-service/tree/saas-19.4/fieldservice_vehicle>`_ project on GitHub.\n"
+"\n"
+"You are welcome to contribute. To learn how please visit https://odoo-community.org/page/Contribute.\n"
+msgstr ""
+
+#. module: fieldservice_vehicle
+#: model:ir.module.module,summary:base.module_fieldservice_vehicle
+msgid "Manage Field Service vehicles and assign drivers"
+msgstr ""
+
+#. module: fieldservice_vehicle
+#: model:ir.model.fields,help:fieldservice_vehicle.field_fsm_vehicle__person_id
+msgid "Person Id. Linked record reference."
+msgstr ""
+
+#. module: fieldservice_vehicle
+#: model:ir.model.fields,help:fieldservice_vehicle.field_fsm_order__vehicle_id
+#: model:ir.model.fields,help:fieldservice_vehicle.field_fsm_person__vehicle_id
+msgid "Vehicle Id. Linked record reference."
+msgstr ""

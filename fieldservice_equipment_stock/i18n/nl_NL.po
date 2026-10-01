@@ -1,0 +1,290 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* fieldservice_equipment_stock
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 20.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-18 09:27+0000\n"
+"PO-Revision-Date: 2026-05-18 09:27+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: nl_NL\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. module: fieldservice_equipment_stock
+#: model:ir.model.fields,field_description:fieldservice_equipment_stock.field_stock_picking_type__create_fsm_equipment
+msgid "Create Fsm Equipment"
+msgstr "FSM-apparaat aanmaken"
+
+#. module: fieldservice_equipment_stock
+#: model:ir.model.fields,field_description:fieldservice_equipment_stock.field_product_product__create_fsm_equipment
+#: model:ir.model.fields,field_description:fieldservice_equipment_stock.field_product_template__create_fsm_equipment
+msgid "Creates a FSM Equipment"
+msgstr "Maakt een FSM-apparaat aan"
+
+#. module: fieldservice_equipment_stock
+#: model:ir.model.fields,help:fieldservice_equipment_stock.field_product_product__create_fsm_equipment
+#: model:ir.model.fields,help:fieldservice_equipment_stock.field_product_template__create_fsm_equipment
+msgid ""
+"Creates a Field Service Equipment when a stock move is done. It requires the"
+" 'Create FSM Equipment' option to be enabled on the picking type, too."
+msgstr ""
+"Maakt een Field Service-apparaat aan wanneer een voorraadmutatie is "
+"voltooid. De optie 'FSM-apparaat aanmaken' moet ook ingeschakeld zijn op het"
+" verzendingstype."
+
+#. module: fieldservice_equipment_stock
+#: model:ir.model.fields,field_description:fieldservice_equipment_stock.field_fsm_equipment__current_stock_location_id
+msgid "Current Inventory Location"
+msgstr "Huidige voorraadlocatie"
+
+#. module: fieldservice_equipment_stock
+#: model:ir.model.fields,field_description:fieldservice_equipment_stock.field_fsm_equipment__display_name
+#: model:ir.model.fields,field_description:fieldservice_equipment_stock.field_product_template__display_name
+#: model:ir.model.fields,field_description:fieldservice_equipment_stock.field_stock_lot__display_name
+#: model:ir.model.fields,field_description:fieldservice_equipment_stock.field_stock_move__display_name
+#: model:ir.model.fields,field_description:fieldservice_equipment_stock.field_stock_picking_type__display_name
+msgid "Display Name"
+msgstr "Weergavenaam"
+
+#. module: fieldservice_equipment_stock
+#: model:ir.model.fields,field_description:fieldservice_equipment_stock.field_stock_lot__fsm_equipment_id
+msgid "Equipment"
+msgstr "Apparaat"
+
+#. module: fieldservice_equipment_stock
+#: model:ir.model,name:fieldservice_equipment_stock.model_fsm_equipment
+msgid "Field Service Equipment"
+msgstr "Field Service-apparaat"
+
+#. module: fieldservice_equipment_stock
+#: model:ir.model.fields,field_description:fieldservice_equipment_stock.field_fsm_equipment__id
+#: model:ir.model.fields,field_description:fieldservice_equipment_stock.field_product_template__id
+#: model:ir.model.fields,field_description:fieldservice_equipment_stock.field_stock_lot__id
+#: model:ir.model.fields,field_description:fieldservice_equipment_stock.field_stock_move__id
+#: model:ir.model.fields,field_description:fieldservice_equipment_stock.field_stock_picking_type__id
+msgid "ID"
+msgstr "ID"
+
+#. module: fieldservice_equipment_stock
+#: model_terms:ir.ui.view,arch_db:fieldservice_equipment_stock.fsm_equipment_form_view_stock
+msgid "Inventory"
+msgstr "Voorraad"
+
+#. module: fieldservice_equipment_stock
+#: model:ir.model,name:fieldservice_equipment_stock.model_stock_lot
+msgid "Lot/Serial"
+msgstr "Lot/Serie"
+
+#. module: fieldservice_equipment_stock
+#: model:ir.model,name:fieldservice_equipment_stock.model_stock_picking_type
+msgid "Picking Type"
+msgstr "Verzendingstype"
+
+#. module: fieldservice_equipment_stock
+#: model:ir.model,name:fieldservice_equipment_stock.model_product_template
+#: model:ir.model.fields,field_description:fieldservice_equipment_stock.field_fsm_equipment__product_id
+msgid "Product"
+msgstr "Product"
+
+#. module: fieldservice_equipment_stock
+#: model:ir.model.fields,help:fieldservice_equipment_stock.field_stock_picking_type__create_fsm_equipment
+msgid ""
+"Products with the 'Creates a FSM Equipment' flag will automatically be "
+"converted to an FSM Equipment."
+msgstr ""
+"Producten met de vlag 'Maakt een FSM-apparaat aan' worden automatisch "
+"omgezet naar een FSM-apparaat."
+
+#. module: fieldservice_equipment_stock
+#: model:ir.model.fields,field_description:fieldservice_equipment_stock.field_fsm_equipment__lot_id
+msgid "Serial #"
+msgstr "Serienr."
+
+#. module: fieldservice_equipment_stock
+#: model:ir.model,name:fieldservice_equipment_stock.model_stock_move
+msgid "Stock Move"
+msgstr "Voorraadmutatie"
+
+#. module: fieldservice_equipment_stock
+#: model:ir.module.module,description:base.module_fieldservice_equipment_stock
+msgid ""
+".. image:: https://odoo-community.org/readme-banner-image\n"
+"   :target: https://odoo-community.org/get-involved?utm_source=readme\n"
+"   :alt: Odoo Community Association\n"
+"\n"
+"===============================\n"
+"Field Service - Stock Equipment\n"
+"===============================\n"
+"\n"
+".. \n"
+"   !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n"
+"   !! This file is generated by oca-gen-addon-readme !!\n"
+"   !! changes will be overwritten.                   !!\n"
+"   !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n"
+"   !! source digest: sha256:c264a73cea51dca4a07b3d1812c17182f942a2fb45dff97076e4e09eb093d923\n"
+"   !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n"
+"\n"
+".. |badge1| image:: https://img.shields.io/badge/maturity-Beta-yellow.png\n"
+"    :target: https://odoo-community.org/page/development-status\n"
+"    :alt: Beta\n"
+".. |badge2| image:: https://img.shields.io/badge/license-AGPL--3-blue.png\n"
+"    :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html\n"
+"    :alt: License: AGPL-3\n"
+".. |badge3| image:: https://img.shields.io/badge/github-OCA%2Ffield--service-lightgray.png?logo=github\n"
+"    :target: https://github.com/OCA/field-service/tree/saas-19.4/fieldservice_equipment_stock\n"
+"    :alt: OCA/field-service\n"
+".. |badge4| image:: https://img.shields.io/badge/weblate-Translate%20me-F47D42.png\n"
+"    :target: https://translation.odoo-community.org/projects/field-service-saas-19-4/field-service-saas-19-4-fieldservice_equipment_stock\n"
+"    :alt: Translate me on Weblate\n"
+".. |badge5| image:: https://img.shields.io/badge/runboat-Try%20me-875A7B.png\n"
+"    :target: https://runboat.odoo-community.org/builds?repo=OCA/field-service&target_branch=saas-19.4\n"
+"    :alt: Try me on Runboat\n"
+"\n"
+"|badge1| |badge2| |badge3| |badge4| |badge5|\n"
+"\n"
+"This module is an add-on for the Field Service application in Odoo. It\n"
+"allows you to track your FSM Equipments in stock moves.\n"
+"\n"
+"**Table of contents**\n"
+"\n"
+".. contents::\n"
+"   :local:\n"
+"\n"
+"Configuration\n"
+"=============\n"
+"\n"
+"Products can be automatically converted into FSM Equipments. This is\n"
+"only available only for products tracked by serial number. This needs to\n"
+"be enabled both on Operation Types and Products. For example, we may\n"
+"want to create the FSM Equipment on Delivery, or on Receipts.\n"
+"\n"
+"To enable on Products:\n"
+"\n"
+"- Go to Inventory > Master Data > Products\n"
+"- Open the Product form, Inventory tab\n"
+"- On the \"Traceability\" section, make sure \"Tracking\" is set to \"By\n"
+"  Unique Serial Number\"\n"
+"- Enable the \"Creates FSM Equipment\" checkbox\n"
+"\n"
+"To enable on Operation Types:\n"
+"\n"
+"- Go to Inventory > Configuration > Operation Types\n"
+"- Select the intended Operation Type (\"Receipts\" for example)\n"
+"- On the \"Traceability\" section, enable the \"Create FSM Equipment\"\n"
+"  checkbox\n"
+"\n"
+"Usage\n"
+"=====\n"
+"\n"
+"A completed stock move for a properly configured Product on a configured\n"
+"stock Operation Type will automatically create a field service\n"
+"equipment.\n"
+"\n"
+"Known issues / Roadmap\n"
+"======================\n"
+"\n"
+"The roadmap of the Field Service application is documented on\n"
+"`Github <https://github.com/OCA/field-service/issues/1>`__.\n"
+"\n"
+"Bug Tracker\n"
+"===========\n"
+"\n"
+"Bugs are tracked on `GitHub Issues <https://github.com/OCA/field-service/issues>`_.\n"
+"In case of trouble, please check there if your issue has already been reported.\n"
+"If you spotted it first, help us to smash it by providing a detailed and welcomed\n"
+"`feedback <https://github.com/OCA/field-service/issues/new?body=module:%20fieldservice_equipment_stock%0Aversion:%20saas-19.4%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**>`_.\n"
+"\n"
+"Do not contact contributors directly about support or help with technical issues.\n"
+"\n"
+"Credits\n"
+"=======\n"
+"\n"
+"Authors\n"
+"-------\n"
+"\n"
+"* Open Source Integrators\n"
+"* Brian McMaster\n"
+"\n"
+"Contributors\n"
+"------------\n"
+"\n"
+"- Brian McMaster <brian@mcmpest.com>\n"
+"- Sandip Mangukiya <smangukiya@opensourceintegrators.com>\n"
+"- Serpent Consulting Services Pvt. Ltd. <support@serpentcs.com>\n"
+"- Marcel Savegnago <marcel.savegnago@escodoo.com.br>\n"
+"- `XCG Consulting <https://xcg-consulting.fr>`__:\n"
+"\n"
+"  - Szeka Wong\n"
+"\n"
+"Other credits\n"
+"-------------\n"
+"\n"
+"The development of this module has been financially supported by:\n"
+"\n"
+"- Open Source Integrators <https://opensourceintegrators.com>\n"
+"\n"
+"Maintainers\n"
+"-----------\n"
+"\n"
+"This module is maintained by the OCA.\n"
+"\n"
+".. image:: https://odoo-community.org/logo.png\n"
+"   :alt: Odoo Community Association\n"
+"   :target: https://odoo-community.org\n"
+"\n"
+"OCA, or the Odoo Community Association, is a nonprofit organization whose\n"
+"mission is to support the collaborative development of Odoo features and\n"
+"promote its widespread use.\n"
+"\n"
+".. |maintainer-brian10048| image:: https://github.com/brian10048.png?size=40px\n"
+"    :target: https://github.com/brian10048\n"
+"    :alt: brian10048\n"
+".. |maintainer-wolfhall| image:: https://github.com/wolfhall.png?size=40px\n"
+"    :target: https://github.com/wolfhall\n"
+"    :alt: wolfhall\n"
+".. |maintainer-max3903| image:: https://github.com/max3903.png?size=40px\n"
+"    :target: https://github.com/max3903\n"
+"    :alt: max3903\n"
+".. |maintainer-smangukiya| image:: https://github.com/smangukiya.png?size=40px\n"
+"    :target: https://github.com/smangukiya\n"
+"    :alt: smangukiya\n"
+"\n"
+"Current `maintainers <https://odoo-community.org/page/maintainer-role>`__:\n"
+"\n"
+"|maintainer-brian10048| |maintainer-wolfhall| |maintainer-max3903| |maintainer-smangukiya| \n"
+"\n"
+"This module is part of the `OCA/field-service <https://github.com/OCA/field-service/tree/saas-19.4/fieldservice_equipment_stock>`_ project on GitHub.\n"
+"\n"
+"You are welcome to contribute. To learn how please visit https://odoo-community.org/page/Contribute.\n"
+msgstr ""
+
+#. module: fieldservice_equipment_stock
+#: model:ir.module.module,shortdesc:base.module_fieldservice_equipment_stock
+msgid "Field Service - Stock Equipment"
+msgstr "Buitendienst - Voorraad apparatuur"
+
+#. module: fieldservice_equipment_stock
+#: model:ir.model.fields,help:fieldservice_equipment_stock.field_stock_lot__fsm_equipment_id
+msgid "Fsm Equipment Id. Linked record reference."
+msgstr "Gekoppeld record: apparatuur."
+
+#. module: fieldservice_equipment_stock
+#: model:ir.module.module,summary:base.module_fieldservice_equipment_stock
+msgid "Integrate stock operations with your field service equipments"
+msgstr "Koppel voorraadbewegingen aan uw buitendienstapparatuur"
+
+#. module: fieldservice_equipment_stock
+#: model:ir.model.fields,help:fieldservice_equipment_stock.field_fsm_equipment__lot_id
+msgid "Lot Id. Linked record reference."
+msgstr "Gekoppeld record: partij/serienummer."
+
+#. module: fieldservice_equipment_stock
+#: model:ir.model.fields,help:fieldservice_equipment_stock.field_fsm_equipment__product_id
+msgid "Product Id. Linked record reference."
+msgstr "Gekoppeld record: product."

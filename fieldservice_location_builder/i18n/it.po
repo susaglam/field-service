@@ -1,0 +1,305 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* fieldservice_location_builder
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 20.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2023-06-08 09:08+0000\n"
+"Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
+"Language-Team: none\n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.17\n"
+
+#. module: fieldservice_location_builder
+#: model_terms:ir.ui.view,arch_db:fieldservice_location_builder.fsm_location_hierarchy_wiz_form_view
+msgid "Cancel"
+msgstr "Annulla"
+
+#. module: fieldservice_location_builder
+#: model_terms:ir.ui.view,arch_db:fieldservice_location_builder.fsm_location_hierarchy_wiz_form_view
+msgid "Create Sub Locations"
+msgstr "Crea sottolocalità"
+
+#. module: fieldservice_location_builder
+#: model:ir.model.fields,field_description:fieldservice_location_builder.field_fsm_location_builder_wizard__create_uid
+#: model:ir.model.fields,field_description:fieldservice_location_builder.field_fsm_location_level__create_uid
+msgid "Created by"
+msgstr "Creato da"
+
+#. module: fieldservice_location_builder
+#: model:ir.model.fields,field_description:fieldservice_location_builder.field_fsm_location_builder_wizard__create_date
+#: model:ir.model.fields,field_description:fieldservice_location_builder.field_fsm_location_level__create_date
+msgid "Created on"
+msgstr "Creato il"
+
+#. module: fieldservice_location_builder
+#: model:ir.model.fields,field_description:fieldservice_location_builder.field_fsm_location_builder_wizard__display_name
+#: model:ir.model.fields,field_description:fieldservice_location_builder.field_fsm_location_level__display_name
+msgid "Display Name"
+msgstr "Nome visualizzato"
+
+#. module: fieldservice_location_builder
+#: model:ir.model.fields,field_description:fieldservice_location_builder.field_fsm_location_level__end_number
+msgid "End Number"
+msgstr "Numero finale"
+
+#. module: fieldservice_location_builder
+#: model:ir.model,name:fieldservice_location_builder.model_fsm_location_builder_wizard
+msgid "FSM Location Builder Wizard"
+msgstr "Procedura guidata creazione località FSM"
+
+#. module: fieldservice_location_builder
+#: model:ir.model.fields,field_description:fieldservice_location_builder.field_fsm_location_builder_wizard__id
+#: model:ir.model.fields,field_description:fieldservice_location_builder.field_fsm_location_level__id
+msgid "ID"
+msgstr "ID"
+
+#. module: fieldservice_location_builder
+#: model:ir.model.fields,field_description:fieldservice_location_builder.field_fsm_location_builder_wizard__write_uid
+#: model:ir.model.fields,field_description:fieldservice_location_builder.field_fsm_location_level__write_uid
+msgid "Last Updated by"
+msgstr "Ultimo aggiornamento di"
+
+#. module: fieldservice_location_builder
+#: model:ir.model.fields,field_description:fieldservice_location_builder.field_fsm_location_builder_wizard__write_date
+#: model:ir.model.fields,field_description:fieldservice_location_builder.field_fsm_location_level__write_date
+msgid "Last Updated on"
+msgstr "Ultimo aggiornamento il"
+
+#. module: fieldservice_location_builder
+#: model:ir.model.fields,field_description:fieldservice_location_builder.field_fsm_location_builder_wizard__level_ids
+msgid "Level ID's"
+msgstr "ID livello"
+
+#. module: fieldservice_location_builder
+#: model:ir.model,name:fieldservice_location_builder.model_fsm_location_level
+msgid "Level in the FSM location tree structure"
+msgstr "Livello nella struttura ad albero delle località FSM"
+
+#. module: fieldservice_location_builder
+#: model:ir.actions.act_window,name:fieldservice_location_builder.fsm_location_hierarchy_wizard_action
+msgid "Location Hierarchy Builder"
+msgstr "Costruttore gerarchia località"
+
+#. module: fieldservice_location_builder
+#: model_terms:ir.ui.view,arch_db:fieldservice_location_builder.fsm_location_level_form_view
+msgid "Location Level"
+msgstr "Livello località"
+
+#. module: fieldservice_location_builder
+#: model:ir.model.fields,field_description:fieldservice_location_builder.field_fsm_location_level__name
+msgid "Name"
+msgstr "Nome"
+
+#. module: fieldservice_location_builder
+#: model:ir.model.fields,field_description:fieldservice_location_builder.field_fsm_location_level__sequence
+msgid "Sequence"
+msgstr "Sequenza"
+
+#. module: fieldservice_location_builder
+#: model:ir.model.fields,field_description:fieldservice_location_builder.field_fsm_location_level__spacer
+msgid "Spacer"
+msgstr "Separatore"
+
+#. module: fieldservice_location_builder
+#: model:ir.model.fields,field_description:fieldservice_location_builder.field_fsm_location_level__start_number
+msgid "Start Number"
+msgstr "Numero iniziale"
+
+#. module: fieldservice_location_builder
+#: model:ir.model.fields,field_description:fieldservice_location_builder.field_fsm_location_level__tag_ids
+msgid "Tags"
+msgstr "Etichette"
+
+#. module: fieldservice_location_builder
+#: model:ir.model.fields,field_description:fieldservice_location_builder.field_fsm_location_level__total_number
+msgid "Total"
+msgstr "Totale"
+
+#. module: fieldservice_location_builder
+#: model:ir.model.fields,field_description:fieldservice_location_builder.field_fsm_location_level__wizard_id
+msgid "Wizard"
+msgstr "Procedura guidata"
+
+#. module: fieldservice_location_builder
+#: model:ir.module.module,description:base.module_fieldservice_location_builder
+msgid ""
+".. image:: https://odoo-community.org/readme-banner-image\n"
+"   :target: https://odoo-community.org/get-involved?utm_source=readme\n"
+"   :alt: Odoo Community Association\n"
+"\n"
+"==============================\n"
+"Field Service Location Builder\n"
+"==============================\n"
+"\n"
+".. \n"
+"   !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n"
+"   !! This file is generated by oca-gen-addon-readme !!\n"
+"   !! changes will be overwritten.                   !!\n"
+"   !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n"
+"   !! source digest: sha256:044614b5e53760f0548eb036f257afc3b077eae2ab114f1036f5580a1841fca0\n"
+"   !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n"
+"\n"
+".. |badge1| image:: https://img.shields.io/badge/maturity-Beta-yellow.png\n"
+"    :target: https://odoo-community.org/page/development-status\n"
+"    :alt: Beta\n"
+".. |badge2| image:: https://img.shields.io/badge/license-AGPL--3-blue.png\n"
+"    :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html\n"
+"    :alt: License: AGPL-3\n"
+".. |badge3| image:: https://img.shields.io/badge/github-OCA%2Ffield--service-lightgray.png?logo=github\n"
+"    :target: https://github.com/OCA/field-service/tree/saas-19.4/fieldservice_location_builder\n"
+"    :alt: OCA/field-service\n"
+".. |badge4| image:: https://img.shields.io/badge/weblate-Translate%20me-F47D42.png\n"
+"    :target: https://translation.odoo-community.org/projects/field-service-saas-19-4/field-service-saas-19-4-fieldservice_location_builder\n"
+"    :alt: Translate me on Weblate\n"
+".. |badge5| image:: https://img.shields.io/badge/runboat-Try%20me-875A7B.png\n"
+"    :target: https://runboat.odoo-community.org/builds?repo=OCA/field-service&target_branch=saas-19.4\n"
+"    :alt: Try me on Runboat\n"
+"\n"
+"|badge1| |badge2| |badge3| |badge4| |badge5|\n"
+"\n"
+"With the Field Service App, building out a site like an apartment\n"
+"complex with multiple buildings, floors, units can become cumbersome and\n"
+"tedious to build all the records. Even building an importable\n"
+"spreadsheet can be tedious to build, and new users will struggle with\n"
+"this.\n"
+"\n"
+"This module is for organizations that needs to create the locations\n"
+"structure (~100 sub-locations) of a new site in less than a minute. It\n"
+"provides a wizard on a location that will assist in building the\n"
+"sub-location hierarchy.\n"
+"\n"
+"**Table of contents**\n"
+"\n"
+".. contents::\n"
+"   :local:\n"
+"\n"
+"Usage\n"
+"=====\n"
+"\n"
+"- Go to Field Service > Master Data > Locations\n"
+"- Select or create a location\n"
+"- In the Action menu, run the Sub-Locations Builder\n"
+"- Add 4 levels with:\n"
+"\n"
+"  - Level 1: Building, - , 1, 2\n"
+"  - Level 2: Floor, - , 1, 2\n"
+"  - Level 3: Unit, - , 1, 2\n"
+"  - Level 4: Room, - , 1, 2\n"
+"\n"
+"- Running the wizard should result in the following sub-locations\n"
+"  structure:\n"
+"\n"
+"::\n"
+"\n"
+"   Building - 1\n"
+"       * Floor - 1\n"
+"           * Unit - 1\n"
+"               * Room - 1\n"
+"               * Room - 2\n"
+"           * Unit - 2\n"
+"               * Room - 1\n"
+"               * Room - 2\n"
+"       * Floor - 2\n"
+"           * Unit - 1\n"
+"               * Room - 1\n"
+"               * Room - 2\n"
+"           * Unit - 2\n"
+"               * Room - 1\n"
+"               * Room - 2\n"
+"   Building - 2\n"
+"       * Floor -  1\n"
+"           * Unit - 1\n"
+"               * Room - 1\n"
+"               * Room - 2\n"
+"           * Unit - 2\n"
+"               * Room - 1\n"
+"               * Room - 2\n"
+"       * Floor - 2\n"
+"           * Unit - 1\n"
+"               * Room - 1\n"
+"               * Room - 2\n"
+"           * Unit - 2\n"
+"               * Room - 1\n"
+"               * Room - 2\n"
+"\n"
+"Known issues / Roadmap\n"
+"======================\n"
+"\n"
+"The roadmap of the Field Service application is documented on\n"
+"`Github <https://github.com/OCA/field-service/issues/1>`__.\n"
+"\n"
+"Bug Tracker\n"
+"===========\n"
+"\n"
+"Bugs are tracked on `GitHub Issues <https://github.com/OCA/field-service/issues>`_.\n"
+"In case of trouble, please check there if your issue has already been reported.\n"
+"If you spotted it first, help us to smash it by providing a detailed and welcomed\n"
+"`feedback <https://github.com/OCA/field-service/issues/new?body=module:%20fieldservice_location_builder%0Aversion:%20saas-19.4%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**>`_.\n"
+"\n"
+"Do not contact contributors directly about support or help with technical issues.\n"
+"\n"
+"Credits\n"
+"=======\n"
+"\n"
+"Authors\n"
+"-------\n"
+"\n"
+"* Open Source Integrators\n"
+"\n"
+"Contributors\n"
+"------------\n"
+"\n"
+"- Open Source Integrators\n"
+"  <`https://www.opensourceintegrators.com\\\\> <https://www.opensourceintegrators.com\\>>`__\n"
+"\n"
+"  - Wolfgang Hall <whall@opensourceintegrators.com>\n"
+"  - Maxime Chambreuil <mchambreuil@opensourceintegrators.com>\n"
+"  - Steve Campbell <scampbell@opensourceintegrators.com>\n"
+"  - Murtaza Mithaiwala <mmithaiwala@opensourceintegrators.com>\n"
+"  - Freni Patel <fpatel@opensourceintegrators.com>\n"
+"\n"
+"Maintainers\n"
+"-----------\n"
+"\n"
+"This module is maintained by the OCA.\n"
+"\n"
+".. image:: https://odoo-community.org/logo.png\n"
+"   :alt: Odoo Community Association\n"
+"   :target: https://odoo-community.org\n"
+"\n"
+"OCA, or the Odoo Community Association, is a nonprofit organization whose\n"
+"mission is to support the collaborative development of Odoo features and\n"
+"promote its widespread use.\n"
+"\n"
+".. |maintainer-osi-scampbell| image:: https://github.com/osi-scampbell.png?size=40px\n"
+"    :target: https://github.com/osi-scampbell\n"
+"    :alt: osi-scampbell\n"
+".. |maintainer-max3903| image:: https://github.com/max3903.png?size=40px\n"
+"    :target: https://github.com/max3903\n"
+"    :alt: max3903\n"
+"\n"
+"Current `maintainers <https://odoo-community.org/page/maintainer-role>`__:\n"
+"\n"
+"|maintainer-osi-scampbell| |maintainer-max3903| \n"
+"\n"
+"This module is part of the `OCA/field-service <https://github.com/OCA/field-service/tree/saas-19.4/fieldservice_location_builder>`_ project on GitHub.\n"
+"\n"
+"You are welcome to contribute. To learn how please visit https://odoo-community.org/page/Contribute.\n"
+msgstr ""
+
+#. module: fieldservice_location_builder
+#: model:ir.module.module,summary:base.module_fieldservice_location_builder
+msgid "Adds a tool to help build out Location Hierarchies"
+msgstr ""
+
+#. module: fieldservice_location_builder
+#: model:ir.module.module,shortdesc:base.module_fieldservice_location_builder
+msgid "Field Service Location Builder"
+msgstr ""

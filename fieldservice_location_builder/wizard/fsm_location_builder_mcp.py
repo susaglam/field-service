@@ -1,0 +1,48 @@
+# Copyright 2026 saas-19.3 port
+# License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
+"""MCP / @ai_tool surface for fsm.location.builder.wizard."""
+
+from odoo import models
+
+try:
+    from odoo.addons.cs_mcp_bridge.tools import ai_tool
+except ImportError:
+    # No-op fallback when cs_mcp_bridge is not installed.
+    # AI/MCP surface unavailable; methods stay normal callable Python.
+    def ai_tool(**_kwargs):
+        def _decorator(fn):
+            return fn
+
+        return _decorator
+
+
+class FsmLocationLevelMcp(models.TransientModel):
+    _inherit = "fsm.location.level"
+
+    @ai_tool(
+        name="fsm_location_builder.list_levels",
+        description=(
+            "List configured location hierarchy levels (used by the "
+            "location-builder wizard to bulk-create sub-locations)."
+        ),
+        input_schema={"type": "object", "properties": {}},
+        risk="low",
+    )
+    def action_mcp_list_levels(self):
+        # a short configuration list: listing all of it is the point
+        rows = self.search([])  # pylint: disable=no-search-all
+        return {
+            "count": len(rows),
+            "levels": [
+                {
+                    "id": lv.id,
+                    "name": lv.name,
+                    "sequence": lv.sequence,
+                    "start_number": lv.start_number,
+                    "end_number": lv.end_number,
+                    "total": lv.total_number,
+                    "spacer": lv.spacer,
+                }
+                for lv in rows
+            ],
+        }
