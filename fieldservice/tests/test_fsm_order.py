@@ -194,6 +194,20 @@ class TestFSMOrder(TransactionCase):
             f.current_location_id = self.test_location
             f.location_id = self.test_location
             f.notes = "test"
+            # fieldservice_equipment_stock, when installed, makes the product
+            # and its serial number mandatory on this form
+            if "lot_id" in self.env["fsm.equipment"]._fields:
+                product = self.env["product.product"].create(
+                    {
+                        "name": "Equipment product",
+                        "is_storable": True,
+                        "tracking": "serial",
+                    }
+                )
+                f.product_id = product
+                f.lot_id = self.env["stock.lot"].create(
+                    {"name": "EQ-TEST-0002", "product_id": product.id}
+                )
         equipment = f.save()
         order3 = self.Order.create(
             {
