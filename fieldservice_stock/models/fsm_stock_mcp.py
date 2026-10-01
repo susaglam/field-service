@@ -23,6 +23,9 @@ except ImportError:
 class FieldserviceStockMcp(models.Model):
     _inherit = "fsm.order"
 
+    # A name of its own: a model has ONE method per name, so sharing
+    # action_mcp_read with fieldservice's own order_read (fsm.order.action_mcp_read)
+    # made the module loaded last answer both tools.
     @ai_tool(
         name="fsm_stock.get_stock_info",
         description="Return stock info (warehouse, inv-location, deliveries, returns, "
@@ -34,7 +37,7 @@ class FieldserviceStockMcp(models.Model):
         },
         risk="low",
     )
-    def action_mcp_read(self, order_id):
+    def action_mcp_stock_info(self, order_id):
         rec = self.browse(order_id).exists()
         if not rec:
             return {"error": f"Record {order_id} not found"}

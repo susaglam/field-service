@@ -23,6 +23,9 @@ except ImportError:
 class FieldserviceSaleStockMcp(models.Model):
     _inherit = "sale.order"
 
+    # A name of its own: a model has ONE method per name, so sharing
+    # action_mcp_read with fieldservice_sale_recurring's (sale.order.action_mcp_read)
+    # made the module loaded last answer both tools.
     @ai_tool(
         name="fsm_sale_stock.get_fsm_count",
         description="Return FSM order count for a sale order (stock-flow variant).",
@@ -33,7 +36,7 @@ class FieldserviceSaleStockMcp(models.Model):
         },
         risk="low",
     )
-    def action_mcp_read(self, sale_order_id):
+    def action_mcp_fsm_count(self, sale_order_id):
         rec = self.browse(sale_order_id).exists()
         if not rec:
             return {"error": f"Record {sale_order_id} not found"}

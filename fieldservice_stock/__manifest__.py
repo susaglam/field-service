@@ -4,7 +4,7 @@
 {
     "name": "Field Service - Stock",
     "summary": "Integrate the logistics operations with Field Service",
-    "version": "20.0.2.1.2",
+    "version": "20.0.2.1.3",
     "category": "Field Service",
     "author": "Open Source Integrators, "
     "Brian McMaster, "

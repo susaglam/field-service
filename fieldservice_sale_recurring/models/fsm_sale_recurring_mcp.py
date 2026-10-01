@@ -23,6 +23,9 @@ except ImportError:
 class FieldserviceSaleRecurringMcp(models.Model):
     _inherit = "sale.order"
 
+    # A name of its own: a model has ONE method per name, so sharing
+    # action_mcp_read with fieldservice_sale_stock's (sale.order.action_mcp_read)
+    # made the module loaded last answer both tools.
     @ai_tool(
         name="fsm_sale_recurring.get_recurring_orders",
         description="Return recurring FSM orders generated from a sale order.",
@@ -33,7 +36,7 @@ class FieldserviceSaleRecurringMcp(models.Model):
         },
         risk="low",
     )
-    def action_mcp_read(self, sale_order_id):
+    def action_mcp_recurring_orders(self, sale_order_id):
         rec = self.browse(sale_order_id).exists()
         if not rec:
             return {"error": f"Record {sale_order_id} not found"}

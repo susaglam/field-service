@@ -3,7 +3,7 @@
 
 {
     "name": "Field Service - Sales - Recurring",
-    "version": "20.0.1.1.1",
+    "version": "20.0.1.1.2",
     "summary": "Sell recurring field services.",
     "category": "Field Service",
     "author": "Open Source Integrators, Odoo Community Association (OCA)",
